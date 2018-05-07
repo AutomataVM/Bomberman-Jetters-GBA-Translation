@@ -5,959 +5,1025 @@
 // Load and activate the table
 #ADDTBL("script/bomberman.tbl", Table)
 #ADDTBL("melissa font/melissa8x8.tbl", engTable)
-#ACTIVETBL(Table)
+#ACTIVETBL(engTable)
 
-// Setup GBA pointers and Pointer Table
+// Setup GBA //POINTERs and //POINTER Table
 #VAR(GBA, CUSTOMPOINTER)
-// Create our pointer type
+// Create our //POINTER type
 #CREATEPTR(GBA, "LINEAR", $-08000000, 32)
 
-#JMP($55B000)
+#JMP($565000)
 
 //GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
 
-//BLOCK #004 NAME:		Block 5 (POINTER)
+//BLOCK #004 NAME:		Block 5 (//POINTER)
 
-//POINTER #0 @ $1C7664 - STRING #0 @ $1C54B4
+////POINTER #0 @ $1C7664 - STRING #0 @ $1C54B4
 
 #WRITE(GBA,$1C7664)
-マイティ ワシじゃ アインじゃ<LINE>
-その セカセカせいの<NEWBOX>
-クロノはかせの けんきゅうじょが<LINE>
-ヒゲヒゲだんに おそわれた!<NEWBOX>
-おそらく クロノはかせの はつめい<LINE>
-タイムドライバーが ヤツらの ねらいじゃ<NEWBOX>
-タイムドライバーは タイムマシンの<LINE>
-エンジンの しさくひんじゃ!<NEWBOX>
-まだ かんせいしていない とはいえ<LINE>
-あくようされれば たいへんなことになる<NEWBOX>
-いそいで クロノはかせを たすけだすのじゃ<LINE>
-たのんだぞ マイティ!<END>
+Come in, Mighty. This is Dr. Ein.<LINE>
+On the Planet Sekaseka,<NEWBOX>
+Dr. Chronos' laboratory was attacked<LINE>
+by the Hige Hige Bandits!<NEWBOX>
+Their aim was likely to obtain Dr.<LINE>
+Chronos' invention, the Time Driver.<NEWBOX>
+The Time Driver is the prototype of<LINE>
+an engine for a time machine!<NEWBOX>
+It's still incomplete, but it could be<LINE>
+problematic if they attempt to use it.<NEWBOX>
+Hurry and help Dr. Chronos.<LINE>
+We're counting on you, Mighty!<END>
 
 //POINTER #1 @ $1C7668 - STRING #1 @ $1C557F
 
 #WRITE(GBA,$1C7668)
-お ちゅうしゃじょうを ごりようかい?<LINE>
-いま とびらを あけるから まっててな<END>
+You want to leave the parking lot?<LINE>
+I'll open up the door. Please wait.<END>
 
 //POINTER #2 @ $1C766C - STRING #2 @ $1C55A7
 
 #WRITE(GBA,$1C766C)
-ホイ これで OK<LINE>
-きをつけて いってきな<END>
+There we go! Alright then.<LINE>
+Be careful out there.<END>
 
 //POINTER #3 @ $1C7670 - STRING #3 @ $1C55BD
 
 #WRITE(GBA,$1C7670)
-この ちゅうしゃじょうは<LINE>
-りょうきん むりょうだよ<END>
+There is no fee for this parking lot.<LINE>
+It's completely free!<END>
 
 //POINTER #4 @ $1C7674 - STRING #4 @ $1C55D7
 
 #WRITE(GBA,$1C7674)
-<CONTROL_CODE><$01><$02>ネ55カードキーヲ イレテ クダサイ<END>
+<CONTROL_CODE><$01><$02><$59><$06><$06>Please insert the Card Key.<END>
 
 //POINTER #5 @ $1C7678 - STRING #5 @ $1C55ED
 
 #WRITE(GBA,$1C7678)
-カードキー カクニン<LINE>
-シャッターヲ ヒラキマス<END>
+Card key accepted.<LINE>
+Opening shutter.<END>
 
 //POINTER #6 @ $1C767C - STRING #6 @ $1C5605
 
 #WRITE(GBA,$1C767C)
-ラバシティニ ヨウコソ<END>
+Welcome to Lava City.<END>
 
 //POINTER #7 @ $1C7680 - STRING #7 @ $1C5611
 
 #WRITE(GBA,$1C7680)
-ありがとうございます<LINE>
-もう だめかと おもいました<NEWBOX>
-ヤツらが とつぜん やってきて<LINE>
-ほとんどのひとが とらわれてしまいました<NEWBOX>
-のこりのひとは あと 2つのビルに<LINE>
-わかれて とらわれています<NEWBOX>
-どうか ほかのひとたちも<LINE>
-たすけだしてください<NEWBOX>
-カルデラこへつづく ちかつうろの<LINE>
-シャッターを あけられるひとも<NEWBOX>
-ラバシティの どこかのビルに<LINE>
-とらわれている はずです<END>
+Thank you very much. I was beginning<LINE>
+to lose hope...<NEWBOX>
+//ヤツらが とつぜん やってきて<LINE>
+//ほとんどのひとが とらわれてしまいました<NEWBOX>
+I was captured a few days ago when<LINE>
+those bandits suddenly showed up.<NEWBOX>
+//のこりのひとは あと 2つのビルに<LINE>
+//わかれて とらわれています<NEWBOX>
+Everyone else is being held captive<LINE>
+within two other buildings.<NEWBOX>
+Please find a way to save the others!<LINE>
+I should also tell you<NEWBOX>
+that the person who has the ability to<LINE>
+open the passage to Caldera Lake<NEWBOX>
+is likely also a prisoner within one of<LINE>
+the two buildings.<END>
 
 //POINTER #8 @ $1C7684 - STRING #8 @ $1C56C5
 
 #WRITE(GBA,$1C7684)
-みんな たすかったぞ!<LINE>
-ジェッターズが きてくれたんだ!<NEWBOX>
-ありがとう!<LINE>
-もう たすからないかと おもったよ<NEWBOX>
-え? カルデラこへの シャッターを<LINE>
-あけられるひとは いないかって?<NEWBOX>
-うーん ざんねんだけど このなかには<LINE>
-いないみたいだ‥‥<NEWBOX>
-あと ひとつのビルに のこりの<LINE>
-ひとたちが とらわれて いるらしい<NEWBOX>
-きっと そのなかに シャッターを<LINE>
-あけられるひとが いるはずだ<END>
+We're all saved! The Jetters came and<LINE>
+rescued us!<NEWBOX>
+Thank you! I really wasn't expecting<LINE>
+anyone to come and help us out.<NEWBOX>
+Hm? You're looking for the person who<LINE>
+can open up the door to Caldera Lake?<NEWBOX>
+Unfortunately, it doesn't appear that<LINE>
+person is here.<NEWBOX>
+There's still one building left where<LINE>
+people are being held captive.<NEWBOX>
+Perhaps that's where the person who<LINE>
+can open the door is!<END>
 
 //POINTER #9 @ $1C7688 - STRING #9 @ $1C577D
 
 #WRITE(GBA,$1C7688)
-ほんとうに ありがとうございます<LINE>
-もう だめかと おもいました<NEWBOX>
-これで とらわれていた ひとは<LINE>
-ぜんいん かいほうされました‥‥<NEWBOX>
-ただひとり アイドルの<LINE>
-アカネさんを のぞいて‥‥<NEWBOX>
-アカネさんは ひがしにある<LINE>
-テレビきょくに とらわれています<NEWBOX>
-まちの ひがしがわ いちばん<LINE>
-おおきいビルが テレビきょくです<NEWBOX>
-カルデラこへつづく ちかつうろの<LINE>
-いりぐちを あけておきます<NEWBOX>
-アクアボムの ちからで<LINE>
-まちなかの ほのおをけして<NEWBOX>
-ラバシティ ひがしがわへ<LINE>
-いそいでください<END>
+Thank you so much! I didn't think<LINE>
+we'd ever get out....<NEWBOX>
+While I wish I could say that everyone<LINE>
+has now been saved, there<NEWBOX>
+is actually still one person missing.<LINE>
+The idol Akane...<NEWBOX>
+She is being held captive inside the<LINE>
+Television Station.<NEWBOX>
+That's the biggest building in the<LINE>
+east side of the city.<NEWBOX>
+I will open up the underground path<LINE>
+leading to Caldera Lake for you.<NEWBOX>
+//アクアボムの ちからで<LINE>
+//まちなかの ほのおをけして<NEWBOX>
+You will need to the power of the Aqua<LINE>
+Bomb to put out the fires in this city.<NEWBOX>
+Please, hurry to the east side of<LINE>
+Lava City!<END>
 
 //POINTER #10 @ $1C768C - STRING #10 @ $1C5866
 
 #WRITE(GBA,$1C768C)
-たすけに きてくれたの?<LINE>
-ありがとう!<NEWBOX>
-いちにちしちょうの イベントちゅうに<LINE>
-じけんに まきこまれるなんて<NEWBOX>
-まったくツイてないわ‥‥<NEWBOX>
-オマケに ほんものの しちょうは<LINE>
-ひとりで にげだしちゃうし‥‥<NEWBOX>
-あ コレ たすけてくれた おれいに<LINE>
-アタシの サインを あげるわ<NEWBOX>
-なんの やくにも<LINE>
-たたないかも しれないけど<NEWBOX>
-おれいのきもちよ うけとって<NEWBOX>
-ボンバーマンは アカネのサインを<LINE>
-<CONTROL_CODE><$12><$0C>てにいれた!<END>
+You came here to rescue me?<LINE>
+Thank you!<NEWBOX>
+//いちにちしちょうの イベントちゅうに<LINE>
+//じけんに まきこまれるなんて<NEWBOX>
+During the Mayor For a Day event,<LINE>
+we were all suddenly attacked.<NEWBOX>
+Of all the times for this to happen...<NEWBOX>
+And to top it all off, the real mayor<LINE>
+ran from the city and left us all!<NEWBOX>
+As thanks for saving me, here's<LINE>
+my autograph!<NEWBOX>
+I'm not sure how helpful it will be, but<LINE>
+hopefully you will find a use for it.<NEWBOX>
+You have my deepest gratitude.<NEWBOX>
+Bomberman obtained<LINE>
+<CONTROL_CODE><$12><$0C>Akane's Signature!<END>
 
 //POINTER #11 @ $1C7690 - STRING #11 @ $1C592C
 
 #WRITE(GBA,$1C7690)
-よし これで このまちの ひとたちは<LINE>
-ぜんいん たすけだしたな<NEWBOX>
-ボンバーマン いっしょに<LINE>
-クロノけんきゅうじょに いって<NEWBOX>
-クロノはかせを たすけだして<LINE>
-くれないか?<NEWBOX>
-オレは あそこで じょしゅとして<LINE>
-はたらいて いたんだが<NEWBOX>
-クロノはかせと オレのともだち<LINE>
-プチラってやつが<NEWBOX>
-ヒゲヒゲだんに つかまってる<LINE>
-はずなんだ<NEWBOX>
-ヤツらに タイムドライバーを<LINE>
-うばわれるまえに なんとかしないと‥‥<END>
+Alright! Now everyone in the city has<LINE>
+been rescued.<NEWBOX>
+//ボンバーマン いっしょに<LINE>
+//クロノけんきゅうじょに いって<NEWBOX>
+Bomberman, will you come with me to<LINE>
+the Chronos Laboratory<NEWBOX>
+and help me rescue Doctor Chronos?<LINE>
+<NEWBOX>
+//オレは あそこで じょしゅとして<LINE>
+//はたらいて いたんだが<NEWBOX>
+In the past I had worked there as<LINE>
+his assistant.<NEWBOX>
+Dr. Chronos is my friend, and it's<LINE>
+inexcusable what the Hige Hige<NEWBOX>
+Bandits have done with him. We<LINE>
+have to do something!<NEWBOX>
+There's no way we can let those<LINE>
+guys take the Time Driver...<END>
 
 //POINTER #12 @ $1C7694 - STRING #12 @ $1C59ED
 
 #WRITE(GBA,$1C7694)
-それなら かざんちたいへの<LINE>
-ちかつうろを あけるわ<NEWBOX>
-いちにちしちょうで つうろの<LINE>
-スイッチを あずかっていたのよ<END>
+If you want to open up the underground<LINE>
+passageway to the volcano<NEWBOX>
+the switch should be with the person<LINE>
+who was appointed mayor for the day.<END>
 
 //POINTER #13 @ $1C7698 - STRING #13 @ $1C5A26
 
 #WRITE(GBA,$1C7698)
-クロノけんきゅうじょは かざんちたいの<LINE>
-いちばんおく ほくせいに ある<NEWBOX>
-さぁ いそいで<LINE>
-はかせを たすけに いこう!<END>
+Chronos Laboratory is located at the<LINE>
+northwest corner of the volcano area.<NEWBOX>
+Come on, let's hurry and go save <LINE>
+the Doctor!<END>
 
 //POINTER #14 @ $1C769C - STRING #14 @ $1C5A61
 
 #WRITE(GBA,$1C769C)
-<CONTROL_CODE><$16><$06>ヤおや ケガをしとるじゃないか<LINE>
-ちょっと ワシにみせてみなさい ‥‥ソレ!<NEWBOX>
-<CONTROL_CODE><$11><$E0>くよよし これで だいじょうぶじゃ<LINE>
-ラクに なったじゃろ? しゃっしゃっしゃっ<END>
+<CONTROL_CODE><$16><$06>Oh my, are you injured? Please let<LINE>
+me look for a second... There! <NEWBOX>
+<CONTROL_CODE><$11><$E0>With this, you're all better now!<LINE>
+Don't you feel good? Cha-Cha-Cha!<END>
 
 //POINTER #15 @ $1C76A0 - STRING #15 @ $1C5AB5
 
 #WRITE(GBA,$1C76A0)
-<CONTROL_CODE><$01><$02>お5かクロノはかせの けんきゅうじょの<LINE>
-とびらをあける きかいは<NEWBOX>
-けんきゅうじょの となりの<LINE>
-はつでんしょの おくにあるんだよ<NEWBOX>
-けれど そこも ヒゲヒゲだんに<LINE>
-おさえられて しまって‥‥<END>
+//<CONTROL_CODE><$01><$02><$0F><$06><$10>クロノはかせの けんきゅうじょの<LINE>
+//とびらをあける きかいは<NEWBOX>
+<CONTROL_CODE><$01><$02><$0F><$06><$10>The mechanism for opening the door to<LINE>
+Dr. Chronos' Laboratory is located<NEWBOX>
+//けんきゅうじょの となりの<LINE>
+//はつでんしょの おくにあるんだよ<NEWBOX>
+inside the powerplant that that is<LINE>
+next door to the lab.<NEWBOX>
+//けれど そこも ヒゲヒゲだんに<LINE>
+//おさえられて しまって‥‥<END>
+However, it looks like the Hige Hige<LINE>
+Bandits have taken over it as well...<END>
 
 //POINTER #16 @ $1C76A4 - STRING #16 @ $1C5B16
 
 #WRITE(GBA,$1C76A4)
-あんたが ヒゲヒゲだんを<LINE>
-やっつけて くれたのかい<NEWBOX>
-さいきんの わかいもんは<LINE>
-どきょうが あるねぇ‥‥<END>
+You're here to get rid of the Hige Hige<LINE>
+Bandits, right?<NEWBOX>
+//さいきんの わかいもんは<LINE>
+//どきょうが あるねぇ‥‥<END>
+For someone so young, you really have<LINE>
+a lot of courage.<END>
 
 //POINTER #17 @ $1C76A8 - STRING #17 @ $1C5B4A
 
 #WRITE(GBA,$1C76A8)
-ちょっとまえに このほしに<LINE>
-ヒゲヒゲだんが やってきたんだ!<NEWBOX>
-ヤツらは ずっときたにある<LINE>
-クロノはかせの けんきゅうじょと<NEWBOX>
-ひがしにある ラバシティを<LINE>
-せんりょうしちゃったんだよ!<END>
+//ちょっとまえに このほしに<LINE>
+//ヒゲヒゲだんが やってきたんだ!<NEWBOX>
+It wasn't long ago that the Hige Hige<LINE>
+Bandits showed up on this planet.<NEWBOX>
+//ヤツらは ずっときたにある<LINE>
+//クロノはかせの けんきゅうじょと<NEWBOX>
+Right after arriving they headed<LINE>
+towards Dr. Chronos' laboratory<NEWBOX>
+//ひがしにある ラバシティを<LINE>
+//せんりょうしちゃったんだよ!<END>
+and occupied Lava City which is<LINE>
+to the east of here!<END>
+
 
 //POINTER #18 @ $1C76AC - STRING #18 @ $1C5BA5
 
 #WRITE(GBA,$1C76AC)
-きたの かざんちたいにすむ<LINE>
-クロノはかせが すこしまえに<NEWBOX>
-タイムドライバー とかいうものの<LINE>
-かいはつに せいこうしたんだ<NEWBOX>
-ヒゲヒゲだんは それをねらって<LINE>
-やってきたんだろうか‥‥<END>
+In the north part of the volcano area<LINE>
+is the place where Dr. Chronos<NEWBOX>
+has developed many inventions.<LINE>
+Including his latest, the Time Driver!<NEWBOX>
+That must be the reason that the Hige<LINE>
+Hige Bandits are targeting him...<END>
 
 //POINTER #19 @ $1C76B0 - STRING #19 @ $1C5BFF
 
 #WRITE(GBA,$1C76B0)
-<CONTROL_CODE><$01><$02>ム5こあのとき ひがしの ラバシティでは<LINE>
-ちょうど アイドルの アカネちゃんが<NEWBOX>
-いちにち しちょうの<LINE>
-イベントを してたんだ‥‥<NEWBOX>
-アカネちゃんは ラバシティの<LINE>
-テレビきょくに とらわれて いるらしいよ<END>
+<CONTROL_CODE><$01><$02><$62><$06><$14>In the east side of Lava City, an idol<LINE>
+named Akane was<NEWBOX>
+attending the Mayor for a Day<LINE>
+celebration. However,<NEWBOX>
+it appears that she was captured<LINE>
+inside of the Lava City TV Station.<END>
 
 //POINTER #20 @ $1C76B4 - STRING #20 @ $1C5C67
 
 #WRITE(GBA,$1C76B4)
-だれかが ヒゲヒゲだんを やっつけて<LINE>
-ラバシティを かいほうしたらしいよ<END>
+Somebody beat the Hige Hige Bandits<LINE>
+and freed Lava City! Yay!<END>
 
 //POINTER #21 @ $1C76B8 - STRING #21 @ $1C5C8C
 
 #WRITE(GBA,$1C76B8)
-このうえのかいに ラバシティから<LINE>
-にげてきた しちょうが いるわ<NEWBOX>
-まったく じぶんのまちの しみんが<LINE>
-たいへんなめに あっているのに<NEWBOX>
-ひとりで にげだしてくるなんて<LINE>
-どういう しんけいかしら‥‥<END>
+//このうえのかいに ラバシティから<LINE>
+//にげてきた しちょうが いるわ<NEWBOX>
+The mayor that ran away from Lava<LINE>
+City is currently upstairs.<NEWBOX>
+Even when the citizens of his own city<LINE>
+are experiencing such a disaster...<NEWBOX>
+How could he have the nerve to just run<LINE>
+away all by himself?<END>
 
 //POINTER #22 @ $1C76BC - STRING #22 @ $1C5CEE
 
 #WRITE(GBA,$1C76BC)
-<CONTROL_CODE><$01><$02>ぽ5すいかにも わたしが ラバしちょうです<LINE>
-じぶんのまちの しみんを みすてて<NEWBOX>
-ひとりで にげだした<LINE>
-ひどい おとこだと おもわれるでしょう<NEWBOX>
-しかし だれかが たすけを<LINE>
-よばねば ならなかったのです<NEWBOX>
-いま ひがしの ラバシティは<LINE>
-ヒゲヒゲだんに せんりょうされて<NEWBOX>
-おおくの しみんが<LINE>
-ビルのなかに とらわれています<NEWBOX>
-おねがいです! ボンバーマンさん<LINE>
-とらわれた しみんを たすけだしてください<NEWBOX>
-ラバシティに はいるには<LINE>
-この カードキーが ひつようです<NEWBOX>
-ボンバーマンは カードキーを<LINE>
-<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$02>ぽ<CONTROL_CODE><$03><$01>みてにいれた!<NEWBOX>
-ラバシティは このまちからでて<LINE>
-みちぞいに ひがしにすすめば あります<NEWBOX>
-ヒゲヒゲだんは ほとんどのビルに<LINE>
-はいりこんでいます きをつけてください<END>
+<CONTROL_CODE><$01><$02><$91><$06><$17>I am the Lava City mayor. It's true...<LINE>
+I abandoned the citizens of my city.<NEWBOX>
+Does that make me a terrible person?<LINE>
+Leaving everyone else behind...<NEWBOX>
+But then, somebody had to go and call<LINE>
+for help, right?<NEWBOX>
+Right now, the Hige Hige Bandits have<LINE>
+control of Lava City to the east.<NEWBOX>
+The remaining citizens are being held<LINE>
+captive inside of buildings.<NEWBOX>
+Please, Mr. Bomberman! Go and save<LINE>
+the captured citizens!<NEWBOX>
+In order to get into Lava City, you'll<LINE>
+need this card key.<NEWBOX>
+Bomberman obtained the<LINE>
+<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$02><$91><CONTROL_CODE><$03><$01><$2A>Card Key!<NEWBOX>
+To reach Lava City, leave this building<LINE>
+and follow the road directly east.<NEWBOX>
+The Hige Hige Bandits will be waiting<LINE>
+inside of the buildings, so be careful!<END>
 
 //POINTER #23 @ $1C76C0 - STRING #23 @ $1C5E3E
 
 #WRITE(GBA,$1C76C0)
-<CONTROL_CODE><$01><$02>ム5せまだ ラバシティの しみんを<LINE>
-たすけだせないのですか?<END>
+//<CONTROL_CODE><$01><$02><$62><$06><$18>まだ ラバシティの しみんを<LINE>
+//たすけだせないのですか<END>
+<CONTROL_CODE><$01><$02><$62><$06><$18>It seems all of the citizens of Lava<LINE>
+City are not yet saved. Keep going!<END>
 
 //POINTER #24 @ $1C76C4 - STRING #24 @ $1C5E60
 
 #WRITE(GBA,$1C76C4)
-おぉ すべての しみんを<LINE>
-たすけだして くれましたか!<NEWBOX>
-ありがとうございます!<END>
+Ah! So you rescued all of the citizens<LINE>
+of Lava City!?<NEWBOX>
+Thank you so much!<END>
 
 //POINTER #25 @ $1C76C8 - STRING #25 @ $1C5E88
 
 #WRITE(GBA,$1C76C8)
-きたの かざんのほうに すんでいる<LINE>
-クロノはかせは<NEWBOX>
-タイムマシンの けんきゅうを<LINE>
-しているんだ<NEWBOX>
-さいきん タイムマシンの<LINE>
-エンジンになるものを はつめいして<NEWBOX>
-けっこう ニュースになったんだよ<END>
+Doctor Chronos who lives in the north<LINE>
+part of the volcano area<NEWBOX>
+is currently conducting research<LINE>
+related to time travel.<NEWBOX>
+Recently he successfully completed an<LINE>
+invention dubbed the Time Engine.<NEWBOX>
+It's really exciting news!<END>
 
-//POINTER #26 @ $1C76CC - STRING #26 @ $1C5EE8
+////POINTER #26 @ $1C76CC - STRING #26 @ $1C5EE8
 
 #WRITE(GBA,$1C76CC)
-<CONTROL_CODE><$01><$02>ム5ちエル オー ブイ イー!<LINE>
-アイ ラブ アカネ!<NEWBOX>
-ボクの だいすきな アカネちゃんが<LINE>
-ヒゲヒゲだんに つかまっちゃったよ!<NEWBOX>
-あぁ~ しんぱいだぁ~ しんぱいだぁ~<LINE>
-オロオロオロオロ‥‥‥‥<END>
+<CONTROL_CODE><$01><$02><$62><$06><$1B>L-O-V-E!<LINE>
+I love Akane!!<NEWBOX>
+My beloved Akane-chan was captured<LINE>
+by the Hige Hige Bandits!<NEWBOX>
+Ahh... I'm so worried... I'm so worried...<LINE>
+They better not hurt Akane-chan...<END>
 
 //POINTER #27 @ $1C76D0 - STRING #27 @ $1C5F4C
 
 #WRITE(GBA,$1C76D0)
-エル オー ブイ イー!<LINE>
-アイ ラブ アカ‥‥<NEWBOX>
-あっ! そ それは<LINE>
-アカネちゃんの サイン!<NEWBOX>
-いいなー いいなー<LINE>
-うらやましいなぁー<END>
+L-O-V-E!<LINE>
+I love Aka-...<NEWBOX>
+Ah! T-that's...? T-That's...!<LINE>
+Akane-chan's signature!<NEWBOX>
+It's so nice... So pretty...<LINE>
+I'm so jealous...<END>
 
 //POINTER #28 @ $1C76D4 - STRING #28 @ $1C5F8F
 
 #WRITE(GBA,$1C76D4)
-いらっしゃいませ しょうひんを<LINE>
-てにとって ごらんください<END>
+Welcome! Please check out my<LINE>
+merchandise!<END>
 
 //POINTER #29 @ $1C76D8 - STRING #29 @ $1C5FAD
 
 #WRITE(GBA,$1C76D8)
-ここ セカセカせいは かざんのほし<LINE>
-まちのそとは きけんな かざんちたいなんだ<END>
+Planet Sekaseka is known for its<LINE>
+volcano. Be careful outside the city!<END>
 
 //POINTER #30 @ $1C76DC - STRING #30 @ $1C5FD5
 
 #WRITE(GBA,$1C76DC)
-<CONTROL_CODE><$01><$02>ム5なあ! ジェッターズの おにいちゃんだ!<LINE>
-ここは ボルケシティよ<NEWBOX>
-ここから ひがしにいくと もっとおおきな<LINE>
-ラバシティが あるのよ<NEWBOX>
-‥‥でも ラバシティは いま<LINE>
-たいへんなことに なっているの‥‥<END>
+<CONTROL_CODE><$01><$02><$62><$06><$1F>Ah! You're the leader of the Jetters!<LINE>
+Welcome to Ember City.<NEWBOX>
+Just to the east of here is the much<LINE>
+larger Lava City.<NEWBOX>
+However, it seems like right now<LINE>
+something dangerous is going on there...<END>
 
 //POINTER #31 @ $1C76E0 - STRING #31 @ $1C603D
 
 #WRITE(GBA,$1C76E0)
-あ! ジェッターズの おにいちゃんだ!<LINE>
-ここは ボルケシティよ<NEWBOX>
-ここから ひがしにいくと もっとおおきな<LINE>
-ラバシティが あるのよ<END>
+Ah! You're the leader of the Jetters!<LINE>
+Welcome to Ember City.<NEWBOX>
+Just to the east of here is the much<LINE>
+larger Lava City.<NEWBOX>
+
 
 //POINTER #32 @ $1C76E4 - STRING #32 @ $1C607E
 
 #WRITE(GBA,$1C76E4)
-<CONTROL_CODE><$01><$02>ム5ぬきたの かざんちたいに クロノはかせの<LINE>
-けんきゅうじょが あるんだ<NEWBOX>
-なんでも タイムマシンけんきゅうの けんいで<LINE>
-さいきん あたらしい はつめいをしたとか‥‥<NEWBOX>
-やっぱり ヒゲヒゲだんは<LINE>
-タイムマシンを ねらってきたんだろうか‥‥<END>
+<CONTROL_CODE><$01><$02><$62><$06><$21>Dr. Chronos' laboratory is located in<LINE>
+the north portion of the volcano area.<NEWBOX>
+He's an expert on time machines, and<LINE>
+recently made a big breakthrough.<NEWBOX>
+The Hige Hige Bandits must be trying<LINE>
+to get their hands on a time machine!<END>
 
 //POINTER #33 @ $1C76E8 - STRING #33 @ $1C60F7
 
 #WRITE(GBA,$1C76E8)
-ヒゲヒゲだんは でていったけど まだ<LINE>
-ラバシティには モンスターが いるらしいよ<END>
+The Hige Hige Bandits are gone, but<LINE>
+some monsters still roam the city.<END>
 
 //POINTER #34 @ $1C76EC - STRING #34 @ $1C6120
 
 #WRITE(GBA,$1C76EC)
-ついさいきん ひがしの ラバシティが<LINE>
-ヒゲヒゲだんに せんりょうされてしまったの<NEWBOX>
-かざんちたいにある クロノはかせの<LINE>
-けんきゅうじょも おそわれたそうよ<NEWBOX>
-このボルケシティも おそわれないか<LINE>
-しんぱいだわ‥‥‥‥<END>
+Just recently, Lava City to the east<LINE>
+was occupied by the Hige Hige Bandits!<NEWBOX>
+They've also attacked the Chronos <LINE>
+Laboratory in the volcano area.<NEWBOX>
+Even though us here seem to be fine<LINE>
+for now, I'm still worried...<END>
 
 //POINTER #35 @ $1C76F0 - STRING #35 @ $1C618A
 
 #WRITE(GBA,$1C76F0)
-<CONTROL_CODE><$01><$02>ム5はラバシティでは おおくの ひとびとが<LINE>
-ビルのなかに とらわれているらしい‥‥<END>
+<CONTROL_CODE><$01><$02><$62><$06><$24>It seems those still in Lava City are<LINE>
+are being held prisoner in buildings.<END>
 
 //POINTER #36 @ $1C76F4 - STRING #36 @ $1C61B7
 
 #WRITE(GBA,$1C76F4)
-しかし なぜ ラバシティが<LINE>
-ヒゲヒゲだんに おそわれたんじゃろうか‥‥<END>
+Just what was the reason that the Hige<LINE>
+Hige Bandits attacked Lava City?<END>
 
 //POINTER #37 @ $1C76F8 - STRING #37 @ $1C61DB
 
 #WRITE(GBA,$1C76F8)
-ラバシティの まちなかは モンスターが<LINE>
-うろついていて きけんらしいよ<END>
+There's been a monster hanging around<LINE>
+in Lava City. It seems dangerous.<END>
 
 //POINTER #38 @ $1C76FC - STRING #38 @ $1C61FF
 
 #WRITE(GBA,$1C76FC)
-クロノはかせの かいはつした<LINE>
-タイムドライバーってのは タイムマシンの<NEWBOX>
-エンジンぶぶんに なるものらしいよ<END>
+The Time Driver that Dr. Chronos<LINE>
+developed is actually an engine for<NEWBOX>
+a time machine!<END>
 
 //POINTER #39 @ $1C7700 - STRING #39 @ $1C6235
 
 #WRITE(GBA,$1C7700)
-ごうせいやで いろいろ ごうせいしていると<LINE>
-たまに ゲームソフトが できるよね<NEWBOX>
-アルバムは けっこう うまった?<LINE>
-なかには レアなソフトも あるらしいよ<END>
+//ごうせいやで いろいろ ごうせいしていると<LINE>
+//たまに ゲームソフトが できるよね<NEWBOX>
+Game Data is mainly obtained through<LINE>
+the process of synthesis.<NEWBOX>
+//アルバムは けっこう うまった?<LINE>
+//なかには レアなソフトも あるらしいよ<END>
+How is your album coming along? I've<LINE>
+heard some Game Data are quite rare.<END>
+
 
 //POINTER #40 @ $1C7704 - STRING #40 @ $1C6282
 
 #WRITE(GBA,$1C7704)
-ここ ラバシティは ひがしエリアと<LINE>
-にしエリアに わかれているんだ<NEWBOX>
-このたてものの みぎにある<LINE>
-れんらくビルを ぬけると ひがしエリアだよ<NEWBOX>
-ただ れんらくビルの いりぐちは<LINE>
-ほのおで ふさがれてしまって はいれないんだ<END>
+This is where the east and west sides<LINE>
+of Lava City are separated.<NEWBOX>
+This building connects both sides and<LINE>
+can usually be used to cross over.<NEWBOX>
+But the building is full of flames now,<LINE>
+so it might not be possible...<END>
 
 //POINTER #41 @ $1C7708 - STRING #41 @ $1C62F0
 
 #WRITE(GBA,$1C7708)
-このビルの ちかくの つうろを ぬけると<LINE>
-カルデラこに でるわ<NEWBOX>
-カルデラこの ちかには<LINE>
-ふしぎな みずの しずくが あるそうよ<NEWBOX>
-そのしずくで つくったボムなら<LINE>
-まちなかの ほのおを けせるかも‥‥<END>
+This building has an underground<LINE>
+passage that leads to Caldera Lake.<NEWBOX>
+//カルデラこの ちかには<LINE>
+//ふしぎな みずの しずくが あるそうよ<NEWBOX>
+Beneath Caldera Lake there is said<LINE>
+to be a mysterious drop of water.<NEWBOX>
+A bomb made from that water may be<LINE>
+able to extinguish flames!<END>
 
 //POINTER #42 @ $1C770C - STRING #42 @ $1C6353
 
 #WRITE(GBA,$1C770C)
-いらっしゃいませ しょうひんを<LINE>
-てにとって ごらんください<END>
+Welcome! Please check out<LINE>
+my merchandise!<END>
 
 //POINTER #43 @ $1C7710 - STRING #43 @ $1C6371
 
 #WRITE(GBA,$1C7710)
-このビルは ヒゲヒゲだんが みおとしたのか<LINE>
-おそわれなかったんだ<NEWBOX>
-もしかしたら ほかにも ヤツらのめをのがれた<LINE>
-たてものが あるかもしれないよ<NEWBOX>
-いまごろ みんな どうしてるのかなぁ‥‥<END>
+The Hige Hige Bandits didn't attack<LINE>
+this building. It seems they missed it.<NEWBOX>
+Maybe that means there are other<LINE>
+buildings that also weren't attacked.<NEWBOX>
+I wonder how everyone else is doing...<END>
 
 //POINTER #44 @ $1C7714 - STRING #44 @ $1C63CE
 
 #WRITE(GBA,$1C7714)
-<CONTROL_CODE><$01><$02>ム5もまちの ひがしエリアの<LINE>
-いちばん おおきなビルが テレビきょくだよ<NEWBOX>
-テレビきょくに とらわれている<LINE>
-キャラボンの とくしゅのうりょくは<NEWBOX>
-おいた ボムを はやく<LINE>
-ばくはつさせることが できるらしい<END>
+<CONTROL_CODE><$01><$02><$62><$06><$2D>The biggest building in the city's <LINE>
+east side is the TV station.<NEWBOX>
+Inside of that TV Station is a Karabon<LINE>
+with a special ability that<NEWBOX>
+//おいた ボムを はやく<LINE>
+//ばくはつさせることが できるらしい<END>
+can make your bombs detonate<LINE>
+very quickly.<END>
+
 
 //POINTER #45 @ $1C7718 - STRING #45 @ $1C6436
 
 #WRITE(GBA,$1C7718)
-まちの ひがしエリアの<LINE>
-いちばん おおきなビルが テレビきょくだよ<END>
+The biggest building in the city's east<LINE>
+side is the TV station.<END>
 
-//POINTER #46 @ $1C771C - STRING #46 @ $1C6458
+////POINTER #46 @ $1C771C - STRING #46 @ $1C6458
 
 #WRITE(GBA,$1C771C)
-クロノけんきゅうじょが おそわれたとき<LINE>
-キャラボンが ラバシティに にげてきたの<NEWBOX>
-でも そのキャラボンも このまちで<LINE>
-ヒゲヒゲだんに つかまって しまったそうよ<END>
+When Dr. Chronos' lab was attacked<LINE>
+a Karabon escaped to Lava City.<NEWBOX>
+However, after coming to the city it<LINE>
+was captured by the Hige Hige Bandits.<END>
 
 //POINTER #47 @ $1C7720 - STRING #47 @ $1C64A9
 
 #WRITE(GBA,$1C7720)
-てきにも ぞくせいを もつものが いるぞ<LINE>
-ボムと てきの ぞくせいの<NEWBOX>
-くみあわせによっては あたえる ダメージが<LINE>
-ふえたり へったり するそうじゃ<NEWBOX>
-ダメージを あたえられないときは<LINE>
-べつの ボムを ためしてみることじゃ<END>
+//てきにも ぞくせいを もつものが いるぞ<LINE>
+//ボムと てきの ぞくせいの<NEWBOX>
+Some enemies possess elemental<LINE>
+attributes. Depending on the bomb<NEWBOX>
+you attack those enemies with, damage<LINE>
+delt may either increase or decrease.<NEWBOX>
+If one type of bomb doesn't deal any<LINE>
+damage, try out another type!<END>
 
 //POINTER #48 @ $1C7724 - STRING #48 @ $1C6517
 
 #WRITE(GBA,$1C7724)
-<CONTROL_CODE><$01><$02>ム5らヒゲヒゲだんに とらわれた ひとたちは<LINE>
-3つのビルに とじこめられて いるらしい<END>
+<CONTROL_CODE><$01><$02><$62><$06><$31>It seems the captured people are being<LINE>
+held hostage inside of three buildings.<END>
 
 //POINTER #49 @ $1C7728 - STRING #49 @ $1C6546
 
 #WRITE(GBA,$1C7728)
-ヒゲヒゲだんに とらわれていた ひとたちは<LINE>
-ぜんいん ぶじに かえってこられた らしいよ<END>
+All of the people who were captured by<LINE>
+those bandits appear to be safe!<END>
 
 //POINTER #50 @ $1C772C - STRING #50 @ $1C6573
 
 #WRITE(GBA,$1C772C)
-ここは ラバシティの にしエリアじゃ<NEWBOX>
-きたにある ちかつうろを とおって<LINE>
-カルデラこに ぬけられるんじゃ<NEWBOX>
-しかし その つうろの かんりにんも<LINE>
-ヤツらに つかまってしまってな‥‥<END>
+This is Lava City's west side.<NEWBOX>
+The underground passage to the north<LINE>
+will take you to Caldera Lake.<NEWBOX>
+However, the overseer of the passage<LINE>
+was captured by those bandits...<END>
 
 //POINTER #51 @ $1C7730 - STRING #51 @ $1C65CD
 
 #WRITE(GBA,$1C7730)
-<CONTROL_CODE><$16><$06>モおにいちゃん やけどだらけね<LINE>
-ちょっと じっとしていてね‥‥<NEWBOX>
-<CONTROL_CODE><$11><$E0>くよハイ これでだいじょうぶ<LINE>
-あんまり ムリしちゃ ダメよ<END>
+<CONTROL_CODE><$16><$06>Mister, it appears you've been burned.<LINE>
+Hold still just a moment...<NEWBOX>
+<CONTROL_CODE><$11><$E0>Alright, you're good to go!<LINE>
+Don't overdo it now.<END>
 
 //POINTER #52 @ $1C7734 - STRING #52 @ $1C6611
 
 #WRITE(GBA,$1C7734)
-この にしエリアの つうろからは<LINE>
-カルデラこにしか でられないわよ<NEWBOX>
-クロノけんきゅうじょのある かざんエリアへは<LINE>
-まちの ひがしエリアの つうろから でるのよ<END>
+A passage on the west side of the city<LINE>
+will take you to Caldera Lake.<NEWBOX>
+You can get to the volcano area<LINE>
+through a passage on the east side.<END>
 
 //POINTER #53 @ $1C7738 - STRING #53 @ $1C6661
 
 #WRITE(GBA,$1C7738)
-クロノけんきゅうじょへ いくには<LINE>
-この ようがんちたいを ぬけていくんだよ<NEWBOX>
-ようがんは いっていの タイミングで<LINE>
-ながれているから<NEWBOX>
-タイミングを みはからって<LINE>
-いっきに かけぬけるんだよ<END>
+In order to reach Chronos Laboratory,<LINE>
+you must traverse this lava field.<NEWBOX>
+The lava here always flows in a<LINE>
+set pattern...<NEWBOX>
+So watch closely and make your<LINE>
+movements carefully!<END>
 
 //POINTER #54 @ $1C773C - STRING #54 @ $1C66BF
 
 #WRITE(GBA,$1C773C)
-<CONTROL_CODE><$00><$06>を<CONTROL_CODE><$01><$02>ユ5をあ ジェッターズさん!<LINE>
-ハイ これ おやくに たててください(HEART)<NEWBOX>
-ボンバーマンは ハートを<LINE>
-<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$02>ユ<CONTROL_CODE><$0E><$01>てにいれた!<NEWBOX>
-ヒゲヒゲだんなんか やっつけて くださいね!<END>
+<GET_ENEMY_NAME><$06><$37><CONTROL_CODE><$01><$02><$66><$06><$37>Ah, Mr. Bomberman! Take this, it<LINE>
+should help you on your journey.(HEART)<NEWBOX>
+Bomberman obtained a<LINE>
+<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$02><$66><CONTROL_CODE><$0E><$01>Heart!<NEWBOX>
+Please defeat the Hige Hige Bandits!<END>
 
 //POINTER #55 @ $1C7740 - STRING #55 @ $1C671E
 
 #WRITE(GBA,$1C7740)
-<CONTROL_CODE><$16><$06>んあ! けがを しているじゃないですか!<LINE>
-ちょっと じっとしていてくださいね‥‥<NEWBOX>
-<CONTROL_CODE><$11><$E0>くよハイ これで だいじょうび!<LINE>
-ヒゲヒゲだんなんか やっつけて くださいね!<END>
+<CONTROL_CODE><$16><$06>Hey! You're not injured, are you?<LINE>
+If you could sit still for a second...<NEWBOX>
+<CONTROL_CODE><$11><$E0>And done! All better!<LINE>
+Please defeat the Hige Hige Bandits!<END>
 
 //POINTER #56 @ $1C7744 - STRING #56 @ $1C6775
 
 #WRITE(GBA,$1C7744)
-あ ジェッターズさん!<LINE>
-ヒゲヒゲだんなんか やっつけて くださいね!<END>
+Ah, you're with the Jetters! Please get<LINE>
+rid of the Hige Hige Bandits.<END>
 
 //POINTER #57 @ $1C7748 - STRING #57 @ $1C6798
 
 #WRITE(GBA,$1C7748)
-こんなときに こんなところに くるなんて<LINE>
-よっぽど ヒマなんだな‥‥‥‥‥‥‥<NEWBOX>
-‥‥って アンタ ジェッターズじゃないか!<LINE>
-クロノはかせの けんきゅうじょは<NEWBOX>
-この かざんちたいを ずっと にしに<LINE>
-すすんだところに あるよ<NEWBOX>
-かざんちたいには ほのおが きかない<LINE>
-モンスターが おおいから きをつけてくれ!<END>
+Why are you here at a time like this?<LINE>
+You must have a lot of free time...<NEWBOX>
+...Ah! You're one of the Jetters, aren't<LINE>
+//クロノはかせの けんきゅうじょは<NEWBOX>
+you? Doctor Chronos' laboratory is<NEWBOX>
+//この かざんちたいを ずっと にしに<LINE>
+//すすんだところに あるよ<NEWBOX>
+in the far west part of this volcano<LINE>
+area...<NEWBOX>
+//かざんちたいには ほのおが きかない<LINE>
+//モンスターが おおいから きをつけてくれ!<END>
+There are many monsters here that<LINE>
+can't be hurt by fire, so watch out!<END>
+
 
 //POINTER #58 @ $1C774C - STRING #58 @ $1C6830
 
 #WRITE(GBA,$1C774C)
-きたの かざんちたいへ ぬける つうろは<LINE>
-このまちの しちょうだけが あけられるんだ<NEWBOX>
-いまは アイドルの アカネちゃんが<LINE>
-いちにち しちょうだから かのじょだけが<NEWBOX>
-つうろを あけしめ できるんだよ<END>
+Only the mayor can open the passage<LINE>
+leading to the north volcano area.<NEWBOX>
+Right now the idol Akane is the acting<LINE>
+mayor for a day, so only she<NEWBOX>
+will be able to open the passage.<END>
 
 //POINTER #59 @ $1C7750 - STRING #59 @ $1C6893
 
 #WRITE(GBA,$1C7750)
-<CONTROL_CODE><$02><$02>き5ぇ<CONTROL_CODE><$02><$01>す5ぇ<CONTROL_CODE><$02><$01>せ5ぇ<CONTROL_CODE><$02><$01>そ5ぇ<CONTROL_CODE><$02><$01>た5ぇ<CONTROL_CODE><$02><$01>ち5ぇおとなりの ビルの ゲームセンター<NEWBOX>
-やっと ぜんぶの ゲームが<LINE>
-あそべるように なったよ!<END>
+<CONTROL_CODE><$02><$02><$11><$06><$3C><CONTROL_CODE><$02><$01><$17><$06><$3C><CONTROL_CODE><$02><$01><$18><$06><$3C><CONTROL_CODE><$02><$01><$19><$06><$3C><CONTROL_CODE><$02><$01><$1A><$06><$3C><CONTROL_CODE><$02><$01><$1B><$06><$3C>Next door is the Game Center.<NEWBOX>
+There you can finally play all of<LINE>
+the Game Data you have obtained!<END>
 
 //POINTER #60 @ $1C7754 - STRING #60 @ $1C68E5
 
 #WRITE(GBA,$1C7754)
-すぐ となりの ビルに<LINE>
-ゲームセンターが あるんだけど<NEWBOX>
-あそべない ゲームがあるんだ‥‥<LINE>
-そのうち あそべるように なるのかな?<END>
+The building right next to here is the<LINE>
+Game Center. However there are<NEWBOX>
+some games that are unplayable. I<LINE>
+wonder if it's possible to unlock them?<END>
 
 //POINTER #61 @ $1C7758 - STRING #61 @ $1C6926
 
 #WRITE(GBA,$1C7758)
-いらっしゃい ここは ゲームセンターだよ!<LINE>
-どのゲームも いっかい 10ゴールド<NEWBOX>
-きろくを こうしんすると<LINE>
-しょうきんを かくとく できるよ!<END>
+Welcome to the Game Center!<LINE>
+It costs 10 Gold to play a game.<NEWBOX>
+If you beat the high score you can<LINE>
+win a prize!<END>
 
 //POINTER #62 @ $1C775C - STRING #62 @ $1C696E
 
 #WRITE(GBA,$1C775C)
-いらっしゃい 2かいは ボスバトルだよ!<LINE>
-どのゲームも いっかい 10ゴールド<NEWBOX>
-そのエリアの コロコロを もっていれば<LINE>
-いままで たおしたボスと バトルできるよ<END>
+//いらっしゃい 2かいは ボスバトルだよ!<LINE>
+//どのゲームも いっかい 10ゴールド<NEWBOX>
+Welcome to the Boss Battle floor!<LINE>
+It costs 10 Gold per try.<NEWBOX><NEWBOX>
+You can re-fight any of the bosses who<LINE>
+you own CoroCoro Comics for.<END>
 
 //POINTER #63 @ $1C7760 - STRING #63 @ $1C69BF
 
 #WRITE(GBA,$1C7760)
-きたの かざんちたいにある<LINE>
-クロノはかせの けんきゅうじょには<NEWBOX>
-ボムの ばくはつするじかんを あやつる<LINE>
-キャラボンが いるそうよ<END>
+Dr. Chronos' laboratory is in the north<LINE>
+part of the volcano area. There you<NEWBOX>
+can find a Karabon that can change how<LINE>
+quickly your bombs explode.<END>
 
 //POINTER #64 @ $1C7764 - STRING #64 @ $1C6A00
 
 #WRITE(GBA,$1C7764)
-おっ たすけてくれるのか<LINE>
-ありがとう!<NEWBOX>
-こんな きけんなところに<LINE>
-はいってくるなんて<NEWBOX>
-アンタ ゆうきが あるな‥‥<LINE>
-よし アンタの ちからになるぜ!<END>
+Ah! You came to save me, did you?<LINE>
+Thank you!<NEWBOX>
+I can't believe you came to such a<LINE>
+dangerous place.<NEWBOX>
+You're really brave... I need to learn to<LINE>
+be more like that myself!<END>
 
 //POINTER #65 @ $1C7768 - STRING #65 @ $1C6A4B
 
 #WRITE(GBA,$1C7768)
-キャラボン ドーラが<LINE>
-<CONTROL_CODE><$22><$00><CONTROL_CODE><$12><$5C>なかまになった!<NEWBOX>
-オレの のうりょくは せっかちボム<LINE>
-ボムが はやく ばくはつするぜ<NEWBOX>
-オレを セットするかい?<LINE>
-    はい       いいえ<CONTROL_CODE><$05><$03>1い15ア5イ<CONTROL_CODE><$0D><$06>オレのいた クロノけんきゅうじょが<LINE>
-ヒゲヒゲだんに おそわれたんで<NEWBOX>
-なんとか たすけをよぼうと<LINE>
-だっしゅつ してきたんだ<NEWBOX>
-だが あいにく ここでも<LINE>
-ヤツらに つかまっちまってな‥‥<NEWBOX>
-アイドルの アカネは このビルの<LINE>
-いちばんうえに とらわれているらしい<NEWBOX>
-まずは かのじょだ<LINE>
-いそいで たすけにいこうぜ!<END>
+Became friends with the Karabon,<LINE>
+<CONTROL_CODE><$22><$00><CONTROL_CODE><$12><$5C>Dora!<NEWBOX>
+My ability is the Hasty Bomb. It will<LINE>
+cause your bombs to detonate faster.<NEWBOX>
+Set me as the active Karabon?<LINE>
+    Yes       No<CONTROL_CODE><$05><$03><$02><$0C><$02><CONTROL_CODE><$0D><$06>I was at the Chronos Laboratory when<LINE>
+the Hige Hige Bandits attacked.<NEWBOX>
+//なんとか たすけをよぼうと<LINE>
+//だっしゅつ してきたんだ<NEWBOX>
+I was hoping to escape and run<LINE>
+to call for help. However...<NEWBOX>
+Unfortunately those bandits captured<LINE>
+me and trapped me here!<NEWBOX>
+It seems that the idol Akane is being<LINE>
+held on the top floor of this building.<NEWBOX>
+We should go and save her as quickly<LINE>
+as possible!<END>
 
 //POINTER #66 @ $1C776C - STRING #66 @ $1C6AAE
 
 #WRITE(GBA,$1C776C)
-<CONTROL_CODE><$0D><$06>オレのいた クロノけんきゅうじょが<LINE>
-ヒゲヒゲだんに おそわれたんで<NEWBOX>
-なんとか たすけをよぼうと<LINE>
-だっしゅつ してきたんだ<NEWBOX>
-だが あいにく ここでも<LINE>
-ヤツらに つかまっちまってな‥‥<NEWBOX>
-アイドルの アカネは このビルの<LINE>
-いちばんうえに とらわれているらしい<NEWBOX>
-まずは かのじょだ<LINE>
-いそいで たすけにいこうぜ!<END>
+<CONTROL_CODE><$0D><$06>I was at the Chronos Laboratory when<LINE>
+the Hige Hige Bandits attacked.<NEWBOX>
+//なんとか たすけをよぼうと<LINE>
+//だっしゅつ してきたんだ<NEWBOX>
+I was hoping to escape and run<LINE>
+to call for help. However...<NEWBOX>
+Unfortunately those bandits captured<LINE>
+me and trapped me here!<NEWBOX>
+It seems that the idol Akane is being<LINE>
+held on the top floor of this building.<NEWBOX>
+We should go and save her as quickly<LINE>
+as possible!<END>
+
 
 //POINTER #67 @ $1C7770 - STRING #67 @ $1C6AB1
 
 #WRITE(GBA,$1C7770)
-オレのいた クロノけんきゅうじょが<LINE>
-ヒゲヒゲだんに おそわれたんで<NEWBOX>
-なんとか たすけをよぼうと<LINE>
-だっしゅつ してきたんだ<NEWBOX>
-だが あいにく ここでも<LINE>
-ヤツらに つかまっちまってな‥‥<NEWBOX>
-アイドルの アカネは このビルの<LINE>
-いちばんうえに とらわれているらしい<NEWBOX>
-まずは かのじょだ<LINE>
-いそいで たすけにいこうぜ!<END>
+I was at the Chronos Laboratory when<LINE>
+the Hige Hige Bandits attacked.<NEWBOX>
+//なんとか たすけをよぼうと<LINE>
+//だっしゅつ してきたんだ<NEWBOX>
+I was hoping to escape and run<LINE>
+to call for help. However...<NEWBOX>
+Unfortunately those bandits captured<LINE>
+me and trapped me here!<NEWBOX>
+It seems that the idol Akane is being<LINE>
+held on the top floor of this building.<NEWBOX>
+We should go and save her as quickly<LINE>
+as possible!<END>
+
 
 //POINTER #68 @ $1C7774 - STRING #68 @ $1C6B49
 
 #WRITE(GBA,$1C7774)
-<CONTROL_CODE><$01><$01>ゆ5エクロノけんきゅうじょ<LINE>
-かんけいしゃいがい たちいり きんし<END>
+<CONTROL_CODE><$01><$01><$2F><$06><$45>Dr. Chronos' Laboratory.<LINE>
+Authorized personnel only.<END>
 
-//POINTER #69 @ $1C7778 - STRING #69 @ $1C6B6D
+////POINTER #69 @ $1C7778 - STRING #69 @ $1C6B6D
 
 #WRITE(GBA,$1C7778)
-クロノけんきゅうじょ<LINE>
-かんけいしゃいがい たちいり きんし<NEWBOX>
-なんで こんなところに けんきゅうじょが<LINE>
-たっているか しってるかい?<NEWBOX>
-かざんの ちねつを りようするためなんだ<LINE>
-‥‥って このまえ はかせが いってたよ<END>
+Dr. Chronos' Laboratory<LINE>
+Authorized personnel only.<NEWBOX>
+Do you know why the laboratory was<LINE>
+built in a place like this?<NEWBOX>
+The Doctor said it's to take advantage<LINE>
+of the geographical terrain here.<END>
 
 //POINTER #70 @ $1C777C - STRING #70 @ $1C6BD9
 
 #WRITE(GBA,$1C777C)
-<CONTROL_CODE><$01><$01>ゆ5エ‥‥‥‥‥‥‥‥‥‥‥‥?<END>
+<CONTROL_CODE><$01><$01><$2F><$06><$45>........................?<END>
 
 //POINTER #71 @ $1C7780 - STRING #71 @ $1C6BED
 
 #WRITE(GBA,$1C7780)
-‥‥‥‥‥‥‥‥‥‥‥‥<LINE>
-ボンバーマンは カンバンをたてた!<END>
+........................<LINE>
+Bomberman built a Signpost!<END>
 
 //POINTER #72 @ $1C7784 - STRING #72 @ $1C6C0C
 
 #WRITE(GBA,$1C7784)
-<CONTROL_CODE><$01><$01>ゆ5クこのさき クロノけんきゅうじょ<END>
+<CONTROL_CODE><$01><$01><$2F><$06><$49>Up ahead is the Chronos Laboratory.<END>
 
 //POINTER #73 @ $1C7788 - STRING #73 @ $1C6C22
 
 #WRITE(GBA,$1C7788)
-このさき クロノけんきゅうじょ<NEWBOX>
-ふー あっつい あっつい<LINE>
-たまに はねるほのおで こげそうに なるよ<END>
+Up ahead is the Chronos Laboratory.<NEWBOX>
+Phew! It's really really hot! Watch out<LINE>
+for fire that occasionally jumps up!<END>
 
 //POINTER #74 @ $1C778C - STRING #74 @ $1C6C55
 
 #WRITE(GBA,$1C778C)
-<CONTROL_CODE><$01><$01>ゆ5コここは カルデラこ<LINE>
-キケン! ゆうえい きんし<END>
+<CONTROL_CODE><$01><$01><$2F><$06><$4B>This is Caldera Lake.<LINE>
+Danger! No swimming.<END>
 
 //POINTER #75 @ $1C7790 - STRING #75 @ $1C6C73
 
 #WRITE(GBA,$1C7790)
-ここは カルデラこ<LINE>
-キケン! ゆうえい きんし<NEWBOX>
-そのエリアの ボスを たおした あと<LINE>
-たいおうする コロコロを もっていると<NEWBOX>
-ラバシティの ゲームセンターで<LINE>
-ボスバトルの ミニゲームを あそべるよ<END>
+This is Caldera Lake<LINE>
+Danger! No swimming.<NEWBOX>
+//そのエリアの ボスを たおした あと<LINE>
+//たいおうする コロコロを もっていると<NEWBOX>
+After you've defeated an area's boss,<LINE>
+
+and if you own their CoroCoro Comic<NEWBOX>
+You can play the Boss Battle minigame<LINE>
+at the Lava City Game Center!<END>
 
 //POINTER #76 @ $1C7794 - STRING #76 @ $1C6CD6
 
 #WRITE(GBA,$1C7794)
-‥‥‥‥‥‥‥‥‥‥‥‥?<END>
+........................?<END>
 
 //POINTER #77 @ $1C7798 - STRING #77 @ $1C6CE4
 
 #WRITE(GBA,$1C7798)
-‥‥‥‥‥‥‥‥‥‥‥‥<LINE>
-ボンバーマンは カンバンをたてた!<END>
+........................<LINE>
+Bomberman built a Signpost!<END>
 
 //POINTER #78 @ $1C779C - STRING #78 @ $1C6D03
 
 #WRITE(GBA,$1C779C)
-<CONTROL_CODE><$01><$01>ゆ5セここより かざんエリア<LINE>
-しちょうの きょかなく たちいらないこと!<END>
+<CONTROL_CODE><$01><$01><$2F><$06><$4F>Ahead is the volcano area. You cannot<LINE>
+enter without the mayor's permission!<END>
 
 //POINTER #79 @ $1C77A0 - STRING #79 @ $1C6D2B
 
 #WRITE(GBA,$1C77A0)
-ここより かざんエリア<LINE>
-しちょうの きょかなく たちいらないこと!<NEWBOX>
-‥‥つか ラバシティの しちょうさん<LINE>
-ひとりで にげたじゃんか!<END>
+Ahead is the volcano area. You cannot<LINE>
+enter without mayor's permission!<END>
+...Except the Lava City Mayor ran away<LINE>
+and ditched us, didn't he?<END>
 
 //POINTER #80 @ $1C77A4 - STRING #80 @ $1C6D6E
 
 #WRITE(GBA,$1C77A4)
-<CONTROL_CODE><$01><$01>ゆ5タこれより ヒバシリロード<LINE>
-ふきだす ほのおに ちゅうい<END>
+<CONTROL_CODE><$01><$01><$2F><$06><$51>Ahead is the Flame Pillar Pass. Watch<LINE>
+out for the raising pillars of fire!<END>
 
 //POINTER #81 @ $1C77A8 - STRING #81 @ $1C6D90
 
 #WRITE(GBA,$1C77A8)
-これより ヒバシリロード<LINE>
-ふきだす ほのおに ちゅうい<NEWBOX>
-ところで キミは どのキャラボンが<LINE>
-おきにいりだい?<NEWBOX>
-うーんと ボクは エレファンが すきだな!<END>
+Ahead is the Flame Pillar Pass. Watch<LINE>
+out for the raising pillars of fire!<NEWBOX>
+By the way, who would you say your<LINE>
+favorite Karabon is?<NEWBOX>
+Well, my favorite is the Elifan!<END>
 
 //POINTER #82 @ $1C77AC - STRING #82 @ $1C6DDD
 
 #WRITE(GBA,$1C77AC)
-<CONTROL_CODE><$01><$01>ゆ5ツラバシティへ ようこそ!<END>
+<CONTROL_CODE><$01><$01><$2F><$06><$53>Welcome to Lava City!<END>
 
 //POINTER #83 @ $1C77B0 - STRING #83 @ $1C6DF0
 
 #WRITE(GBA,$1C77B0)
-ラバシティへ ようこそ!<NEWBOX>
-ヒゲヒゲだんは やっつけたのに なんで まだ<LINE>
-モンスターが あるいてるのかなぁ‥‥<END>
+Welcome to Lava City!<NEWBOX>
+Even though those bandits are gone,<LINE>
+there are still some monsters around.<END>
 
 //POINTER #84 @ $1C77B4 - STRING #84 @ $1C6E27
 
 #WRITE(GBA,$1C77B4)
-<CONTROL_CODE><$01><$01>ゆ5トラバテレビ ほんしゃ<END>
+<CONTROL_CODE><$01><$01><$2F><$06><$55>Lava Television - Main Office<END>
 
 //POINTER #85 @ $1C77B8 - STRING #85 @ $1C6E38
 
 #WRITE(GBA,$1C77B8)
-ラバテレビ ほんしゃ<NEWBOX>
-すいよう よる 6じより<LINE>
-こうひょう ほうえいちゅう!<END>
+Lava Television - Main Office<NEWBOX>
+We'll be live at 6 o'clock on Wednesday<LINE>
+with an official announcement!<END>
 
 //POINTER #86 @ $1C77BC - STRING #86 @ $1C6E5F
 
 #WRITE(GBA,$1C77BC)
-<CONTROL_CODE><$01><$02>お5リおぉ ジェッターズか!<LINE>
-ありがとう たすかったよ<NEWBOX>
-だが‥‥‥‥<LINE>
-いっぽ おそかったようだ<NEWBOX>
-ヤツらは ワシのはつめいした<LINE>
-タイムドライバーを つかって<NEWBOX>
-こだいの ノンビリせいに<LINE>
-タイムワープ してしまった!<NEWBOX>
-おそらく せいぎょクリスタルごと<LINE>
-こうせんほうを うばってくる つもりだ<NEWBOX>
-ここに タイムドライバーの<LINE>
-しさくひんが ひとつある<NEWBOX>
-ヤツらに みつからないように<LINE>
-かくして おいたものだ<NEWBOX>
-これを つかって<LINE>
-こだいノンビリせいに いき<NEWBOX>
-ヤツらの けいかくを そし してくれ<LINE>
-たのんだぞ!<END>
+<CONTROL_CODE><$01><$02><$0F><$06><$69>Oh, you're from the Jetters!<LINE>
+Thanks, you really saved me.<NEWBOX>
+However... <LINE>
+You were just a little too slow.<NEWBOX>
+Those bandits stole my invention, the<LINE>
+Time Driver, and used it<NEWBOX>
+to warp back in time to the planet<LINE>
+Nonbiri of the past!<NEWBOX>
+Most likely, their goal is to find the<LINE>
+Beam Cannon's Control Crystal.<NEWBOX>
+It looks like the original prototype of<LINE>
+the Time Driver is still here though.<NEWBOX>
+I guess that those bandits didn't see<LINE>
+it and left it behind.<NEWBOX>
+Use the prototype to chase those<LINE>
+bandits to ancient Nonbiri!<NEWBOX>
+You have to put an end to what they're<LINE>
+plotting! We're counting on you!<END>
 
 //POINTER #87 @ $1C77C0 - STRING #87 @ $1C6F58
 
 #WRITE(GBA,$1C77C0)
-ヒゲ! ヒゲヒゲ ヒゲヒゲヒゲ!<LINE>
-ヒゲヒゲ ヒゲヒゲ!<NEWBOX>
-ヒゲヒゲ‥‥<LINE>
-ヒゲーーーーーーーーーーーーーーー!<END>
+Hige! Higehige Higehigehige!<LINE>
+Higehige Higehige!<NEWBOX>
+Higehige...<LINE>
+Higeeeeeeeeeeeeeeeeee!<END>
 
 //POINTER #88 @ $1C77C4 - STRING #88 @ $1C6F8E
 
 #WRITE(GBA,$1C77C4)
-オイ プチラ!<LINE>
-だいじょうぶだったか?<NEWBOX>
-あ! ドーラ! ありがとう たすかった~<LINE>
-もう だめかとおもったよ<NEWBOX>
-たすけにくるのが おくれて すまない<LINE>
-クロノはかせは ぶじか?<NEWBOX>
-わからない ボクは ずっとここに<LINE>
-とじこめられて いたから‥‥<NEWBOX>
-たぶん はかせは けんきゅうじょの<LINE>
-いちばんおくに とらわれているとおもう<NEWBOX>
-ボンバーマンさん!<LINE>
-このおくにある きかいで<NEWBOX>
-けんきゅうじょの いりぐちの<LINE>
-とびらを あけて<NEWBOX>
-クロノはかせを たすけに いきましょう!<LINE>
-ボクも あなたに きょうりょくします<END>
+Hey, Puchira!<LINE>
+Are you alright?<NEWBOX>
+Ah, Dora! Thanks, you saved me!<LINE>
+I really didn't know what to do...<NEWBOX>
+I'm sorry it took so long to get here.<LINE>
+Is Dr. Chronos safe?<NEWBOX>
+I'm not sure. I've been locked up this<LINE>
+entire time...<NEWBOX>
+//たぶん はかせは けんきゅうじょの<LINE>
+//いちばんおくに とらわれているとおもう<NEWBOX>
+I think the Doctor is being held<LINE>
+captive somewhere in the laboratory.<NEWBOX>
+Mr. Bomberman! There is a<LINE>
+//このおくにある きかいで<NEWBOX>
+mechanism somewhere this building<NEWBOX>
+that can open up the front door of the<LINE>
+Laboratory. Find it, and then<NEWBOX>
+let's go and save Dr. Chronos!<LINE>
+I'll help you out too!<END>
 
 //POINTER #89 @ $1C77C8 - STRING #89 @ $1C7081
 
 #WRITE(GBA,$1C77C8)
-キャラボン プチラが<LINE>
-<CONTROL_CODE><$22><$00><CONTROL_CODE><$12><$5C>なかまになった!<NEWBOX>
-ボクの のうりょくは のんびりボム<LINE>
-ボムが ゆっくり ばくはつするよ<NEWBOX>
-ボクを セットする?<LINE>
-    はい       いいえ<CONTROL_CODE><$05><$03>1い15ノ5ハ<CONTROL_CODE><$0D><$07><$FD>スロットバトルの せつめいを ききますか?<LINE>
-    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$06><$5D><$06><$5E>じゅうじキーの したを おすと<LINE>
-スロットが まわります<NEWBOX>
-Aボタンを おすと<LINE>
-ひだりから リールが とまります<NEWBOX>
-ジェッターズえがらを そろえると<LINE>
-あいてを こうげきできます<NEWBOX>
-ヒゲヒゲだんえがらを そろえてしまうと<LINE>
-せんとういんが こうげき してきます<NEWBOX>
-せんとういんを たおせば<LINE>
-ミニゲーム クリアーです<NEWBOX>
-それでは がんばってください!<END>
+Bomberman became friends with the<LINE>
+<CONTROL_CODE><$22><$00><CONTROL_CODE><$12><$5C>Karabon, Puchira!<NEWBOX>
+My ability is the Lazy Bomb. With it,<LINE>
+bombs with take longer to detonate.<NEWBOX>
+Set me as the active Karabon?<LINE>
+    Yes       No<CONTROL_CODE><$05><$03><$02><$0C><$02><CONTROL_CODE><$0D><$07><$FD>Listen to the Slot Battle explanation?<LINE>
+    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$06><$5D><$06><$5E>Press down on the D-Pad to start<LINE>
+the slots.<NEWBOX>
+Pressing the A Button will stop the<LINE>
+slots, starting from the left.<NEWBOX>
+Completing a line of Jetters icons<LINE>
+will deal damage to the opponent.<NEWBOX>
+However, a full line of Hige Hige<LINE>
+Bandits will deal damage to you.<NEWBOX>
+You can win the minigame by defeating<LINE>
+your opponent.<NEWBOX>
+Well then, do your best!<END>
 
 //POINTER #90 @ $1C77CC - STRING #90 @ $1C70E3
 
 #WRITE(GBA,$1C77CC)
-<CONTROL_CODE><$0D><$07><$FD>スロットバトルの せつめいを ききますか?<LINE>
-    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$06><$5D><$06><$5E>じゅうじキーの したを おすと<LINE>
-スロットが まわります<NEWBOX>
-Aボタンを おすと<LINE>
-ひだりから リールが とまります<NEWBOX>
-ジェッターズえがらを そろえると<LINE>
-あいてを こうげきできます<NEWBOX>
-ヒゲヒゲだんえがらを そろえてしまうと<LINE>
-せんとういんが こうげき してきます<NEWBOX>
-せんとういんを たおせば<LINE>
-ミニゲーム クリアーです<NEWBOX>
-それでは がんばってください!<END>
+<CONTROL_CODE><$0D><$07><$FD>Listen to the Slot Battle explanation?<LINE>
+    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$06><$5D><$06><$5E>Press down on the D-Pad to start<LINE>
+the slots.<NEWBOX>
+Pressing the A Button will stop the<LINE>
+slots, starting from the left.<NEWBOX>
+Completing a line of Jetters icons<LINE>
+will deal damage to the opponent.<NEWBOX>
+However, a full line of Hige Hige<LINE>
+Bandits will deal damage to you.<NEWBOX>
+You can win the minigame by defeating<LINE>
+your opponent.<NEWBOX>
+Well then, do your best!<END>
 
 //POINTER #91 @ $1C77D0 - STRING #91 @ $1C70E6
 
 #WRITE(GBA,$1C77D0)
-<$FD>スロットバトルの せつめいを ききますか?<LINE>
-    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$06><$5D><$06><$5E>じゅうじキーの したを おすと<LINE>
-スロットが まわります<NEWBOX>
-Aボタンを おすと<LINE>
-ひだりから リールが とまります<NEWBOX>
-ジェッターズえがらを そろえると<LINE>
-あいてを こうげきできます<NEWBOX>
-ヒゲヒゲだんえがらを そろえてしまうと<LINE>
-せんとういんが こうげき してきます<NEWBOX>
-せんとういんを たおせば<LINE>
-ミニゲーム クリアーです<NEWBOX>
-それでは がんばってください!<END>
+<$FD>Listen to the Slot Battle explanation?<LINE>
+    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$06><$5D><$06><$5E>Press down on the D-Pad to start<LINE>
+the slots.<NEWBOX>
+Pressing the A Button will stop the<LINE>
+slots, starting from the left.<NEWBOX>
+Completing a line of Jetters icons<LINE>
+will deal damage to the opponent.<NEWBOX>
+However, a full line of Hige Hige<LINE>
+Bandits will deal damage to you.<NEWBOX>
+You can win the minigame by defeating<LINE>
+your opponent.<NEWBOX>
+Well then, do your best!<END>
 
 //POINTER #92 @ $1C77D4 - STRING #92 @ $1C70E7
 
 #WRITE(GBA,$1C77D4)
-スロットバトルの せつめいを ききますか?<LINE>
-    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$06><$5D><$06><$5E>じゅうじキーの したを おすと<LINE>
-スロットが まわります<NEWBOX>
-Aボタンを おすと<LINE>
-ひだりから リールが とまります<NEWBOX>
-ジェッターズえがらを そろえると<LINE>
-あいてを こうげきできます<NEWBOX>
-ヒゲヒゲだんえがらを そろえてしまうと<LINE>
-せんとういんが こうげき してきます<NEWBOX>
-せんとういんを たおせば<LINE>
-ミニゲーム クリアーです<NEWBOX>
-それでは がんばってください!<END>
+Listen to the Slot Battle explanation?<LINE>
+    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$06><$5D><$06><$5E>Press down on the D-Pad to start<LINE>
+the slots.<NEWBOX>
+Pressing the A Button will stop the<LINE>
+slots, starting from the left.<NEWBOX>
+Completing a line of Jetters icons<LINE>
+will deal damage to the opponent.<NEWBOX>
+However, a full line of Hige Hige<LINE>
+Bandits will deal damage to you.<NEWBOX>
+You can win the minigame by defeating<LINE>
+your opponent.<NEWBOX>
+Well then, do your best!<END>
 
 //POINTER #93 @ $1C77D8 - STRING #93 @ $1C7117
 
 #WRITE(GBA,$1C77D8)
-じゅうじキーの したを おすと<LINE>
-スロットが まわります<NEWBOX>
-Aボタンを おすと<LINE>
-ひだりから リールが とまります<NEWBOX>
-ジェッターズえがらを そろえると<LINE>
-あいてを こうげきできます<NEWBOX>
-ヒゲヒゲだんえがらを そろえてしまうと<LINE>
-せんとういんが こうげき してきます<NEWBOX>
-せんとういんを たおせば<LINE>
-ミニゲーム クリアーです<NEWBOX>
-それでは がんばってください!<END>
+Press down on the D-Pad to start<LINE>
+the slots.<NEWBOX>
+Pressing the A Button will stop the<LINE>
+slots, starting from the left.<NEWBOX>
+Completing a line of Jetters icons<LINE>
+will deal damage to the opponent.<NEWBOX>
+However, a full line of Hige Hige<LINE>
+Bandits will deal damage to you.<NEWBOX>
+You can win the minigame by defeating<LINE>
+your opponent.<NEWBOX>
+Well then, do your best!<END>
 
 //POINTER #94 @ $1C77DC - STRING #94 @ $1C71AE
 
 #WRITE(GBA,$1C77DC)
-それでは がんばってください!<END>
+Well then, do your best!<END>
 
 //POINTER #95 @ $1C77E0 - STRING #95 @ $1C71BE
 
 #WRITE(GBA,$1C77E0)
-<CONTROL_CODE><$13><$0D>マイティ! ワイや ガングや!<LINE>
-ノンビリせいの しゅうへんで<NEWBOX>
-<CONTROL_CODE><$13><$0D>じくうの ゆがみが けんしゅつされたんや!<LINE>
-おそらく ヒゲヒゲだんの しわざや<NEWBOX>
-<CONTROL_CODE><$13><$0D>クロノはかせから うけとった そうちを<LINE>
-モトジェッターに そうちゃくすれば<NEWBOX>
-<CONTROL_CODE><$13><$0D>ヤツらと おなじ じだいに<LINE>
-ワープできるはず!<NEWBOX>
-<CONTROL_CODE><$13><$0D>こだい ノンビリせいに タイムワープして<LINE>
-ヤツらの けいかくを そしするんや!<NEWBOX>
-<CONTROL_CODE><$13><$0D>たのんだデェ マイティ!<END>
+<CONTROL_CODE><$13><$0D>Mighty! This is Gangu. At the outskirts<LINE>
+of Planet Nonbiri I'm detecting some<NEWBOX>
+<CONTROL_CODE><$13><$0D>space time distortion! It must be<LINE>
+the work of the Hige Hige Bandits.<NEWBOX>
+<CONTROL_CODE><$13><$0D>If you attach the equipment Dr.<LINE>
+Chronos gave you to the Moto Jetter<NEWBOX>
+<CONTROL_CODE><$13><$0D>you should be able to warp back in time<LINE>
+like the Hige Hige Bandits did!<NEWBOX>
+<CONTROL_CODE><$13><$0D>Time warp back to ancient Nonbiri,<LINE>
+and put a stop to their plans!<NEWBOX>
+<CONTROL_CODE><$13><$0D>We're counting on you, Mighty!<END>
 
-//POINTER #96 @ $1C77E4 - STRING #96 @ $1C728A
+////POINTER #96 @ $1C77E4 - STRING #96 @ $1C728A
 
 #WRITE(GBA,$1C77E4)
-<CONTROL_CODE><$13><$0D>もしもし こちら バーディ<LINE>
-その セカセカせいにある<NEWBOX>
-<CONTROL_CODE><$13><$0D>クロノはかせの けんきゅうじょが<LINE>
-ヒゲヒゲだんに おそわれたらしい!<NEWBOX>
-<CONTROL_CODE><$13><$0D>おそらく クロノはかせの はつめい<LINE>
-タイムドライバーが ヤツらの ねらいだ<NEWBOX>
-<CONTROL_CODE><$13><$0D>タイムドライバーは タイムマシンの<LINE>
-エンジンの しさくひんらしい!<NEWBOX>
-<CONTROL_CODE><$13><$0D>まだ かんせいしていない とはいえ<LINE>
-あくようされれば たいへんなことになる<NEWBOX>
-<CONTROL_CODE><$13><$0D>いそいで クロノはかせを たすけだすんだ<LINE>
-たのんだぜ マイティ!<$F8><CONTROL_CODE><$13><$0D>マイティ そろそろ てきのこうげきが<LINE>
-きつくなってきたんと ちゃうか?<NEWBOX>
-<CONTROL_CODE><$13><$0D>いちど こきょうの ボンバーせいで<LINE>
-しゅぎょうしてくるのも わるくないで<NEWBOX>
-<CONTROL_CODE><$13><$0D>いそがばまわれ っちゅうヤツや!<END>
+<CONTROL_CODE><$13><$0D>Hello, this is Birdy. I see you've<LINE>
+arrived on planet Sekaseka.<NEWBOX>
+<CONTROL_CODE><$13><$0D>It looks like Dr. Chronos' laboratory<LINE>
+was attacked by the Hige Hige Bandits!<NEWBOX>
+<CONTROL_CODE><$13><$0D>Their aim was likely to steal Dr.<LINE>
+Chronos' invention, the Time Driver.<NEWBOX>
+<CONTROL_CODE><$13><$0D>The Time Driver is the prototype of<LINE>
+an engine for a time machine.<NEWBOX>
+<CONTROL_CODE><$13><$0D>It's still incomplete, but it could be<LINE>
+problematic if they attempt to use it.<NEWBOX>
+<CONTROL_CODE><$13><$0D>Hurry and help Dr. Chronos.<LINE>
+We're counting on you, Mighty!<$F8><CONTROL_CODE><$13><$0D>Mighty, do you think the enemy's<LINE>
+attacks are becoming more intense?<NEWBOX>
+<CONTROL_CODE><$13><$0D>Perhaps returning to Planet Bomber<LINE>
+for some training is a good idea.<NEWBOX>
+<CONTROL_CODE><$13><$0D>Slow and steady wins the race, right?<END>
 
 //POINTER #97 @ $1C77E8 - STRING #97 @ $1C7369
 
 #WRITE(GBA,$1C77E8)
-<CONTROL_CODE><$13><$0D>マイティ そろそろ てきのこうげきが<LINE>
-きつくなってきたんと ちゃうか?<NEWBOX>
-<CONTROL_CODE><$13><$0D>いちど こきょうの ボンバーせいで<LINE>
-しゅぎょうしてくるのも わるくないで<NEWBOX>
-<CONTROL_CODE><$13><$0D>いそがばまわれ っちゅうヤツや!<END>
+<CONTROL_CODE><$13><$0D>Mighty, do you think the enemy's<LINE>
+attacks are becoming more intense?<NEWBOX>
+<CONTROL_CODE><$13><$0D>Perhaps returning to Planet Bomber<LINE>
+for some training is a good idea.<NEWBOX>
+<CONTROL_CODE><$13><$0D>Slow and steady wins the race, right?<END>
 
 //POINTER #98 @ $1C77EC - STRING #98 @ $1C73CC
 
@@ -967,76 +1033,83 @@ Aボタンを おすと<LINE>
 //POINTER #99 @ $1C77F0 - STRING #99 @ $1C73CD
 
 #WRITE(GBA,$1C77F0)
-この カルデラこには ごうせいそざい<LINE>
-カルデラのしずくが あるんだけど<NEWBOX>
-さいきん ヘンな モンスターが<LINE>
-すみついちゃっているんだ<NEWBOX>
-アイツを たおさないと<LINE>
-しずくが とれないな‥‥<NEWBOX>
-しずくと ボムノモトを ごうせいして<LINE>
-アクアボムを つくれば<NEWBOX>
-ラバシティの ほのおが<LINE>
-けせるのに‥‥‥‥<END>
+//この カルデラこには ごうせいそざい<LINE>
+//カルデラのしずくが あるんだけど<NEWBOX>
+The synthesis ingredient called the<LINE>
+Caldera Drop should be under this lake.<NEWBOX>
+Recently a strange monster has<LINE>
+appeared down there.<NEWBOX>
+It you defeat it, perhaps you could<LINE>
+probably find the Caldera Drop...<NEWBOX>
+You can use the Caldera Drop in<LINE>
+synthesis to create the Aqua Bomb.<NEWBOX>
+The Aqua Bomb can be used to put out<LINE>
+flames in Lava City!<END>
 
-//POINTER #100 @ $1C77F4 - STRING #100 @ $1C745C
+////POINTER #100 @ $1C77F4 - STRING #100 @ $1C745C
 
 #WRITE(GBA,$1C77F4)
-きたにある カルデラこの おくには<LINE>
-カルデラのしずく っていう みずがあるの<NEWBOX>
-いろんなものと ごうせいできる<LINE>
-ふしぎな みずなのよ<END>
+//きたにある カルデラこの おくには<LINE>
+//カルデラのしずく っていう みずがあるの<NEWBOX>
+At Caldera Lake to the north there is<LINE>
+an item known as the Caldera Drop.<NEWBOX>
+//いろんなものと ごうせいできる<LINE>
+//ふしぎな みずなのよ<END>
+It's a mysterious type of water that<LINE>
+can be used in the creation of items!<END>
 
 //POINTER #101 @ $1C77F8 - STRING #101 @ $1C749E
 
 #WRITE(GBA,$1C77F8)
-ここから すこし<LINE>
-きたに いったところにある<NEWBOX>
-クロノはかせの けんきゅうじょが<LINE>
-なんにちか まえに<NEWBOX>
-ヒゲヒゲだんとか いうやつらに<LINE>
-せんりょうされて しまったんじゃ‥‥<NEWBOX>
-そういえば ヤツらが<LINE>
-おそってきたとき キャラボンがいっぴき<NEWBOX>
-まちのほうへ にげていったが<LINE>
-ぶじに にげきれたんじゃろうか‥‥<END>
+At Dr. Chronos' laboratory that is<LINE>
+a little bit to the north of here<NEWBOX>
+a few days ago some guys who call<LINE>
+themselves the Hige Hige Bandits<NEWBOX>
+showed up an took over the place!<LINE>
+They even captured Dr. Chronos.<NEWBOX>
+Which reminds me. When those bandits<LINE>
+attacked I saw a Karabon escape<NEWBOX>
+in the direction of the city. I wonder<LINE>
+if it got away safely...<END>
 
 //POINTER #102 @ $1C77FC - STRING #102 @ $1C7533
 
 #WRITE(GBA,$1C77FC)
-スロットバトルの せつめいを ききますか?<LINE>
-    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$06><$67><$06><$68>じゅうじキーの したを おすと<LINE>
-スロットが まわります<NEWBOX>
-Aボタンを おすと<LINE>
-ひだりから リールが とまります<NEWBOX>
-ジェッターズえがらを そろえると<LINE>
-あいてを こうげきできます<NEWBOX>
-ヒゲヒゲだんえがらを そろえてしまうと<LINE>
-せんとういんが こうげき してきます<NEWBOX>
-それでは がんばってください!<END>
+Listen to the Slot Battle explanation?<LINE>
+    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$06><$67><$06><$68>Press down on the D-Pad to start<LINE>
+the slots.<NEWBOX>
+Pressing the A Button will stop the<LINE>
+slots, starting from the left.<NEWBOX>
+Completing a line of Jetters icons<LINE>
+will deal damage to the opponent.<NEWBOX>
+However, a full line of Hige Hige<LINE>
+Bandits will deal damage to you.<NEWBOX>
+Well then, do your best!<END>
 
 //POINTER #103 @ $1C7800 - STRING #103 @ $1C7563
 
 #WRITE(GBA,$1C7800)
-じゅうじキーの したを おすと<LINE>
-スロットが まわります<NEWBOX>
-Aボタンを おすと<LINE>
-ひだりから リールが とまります<NEWBOX>
-ジェッターズえがらを そろえると<LINE>
-あいてを こうげきできます<NEWBOX>
-ヒゲヒゲだんえがらを そろえてしまうと<LINE>
-せんとういんが こうげき してきます<NEWBOX>
-それでは がんばってください!<END>
+Press down on the D-Pad to start<LINE>
+the slots.<NEWBOX>
+Pressing the A Button will stop the<LINE>
+slots, starting from the left.<NEWBOX>
+Completing a line of Jetters icons<LINE>
+will deal damage to the opponent.<NEWBOX>
+However, a full line of Hige Hige<LINE>
+Bandits will deal damage to you.<NEWBOX>
+Well then, do your best!<END>
 
 //POINTER #104 @ $1C7804 - STRING #104 @ $1C75F0
 
 #WRITE(GBA,$1C7804)
-それでは がんばってください<END>
+Well then, please do your best.<END>
 
-//POINTER #105 @ $1C7808 - STRING #105 @ $1C75FF
+////POINTER #105 @ $1C7808 - STRING #105 @ $1C75FF
 
 #WRITE(GBA,$1C7808)
-キミにわたした しさくひんの<LINE>
-タイムドライバーは ちゃんと うごいたかい?<NEWBOX>
-あまりパーツで つくったものだから<LINE>
-ちょっと じしん なかったんだけど‥‥<NEWBOX>
-まぁ もんだいなく うごいて なによりだ!<END>
+Did the prototype Time Driver that<LINE>
+I gave to you work properly?<NEWBOX>
+It was still incomplete, so I wasn't<LINE>
+completely sure what would happen.<NEWBOX>
+But it's great if it worked!<END>
+

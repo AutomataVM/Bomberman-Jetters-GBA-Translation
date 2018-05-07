@@ -1,0 +1,36 @@
+C:\Users\juan pablo\Desktop\Bomberman-Jetters-GBA-Translation-master\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\bin\Debug\TextPreviewer.exe.config
+C:\Users\juan pablo\Desktop\Bomberman-Jetters-GBA-Translation-master\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\bin\Debug\TextPreviewer.exe
+C:\Users\juan pablo\Desktop\Bomberman-Jetters-GBA-Translation-master\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\bin\Debug\TextPreviewer.pdb
+C:\Users\juan pablo\Desktop\Bomberman-Jetters-GBA-Translation-master\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.csprojResolveAssemblyReference.cache
+C:\Users\juan pablo\Desktop\Bomberman-Jetters-GBA-Translation-master\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.Form1.resources
+C:\Users\juan pablo\Desktop\Bomberman-Jetters-GBA-Translation-master\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.Properties.Resources.resources
+C:\Users\juan pablo\Desktop\Bomberman-Jetters-GBA-Translation-master\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.csproj.GenerateResource.Cache
+C:\Users\juan pablo\Desktop\Bomberman-Jetters-GBA-Translation-master\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.exe
+C:\Users\juan pablo\Desktop\Bomberman-Jetters-GBA-Translation-master\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.pdb
+C:\Users\juan pablo\Nueva carpeta\gba\Bomberman-Jetters-GBA-Translation-master\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\bin\Debug\TextPreviewer.exe.config
+C:\Users\juan pablo\Nueva carpeta\gba\Bomberman-Jetters-GBA-Translation-master\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.exe
+C:\Users\juan pablo\Nueva carpeta\gba\Bomberman-Jetters-GBA-Translation-master\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.pdb
+C:\Users\juan pablo\Nueva carpeta\gba\Bomberman-Jetters-GBA-Translation-master\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\bin\Debug\TextPreviewer.exe
+C:\Users\juan pablo\Nueva carpeta\gba\Bomberman-Jetters-GBA-Translation-master\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\bin\Debug\TextPreviewer.pdb
+C:\Users\juan pablo\Nueva carpeta\gba\Bomberman-Jetters-GBA-Translation-master\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.csprojResolveAssemblyReference.cache
+C:\Users\juan pablo\Nueva carpeta\gba\Bomberman-Jetters-GBA-Translation-master\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.Form1.resources
+C:\Users\juan pablo\Nueva carpeta\gba\Bomberman-Jetters-GBA-Translation-master\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.Properties.Resources.resources
+C:\Users\juan pablo\Nueva carpeta\gba\Bomberman-Jetters-GBA-Translation-master\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.csproj.GenerateResource.Cache
+C:\Users\juan pablo\Nueva carpeta\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\bin\Debug\TextPreviewer.exe.config
+C:\Users\juan pablo\Nueva carpeta\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\bin\Debug\TextPreviewer.exe
+C:\Users\juan pablo\Nueva carpeta\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\bin\Debug\TextPreviewer.pdb
+C:\Users\juan pablo\Nueva carpeta\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.Form1.resources
+C:\Users\juan pablo\Nueva carpeta\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.Properties.Resources.resources
+C:\Users\juan pablo\Nueva carpeta\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.csproj.GenerateResource.Cache
+C:\Users\juan pablo\Nueva carpeta\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.exe
+C:\Users\juan pablo\Nueva carpeta\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.pdb
+C:\Users\juan pablo\Nueva carpeta\Bomberman-Jetters-GBA-Translation-master\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.csprojResolveAssemblyReference.cache
+C:\Users\juan pablo\Google Drive\Bomberman-Jetters-GBA-Translation\TextPreviewer\TextPreviewer\bin\Debug\TextPreviewer.exe.config
+C:\Users\juan pablo\Google Drive\Bomberman-Jetters-GBA-Translation\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.exe
+C:\Users\juan pablo\Google Drive\Bomberman-Jetters-GBA-Translation\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.pdb
+C:\Users\juan pablo\Google Drive\Bomberman-Jetters-GBA-Translation\TextPreviewer\TextPreviewer\bin\Debug\TextPreviewer.exe
+C:\Users\juan pablo\Google Drive\Bomberman-Jetters-GBA-Translation\TextPreviewer\TextPreviewer\bin\Debug\TextPreviewer.pdb
+C:\Users\juan pablo\Google Drive\Bomberman-Jetters-GBA-Translation\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.csprojResolveAssemblyReference.cache
+C:\Users\juan pablo\Google Drive\Bomberman-Jetters-GBA-Translation\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.Form1.resources
+C:\Users\juan pablo\Google Drive\Bomberman-Jetters-GBA-Translation\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.Properties.Resources.resources
+C:\Users\juan pablo\Google Drive\Bomberman-Jetters-GBA-Translation\TextPreviewer\TextPreviewer\obj\x86\Debug\TextPreviewer.csproj.GenerateResource.Cache

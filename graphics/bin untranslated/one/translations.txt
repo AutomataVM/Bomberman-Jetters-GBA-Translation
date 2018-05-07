@@ -1,0 +1,7 @@
+Start!
+
+Goal/Finish
+
+Win/You Win!
+
+Lose/You Lose!

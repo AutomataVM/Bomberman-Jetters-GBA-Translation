@@ -5,1108 +5,1867 @@
 // Load and activate the table
 #ADDTBL("script/bomberman.tbl", Table)
 #ADDTBL("melissa font/melissa8x8.tbl", engTable)
-#ACTIVETBL(Table)
+#ACTIVETBL(engTable)
 
-// Setup GBA pointers and Pointer Table
+// Setup GBA//POINTERs and//POINTER Table
 #VAR(GBA, CUSTOMPOINTER)
-// Create our pointer type
+// Create our//POINTER type
 #CREATEPTR(GBA, "LINEAR", $-08000000, 32)
 
-#JMP($565000)
+#JMP($57D000)
 
 //GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
 
-//BLOCK #007 NAME:		Block 8 (POINTER)
+//BLOCK #007 NAME:		Block 8 (//POINTER)
+//Translated by Higsby
+////POINTER #0 @ $1CF708 - STRING #0 @ $1CCBB8
 
-//POINTER #0 @ $1CF708 - STRING #0 @ $1CCBB8
 
 #WRITE(GBA,$1CF708)
- たすかったぁ‥‥ありがとう!<NEWBOX>
- ボクは ストロング!<LINE>
- おれいに これから てだすけします!<NEWBOX>
- キャラボン ストロングが<LINE>
- なかまになった!<CONTROL_CODE><$12><$0C><NEWBOX>
- ボクの のうりょくは<LINE>
- パワーグローブ!<NEWBOX>
- Aボタンで ボムを おいてから‥‥<NEWBOX>
- もういちど Aボタンをおすと<LINE>
- ボムを もちあげられるよ<NEWBOX>
- おしっぱなしで ボムを<LINE>
- もちあげたまま あるけて‥‥<NEWBOX>
- Aボタンをはなすと むいている<LINE>
- ほうこうに なげられるんだ<NEWBOX>
- しかも なんと ボクの のうりょくは<LINE>
- ボクを つれてさえいれば‥‥<NEWBOX>
- とくに ボクを セットしてなくても<LINE>
- いつでも つかえるんだよ<NEWBOX>
- でも ボクを そだてたいときは<LINE>
- セット していないと ダメなんだ<NEWBOX>
- あと マリンゴンという キャラボンを<LINE>
- セットしているときだけは<NEWBOX>
- パワーグローブの のうりょくが<LINE>
- つかえなくなるから ちゅういしてね<NEWBOX>
- Bボタンにボクを セットする?<LINE>
-  はい  いいえ<CONTROL_CODE><$05><$01>1418わ8を ほぉ ここが よく わかったな‥‥<NEWBOX>
- なんと ここは<LINE>
- ひみつの おんせんなのじゃ!<NEWBOX>
- ‥‥まぁ もう バレとるがな<NEWBOX>
- はいっても ええが じつは<LINE>
- このおんせんの ゆかげんは<NEWBOX>
- キャラボンのタマゴを かえすのに<LINE>
- ピッタリなんじゃ<NEWBOX>
- おまえさんも キャラボンのタマゴを<LINE>
- てにいれたら ここに くると よいぞ<END>
+You saved me... Thank you!<NEWBOX>
+My name is ToughGuy. To show my<LINE>
+gratitude, please let me help you.<NEWBOX>
+//キャラボン ストロングが<LINE>
+//なかまになった!<CONTROL_CODE><$12><$0C><NEWBOX>
+Bomberman became friends with the<LINE>
+Karabon, ToughGuy!<CONTROL_CODE><$12><$0C><NEWBOX>
+My ability is<LINE>
+the Power Glove.<NEWBOX>
+//Aボタンで ボムを おいてから‥‥<NEWBOX>
+//もういちど Aボタンをおすと<LINE>
+If you place a bomb with the A Button,<NEWBOX>
+and then press the A button again<LINE>
+//ボムを もちあげられるよ<NEWBOX>
+you will be able to pick up the bomb!<NEWBOX>
+//おしっぱなしで ボムを<LINE>
+//もちあげたまま あるけて‥‥<NEWBOX>
+If you keep the A Button held down,<LINE>
+you can walk while holding the bomb.<NEWBOX>
+//Aボタンをはなすと むいている<LINE>
+//ほうこうに なげられるんだ<NEWBOX>
+And when you release it, you will throw<LINE>
+the bomb in direction you are facing.<NEWBOX>
+//しかも なんと ボクの のうりょくは<LINE>
+//ボクを つれてさえいれば‥‥<NEWBOX>
+Anytime you wish to use my ability,<LINE>
+as long as I am with you<NEWBOX>
+//とくに ボクを セットしてなくても<LINE>
+//いつでも つかえるんだよ<NEWBOX>
+even if you don't have me set,<LINE>
+you'll still be able to use it!<NEWBOX>
+//でも ボクを そだてたいときは<LINE>
+//セット していないと ダメなんだ<NEWBOX>
+But when you wish to raise me, unless<LINE>
+I am selected the ability won't work.<NEWBOX>
+//あと マリンゴンという キャラボンを<LINE>
+//セットしているときだけは<NEWBOX>
+Furthermore, if you have the Karabon<LINE>
+named MarinGon selected<NEWBOX>
+//パワーグローブの のうりょくが<LINE>
+//つかえなくなるから ちゅういしてね<NEWBOX>
+you won't be able to use the Power<LINE>
+Glove. So please be careful!<NEWBOX>
+//Bボタンにボクを セットする?<LINE>
+Do you wish to set me to the B button?<LINE>
+//はい  いいえ<CONTROL_CODE><$05><$01><$02><$05><$02>8わ8を ほぉ ここが よく わかったな‥‥<NEWBOX>
+Yes  No<CONTROL_CODE><$05><$01><$02><$05><$02>Ah, so you have found your way here...<NEWBOX>
+//なんと ここは<LINE>
+//ひみつの おんせんなのじゃ!<NEWBOX>
+This place is...<LINE>
+The secret hot spring!<NEWBOX>
+//‥‥まぁ もう バレとるがな<NEWBOX>
+I guess the secret's out then...<NEWBOX>
+//はいっても ええが じつは<LINE>
+//このおんせんの ゆかげんは<NEWBOX>
+The truth is that this hot<LINE>
+spring's temperature<NEWBOX>
+//キャラボンのタマゴを かえすのに<LINE>
+//ピッタリなんじゃ<NEWBOX>
+Is exactly right for hatching<LINE>
+Karabon eggs!<NEWBOX>
+//おまえさんも キャラボンのタマゴを<LINE>
+//てにいれたら ここに くると よいぞ<END>
+If you come across any Karabon eggs,<LINE>
+you should bring them here!<END>
+
 
 //POINTER #1 @ $1CF70C - STRING #1 @ $1CCD59
 
+
 #WRITE(GBA,$1CF70C)
- ほぉ ここが よく わかったな‥‥<NEWBOX>
- なんと ここは<LINE>
- ひみつの おんせんなのじゃ!<NEWBOX>
- ‥‥まぁ もう バレとるがな<NEWBOX>
- はいっても ええが じつは<LINE>
- このおんせんの ゆかげんは<NEWBOX>
- キャラボンのタマゴを かえすのに<LINE>
- ピッタリなんじゃ<NEWBOX>
- おまえさんも キャラボンのタマゴを<LINE>
- てにいれたら ここに くると よいぞ<END>
+Ah, so you have found your way here...<NEWBOX>
+//なんと ここは<LINE>
+//ひみつの おんせんなのじゃ!<NEWBOX>
+This place is...<LINE>
+The secret hot spring!<NEWBOX>
+//‥‥まぁ もう バレとるがな<NEWBOX>
+I guess the secret's out then...<NEWBOX>
+//はいっても ええが じつは<LINE>
+//このおんせんの ゆかげんは<NEWBOX>
+The truth is that this hot<LINE>
+spring's temperature...<NEWBOX>
+//キャラボンのタマゴを かえすのに<LINE>
+//ピッタリなんじゃ<NEWBOX>
+Is exactly right for hatching<LINE>
+Karabon eggs!<NEWBOX>
+//おまえさんも キャラボンのタマゴを<LINE>
+//てにいれたら ここに くると よいぞ<END>
+If you come across any Karabon eggs,<LINE>
+you should bring them here!<END>
+
 
 //POINTER #2 @ $1CF710 - STRING #2 @ $1CCDF6
 
 #WRITE(GBA,$1CF710)
-<CONTROL_CODE><$04><$00>る おっ キャラボンのタマゴを<LINE>
- もってきたようじゃな!<NEWBOX>
- ほれ さっそく<LINE>
- おんせんに つけてみなされ!<END>
+<CONTROL_CODE><$04><$00><$33>Oh, you've brought a Karabon egg!<LINE>
+<NEWBOX>
+Come on, throw it into the hot <LINE>
+spring for a good soak!<END>
 
 //POINTER #3 @ $1CF714 - STRING #3 @ $1CCE2F
 
 #WRITE(GBA,$1CF714)
- ‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥<LINE>
- ‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥<NEWBOX>
- ‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥<LINE>
- ‥‥‥‥‥おおっ!? うまれたぞ!!<END>
+..................<LINE>
+..................<NEWBOX>
+..................<LINE>
+......Whoa!? It hatched!!<END>
 
 //POINTER #4 @ $1CF718 - STRING #4 @ $1CCE7F
 
 #WRITE(GBA,$1CF718)
- ガウガウ~ いいきもちで ねてたのに<LINE>
- ボクを おこすのは だれガウ~<END>
+Gao Gao~ I was sleeping peacefully.<LINE>
+Who was it that woke me up? Gao~<END>
 
 //POINTER #5 @ $1CF71C - STRING #5 @ $1CCEA4
 
 #WRITE(GBA,$1CF71C)
-<CONTROL_CODE><$01><$01>ケ8ケ こんにちは きょうも さむいわね<NEWBOX>
- そういえば ここらへんには<LINE>
- こおりづけのはな という‥‥<NEWBOX>
- はなが さくんだけど あなたは<LINE>
- もう みた?<NEWBOX>
- まぁ さいたそばから プテラドンに<LINE>
- たべられてしまうから<NEWBOX>
- かんたんには みつからないと<LINE>
- おもうけどね<END>
+//<CONTROL_CODE><$01><$01>ケ8ケ こんにちは きょうも さむいわね<NEWBOX>
+<CONTROL_CODE><$01><$01><$4A><$09><$4A>Hey there. Today's another cold day...<NEWBOX>
+//そういえば ここらへんには<LINE>
+//こおりづけのはな という‥‥<NEWBOX>
+Which reminds me. Around here a<LINE>
+plant called the Ice Flower<NEWBOX>
+//はなが さくんだけど あなたは<LINE>
+//もう みた?<NEWBOX>
+is known to bloom. Have you come<LINE>
+across any?<NEWBOX>
+//まぁ さいたそばから プテラドンに<LINE>
+//たべられてしまうから<NEWBOX>
+I guess right after it blooms,<LINE>
+the Pteradon eat them all up.<NEWBOX>
+//かんたんには みつからないと<LINE>
+//おもうけどね<END>
+I doubt you'll be able to find one<LINE>
+very easily.<END>
+
 
 //POINTER #6 @ $1CF720 - STRING #6 @ $1CCF2B
 
+
 #WRITE(GBA,$1CF720)
- フェアリーパレスに すんでいる<LINE>
- エメラリーダさまはねぇ‥‥<NEWBOX>
- むかしから このほしを<LINE>
- おさめてらっしゃるんだよ<NEWBOX>
- もともとは そらのうえに ある<LINE>
- おしろに すんでたんだけどね<NEWBOX>
- いんせきが おちたときに<LINE>
- おしろに なにか あったとかで<NEWBOX>
- ちじょうに おりてきたそうだよ<NEWBOX>
- そういえば おしろには むかし<LINE>
- 4にんの けんじゃが いたんじゃが<NEWBOX>
- この さむいなか<LINE>
- げんきにしてるかねぇ‥‥<NEWBOX>
- あのかたたちも もう トシだから<LINE>
- しんぱいじゃ‥‥とか いっていたら<NEWBOX>
- わしゃ まだまだ わかいのぢゃ!<NEWBOX>
- ‥‥なんて おこられるんじゃろうがの<END>
+At the Fairy Palace lives<LINE>
+Queen Emeralda<NEWBOX>
+who since long ago<LINE>
+has governed over this star.<NEWBOX>
+//もともとは そらのうえに ある<LINE>
+//おしろに すんでたんだけどね<NEWBOX>
+In the past she lived in a<LINE>
+castle high up in the sky.<NEWBOX>
+//いんせきが おちたときに<LINE>
+//おしろに なにか あったとかで<NEWBOX>
+But after a meteor landed, something<LINE>
+happened to her castle.<NEWBOX>
+//ちじょうに おりてきたそうだよ<NEWBOX>
+Some think it fell to the ground.<NEWBOX>
+//そういえば おしろには むかし<LINE>
+//4にんの けんじゃが いたんじゃが<NEWBOX>
+Come to think of it, long ago<LINE>
+four wise men lived in that castle.<NEWBOX>
+//この さむいなか<LINE>
+//げんきにしてるかねぇ‥‥<NEWBOX>
+Being in this cold... It certainly<LINE>
+livens one up, doesn't it?<NEWBOX>
+//あのかたたちも もう トシだから<LINE>
+//しんぱいじゃ‥‥とか いっていたら<NEWBOX>
+Those people are even older,<LINE>
+so carry on without worrying.<NEWBOX>
+//わしゃ まだまだ わかいのぢゃ!<NEWBOX>
+//‥‥なんて おこられるんじゃろうがの<END>
+I'm really still quite young!<NEWBOX>
+Hey, what's with that look?<END>
+
 
 //POINTER #7 @ $1CF724 - STRING #7 @ $1CD03E
 
+
 #WRITE(GBA,$1CF724)
-<CONTROL_CODE><$01><$01>っ87<CONTROL_CODE><$16><$09>エ え? おしろにいきたいの‥‥?<LINE>
- それは ムリよ ムリ ムリ!<NEWBOX>
- だって いま おしろに いくための<LINE>
- はしが こおって おちちゃってるもん<NEWBOX>
- いま おしろと ここを<LINE>
- いったりきたりできるのは‥‥<NEWBOX>
- あそこの ガケを ひとっとび! の<LINE>
- ビーストポミュぐらいのものよ<NEWBOX>
- ‥‥あら? あなた ケガしてない?<LINE>
- ‥‥ちょっと じっとしててね(HEART)<CONTROL_CODE><$11><$E0>くよ<NEWBOX>
- はい これで よし! あんまり<LINE>
- ケガしないように きをつけてね(HEART)<END>
+//<CONTROL_CODE><$01><$01><CONTROL_CODE><$16><$09>エ え? おしろにいきたいの‥‥?<LINE>
+<CONTROL_CODE><$01><$01><$3E><$09><$08><CONTROL_CODE><$16><$09>Eh? You want to go to the castle...?<LINE>
+//それは ムリよ ムリ ムリ!<NEWBOX>
+That's impossible! It can't be done!<NEWBOX>
+//だって いま おしろに いくための<LINE>
+//はしが こおって おちちゃってるもん<NEWBOX>
+Right now, the bridge to the<LINE>
+castle is frozen and destroyed.<NEWBOX>
+//いま おしろと ここを<LINE>
+//いったりきたりできるのは‥‥<NEWBOX>
+To go back and forth between the<LINE>
+castle, well...<NEWBOX>
+//あそこの ガケを ひとっとび! の<LINE>
+//ビーストポミュぐらいのものよ<NEWBOX>
+You'd have to be able to fly over the<LINE>
+cliff like Pommy Beast!<NEWBOX>
+//‥‥あら? あなた ケガしてない?<LINE>
+//‥‥ちょっと じっとしててね(HEART)<CONTROL_CODE><$11><$E0>くよ<NEWBOX>
+...Ah! Are you injured?<LINE>
+...Sit still for one second(HEART)<CONTROL_CODE><$11><$E0>Kuyo<NEWBOX>
+//はい これで よし! あんまり<LINE>
+//ケガしないように きをつけてね(HEART)<END>
+There, that's all better! Be careful<LINE>
+so you don't get hurt again! (HEART)<END>
+
 
 //POINTER #8 @ $1CF728 - STRING #8 @ $1CD11C
 
+
 #WRITE(GBA,$1CF728)
-<CONTROL_CODE><$16><$09>オ みてみて! おしろの こおりが<LINE>
- とけたんだよ!<NEWBOX>
- ‥‥あら? あなた ケガしてない?<LINE>
- ‥‥ちょっと じっとしててね(HEART)<CONTROL_CODE><$11><$E0>くよ<NEWBOX>
- はい これで よし! あんまり<LINE>
- ケガしないように きをつけてね(HEART)<END>
+<CONTROL_CODE><$16><$09>Hey! Look look! The ice around the<LINE>
+castle has melted!<NEWBOX>
+...Ah! Are you injured?<LINE>
+...Sit still for one second(HEART)<CONTROL_CODE><$11><$E0>Kuyo<NEWBOX>
+//はい これで よし! あんまり<LINE>
+//ケガしないように きをつけてね(HEART)<END>
+There, that's all better! Be careful<LINE>
+so you don't get hurt again! (HEART)<END>
+
 
 //POINTER #9 @ $1CF72C - STRING #9 @ $1CD186
 
+
 #WRITE(GBA,$1CF72C)
-<CONTROL_CODE><$01><$01>っ89 ここに くるまでに ばくふうを<LINE>
- ジャンプで よけるヤツを みましたか?<NEWBOX>
- あいつらは どうやら いちど<LINE>
- ジャンプすると‥‥<NEWBOX>
- しばらく つぎの ジャンプが<LINE>
- できないみたいなんです<NEWBOX>
- それを りようすれば たおせると<LINE>
- おもうから ためしてみては?<END>
+//<CONTROL_CODE><$01><$01><$3E><$09><$0A> ここに くるまでに ばくふうを<LINE>
+//ジャンプで よけるヤツを みましたか?<NEWBOX>
+<CONTROL_CODE><$01><$01><$3E><$09><$0A>Have you encountered enemies that<LINE>
+dodge blasts from bombs by jumping?<NEWBOX>
+//あいつらは どうやら いちど<LINE>
+//ジャンプすると‥‥<NEWBOX>
+It appears that after those kinds<LINE>
+of enemies have jumped<NEWBOX>
+//しばらく つぎの ジャンプが<LINE>
+//できないみたいなんです<NEWBOX>
+There is a short period afterwards in<LINE>
+which they are not able to jump again.<NEWBOX>
+//それを りようすれば たおせると<LINE>
+//おもうから ためしてみては?<END>
+By utilizing that, I think you can<LINE>
+defeat them! Won't you give it a try?<END>
+
 
 //POINTER #10 @ $1CF730 - STRING #10 @ $1CD20C
 
+
 #WRITE(GBA,$1CF730)
- そらが はれてきたら てんくうのしろ<LINE>
- ファンタシーが よくみえてきましたね<NEWBOX>
- ほんらい あそこに おられるはずの<LINE>
- エメラリーダさまが<NEWBOX>
- すぐそこの フェアリーパレスに<LINE>
- おられるなんて ふしぎな かんじです<NEWBOX>
- むかし いまのように ファンタシーが<LINE>
- せめおとされたときいらいですね<NEWBOX>
- ‥‥あの あおい めの せんし‥‥<LINE>
- なまえは たしか‥‥マックス?<NEWBOX>
- そう たしか そんな なまえでした<LINE>
- わたしの いのちの おんじんなんです<NEWBOX>
- ぜひ いちど あって おれいを<LINE>
- いいたいんですけど<NEWBOX>
- きいても いま そういう なまえの<LINE>
- せんしは いないといわれましてね<NEWBOX>
- もし あなたが うちゅうの どこかで<LINE>
- かれに あうことが あったなら<NEWBOX>
- わたしが かんしゃしていたことを<LINE>
- かれに つたえてくれませんか?<NEWBOX>
- よろしく おねがいしますね<END>
+If the sky would clear up, we would<LINE>
+have a good view of Fantasy castle.<NEWBOX>
+That was originally where Queen<LINE>
+Emeralda resided.<NEWBOX>
+But now she lives in the nearby Fairy<LINE>
+Castle. It has a mysterious feel to it.<NEWBOX>
+//むかし いまのように ファンタシーが<LINE>
+//せめおとされたときいらいですね<NEWBOX>
+Now, just like in the past, we depend<LINE>
+on Fantasy during attacks.<NEWBOX>
+//‥‥あの あおい めの せんし‥‥<LINE>
+//なまえは たしか‥‥マックス?<NEWBOX>
+That Blue soldier... If I remember<LINE>
+correctly, his name was... Max?<NEWBOX>
+Yes, I'm sure that was his name.<LINE>
+I owe him my life!<NEWBOX>
+If I ever see him again, I'll<LINE>
+give him my thanks for sure.<NEWBOX>
+//きいても いま そういう なまえの<LINE>
+//せんしは いないといわれましてね<NEWBOX>
+But unfortunately, I don't believe<LINE>
+that he's around anymore.<NEWBOX>
+//もし あなたが うちゅうの どこかで<LINE>
+//かれに あうことが あったなら<NEWBOX>
+If by chance you someday meet him<LINE>
+somewhere out there...<NEWBOX>
+//わたしが かんしゃしていたことを<LINE>
+//かれに つたえてくれませんか?<NEWBOX>
+Do you think you could convey my<LINE>
+gratitude to him for me?<NEWBOX>
+//よろしく おねがいしますね<END>
+I would really appreciate that.<END>
+
 
 //POINTER #11 @ $1CF734 - STRING #11 @ $1CD37F
 
+
 #WRITE(GBA,$1CF734)
-<CONTROL_CODE><$01><$01>っ8い え? じょうきょうを せいりして<LINE>
- ききたいの? いいわよ‥‥えーと‥‥<NEWBOX>
- 1ねんまえに いんせきがおちて<LINE>
- ほくせいに ヘンなとうが できたの<NEWBOX>
- ファンタシーが なにものかに<LINE>
- こうげきされたのも このころらしいわ<NEWBOX>
- はんとしまえ ヘンなモンスターが<LINE>
- そとを うろつくようになったころに<NEWBOX>
- ファンタシーから にげてきた<LINE>
- エメラリーダさまたちが<NEWBOX>
- フェアリーパレスに やってきたの<LINE>
- ‥‥このへんの くわしい じじょうは<NEWBOX>
- フェアリーパレスの せんしに<LINE>
- きいたほうが いいとおもうわ<NEWBOX>
- あなたが さがしているらしい ひとを<LINE>
- みたのは つい せんしゅうよ<NEWBOX>
- その つぎのひから いきなり すごい<LINE>
- ふぶきが なんにちもつづいて‥‥<NEWBOX>
- フェアリーパレスに<LINE>
- つながる はしが おちてしまったの<NEWBOX>
- いま フェアリーパレスの おくは<LINE>
- すっかり こおってしまっているそうよ<NEWBOX>
- ‥‥こんなところだけど<LINE>
- おやくに たてたかしら?<END>
+<CONTROL_CODE><$01><$01><$3E><$09><$0C>Eh? You want to sort out this<LINE>
+situation? That's fine... But...<NEWBOX>
+//1ねんまえに いんせきがおちて<LINE>
+//ほくせいに ヘンなとうが できたの<NEWBOX>
+One year ago a meteorite landed, and a<LINE>
+tower appeared in the north-west.<NEWBOX>
+//ファンタシーが なにものかに<LINE>
+//こうげきされたのも このころらしいわ<NEWBOX>
+And since then it appears something<LINE>
+has been attacking Fantasy.<NEWBOX>
+//はんとしまえ ヘンなモンスターが<LINE>
+//そとを うろつくようになったころに<NEWBOX>
+It was half a year ago that monsters<LINE>
+began appearing around the castle.<NEWBOX>
+//ファンタシーから にげてきた<LINE>
+//エメラリーダさまたちが<NEWBOX>
+Thankfully Queen Emeralda and others<LINE>
+within Fantasy managed to escape...<NEWBOX>
+//フェアリーパレスに やってきたの<LINE>
+//‥‥このへんの くわしい じじょうは<NEWBOX>
+But those are the circumstances <LINE>
+surrounding Fantasy castle.<NEWBOX>
+//フェアリーパレスの せんしに<LINE>
+//きいたほうが いいとおもうわ<NEWBOX>
+I think it would be good if you talked<NEWBOX>
+with the soldier of the Fairy Palace.<LINE>
+//あなたが さがしているらしい ひとを<LINE>
+//みたのは つい せんしゅうよ<NEWBOX>
+Just last week there was someone who<LINE>
+appeared to be looking for you.<NEWBOX>
+//その つぎのひから いきなり すごい<LINE>
+//ふぶきが なんにちもつづいて‥‥<NEWBOX>
+But the next day, a blizzard started <LINE>
+which has been raging non-stop...<NEWBOX>
+//フェアリーパレスに<LINE>
+//つながる はしが おちてしまったの<NEWBOX>
+To make matters worse, the bridge to<LINE>
+the Fairy Palace was also destroyed.<NEWBOX>
+//いま フェアリーパレスの おくは<LINE>
+//すっかり こおってしまっているそうよ<NEWBOX>
+And now the inside of the Fairy<LINE>
+Palace is completely frozen.<NEWBOX>
+//‥‥こんなところだけど<LINE>
+//おやくに たてたかしら?<END>
+In this kind of situation,<LINE>
+what is one to do?<END>
 
 //POINTER #12 @ $1CF738 - STRING #12 @ $1CD524
 
+
 #WRITE(GBA,$1CF738)
- エメラリーダさまの へやの とびらが<LINE>
- あいたんですって!<NEWBOX>
- エメラリーダさま ぶじだったそうよ<LINE>
- ‥‥よかったわぁ‥‥<END>
+The door to Queen Emeralda's room<LINE>
+has opened!<NEWBOX>
+It appears that Queen Emeralda is safe.<LINE>
+...Thank goodness...<END>
+
 
 //POINTER #13 @ $1CF73C - STRING #13 @ $1CD562
 
+
 #WRITE(GBA,$1CF73C)
- ねぇねぇ きいて きいて!<LINE>
- せんしゅうさぁ‥‥<NEWBOX>
- ぜんしん まっくろの カッコイイ<LINE>
- ひとが ここに きたんだ!<NEWBOX>
- マックス? へえぇ あのひと<LINE>
- マックスって いうんだ?<NEWBOX>
- ほかの ほしから きたわりには<LINE>
- このへんのことについて くわしいから<NEWBOX>
- オイラ ビックリしちゃったよ<LINE>
- ‥‥まえに きたことが あるのかな?<END>
+Hey hey! Listen listen!<LINE>
+So, last week...<NEWBOX>
+A cool looking person covered in<LINE>
+pitch black came here!<NEWBOX>
+Max? Huh... So that person's<LINE>
+name was Max?<NEWBOX>
+//ほかの ほしから きたわりには<LINE>
+//このへんのことについて くわしいから<NEWBOX>
+Even though he's from another star, he<LINE>
+seemed to understand our situation.<NEWBOX>
+//オイラ ビックリしちゃったよ<LINE>
+//‥‥まえに きたことが あるのかな?<END>
+He really surprised me! Perhaps...<LINE>
+that wasn't his first visit here?<END>
+
 
 //POINTER #14 @ $1CF740 - STRING #14 @ $1CD604
 
+
 #WRITE(GBA,$1CF740)
-<CONTROL_CODE><$01><$01>ア8ま<CONTROL_CODE><$01><$01>ょ8お<CONTROL_CODE><$01><$01>ゅ8ほ<CONTROL_CODE><$03><$01>ゅ<CONTROL_CODE><$03><$00>ぁ いらっしゃい よくきたね‥‥ん?<LINE>
- このタマゴが きになるかい?<NEWBOX>
- これは ビーストポミュっていう<LINE>
- キャラボンの タマゴだよ<NEWBOX>
- もともとは ガケのうえに あったのが<LINE>
- すべりおちちゃったみたいでね<NEWBOX>
- ほうっておけないから<LINE>
- ここに もってきたのさ<NEWBOX>
- え? このタマゴが ほしいのかい?<LINE>
- ‥‥そうだねぇ<NEWBOX>
- じゃあ ちょっと おつかいを<LINE>
- してくれたら おだちんに あげるよ<NEWBOX>
- このコムギコを きたイプシロンにいる<LINE>
- あねのギンに とどけて<NEWBOX>
- やいてもらったパンを うけとって<LINE>
- ここまで もってきてくれれば いい<NEWBOX>
- じゃ たのんだよ<NEWBOX>
- ボンバーマンは コムギコを<LINE>
- てにいれた!<CONTROL_CODE><$12><$0C><END>
+<CONTROL_CODE><$01><$01><$42><$09><$29><CONTROL_CODE><$01><$01><$41><$09><$0F><CONTROL_CODE><$01><$01><$40><$09><$28><CONTROL_CODE><$03><$01><$40><CONTROL_CODE><$03><$00><$39>Welcome! Hm...? What's that...?<LINE>
+Are you curious about this egg?<NEWBOX>
+This is a Karabon egg of<LINE>
+Pommy Beast.<NEWBOX>
+//もともとは ガケのうえに あったのが<LINE>
+//すべりおちちゃったみたいでね<NEWBOX>
+It was originally located atop a cliff,<LINE>
+but I guess it slid off.<NEWBOX>
+//ほうっておけないから<LINE>
+//ここに もってきたのさ<NEWBOX>
+I couldn't just leave it there,<LINE>
+so I decided to bring it back here.<NEWBOX>
+Hm? Do you want this egg?<LINE>
+//‥‥そうだねぇ<NEWBOX>
+Is that so...<NEWBOX>
+Run a little errand for me,<LINE>
+and I'll give it to you as a reward.<NEWBOX>
+//このコムギコを きたイプシロンにいる<LINE>
+//あねのギンに とどけて<NEWBOX>
+This flour needs to be delivered to my<LINE>
+older sister Gin in North Epsilon.<NEWBOX>
+//やいてもらったパンを うけとって<LINE>
+//ここまで もってきてくれれば いい<NEWBOX> 
+After she makes bread from it, I'd<LINE>
+like you to bring some back to me.<NEWBOX>
+I'm counting on you!<NEWBOX>
+Bomberman received some<LINE>
+Flour!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #15 @ $1CF744 - STRING #15 @ $1CD745
 
+
 #WRITE(GBA,$1CF744)
-<CONTROL_CODE><$04><$00>ぃ おぉ いってきてくれたのかい<LINE>
- ありがとうよ<NEWBOX>
- ボンバーマンは パンを<LINE>
- わたした<CONTROL_CODE><$12><$0C><NEWBOX>
- こりゃあ また おいしそうなパンだね<LINE>
- たべるのが たのしみだよ<NEWBOX>
- それじゃ やくそくだからね<LINE>
- ちゃんと めんどう みてあげるんだよ<NEWBOX>
-<CONTROL_CODE><$03><$00>る<CONTROL_CODE><$03><$01>ア ボンバーマンは タマゴを<LINE>
- てにいれた!<CONTROL_CODE><$12><$0C><END>
+<CONTROL_CODE><$04><$00><$3A>Oh, so you've completed my request?<LINE>
+Thanks!<NEWBOX>
+Bomberman handed over<LINE>
+the Bread.<CONTROL_CODE><$12><$0C><NEWBOX>
+See, doesn't this look like tasty bread?<LINE>
+I'm going to enjoy eating this!<NEWBOX>
+//それじゃ やくそくだからね<LINE>
+//ちゃんと めんどう みてあげるんだよ<NEWBOX>
+Well then, as promised, here's the<LINE>
+ egg. I must admit I'm sad to see it go.<NEWBOX>
+<CONTROL_CODE><$03><$00><$33><CONTROL_CODE><$03><$01><$42> Bomberman recieved<LINE>
+the Egg!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #16 @ $1CF748 - STRING #16 @ $1CD7DD
 
+
 #WRITE(GBA,$1CF748)
-<CONTROL_CODE><$01><$01>ウ8カ おぉ わかいの!<LINE>
- このへんは はじめてか?<NEWBOX>
- ここにきたら やはり<LINE>
- おんせんに はいらんとな!<NEWBOX>
- まぁ しかし わかりにくいところに<LINE>
- あるからな<NEWBOX>
- ここにくるまえに みかけたなら<LINE>
- かなり ラッキーじゃぞ<NEWBOX>
- まだ みつけていないなら<LINE>
- もときたみちを もどって<NEWBOX>
- さがしてみると いいじゃろう<LINE>
- ‥‥フホホ<END>
+<CONTROL_CODE><$01><$01><$44><$09><$47>Hey, you there!<LINE>
+//このへんは はじめてか?<NEWBOX>
+Is this your first time around here?<NEWBOX>
+//ここにきたら やはり<LINE>
+//おんせんに はいらんとな!<NEWBOX>
+If so, then naturally you'll want<LINE>
+to try the hot spring!<NEWBOX>
+//まぁ しかし わかりにくいところに<LINE>
+//あるからな<NEWBOX>
+However, it's in a location that<LINE>
+may be difficult to find...<NEWBOX>
+//ここにくるまえに みかけたなら<LINE>
+//かなり ラッキーじゃぞ<NEWBOX>
+You're quite lucky if you managed<LINE>
+to find it before coming here!<NEWBOX>
+//まだ みつけていないなら<LINE>
+//もときたみちを もどって<NEWBOX>
+But if you didn't come across it, your<LINE>
+best bet is to go back the way you came.<NEWBOX>
+//さがしてみると いいじゃろう<LINE>
+//‥‥フホホ<END>
+Good luck finding it!<LINE>
+...Fwa ha ha.<END>
+
 
 //POINTER #17 @ $1CF74C - STRING #17 @ $1CD881
 
+
 #WRITE(GBA,$1CF74C)
- はやく あたたかくならないかな‥‥<LINE>
- はんとしも このちょうしだからねぇ<END>
+I wish it would hurry and warm up...<LINE>
+It's already been like this for half a year.<END>
+
 
 //POINTER #18 @ $1CF750 - STRING #18 @ $1CD8A7
 
+
 #WRITE(GBA,$1CF750)
-<CONTROL_CODE><$02><$01>ゅ8み<CONTROL_CODE><$01><$01>ょ8む<CONTROL_CODE><$03><$01>ょ<CONTROL_CODE><$03><$00>ぃ<CONTROL_CODE><$04><$00>ぁ おや みなみイプシロンの いもうとの<LINE>
- キンの おつかいで きたのかい?<NEWBOX>
- それは ごくろうだったね‥‥じゃあ<LINE>
- まず コムギコを わたしておくれ<NEWBOX>
- ボンバーマンは コムギコを<LINE>
- わたした<CONTROL_CODE><$12><$0C><NEWBOX>
- よし それじゃあ いまから パンを<LINE>
- やくから ちょっと まってておくれ<NEWBOX>
- ‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥<LINE>
- ‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥<NEWBOX>
- はい おいしく やきあがった<LINE>
- やきたてのパンだよ<NEWBOX>
- ボンバーマンは パンを<LINE>
- てにいれた!<CONTROL_CODE><$12><$0C><NEWBOX>
- たしかに わたしたからね<LINE>
- さめないうちに とどけておくれ<END>
+//<CONTROL_CODE><$02><$01><$40><$09><$2A><CONTROL_CODE><$01><$01><$41><$09><$2B><CONTROL_CODE><$03><$01><$41><CONTROL_CODE><$03><$00><$3A><CONTROL_CODE><$04><$00><$39> おや みなみイプシロンの いもうとの<LINE>
+//キンの おつかいで きたのかい?<NEWBOX>
+<CONTROL_CODE><$02><$01><$40><$09><$2A><CONTROL_CODE><$01><$01><$41><$09><$2B><CONTROL_CODE><$03><$01><$41><CONTROL_CODE><$03><$00><$3A><CONTROL_CODE><$04><$00><$39>Ah, so you are here at the request of<LINE>
+my sister Kin from South Epsilon?<NEWBOX>
+//それは ごくろうだったね‥‥じゃあ<LINE>
+//まず コムギコを わたしておくれ<NEWBOX>
+That must be rough. But let's start,<LINE>
+shall we? Please hand me the flour.<NEWBOX>
+Bomberman handed over<LINE>
+the Flour.<CONTROL_CODE><$12><$0C><NEWBOX>
+//よし それじゃあ いまから パンを<LINE>
+//やくから ちょっと まってておくれ<NEWBOX>
+Alright, wait just a bit and<LINE>
+the bread will be done!<NEWBOX>
+...........<LINE>
+...........<NEWBOX>
+Okay, it's ready and delicious.<LINE>
+Fresh baked bread!<NEWBOX>
+Bomberman obtained some<LINE>
+Bread!<CONTROL_CODE><$12><$0C><NEWBOX>
+//たしかに わたしたからね<LINE>
+//さめないうちに とどけておくれ<END>
+Be sure to deliver it before it gets<LINE>
+cold!<END>
+
 
 //POINTER #19 @ $1CF754 - STRING #19 @ $1CD9C2
 
-#WRITE(GBA,$1CF754)
-<CONTROL_CODE><$01><$01>っ8こ エメラリーダさまの へやの とびらが<LINE>
- こおってしまい ビクともしないのだ<NEWBOX>
- なかのようすが まったくわからん‥‥<LINE>
- エメラリーダさまは ぶじなのだろうか<END>
 
-//POINTER #20 @ $1CF758 - STRING #20 @ $1CDA17
+#WRITE(GBA,$1CF754)
+<CONTROL_CODE><$01><$01><$3E><$09><$14>The door to Queen Emeralda's room is<LINE>
+frozen shut and won't budge an inch.<NEWBOX>
+I have no idea what's going on inside...<LINE>
+Do you think Queen Emeralda is safe?<END>
+
+
+////POINTER #20 @ $1CF758 - STRING #20 @ $1CDA17
+
 
 #WRITE(GBA,$1CF758)
- とびらの こおりが とけたぞ!<NEWBOX>
- エメラリーダさまも ぶじだったし<LINE>
- とりあえず ひとあんしんだ<END>
+The ice around the door has melted!<NEWBOX>
+Queen Emeralda is appears to be safe.<LINE>
+That's a huge relief!<END>
+
 
 //POINTER #21 @ $1CF75C - STRING #21 @ $1CDA49
 
+
 #WRITE(GBA,$1CF75C)
-<CONTROL_CODE><$01><$01>っ8し なんねんかまえ このほしが<LINE>
- いまのように てきに せめられたとき<NEWBOX>
- このフェアリーパレスに つかえていた<LINE>
- われわれ せんしたちが<NEWBOX>
- ちからを あわせて てきに<LINE>
- たちむかったのだ<NEWBOX>
- せんしたちの なかでも とくに<LINE>
- ゆうかんだったのが‥‥<NEWBOX>
- あおい めをした サムライと<LINE>
- よばれていた‥‥マックスだった<NEWBOX>
- こんなときにこそ マックスが<LINE>
- いてくれれば‥‥<NEWBOX>
- ヤツは いまごろ いったい どこで<LINE>
- どうしてるのだろうか‥‥<END>
+//<CONTROL_CODE><$01><$01><$3E><$09><$16> なんねんかまえ このほしが<LINE>
+//いまのように てきに せめられたとき<NEWBOX>
+<CONTROL_CODE><$01><$01><$3E><$09><$16>Several years ago during times of<LINE>
+trouble just like now...<NEWBOX>
+//このフェアリーパレスに つかえていた<LINE>
+//われわれ せんしたちが<NEWBOX>
+Us soldiers have combined our<LINE>
+strength to serve Fairy Palace.<NEWBOX>
+//ちからを あわせて てきに<LINE>
+//たちむかったのだ<NEWBOX>
+While we have all done our best to<LINE>
+work together and fight the enemy...<NEWBOX>
+//せんしたちの なかでも とくに<LINE>
+//ゆうかんだったのが‥‥<NEWBOX>
+And while all soldiers have<LINE>
+displayed acts of great bravery...<NEWBOX>
+//あおい めをした サムライと<LINE>
+//よばれていた‥‥マックスだった<NEWBOX>
+The greatest soldier we have ever<LINE>
+known, was the one called... Max...<NEWBOX>
+//こんなときにこそ マックスが<LINE>
+//いてくれれば‥‥<NEWBOX>
+If only he was here again to help<LINE>
+during a troubling time like this...<NEWBOX>
+//ヤツは いまごろ いったい どこで<LINE>
+//どうしてるのだろうか‥‥<END>
+I really wonder what he's up to<LINE>
+these days...<NEWBOX>
+
 
 //POINTER #22 @ $1CF760 - STRING #22 @ $1CDB26
 
+
 #WRITE(GBA,$1CF760)
- むかし このほしを すくった<LINE>
- マックスという せんしは‥‥<NEWBOX>
- てきの ようさいを はかいしたあと<LINE>
- けっきょく もどってこなかった<NEWBOX>
- ようさいの ばくはつに<LINE>
- まきこまれてしまったのか‥‥<NEWBOX>
- それとも にげた てきを<LINE>
- おって たびだってしまったのか‥‥<NEWBOX>
- いま どこで どうしているのかは<LINE>
- まったくわからない<NEWBOX>
- しかし じょおう<LINE>
- エメラリーダさまは いまも‥‥<NEWBOX>
- マックスが かえってくる ひを<LINE>
- しんじて まちつづけているのだ<END>
+Long ago this star was saved by a<LINE>
+soldier named Max.<NEWBOX>
+In the end, after destroying the<LINE>
+enemy's fortress, he never returned.<NEWBOX>
+I wonder if he may have been caught<LINE>
+in the fortress' explosion...?<NEWBOX>
+Or perhaps he left to pursue the<LINE>
+fleeing enemy...?<NEWBOX>
+//いま どこで どうしているのかは<LINE>
+//まったくわからない<NEWBOX>
+Regardless of where he ended up,<LINE>
+nobody knows for sure.<NEWBOX>
+//しかし じょおう<LINE>
+//エメラリーダさまは いまも‥‥<NEWBOX>
+However, Even now...<LINE>
+Queen Emeralda...<NEWBOX>
+//マックスが かえってくる ひを<LINE>
+//しんじて まちつづけているのだ<END>
+Believes that eventually a day will<LINE>
+come when Max finally returns.<END>
+
 
 //POINTER #23 @ $1CF764 - STRING #23 @ $1CDC02
 
+
 #WRITE(GBA,$1CF764)
-<CONTROL_CODE><$01><$01>っ8せ わたしは ここ さいきん<LINE>
- さむくなったのは<NEWBOX>
- にしの とうが げんいんではないかと<LINE>
- にらんでいる<NEWBOX>
- いんせきのおちた つぎのひに<LINE>
- とつぜん あの とうが あらわれて<NEWBOX>
- それから だんだんと じめんが<LINE>
- こおりだしたのだ<NEWBOX>
- とはいえ フェアリーパレスが こんな<LINE>
- じょうたいでは しらべにも いけん<NEWBOX>
- ‥‥どうしたものか‥‥<END>
+<CONTROL_CODE><$01><$01><$3E><$09><$18>It's become quite cool as of late.<LINE>
+ I'm certainly feeling the chill...<NEWBOX>
+//にしの とうが げんいんではないかと<LINE>
+//にらんでいる<NEWBOX>
+I would bet that tower to the west<LINE>
+has something to do with this cold.<NEWBOX>
+//いんせきのおちた つぎのひに<LINE>
+//とつぜん あの とうが あらわれて<NEWBOX>
+After a meteorite landed, the very<LINE>
+next day that tower appeared.<NEWBOX>
+//それから だんだんと じめんが<LINE>
+//こおりだしたのだ<NEWBOX>
+Ever since then, the ground has<LINE>
+gradually begun to freeze.<NEWBOX>
+//とはいえ フェアリーパレスが こんな<LINE>
+//じょうたいでは しらべにも いけん<NEWBOX>
+And with things the way they are, we<LINE>
+can't even get to the Fairy Palace...<NEWBOX>
+//‥‥どうしたものか‥‥<END>
+...What is one to do...<END>
+
 
 //POINTER #24 @ $1CF768 - STRING #24 @ $1CDCAE
 
+
 #WRITE(GBA,$1CF768)
- てんくうのしろ ファンタシーに<LINE>
- あのひ せめてきた てきを<NEWBOX>
- わたしたちは しっている‥‥<NEWBOX>
- ‥‥かつて このほしを<LINE>
- きょうふの ドンぞこに おとしいれた<NEWBOX>
- きょうあくボンバー 5にんしゅう!<NEWBOX>
- みまちがえるハズもない!<LINE>
- やつらは しんではいなかった‥‥!<NEWBOX>
- かつての たたかいで マックスを<LINE>
- うしなってまで たたかいぬいた<NEWBOX>
- われわれは‥‥あの たたかいは<LINE>
- いったい なんだったというのだ‥‥<END>
+//てんくうのしろ ファンタシーに<LINE>
+//あのひ せめてきた てきを<NEWBOX>
+That day when enemies came to<LINE>
+attack the sky castle Fantasy...<NEWBOX>
+//わたしたちは しっている‥‥<NEWBOX>
+It's a time we all remember well.<NEWBOX>
+//‥‥かつて このほしを<LINE>
+//きょうふの ドンぞこに おとしいれた<NEWBOX>
+A time when we held a great fear of<LINE>
+those who were attacking us.<NEWBOX>
+//きょうあくボンバー 5にんしゅう!<NEWBOX>
+Those terrible five Evil Bombers!<NEWBOX>
+//みまちがえるハズもない!<LINE>
+//やつらは しんではいなかった‥‥!<NEWBOX>
+There's absolutely no mistaking it!<LINE>
+And we just couldn't defeat them...<NEWBOX>
+//かつての たたかいで マックスを<LINE>
+//うしなってまで たたかいぬいた<NEWBOX>
+But then Max arrived and saved us.<LINE>
+He fought until the bitter end.<NEWBOX>
+//われわれは‥‥あの たたかいは<LINE>
+//いったい なんだったというのだ‥‥<END>
+As for exactly what happened during<LINE>
+battle... We may never know...<END>
+
 
 //POINTER #25 @ $1CF76C - STRING #25 @ $1CDD7A
 
+
 #WRITE(GBA,$1CF76C)
-<CONTROL_CODE><$01><$01>っ8た とうの たっているところから ずっと<LINE>
- みなみに いった ガケのそばに<NEWBOX>
- こおりづけのはなが さいている<LINE>
- ばしょがある<NEWBOX>
- あのはなは プテラドンという<LINE>
- キャラボンの だいこうぶつだそうだ<END>
+//<CONTROL_CODE><$01><$01><$3E><$09><$1A> とうの たっているところから ずっと<LINE>
+//みなみに いった ガケのそばに<NEWBOX>
+<CONTROL_CODE><$01><$01><$3E><$09><$1A>Do you know of the Ice Flower?<LINE>
+Apparently directly south of the tower...<NEWBOX>
+//こおりづけのはなが さいている<LINE>
+//ばしょがある<NEWBOX>
+There is an area near a cliff where<LINE>
+they are known to bloom!<NEWBOX>
+//あのはなは プテラドンという<LINE>
+//キャラボンの だいこうぶつだそうだ<END>
+That flower is the favorite food of<LINE>
+the Karabon, Pteradon!<END>
+
 
 //POINTER #26 @ $1CF770 - STRING #26 @ $1CDDE1
 
+
 #WRITE(GBA,$1CF770)
- エメラリーダさまは つがいの<LINE>
- キャラボンを かっておられた‥‥だが<NEWBOX>
- ファンタシーが せめこまれたときに<LINE>
- オスのほうは うばわれてしまった‥‥<NEWBOX>
- オスのほうには たしか つちを<LINE>
- たがやす のうりょくが あったのだが<NEWBOX>
- こんな よのなかでは たいして<LINE>
- やくに たたないかも しれんな‥‥<END>
+Queen Emeralda once had a<LINE>
+Karabon partner. However...<NEWBOX>
+//ファンタシーが せめこまれたときに<LINE>
+//オスのほうは うばわれてしまった‥‥<NEWBOX>
+During the attack on Fantasy, he<LINE>
+was kidnapped.<NEWBOX>
+//オスのほうには たしか つちを<LINE>
+//たがやす のうりょくが あったのだが<NEWBOX>
+If I'm not mistaken, that Karabon had<LINE>
+the ability to plow the ground.<NEWBOX>
+//こんな よのなかでは たいして<LINE>
+//やくに たたないかも しれんな‥‥<END>
+But in a place like this, I can't really<LINE>
+see how that ability would be helpful.<END>
+
 
 //POINTER #27 @ $1CF774 - STRING #27 @ $1CDE75
 
+
 #WRITE(GBA,$1CF774)
-<CONTROL_CODE><$01><$01>メ8ア おお あなたですか<LINE>
- このしろを すくってくださったのは<NEWBOX>
- エメラリーダさまに これを あなたに<LINE>
- わたすようにと いわれておりました<NEWBOX>
-<CONTROL_CODE><$03><$01>メ<CONTROL_CODE><$03><$00>ひ ボンバーマンは フーセンを<LINE>
- てにいれた!<CONTROL_CODE><$12><$0C><NEWBOX>
- このフーセンは あたらしいボムを<LINE>
- つくるための ごうせいそざいです<NEWBOX>
- これからの たたかいに<LINE>
- やくだててください<NEWBOX>
- さきほど エメラリーダさまに<LINE>
- つかえる 4けんじゃの ひとり‥‥<NEWBOX>
- ブゥさまが もどられて あなたに<LINE>
- でんごんを のこしていかれました<NEWBOX>
- でんごんを おつたえします<NEWBOX>
- ‥‥ワシら 4けんじゃは あるひ<LINE>
- きょうあくボンバーたちを<NEWBOX>
- たおすほうほうについての<LINE>
- ある じょうほうを てにいれたのぢゃ<NEWBOX>
- じつは ヤツらには それぞれ<LINE>
- にがてとする キャラボンが いる<NEWBOX>
- ‥‥という じょうほうを もとに<LINE>
- ワシらは かくちに ちり<NEWBOX>
- みつけた キャラボンを つれて<LINE>
- それぞれの ようさいに いったんぢゃ<NEWBOX>
- ぢゃが それは ブレインボンバーが<LINE>
- ながした にせじょうほうぢゃった‥‥<NEWBOX>
- けっかてきに ワシらは やつらを<LINE>
- パワーアップさせる キャラボンを<NEWBOX>
- あつめる てだすけを させられて<LINE>
- しまったのぢゃ‥‥めんぼくない<NEWBOX>
- ‥‥でんごん おわります<LINE>
- ‥‥にてました?<END>
+<CONTROL_CODE><$01><$01><$63><$09><$42>Ah, it's you!<LINE>
+//このしろを すくってくださったのは<NEWBOX>
+For helping to save the castle<NEWBOX>
+//エメラリーダさまに これを あなたに<LINE>
+//わたすようにと いわれておりました<NEWBOX>
+Queen Emeralda said that she wished<LINE>
+for you to have this.<NEWBOX>
+<CONTROL_CODE><$03><$01><$63><CONTROL_CODE><$03><$00><$25>Bomberman obtained<LINE>
+//フーセン!<CONTROL_CODE><$12><$0C><NEWBOX>
+the Balloon!<CONTROL_CODE><$12><$0C><NEWBOX>
+//Thisフーセンは あたらしいボムを<LINE>
+//つくるための ごうせいそざいです<NEWBOX>
+This balloon can be used to<LINE>
+synthesize a new type of bomb.<NEWBOX>
+//これからの たたかいに<LINE>
+//やくだててください<NEWBOX>
+Please use it during your battles<LINE>
+from now on!<NEWBOX>
+//さきほど エメラリーダさまに<LINE>
+//つかえる 4けんじゃの ひとり‥‥<NEWBOX>
+Not long ago, one of the four wise men<LINE>
+who serves Queen Emeralda, Buu...<NEWBOX>
+//ブゥさまが もどられて あなたに<LINE>
+//でんごんを のこしていかれました<NEWBOX>
+returned and left a message <LINE>
+for you.<NEWBOX>
+//でんごんを おつたえします<NEWBOX>
+This is what he said...<NEWBOX>
+//‥‥ワシら 4けんじゃは あるひ<LINE>
+//きょうあくボンバーたちを<NEWBOX>
+One day, we the four wise men<LINE>
+finally discovered...<NEWBOX>
+//たおすほうほうについての<LINE>
+//ある じょうほうを てにいれたのぢゃ<NEWBOX>
+the method through which the Evil<LINE>
+Bombers may be defeated.<NEWBOX>
+//じつは ヤツらには それぞれ<LINE>
+//にがてとする キャラボンが いる<NEWBOX>
+The truth is that there exists a<LINE>
+Karabon which they are weak to.<NEWBOX>
+//‥‥という じょうほうを もとに<LINE>
+//ワシらは かくちに ちり<NEWBOX>
+With this information, together with<LINE>
+the Karabons we had found<NEWBOX>
+//みつけた キャラボンを つれて<LINE>
+//それぞれの ようさいに いったんぢゃ<NEWBOX>
+we set out to visit many different<LINE>
+fortresses<NEWBOX>
+//ぢゃが それは ブレインボンバーが<LINE>
+//ながした にせじょうほうぢゃった‥‥<NEWBOX>
+but perhaps our lead was just false<LINE>
+information spread by Brain Bomber.<NEWBOX>
+//けっかてきに ワシらは やつらを<LINE>
+//パワーアップさせる キャラボンを<NEWBOX>
+As in the end, all we did was help<LINE>
+them get their hands<NEWBOX>
+//あつめる てだすけを させられて<LINE>
+//しまったのぢゃ‥‥めんぼくない<NEWBOX>
+on our powered up Karabons. I am<LINE>
+very ashamed by what happened...<NEWBOX>
+//‥‥でんごん おわります<LINE>
+//‥‥にてました?<END>
+That's the end of the message.<LINE>
+Does it make sense to you?<END>
+
 
 //POINTER #28 @ $1CF778 - STRING #28 @ $1CE0A3
 
+
 #WRITE(GBA,$1CF778)
- あの いんせきの おちた ひ<LINE>
- てんくうのしろ ファンタシーは<NEWBOX>
- きょうあくボンバー 5にんしゅうに<LINE>
- よって せめおとされた<NEWBOX>
- われわれは なんとか さばくにある<LINE>
- てんくうへのみちから にげのび<NEWBOX>
- やつらが おって こられないように<LINE>
- メダリオンを はずし みちを とじた<NEWBOX>
- だが さばくも すでに やつらの<LINE>
- てに おちていて<NEWBOX>
- たたかいの なかで てきに 4つの<LINE>
- メダリオンを うばわれてしまった<NEWBOX>
- そこで すうねんまえに おなじような<LINE>
- ことがあったときに つかった<NEWBOX>
- この フェアリーパレスへと<LINE>
- うつってきたのだ<NEWBOX>
- だが やつらは ここでも われわれの<LINE>
- せんてを うっていた‥‥あのとうだ<NEWBOX>
- けっきょく われわれは ここに<LINE>
- とじこめられた かっこうになって<NEWBOX>
- そのあいだに やつらに すきに<LINE>
- やられてしまった‥‥めんぼくない<NEWBOX>
- まだ ちじょうに おおくの まものが<LINE>
- いるいじょうは‥‥<NEWBOX>
- われわれは ちじょうを<LINE>
- はなれるわけにはいかない<NEWBOX>
- すまないが あなたに ファンタシーを<LINE>
- とりもどすことを おねがいしたい<NEWBOX>
- ‥‥よろしく たのむ<END>
+//あの いんせきの おちた ひ<LINE>
+//てんくうのしろ ファンタシーは<NEWBOX>
+The day the meteorite landed, the<LINE>
+sky castle Fantasy<NEWBOX>
+//きょうあくボンバー 5にんしゅうに<LINE>
+//よって せめおとされた<NEWBOX>
+was attacked by the group of five<LINE>
+Evil Bombers.<NEWBOX>
+//われわれは なんとか さばくにある<LINE>
+//てんくうへのみちから にげのび<NEWBOX>
+We escaped from the sky using a path<LINE>
+leading to the desert. And so that<NEWBOX>
+//やつらが おって こられないように<LINE>
+//メダリオンを はずし みちを とじた<NEWBOX>
+the Evil Bombers couldn't also use it, we<LINE>
+sealed it and removed the medallions.<NEWBOX>
+//だが さばくも すでに やつらの<LINE>
+//てに おちていて<NEWBOX>
+However, the desert had already been<LINE>
+taken over by the Evil Bombers...<NEWBOX>
+//たたかいの なかで てきに 4つの<LINE>
+//メダリオンを うばわれてしまった<NEWBOX>
+And during the battle, they stole<LINE>
+the four medallions form us.<NEWBOX>
+//そこで すうねんまえに おなじような<LINE>
+//ことがあったときに つかった<NEWBOX>
+Then, just as we did several years ago<LINE>
+in a similar situation<NEWBOX>
+//この フェアリーパレスへと<LINE>
+//うつってきたのだ<NEWBOX>
+we moved to the<LINE>
+Fairy Palace.<NEWBOX>
+//だが やつらは ここでも われわれの<LINE>
+//せんてを うっていた‥‥あのとうだ<NEWBOX>
+However, the Evil Bombers attacked<LINE>
+here as well... With that tower...<NEWBOX>
+//けっきょく われわれは ここに<LINE>
+//とじこめられた かっこうになって<NEWBOX>
+And as a result we became sealed<LINE>
+here.<NEWBOX>
+//そのあいだに やつらに すきに<LINE>
+//やられてしまった‥‥めんぼくない<NEWBOX>
+During that time, those Evil Bombers<LINE>
+have done great damage. It's awful...<NEWBOX>
+//まだ ちじょうに おおくの まものが<LINE>
+//いるいじょうは‥‥<NEWBOX>
+And even now evil beings continue<LINE>
+to roam the surface world...<NEWBOX>
+//われわれは ちじょうを<LINE>
+//はなれるわけにはいかない<NEWBOX>
+And we aren't separate from what<LINE>
+happens on the surface.<NEWBOX>
+//すまないが あなたに ファンタシーを<LINE>
+//とりもどすことを おねがいしたい<NEWBOX>
+I hate to further burden you, but<LINE>
+please... You must take back Fantasy.<NEWBOX>
+//‥‥よろしく たのむ<END>
+I'm begging you...<END>
+
 
 //POINTER #29 @ $1CF77C - STRING #29 @ $1CE286
 
+
 #WRITE(GBA,$1CF77C)
- あなたが ボンバーマンですか‥‥<LINE>
- はじめまして<NEWBOX>
- わたしが このほしの じょおう<LINE>
- エメラリーダです<NEWBOX>
- いろいろなところで ひとびとを<LINE>
- たすけてくださっているそうで‥‥<NEWBOX>
- ほんとうに ありがとうございます<NEWBOX>
- なにぶん さきほどまで あのような<LINE>
- じょうたいでしたので<NEWBOX>
- たいした おれいも できませんが‥‥<NEWBOX>
- このキャラボンを おつれください<LINE>
- きっと たすけに なるでしょう<END>
+Are you Bomberman...?<LINE>
+It's nice to meet you.<NEWBOX>
+I am the leader of this star,<LINE>
+Queen Emeralda.<NEWBOX>
+//いろいろなところで ひとびとを<LINE>
+//たすけてくださっているそうで‥‥<NEWBOX>
+You have overcome many challenges,<LINE>
+and defeated many foes in coming here.<NEWBOX>
+//ほんとうに ありがとうございます<NEWBOX>
+And for that, I am truly thankful.<NEWBOX>
+//なにぶん さきほどまで あのような<LINE>
+//じょうたいでしたので<NEWBOX>
+For all of the hardships you have<LINE>
+endured on your journey...<NEWBOX>
+//たいした おれいも できませんが‥‥<NEWBOX>
+I think that a reward is in order.<NEWBOX>
+//このキャラボンを おつれください<LINE>
+//きっと たすけに なるでしょう<END>
+Please take this Karabon with you. I<LINE>
+am sure they will be helpful.<END>
+
 
 //POINTER #30 @ $1CF780 - STRING #30 @ $1CE346
 
+
 #WRITE(GBA,$1CF780)
- わたしは ユニコルノス<LINE>
- こんごとも よろしく‥‥<NEWBOX>
- キャラボン ユニコルノスが<LINE>
- なかまになった!<CONTROL_CODE><$12><$0C><NEWBOX>
- わたしの のうりょくは<LINE>
- かぜおこし<NEWBOX>
- セットしていると たつまきを<LINE>
- しずめたりできます<NEWBOX>
- Bボタンに わたしを セットしますか?<LINE>
-  はい  いいえ<CONTROL_CODE><$05><$01>1418ぁ8ぃ ‥‥! それは‥‥メダリオンでは<LINE>
- ありませんか!‥‥どこでそれを?<NEWBOX>
- ‥‥そうですか<LINE>
- ‥‥じつは それらのメダリオンは‥‥<NEWBOX>
- てんくうへのみちを ひらく<LINE>
- カギなのです<NEWBOX>
- おねがいです! メダリオンを すべて<LINE>
- とりもどしていただけないでしょうか?<NEWBOX>
- すべて そろえれば てきに<LINE>
- うばわれてしまった ファンタシーを<NEWBOX>
- とりもどせるかもしれません<NEWBOX>
- メダリオンは ぜんぶで 4つですから<LINE>
- のこりは 1つ‥‥<NEWBOX>
- おそらく かざんの ほうに<LINE>
- あるのではないかと おもいます<NEWBOX>
- わたしたちが てんくうから<LINE>
- ここへ にげるときに つかった<NEWBOX>
- さばくへの ゲートを<LINE>
- ひらかせておきます<NEWBOX>
- ばしょは きたイプシロンの そばです<LINE>
- いけば すぐわかると おもいます<NEWBOX>
- そこから かざんへ むかってください<LINE>
- それでは どうぞ おきをつけて‥‥<END>
+//わたしは ユニコルノス<LINE>
+//こんごとも よろしく‥‥<NEWBOX>
+I am Youno!<LINE>
+Let's work together from now on.<NEWBOX>
+Bomberman became friends with the<LINE>
+Karabon, Youno!<CONTROL_CODE><$12><$0C><NEWBOX>
+My ability is called<LINE>
+Monsoon.<NEWBOX>
+//セットしていると たつまきを<LINE>
+//しずめたりできます<NEWBOX>
+If I'm set, I can also eliminate<LINE>
+tornados, among other things!<NEWBOX>
+Set me to B button?<LINE>
+  Yes  No<CONTROL_CODE><$05><$01><$02><$05><$02>...! That's... Isn't that a medallion!?...<LINE>
+Where did you find it?<NEWBOX>
+...Is that so?<LINE>
+//‥‥じつは それらのメダリオンは‥‥<NEWBOX>
+The truth is... That medallion is...<NEWBOX>
+//てんくうへのみちを ひらく<LINE>
+//カギなのです<NEWBOX>
+A key that opens up a path to the<LINE>
+sky!<NEWBOX>
+//おねがいです! メダリオンを すべて<LINE>
+//とりもどしていただけないでしょうか?<NEWBOX>
+Please! Do everything you can to find<LINE>
+all of them. Won't you?<NEWBOX>
+//すべて そろえれば てきに<LINE>
+//うばわれてしまった ファンタシーを<NEWBOX>
+If you do obtain them all, then we<LINE>
+may just be able...<NEWBOX>
+//とりもどせるかもしれません<NEWBOX>
+to take back Fantasy from the enemy!<NEWBOX>
+//メダリオンは ぜんぶで 4つですから<LINE>
+//のこりは 1つ‥‥<NEWBOX>
+The are four medallions in total,<LINE>
+meaning that one more remains...<NEWBOX>
+//おそらく かざんの ほうに<LINE>
+//あるのではないかと おもいます<NEWBOX>
+Perhaps the last one is located<LINE>
+in the direction of the volcano.<NEWBOX>
+//わたしたちが てんくうから<LINE>
+//ここへ にげるときに つかった<NEWBOX>
+When we escaped from the sky, we<LINE>
+used a gate located in the desert.<NEWBOX>
+//さばくへの ゲートを<LINE>
+//ひらかせておきます<NEWBOX>
+That  is located near North<LINE>
+Epsilon. I can open it for you.<NEWBOX>
+//ばしょは きたイプシロンの そばです<LINE>
+//いけば すぐわかると おもいます<NEWBOX>
+If you go to that location, I believe<LINE>
+you will understand what to do.<NEWBOX>
+//そこから かざんへ むかってください<LINE>
+//それでは どうぞ おきをつけて‥‥<END>
+Then from there, head towards the<LINE>
+volcano. Be careful out there...<END>
+
 
 //POINTER #31 @ $1CF784 - STRING #31 @ $1CE3D4
 
+
 #WRITE(GBA,$1CF784)
- ‥‥! それは‥‥メダリオンでは<LINE>
- ありませんか!‥‥どこでそれを?<NEWBOX>
- ‥‥そうですか<LINE>
- ‥‥じつは それらのメダリオンは‥‥<NEWBOX>
- てんくうへのみちを ひらく<LINE>
- カギなのです<NEWBOX>
- おねがいです! メダリオンを すべて<LINE>
- とりもどしていただけないでしょうか?<NEWBOX>
- すべて そろえれば てきに<LINE>
- うばわれてしまった ファンタシーを<NEWBOX>
- とりもどせるかもしれません<NEWBOX>
- メダリオンは ぜんぶで 4つですから<LINE>
- のこりは 1つ‥‥<NEWBOX>
- おそらく かざんの ほうに<LINE>
- あるのではないかと おもいます<NEWBOX>
- わたしたちが てんくうから<LINE>
- ここへ にげるときに つかった<NEWBOX>
- さばくへの ゲートを<LINE>
- ひらかせておきます<NEWBOX>
- ばしょは きたイプシロンの そばです<LINE>
- いけば すぐわかると おもいます<NEWBOX>
- そこから かざんへ むかってください<LINE>
- それでは どうぞ おきをつけて‥‥<END>
+That's... Isn't that a medallion!?...<LINE>
+Where did you find it?<NEWBOX>
+...Is that so?<LINE>
+//‥‥じつは それらのメダリオンは‥‥<NEWBOX>
+The truth is... That medallion is...<NEWBOX>
+//てんくうへのみちを ひらく<LINE>
+//カギなのです<NEWBOX>
+A key that opens up a path to the<LINE>
+sky!<NEWBOX>
+//おねがいです! メダリオンを すべて<LINE>
+//とりもどしていただけないでしょうか?<NEWBOX>
+Please! Do everything you can to find<LINE>
+all of them. Won't you?<NEWBOX>
+//すべて そろえれば てきに<LINE>
+//うばわれてしまった ファンタシーを<NEWBOX>
+If you do obtain them all, then we<LINE>
+may just be able...<NEWBOX>
+to take back Fantasy from the enemy!<NEWBOX>
+//メダリオンは ぜんぶで 4つですから<LINE>
+//のこりは 1つ‥‥<NEWBOX>
+The are four medallions in total,<LINE>
+meaning that one more remains...<NEWBOX>
+//おそらく かざんの ほうに<LINE>
+//あるのではないかと おもいます<NEWBOX>
+Perhaps the last one is located<LINE>
+in the direction of the volcano.<NEWBOX>
+//わたしたちが てんくうから<LINE>
+//ここへ にげるときに つかった<NEWBOX>
+When we escaped from the sky, we<LINE>
+used a  located in the desert.<NEWBOX>
+//さばくへの ゲートを<LINE>
+//ひらかせておきます<NEWBOX>
+That  is located near North<LINE>
+Epsilon. I can open it for you.<NEWBOX>
+//ばしょは きたイプシロンの そばです<LINE>
+//いけば すぐわかると おもいます<NEWBOX>
+If you go to that location, I believe<LINE>
+you will understand what to do.<NEWBOX>
+//そこから かざんへ むかってください<LINE>
+//それでは どうぞ おきをつけて‥‥<END>
+Then from there, head towards the<LINE>
+volcano. Be careful out there...<END>
+
 
 //POINTER #32 @ $1CF788 - STRING #32 @ $1CE548
 
+
 #WRITE(GBA,$1CF788)
- わーい! こおりづけのはなだ~<LINE>
- モグモグモグ‥‥<END>
+Whoo hoo! It's the Ice Flower!~<LINE>
+Om nom nom...<END>
+
 
 //POINTER #33 @ $1CF78C - STRING #33 @ $1CE563
 
-#WRITE(GBA,$1CF78C)
- よくきた ボンバーマン<LINE>
- ワシは ブゥというモノぢゃ!<NEWBOX>
- ボスのへやの おくにある<LINE>
- メダリオンを とりもどさぬかぎり‥‥<NEWBOX>
- ワシは ここから にげられん‥‥<NEWBOX>
- よいか よくきけ‥‥この ようさいの<LINE>
- ボスのへやの とびらを あけるには<NEWBOX>
- ビーストポミュと ドラコを<LINE>
- ごうせいさせた キャラボンが‥‥<NEWBOX>
- ひつようなのぢゃ!<NEWBOX>
- キャラボンは キャラボンごうせい<LINE>
- マシーンで ごうせいすることができる<NEWBOX>
- キャラボンごうせいマシーンは この<LINE>
- ようさいの どこかに あるはずぢゃ!<NEWBOX>
- ここに ごうせいの もととなる<LINE>
- ドラコが おる<NEWBOX>
- つれていくがよい<END>
 
-//POINTER #34 @ $1CF790 - STRING #34 @ $1CE678
+#WRITE(GBA,$1CF78C)
+//よくきた ボンバーマン<LINE>
+//ワシは ブゥというモノぢゃ!<NEWBOX>
+You've done well to make it here,<LINE>
+Bomberman. My name is Buu!<NEWBOX>
+//ボスのへやの おくにある<LINE>
+//メダリオンを とりもどさぬかぎり‥‥<NEWBOX>
+Until you obtain the medallion<LINE>
+located within the boss' room...<NEWBOX>
+//ワシは ここから にげられん‥‥<NEWBOX>
+I cannot escape from this place...<NEWBOX>
+//よいか よくきけ‥‥この ようさいの<LINE>
+//ボスのへやの とびらを あけるには<NEWBOX>
+Listen well... In order to open<LINE>
+the boss room door of this fortress<NEWBOX>
+//ビーストポミュと ドラコを<LINE>
+//ごうせいさせた キャラボンが‥‥<NEWBOX>
+you must use the Karabon that is<LINE>
+a combination of both Pommy<NEWBOX>
+///ひつようなのぢゃ!<NEWBOX>
+and Dorako. It's the only way!<NEWBOX>
+//キャラボンは キャラボンごうせい<LINE>
+//マシーンで ごうせいすることができる<NEWBOX>
+You can combine Karabons by using<LINE>
+a Karabon combining machine.<NEWBOX>
+//キャラボンごうせいマシーンは この<LINE>
+//ようさいの どこかに あるはずぢゃ!<NEWBOX>
+And it just so happens that such a<LINE>
+machine is inside this fortress!<NEWBOX>
+//ここに ごうせいの もととなる<LINE>
+//ドラコが おる<NEWBOX>
+Located here is Dorako in its<LINE>
+original form.<NEWBOX>
+//つれていくがよい<END>
+It would be good if it joined you<END>
+
+
+////POINTER #34 @ $1CF790 - STRING #34 @ $1CE678
+
 
 #WRITE(GBA,$1CF790)
- ボスのへやの おくにある<LINE>
- メダリオンを とりもどさぬかぎり‥‥<NEWBOX>
- ワシは ここから にげられん‥‥<NEWBOX>
- よいか よくきけ‥‥この ようさいの<LINE>
- ボスのへやの とびらを あけるには<NEWBOX>
- ビーストポミュと ドラコを<LINE>
- ごうせいさせた キャラボンが‥‥<NEWBOX>
- ひつようなのぢゃ!<NEWBOX>
- キャラボンは キャラボンごうせい<LINE>
- マシーンで ごうせいすることができる<NEWBOX>
- キャラボンごうせいマシーンは この<LINE>
- ようさいの どこかに あるはずぢゃ!<NEWBOX>
- なんとか みつけだして キャラボンを<LINE>
- ごうせいさせるのぢゃ!<NEWBOX>
- それと 3かいに のぼる かいだんは<LINE>
- ふしぎな ちからで かくされておる<NEWBOX>
- しかし かくされたものを みつけだす<LINE>
- キャラボンの ちからを かりれば‥‥<NEWBOX>
- きっと みちは<LINE>
- ひらかれることぢゃろう!<END>
+//ボスのへやの おくにある<LINE>
+//メダリオンを とりもどさぬかぎり‥‥<NEWBOX>
+Until you obtain the medallion<LINE>
+located within the boss' room...<NEWBOX>
+//ワシは ここから にげられん‥‥<NEWBOX>
+I cannot escape from this place...<NEWBOX>
+//よいか よくきけ‥‥この ようさいの<LINE>
+//ボスのへやの とびらを あけるには<NEWBOX>
+Listen well... In order to open<LINE>
+the boss room door of this fortress<NEWBOX>
+//ビーストポミュと ドラコを<LINE>
+//ごうせいさせた キャラボンが‥‥<NEWBOX>
+you must use the Karabon that is<LINE>
+a combination of both Pommy<NEWBOX>
+///ひつようなのぢゃ!<NEWBOX>
+and Dorako. It's the only way!<NEWBOX>
+//キャラボンは キャラボンごうせい<LINE>
+//マシーンで ごうせいすることができる<NEWBOX>
+You can combine Karabons by using<LINE>
+a Karabon combining machine.<NEWBOX>
+//キャラボンごうせいマシーンは この<LINE>
+//ようさいの どこかに あるはずぢゃ!<NEWBOX>
+And it just so happens that such a<LINE>
+machine is inside this fortress!<NEWBOX>
+//なんとか みつけだして キャラボンを<LINE>
+//ごうせいさせるのぢゃ!<NEWBOX>
+Go search it out, and then perform<LINE>
+a Karabon synthesis!<NEWBOX>
+//それと 3かいに のぼる かいだんは<LINE>
+//ふしぎな ちからで かくされておる<NEWBOX>
+If you investigate around the stairs<LINE>
+leading to the 3rd floor, you may<NEWBOX>
+//しかし かくされたものを みつけだす<LINE>
+//キャラボンの ちからを かりれば‥‥<NEWBOX>
+find something. But you will need<LINE>
+the help of a hidden Karabon.<NEWBOX>
+//きっと みちは<LINE>
+//ひらかれることぢゃろう!<END>
+With their assistance, you should be<LINE>
+able to open up the path!<END>
+
 
 //POINTER #35 @ $1CF794 - STRING #35 @ $1CE7D3
 
+
 #WRITE(GBA,$1CF794)
- よくきたな ボンバーマン‥‥<LINE>
- ここまでくるとは たいしたもんだ<NEWBOX>
- もくてきは マックスか?<LINE>
- だったら ておくれだ あきらめな!<NEWBOX>
- フフフ‥‥かてるつもりか? あまいな<LINE>
- むかしの オレとは ちがうぜ!<NEWBOX>
- ポミュドラゴン! おまえのちから‥‥<NEWBOX>
- このプラズマボンバーが<LINE>
- もらったぁぁぁぁぁっ!!<END>
+//よくきた ボンバーマン<LINE>
+//ここまでくるとは たいしたもんだ<NEWBOX>
+You did well to get here, Bomberman...<LINE>
+It is important that we meet.<NEWBOX>
+//もくてきは マックスか?<LINE>
+//だったら ておくれだ あきらめな!<NEWBOX>
+Are you looking for Max? If so, then<LINE>
+you're too late. So give up!<NEWBOX>
+//フフフ...かてるつもりか? あまいな<LINE>
+//むかしの オレとは ちがうぜ!<NEWBOX>
+Hm? You think you can beat me? This<LINE>
+won't be the same as last time...<NEWBOX>
+//ポミュドラゴン! おまえのちから‥‥<NEWBOX>
+Pommy Dragon! With your power<NEWBOX>
+//このプラズマボンバーが<LINE>
+//もらったぁぁぁぁぁっ!!<END>
+I, the Plasma Bomber, will be<LINE>
+victorious!!!!<END>
+
 
 //POINTER #36 @ $1CF798 - STRING #36 @ $1CE86A
 
-#WRITE(GBA,$1CF798)
- まっていたぞ ボンバーマン‥‥<NEWBOX>
- これで フェアリーパレスの こおりも<LINE>
- とけることだろう‥‥<NEWBOX>
- これが ここに ふういんされていた<LINE>
- あいのメダリオンだ‥‥もっていけ<END>
 
-//POINTER #37 @ $1CF79C - STRING #37 @ $1CE8C0
+#WRITE(GBA,$1CF798)
+Wait a second, Bomberman....<NEWBOX>
+//これで フェアリーパレスの こおりも<LINE>
+//とけることだろう‥‥<NEWBOX>
+With this, it looks like we'll be able<LINE>
+to melt the ice at Fairy Palace...<NEWBOX>
+//これが ここに ふういんされていた<LINE>
+//あいのメダリオンだ‥‥もっていけ<END>
+And that means we'll be able to.<LINE>
+obtain the Medallion of Love!<END>
+
+
+////POINTER #37 @ $1CF79C - STRING #37 @ $1CE8C0
+
 
 #WRITE(GBA,$1CF79C)
- フフフ‥‥オレは ドラコ! あんたが<LINE>
- ボンバーマンか ウワサは きいてるよ<NEWBOX>
- まっ よろしくたのむぜ!<NEWBOX>
- キャラボン ドラコが<LINE>
- なかまになった!<CONTROL_CODE><$12><$0C><NEWBOX>
- オレの のうりょくは<LINE>
- ライト!<NEWBOX>
- セットしていると くらいへやでも<LINE>
- あかるくてらすぜ!<NEWBOX>
- Bボタンに オレを セットするか?<LINE>
-  はい  いいえ<CONTROL_CODE><$05><$01>1418ふ8へ<CONTROL_CODE><$0D><$0E><$FD> それじゃ たのんだよ<END>
+//フフフ‥‥オレは ドラコ! あんたが<LINE>
+//ボンバーマンか ウワサは きいてるよ<NEWBOX>
+Fu fu fu... I am Dorako! So you're<LINE>
+Bomberman? I've heard the rumors!<NEWBOX>
+//まっ よろしくたのむぜ!<NEWBOX>
+I look forward to working with you.<NEWBOX>
+Became friends with the<LINE>
+Karabon Dorako!<CONTROL_CODE><$12><$0C><NEWBOX>
+My ability is called<LINE>
+Light!<NEWBOX>
+//セットしていると くらいへやでも<LINE>
+//あかるくてらすぜ!<NEWBOX>
+If you have me set, even if a room is<LINE>
+dark, I can light it up!<NEWBOX>
+Set me to the B Button?<LINE>
+  Yes  No<CONTROL_CODE><$05><$01><$02><$05><$02><CONTROL_CODE><$0D><$0E><$FD> I'm counting on you!<END>
+
 
 //POINTER #38 @ $1CF7A0 - STRING #38 @ $1CE964
 
+
 #WRITE(GBA,$1CF7A0)
-<CONTROL_CODE><$0D><$0E><$FD> それじゃ たのんだよ<END>
+<CONTROL_CODE><$0D><$0E><$FD>I'm counting on you!<END>
+
 
 //POINTER #39 @ $1CF7A4 - STRING #39 @ $1CE967
 
+
 #WRITE(GBA,$1CF7A4)
-<$FD> それじゃ たのんだよ<END>
+<$FD>I'm counting on you!<END>
+
 
 //POINTER #40 @ $1CF7A8 - STRING #40 @ $1CE968
 
+
 #WRITE(GBA,$1CF7A8)
- それじゃ たのんだよ<END>
+I'm counting on you!<END>
+
 
 //POINTER #41 @ $1CF7AC - STRING #41 @ $1CE974
 
-#WRITE(GBA,$1CF7AC)
- さっきは ありがとうね<END>
 
-//POINTER #42 @ $1CF7B0 - STRING #42 @ $1CE981
+#WRITE(GBA,$1CF7AC)
+Thanks for that!<END>
+
+
+////POINTER #42 @ $1CF7B0 - STRING #42 @ $1CE981
+
 
 #WRITE(GBA,$1CF7B0)
- きょうも さむいねぇ<END>
+Today's cold too, huh?<END>
+
 
 //POINTER #43 @ $1CF7B4 - STRING #43 @ $1CE98D
 
+
 #WRITE(GBA,$1CF7B4)
- キンは げんきに してるかい?<END>
+Has Kin been doing well?<END>
+
 
 //POINTER #44 @ $1CF7B8 - STRING #44 @ $1CE99E
 
+
 #WRITE(GBA,$1CF7B8)
- ガウ? ねてるあいだに ずいぶん<LINE>
- さむくなったガウ‥‥なぜガウ?<END>
+Gao? While I was napping it became<LINE>
+really cold... What happened? Gao?<END>
+
 
 //POINTER #45 @ $1CF7BC - STRING #45 @ $1CE9C1
 
+
 #WRITE(GBA,$1CF7BC)
-<CONTROL_CODE><$03><$01>ウ ‥‥なるほど そうだったんガウか‥‥<NEWBOX>
- そういうことなら この<LINE>
- ビーストポミュが てを かすガウ~!<NEWBOX>
- キャラボン ビーストポミュが<LINE>
- なかまになった!<CONTROL_CODE><$12><$0C><NEWBOX>
- ボクの のうりょくは<LINE>
- くうちゅういどうガウ!<NEWBOX>
- セットしていると ガケとかも<LINE>
- ひとっとびガウ!<NEWBOX>
- Bボタンに ボクを セットするガウ?<LINE>
-  はい  いいえ<CONTROL_CODE><$05><$01>1418や8ゆ<CONTROL_CODE><$0D><$0C><$FD> ここを きたにいくと<LINE>
- きたイプシロンが あるんだが<NEWBOX>
- きたイプシロンの まちの<LINE>
- いりぐちしゅうへんは<NEWBOX>
- ふっかつする ユキダルマの<LINE>
- トラップで まもられていて<NEWBOX>
- へたに はいろうとすると<LINE>
- とじこめられてしまうんだ<NEWBOX>
- ここは ストロングの のうりょく<LINE>
- ボムなげで ボムを なげこむと いい<NEWBOX>
- どうしても ぬけだせなくなって<LINE>
- しまったら ポミュの テレポートで<NEWBOX>
- みなみイプシロンに もどって<LINE>
- でなおすのが いいだろう<NEWBOX>
- ヒントとしては みぎがわから<LINE>
- はいっていくのが いいとおもうぞ<END>
+//<CONTROL_CODE><$03><$01><$44> ‥‥なるほど そうだったんガウか‥‥<NEWBOX>
+<CONTROL_CODE><$03><$01><$44>...Ah, so is that what happened... Gao?<NEWBOX>
+//そういうことなら この<LINE>
+//ビーストポミュが てを かすガウ~!<NEWBOX>
+If that's the case, then I want<LINE>
+to lend a hand, Gao!<NEWBOX>
+Became friends with the<LINE>
+Karabon, Pommy Beast!<CONTROL_CODE><$12><$0C><NEWBOX>
+//ボクの のうりょくは<LINE>
+//くうちゅういどうガウ!<NEWBOX> 
+My ability is<LINE>
+Air Transport!<NEWBOX>
+//セットしていると ガケとかも<LINE>
+//ひとっとびガウ!<NEWBOX>
+If you have me selected, I can fly<LINE>
+over cliffs and other obstacles!<NEWBOX>
+//Bボタンに ボクを セットするガウ?<LINE>
+//Set me to the B Button??<LINE>
+  Yes  No<CONTROL_CODE><$05><$01><$02><$05><$02><CONTROL_CODE><$0D><$0C><$FD>If you head north from here you<LINE>
+//きたイプシロンが あるんだが<NEWBOX>
+will find the town of North Epsilon.<NEWBOX>
+//きたイプシロンの まちの<LINE>
+//いりぐちしゅうへんは<NEWBOX>
+But surrounding the entrance to North<LINE>
+Epsilon you will encounter<NEWBOX>
+//ふっかつする ユキダルマの<LINE>
+//トラップで まもられていて<NEWBOX>
+resurrecting snowman traps<LINE>
+protecting the town.<NEWBOX>
+//へたに はいろうとすると<LINE>
+//とじこめられてしまうんだ<NEWBOX>
+If you aren't careful when trying to<LINE>
+enter, you could end up captured!<NEWBOX>
+//ここは ストロングの のうりょく<LINE>
+//ボムなげで ボムを なげこむと いい<NEWBOX>
+In this case you should use ToughGuy's<LINE>
+Bomb Throw ability to help you out.<NEWBOX>
+//どうしても ぬけだせなくなって<LINE>
+//しまったら ポミュの テレポートで<NEWBOX>
+If worse comes to worst and you can't<LINE>
+escape, you can use Pommy's<NEWBOX>
+//みなみイプシロンに もどって<LINE>
+//でなおすのが いいだろう<NEWBOX>
+Teleport ability to return to South<LINE>
+Epsilon where you can heal.<NEWBOX>
+//ヒントとしては みぎがわから<LINE>
+//はいっていくのが いいとおもうぞ<END>
+If you ask me, I think approaching<LINE>
+the town from the right is ideal.<END>
+
 
 //POINTER #46 @ $1CF7C0 - STRING #46 @ $1CEA71
 
+
 #WRITE(GBA,$1CF7C0)
-<CONTROL_CODE><$0D><$0C><$FD> ここを きたにいくと<LINE>
- きたイプシロンが あるんだが<NEWBOX>
- きたイプシロンの まちの<LINE>
- いりぐちしゅうへんは<NEWBOX>
- ふっかつする ユキダルマの<LINE>
- トラップで まもられていて<NEWBOX>
- へたに はいろうとすると<LINE>
- とじこめられてしまうんだ<NEWBOX>
- ここは ストロングの のうりょく<LINE>
- ボムなげで ボムを なげこむと いい<NEWBOX>
- どうしても ぬけだせなくなって<LINE>
- しまったら ポミュの テレポートで<NEWBOX>
- みなみイプシロンに もどって<LINE>
- でなおすのが いいだろう<NEWBOX>
- ヒントとしては みぎがわから<LINE>
- はいっていくのが いいとおもうぞ<END>
+<CONTROL_CODE><$0D><$0C><$FD>If you head north from here you<LINE>
+//きたイプシロンが あるんだが<NEWBOX>
+will find the town of North Epsilon.<NEWBOX>
+//きたイプシロンの まちの<LINE>
+//いりぐちしゅうへんは<NEWBOX>
+But surrounding the entrance to North<LINE>
+Epsilon you will encounter<NEWBOX>
+//ふっかつする ユキダルマの<LINE>
+//トラップで まもられていて<NEWBOX>
+resurrecting snowman traps<LINE>
+protecting the town.<NEWBOX>
+//へたに はいろうとすると<LINE>
+//とじこめられてしまうんだ<NEWBOX>
+If you aren't careful when trying to<LINE>
+enter, you could end up captured!<NEWBOX>
+//ここは ストロングの のうりょく<LINE>
+//ボムなげで ボムを なげこむと いい<NEWBOX>
+In this case you should use ToughGuy's<LINE>
+Bomb Throw ability to help you out.<NEWBOX>
+//どうしても ぬけだせなくなって<LINE>
+//しまったら ポミュの テレポートで<NEWBOX>
+If worse comes to worst and you can't<LINE>
+escape, you can use Pommy's<NEWBOX>
+//みなみイプシロンに もどって<LINE>
+//でなおすのが いいだろう<NEWBOX>
+Teleport ability to return to South<LINE>
+Epsilon where you can heal.<NEWBOX>
+//ヒントとしては みぎがわから<LINE>
+//はいっていくのが いいとおもうぞ<END>
+If you ask me, I think approaching<LINE>
+the town from the right is ideal.<END>
+
 
 //POINTER #47 @ $1CF7C4 - STRING #47 @ $1CEA74
 
+
 #WRITE(GBA,$1CF7C4)
-<$FD> ここを きたにいくと<LINE>
- きたイプシロンが あるんだが<NEWBOX>
- きたイプシロンの まちの<LINE>
- いりぐちしゅうへんは<NEWBOX>
- ふっかつする ユキダルマの<LINE>
- トラップで まもられていて<NEWBOX>
- へたに はいろうとすると<LINE>
- とじこめられてしまうんだ<NEWBOX>
- ここは ストロングの のうりょく<LINE>
- ボムなげで ボムを なげこむと いい<NEWBOX>
- どうしても ぬけだせなくなって<LINE>
- しまったら ポミュの テレポートで<NEWBOX>
- みなみイプシロンに もどって<LINE>
- でなおすのが いいだろう<NEWBOX>
- ヒントとしては みぎがわから<LINE>
- はいっていくのが いいとおもうぞ<END>
+<$FD>If you head north from here you<LINE>
+//きたイプシロンが あるんだが<NEWBOX>
+ will find the town of North Epsilon.<NEWBOX>
+//きたイプシロンの まちの<LINE>
+//いりぐちしゅうへんは<NEWBOX>
+But surrounding the entrance to North<LINE>
+Epsilon you will encounter<NEWBOX>
+//ふっかつする ユキダルマの<LINE>
+//トラップで まもられていて<NEWBOX>
+resurrecting snowman traps<LINE>
+protecting the town.<NEWBOX>
+//へたに はいろうとすると<LINE>
+//とじこめられてしまうんだ<NEWBOX>
+If you aren't careful when trying to<LINE>
+enter, you could end up captured!<NEWBOX>
+//ここは ストロングの のうりょく<LINE>
+//ボムなげで ボムを なげこむと いい<NEWBOX>
+In this case you should use ToughGuy's<LINE>
+Bomb Throw ability to help you out.<NEWBOX>
+//どうしても ぬけだせなくなって<LINE>
+//しまったら ポミュの テレポートで<NEWBOX>
+If worse comes to worst and you can't<LINE>
+escape, you can use Pommy's...<NEWBOX>
+//みなみイプシロンに もどって<LINE>
+//でなおすのが いいだろう<NEWBOX>
+Teleport ability to return to South<LINE>
+Epsilon where you can heal.<NEWBOX>
+//ヒントとしては みぎがわから<LINE>
+//はいっていくのが いいとおもうぞ<END>
+If you ask me, I think approaching<LINE>
+the town from the right is ideal.<END>
+
 
 //POINTER #48 @ $1CF7C8 - STRING #48 @ $1CEA75
 
+
 #WRITE(GBA,$1CF7C8)
- ここを きたにいくと<LINE>
- きたイプシロンが あるんだが<NEWBOX>
- きたイプシロンの まちの<LINE>
- いりぐちしゅうへんは<NEWBOX>
- ふっかつする ユキダルマの<LINE>
- トラップで まもられていて<NEWBOX>
- へたに はいろうとすると<LINE>
- とじこめられてしまうんだ<NEWBOX>
- ここは ストロングの のうりょく<LINE>
- ボムなげで ボムを なげこむと いい<NEWBOX>
- どうしても ぬけだせなくなって<LINE>
- しまったら ポミュの テレポートで<NEWBOX>
- みなみイプシロンに もどって<LINE>
- でなおすのが いいだろう<NEWBOX>
- ヒントとしては みぎがわから<LINE>
- はいっていくのが いいとおもうぞ<END>
+//ここを きたにいくと<LINE>
+//きたイプシロンが あるんだが<NEWBOX>
+If you head north from here you<LINE>
+will find the town of North Epsilon.<NEWBOX>
+//きたイプシロンの まちの<LINE>
+//いりぐちしゅうへんは<NEWBOX>
+But surrounding the entrance to North<LINE>
+Epsilon you will encounter<NEWBOX>
+//ふっかつする ユキダルマの<LINE>
+//トラップで まもられていて<NEWBOX>
+resurrecting snowman traps<LINE>
+protecting the town.<NEWBOX>
+//へたに はいろうとすると<LINE>
+//とじこめられてしまうんだ<NEWBOX>
+If you aren't careful when trying to<LINE>
+enter, you could end up captured!<NEWBOX>
+//ここは ストロングの のうりょく<LINE>
+//ボムなげで ボムを なげこむと いい<NEWBOX>
+In this case you should use ToughGuy's<LINE>
+Bomb Throw ability to help you out.<NEWBOX>
+//どうしても ぬけだせなくなって<LINE>
+//しまったら ポミュの テレポートで<NEWBOX>
+If worse comes to worst and you can't<LINE>
+escape, you can use Pommy's<NEWBOX>
+//みなみイプシロンに もどって<LINE>
+//でなおすのが いいだろう<NEWBOX>
+Teleport ability to return to South<LINE>
+Epsilon where you can heal.<NEWBOX>
+//ヒントとしては みぎがわから<LINE>
+//はいっていくのが いいとおもうぞ<END>
+If you ask me, I think approaching<LINE>
+the town from the right is ideal.<END>
+
 
 //POINTER #49 @ $1CF7CC - STRING #49 @ $1CEB6F
 
+
 #WRITE(GBA,$1CF7CC)
- うごいている ゆかは とめないと<LINE>
- のれないよ<NEWBOX>
- とめるための スイッチは<LINE>
- ゆかのそばに あるはずさ<NEWBOX>
- このスイッチは ふめないから<LINE>
- ばくふうで いれるんだよ<END>
+//うごいている ゆかは とめないと<LINE>
+//のれないよ<NEWBOX>
+Unless you stop a moving platform,<LINE>
+you won't be able to walk on it.<NEWBOX>
+//とめるための スイッチは<LINE>
+//ゆかのそばに あるはずさ<NEWBOX>
+In order to stop it, there should be a<LINE>
+switch located nearby on the floor.<NEWBOX>
+//このスイッチは ふめないから<LINE>
+//ばくふうで いれるんだよ<END>
+Rather than stepping on it, you must<LINE>
+use a bomb to press it.<END>
+
 
 //POINTER #50 @ $1CF7D0 - STRING #50 @ $1CEBC2
 
-#WRITE(GBA,$1CF7D0)
- あら あなた もしかして<LINE>
- ガケの むこうから きたの?<NEWBOX>
- え? あなたが わたれるように<LINE>
- してくれたの? たすかったわぁ!<NEWBOX>
- じつは フィアンセが うみのほうに<LINE>
- いったきり かえってこないから<NEWBOX>
- むかえに いこうとしてたんだけど<LINE>
- あの ガケで あしどめされてたのよ<NEWBOX>
- なにか ちからに なれることが<LINE>
- あったら いってちょうだい<NEWBOX>
- え? マックスを みなかったか?<LINE>
- ‥‥あ! もしかして あのひとかしら<NEWBOX>
- ここの きたに さいきん<LINE>
- 2つならんだ とうが できたのよ<NEWBOX>
- そこへの いきかたを たしか<LINE>
- そんなひとに きかれたわ<NEWBOX>
- あそこへは フェアリーパレスの<LINE>
- にしがわからしか いけないのよ<NEWBOX>
- とりあえず みなみイプシロンに<LINE>
- いけば なんとかなるんじゃないかしら<NEWBOX>
- それじゃ マックスさんに<LINE>
- ぶじ あえるように いのってるわ<END>
 
-//POINTER #51 @ $1CF7D4 - STRING #51 @ $1CED37
+#WRITE(GBA,$1CF7D0)
+Oh my, could you be<LINE>
+from the other side of the cliff?<NEWBOX>
+//え? あなたが わたれるように<LINE>
+//してくれたの? たすかったわぁ!<NEWBOX>
+Eh? You're willing to help me get to<LINE>
+the other side? I'm saved!<NEWBOX>
+//じつは フィアンセが うみのほうに<LINE>
+//いったきり かえってこないから<NEWBOX>
+The truth is, my fiance headed towards<LINE>
+the ocean, but hasn't yet returned.<NEWBOX>
+//むかえに いこうとしてたんだけど<LINE>
+//あの ガケで あしどめされてたのよ<NEWBOX>
+He tried to cross to the other side,<LINE>
+but he couldn't get passed the cliff... <NEWBOX>
+//なにか ちからに なれることが<LINE>
+//あったら いってちょうだい<NEWBOX>
+If only there was a way to gain more<LINE>
+strength, it might just be possible...<NEWBOX>
+//え? マックスを みなかったか?<LINE>
+//‥‥あ! もしかして あのひとかしら<NEWBOX>
+Hm? Have I met someone named Max?<LINE>
+...Ah! Perhaps you're referring to him!<NEWBOX>
+//ここの きたに さいきん<LINE>
+//2つならんだ とうが できたのよ<NEWBOX>
+Not long ago there were two towers<LINE>
+built to the north of here.<NEWBOX>
+//そこへの いきかたを たしか<LINE>
+//そんなひとに きかれたわ<NEWBOX>
+There's a chance that the one who<LINE>
+lives there is who you're looking for!<NEWBOX>
+//あそこへは フェアリーパレスの<LINE>
+//にしがわからしか いけないのよ<NEWBOX>
+The only possible way to get there is<LINE>
+to go west from the Fairy Palace.<NEWBOX>
+//とりあえず みなみイプシロンに<LINE>
+//いけば なんとかなるんじゃないかしら<NEWBOX>
+I think you can find your way there by<LINE>
+first heading to South Epsilon.<NEWBOX>
+//それじゃ マックスさんに<LINE>
+//ぶじ あえるように いのってるわ<END>
+I will pray that your journey to meet<LINE>
+Max is a safe one.<END>
+
+
+////POINTER #51 @ $1CF7D4 - STRING #51 @ $1CED37
+
 
 #WRITE(GBA,$1CF7D4)
- ここのガケぞいに ひがしに あるいて<LINE>
- いくと おんせんが あるのよ<NEWBOX>
- ガケぞいの みちの きたがわにある<LINE>
- こおりのカベの むこうが<NEWBOX>
- じょうかまち みなみイプシロンよ<NEWBOX>
- あ! おんせんのほうに いっても<LINE>
- まちへの いりぐちは ないからね<NEWBOX>
- まちに はいりたければ かべぞいに<LINE>
- おんせんと はんたいほうこうよ<END>
+//ここのガケぞいに ひがしに あるいて<LINE>
+//いくと おんせんが あるのよ<NEWBOX>
+If you walk east along these cliffs,<LINE>
+you'll come upon a hot spring.<NEWBOX>
+//ガケぞいの みちの きたがわにある<LINE>
+//こおりのカベの むこうが<NEWBOX>
+To the north of the cliffs and on<LINE>
+the other side of the wall of ice<NEWBOX>
+//じょうかまち みなみイプシロンよ<NEWBOX>
+is the castle town of South Epsilon.<NEWBOX>
+//あ! おんせんのほうに いっても<LINE>
+//まちへの いりぐちは ないからね<NEWBOX>
+Ah! But if you head towards the hot<LINE>
+spring, you can't get to the town.<NEWBOX>
+//まちに はいりたければ かべぞいに<LINE>
+//おんせんと はんたいほうこうよ<END>
+The town and hot spring are on<LINE>
+opposite sides of the cliff!<END>
+
 
 //POINTER #52 @ $1CF7D8 - STRING #52 @ $1CEDD6
 
+
 #WRITE(GBA,$1CF7D8)
-<CONTROL_CODE><$01><$01>コ8キ さいきん さむかったせいか<LINE>
- じわれが おこっちまってな<NEWBOX>
- こっちから じょうかまちの<LINE>
- イプシロンに いけなくなっちまった<NEWBOX>
- ガケぞいに にしに いくと はしが<LINE>
- かけられそうな ところが あるんだが<NEWBOX>
- ガケの むこうがわにいる<LINE>
- ヘンなやつらが ジャマをするんだ<NEWBOX>
- だれか あいつらを<LINE>
- やっつけてくれないかなぁ‥‥<END>
+//<CONTROL_CODE><$01><$01><$4B><$09><$48> さいきん さむかったせいか<LINE>
+//じわれが おこっちまってな<NEWBOX>
+<CONTROL_CODE><$01><$01><$4B><$09><$48>Due to the recent cold weather, the<LINE>
+ground has become unstable.<NEWBOX>
+//こっちから じょうかまちの<LINE>
+//イプシロンに いけなくなっちまった<NEWBOX>
+It's even made it impossible to access<LINE>
+the castle town of Epsilon from here...<NEWBOX>
+//ガケぞいに にしに いくと はしが<LINE>
+//かけられそうな ところが あるんだが<NEWBOX>
+If you head west along the cliffs,<LINE>
+you'll see that the bridge is out.<NEWBOX>
+//ヘンなやつらが ジャマをするんだ<NEWBOX>
+This is all the doing of those<NEWBOX>
+//だれか あいつらを<LINE>
+//やっつけてくれないかなぁ‥‥<END>
+strange guys. I really wish someone<LINE>
+would teach them a lesson...<END>
+
 
 //POINTER #53 @ $1CF7DC - STRING #53 @ $1CEE7E
 
+
 #WRITE(GBA,$1CF7DC)
-<CONTROL_CODE><$01><$01>カ8ク このさきに あやしいやつらが<LINE>
- あつまって なにか やってるのよ<NEWBOX>
- なんか ドカーンって おととか<LINE>
- キャラボンの なきごえとか してたわ<END>
+<CONTROL_CODE><$01><$01><$47><$09><$49> Up ahead, some strange guys<LINE>
+are gathering something.<NEWBOX>
+//なんか ドカーンって おととか<LINE>
+//キャラボンの なきごえとか してたわ<END>
+They're making lots of noise, and I<LINE>
+even heard the cry of a Karabon...<END>
+
 
 //POINTER #54 @ $1CF7E0 - STRING #54 @ $1CEECB
 
+
 #WRITE(GBA,$1CF7E0)
-<CONTROL_CODE><$0D><$0B><$FD><CONTROL_CODE><$01><$01>ナ8コ メダリオンは ぜんぶで 4つですから<LINE>
- のこりは 1つ‥‥<NEWBOX>
- おそらく かざんの ほうに<LINE>
- あるのではないかと おもいます<NEWBOX>
- わたしたちが てんくうから<LINE>
- ここへ にげるときに つかった<NEWBOX>
- さばくへの ゲートを<LINE>
- ひらかせておきます<NEWBOX>
- ばしょは きたイプシロンの そばです<LINE>
- いけば すぐわかると おもいます<NEWBOX>
- そこから かざんへ むかってください<LINE>
- それでは どうぞ おきをつけて‥‥<END>
+//<CONTROL_CODE><$0D><$0B><$FD><CONTROL_CODE><$01><$01> メダリオンは ぜんぶで 4つですから<LINE>
+//のこりは 1つ‥‥<NEWBOX>
+<CONTROL_CODE><$0D><$0B><$FD><CONTROL_CODE><$01><$01>There are four medallions in total,<LINE>
+meaning that one more remains...<NEWBOX>
+//おそらく かざんの ほうに<LINE>
+//あるのではないかと おもいます<NEWBOX>
+Perhaps the last one is located<LINE>
+in the direction of the volcano.<NEWBOX>
+//わたしたちが てんくうから<LINE>
+//ここへ にげるときに つかった<NEWBOX>
+When we escaped from the sky, we<LINE>
+used a gate located in the desert.<NEWBOX>
+//さばくへの ゲートを<LINE>
+//ひらかせておきます<NEWBOX>
+That gate is located near North<LINE>
+Epsilon. I can open it for you.<NEWBOX>
+//ばしょは きたイプシロンの そばです<LINE>
+//いけば すぐわかると おもいます<NEWBOX>
+If you go to that location, I believe<LINE>
+you will understand what to do.<NEWBOX>
+//そこから かざんへ むかってください<LINE>
+//それでは どうぞ おきをつけて‥‥<END>
+Then from there, head towards the<LINE>
+volcano. Be careful out there...<END>
+
+
 
 //POINTER #55 @ $1CF7E4 - STRING #55 @ $1CEECE
 
+
 #WRITE(GBA,$1CF7E4)
-<$FD><CONTROL_CODE><$01><$01>ナ8コ メダリオンは ぜんぶで 4つですから<LINE>
- のこりは 1つ‥‥<NEWBOX>
- おそらく かざんの ほうに<LINE>
- あるのではないかと おもいます<NEWBOX>
- わたしたちが てんくうから<LINE>
- ここへ にげるときに つかった<NEWBOX>
- さばくへの ゲートを<LINE>
- ひらかせておきます<NEWBOX>
- ばしょは きたイプシロンの そばです<LINE>
- いけば すぐわかると おもいます<NEWBOX>
- そこから かざんへ むかってください<LINE>
- それでは どうぞ おきをつけて‥‥<END>
+<$FD><CONTROL_CODE><$01><$01><$56><$09><$4B>There are four medallions in total,<LINE>
+meaning that one more remains...<NEWBOX>
+//おそらく かざんの ほうに<LINE>
+//あるのではないかと おもいます<NEWBOX>
+Perhaps the last one is located<LINE>
+in the direction of the volcano.<NEWBOX>
+//わたしたちが てんくうから<LINE>
+//ここへ にげるときに つかった<NEWBOX>
+When we escaped from the sky, we<LINE>
+used a gate located in the desert.<NEWBOX>
+//さばくへの ゲートを<LINE>
+//ひらかせておきます<NEWBOX>
+That gate is located near North<LINE>
+Epsilon. I will open it for you.<NEWBOX>
+//ばしょは きたイプシロンの そばです<LINE>
+//いけば すぐわかると おもいます<NEWBOX>
+If you go to that location, I believe<LINE>
+you will understand what to do.<NEWBOX>
+//そこから かざんへ むかってください<LINE>
+//それでは どうぞ おきをつけて‥‥<END>
+Then from there, head towards the<LINE>
+volcano. Be careful out there...<END>
+
 
 //POINTER #56 @ $1CF7E8 - STRING #56 @ $1CEECF
 
+
 #WRITE(GBA,$1CF7E8)
-<CONTROL_CODE><$01><$01>ナ8コ メダリオンは ぜんぶで 4つですから<LINE>
- のこりは 1つ‥‥<NEWBOX>
- おそらく かざんの ほうに<LINE>
- あるのではないかと おもいます<NEWBOX>
- わたしたちが てんくうから<LINE>
- ここへ にげるときに つかった<NEWBOX>
- さばくへの ゲートを<LINE>
- ひらかせておきます<NEWBOX>
- ばしょは きたイプシロンの そばです<LINE>
- いけば すぐわかると おもいます<NEWBOX>
- そこから かざんへ むかってください<LINE>
- それでは どうぞ おきをつけて‥‥<END>
+<CONTROL_CODE><$01><$01><$56><$09><$4B>There are four medallions in total,<LINE>
+so there's only 1 piece left<NEWBOX>
+meaning that one more remains...<NEWBOX>
+//おそらく かざんの ほうに<LINE>
+//あるのではないかと おもいます<NEWBOX>
+ Perhaps the last one is located<LINE>
+ in the direction of the volcano.<NEWBOX>
+//わたしたちが てんくうから<LINE>
+//ここへ にげるときに つかった<NEWBOX>
+When we escaped from the sky, we<LINE>
+used a gate located in the desert.<NEWBOX>
+//さばくへの ゲートを<LINE>
+//ひらかせておきます<NEWBOX>
+That gate is located near North<LINE>
+Epsilon. I will open it for you.<NEWBOX>
+//ばしょは きたイプシロンの そばです<LINE>
+//いけば すぐわかると おもいます<NEWBOX>
+If you go to that location, I believe<LINE>
+you will understand what to do.<NEWBOX>
+//そこから かざんへ むかってください<LINE>
+//それでは どうぞ おきをつけて‥‥<END>
+Then from there, head towards the<LINE>
+volcano. Be careful out there...<END>
+
 
 //POINTER #57 @ $1CF7EC - STRING #57 @ $1CEF98
 
+
 #WRITE(GBA,$1CF7EC)
-<CONTROL_CODE><$0D><$10><$FD><CONTROL_CODE><$03><$00>れ ボンバーマンは<LINE>
- こおりづけのはなをてにいれた!<CONTROL_CODE><$12><$0C><END>
+<CONTROL_CODE><$0D><$10><$FD><CONTROL_CODE><$03><$00><$34>Bomberman obtained<LINE>
+the Ice Flower!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #58 @ $1CF7F0 - STRING #58 @ $1CEF9B
 
+
 #WRITE(GBA,$1CF7F0)
-<$FD><CONTROL_CODE><$03><$00>れ ボンバーマンは<LINE>
- こおりづけのはなをてにいれた!<CONTROL_CODE><$12><$0C><END>
+<$FD><CONTROL_CODE><$03><$00><$34>Bomberman obtained<LINE>
+the Ice Flower!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #59 @ $1CF7F4 - STRING #59 @ $1CEF9C
 
+
 #WRITE(GBA,$1CF7F4)
-<CONTROL_CODE><$03><$00>れ ボンバーマンは<LINE>
- こおりづけのはなをてにいれた!<CONTROL_CODE><$12><$0C><END>
+<CONTROL_CODE><$03><$00><$34>Bomberman obtained<LINE>
+the Ice Flower!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #60 @ $1CF7F8 - STRING #60 @ $1CEFBD
 
+
 #WRITE(GBA,$1CF7F8)
- プハー おいしかったー!<LINE>
- ‥‥え? キミの はなだったの?<NEWBOX>
- ‥‥ごめんよう‥‥ここ さいきん<LINE>
- たべたこと なかったんだよう‥‥<NEWBOX>
- ‥‥え? ゆるしてくれるの?<LINE>
- ありがとうー! やさしいんだね!<NEWBOX>
- おわびといってはなんだけど<LINE>
- これから キミの おてつだいをするよ<NEWBOX>
- ボクは プテラドン<LINE>
- これから よろしくおねがいしまーす<NEWBOX>
- キャラボン プテラドンが<LINE>
- なかまになった!<CONTROL_CODE><$12><$0C><NEWBOX>
- ボクの のうりょくは<LINE>
- かりょくダウンだよ<NEWBOX>
- セットしていると ばくふうが<LINE>
- 1レベル ちいさくなるんだ<NEWBOX>
- Bボタンにボクを セットする?<LINE>
-  はい  いいえ<CONTROL_CODE><$05><$01>1418ぉ8っ<CONTROL_CODE><$0D><$0D><$FD> このさき みなみイプシロン<LINE>
- さらに すすむと きたイプシロン<END>
+Pweh! That was delicious!<LINE>
+...Eh?? Was that your flower?<NEWBOX>
+I'm so sorry... Lately there hasn't<LINE>
+been anything to eat here...<NEWBOX>
+...Eh? You'll forgive me?<LINE>
+Thank you! You're so nice!<NEWBOX>
+//おわびといってはなんだけど<LINE>
+//これから キミの おてつだいをするよ<NEWBOX>
+To make it up to you, from now<LINE>
+on I will lend you a hand!<NEWBOX>
+//ボクは プテラドン<LINE>
+//これから よろしくおねがいしまーす<NEWBOX>
+My name is Pteradon. Let's do<LINE>
+our best together!<NEWBOX>
+//キャラボン プテラドンが<LINE>
+//なかまになった!<CONTROL_CODE><$12><$0C><NEWBOX>
+Bomberman became friends with the<LINE>
+Karabon, Pteradon!<CONTROL_CODE><$12><$0C><NEWBOX>
+//ボクの のうりょくは<LINE>
+//かりょくダウンだよ<NEWBOX>
+My ability is called<LINE>
+Power Down.<NEWBOX>
+//セットしていると ばくふうが<LINE>
+//1レベル ちいさくなるんだ<NEWBOX>
+If I am set, your bomb's blast will be<LINE>
+powered down by one level.<NEWBOX>
+//Bボタンにボクを セットする?<LINE>
+Set me to the B Button?<LINE>
+  Yes  No<CONTROL_CODE><$05><$01><$02><$05><$02><CONTROL_CODE><$0D><$0D><$FD>Beyond this point is South Epsilon.<LINE>
+Further up ahead is North Epsilon.<END>
+
 
 //POINTER #61 @ $1CF7FC - STRING #61 @ $1CF0D9
 
+
 #WRITE(GBA,$1CF7FC)
-<CONTROL_CODE><$0D><$0D><$FD> このさき みなみイプシロン<LINE>
- さらに すすむと きたイプシロン<END>
+<CONTROL_CODE><$0D><$0D><$FD>Beyond this point is South Epsilon.<LINE>
+Further up ahead is North Epsilon.<END>
+
 
 //POINTER #62 @ $1CF800 - STRING #62 @ $1CF0DC
 
+
 #WRITE(GBA,$1CF800)
-<$FD> このさき みなみイプシロン<LINE>
- さらに すすむと きたイプシロン<END>
+<$FD>Beyond this point is South Epsilon.<LINE>
+Further up ahead is North Epsilon.<END>
+
 
 //POINTER #63 @ $1CF804 - STRING #63 @ $1CF0DD
 
+
 #WRITE(GBA,$1CF804)
- このさき みなみイプシロン<LINE>
- さらに すすむと きたイプシロン<END>
+Beyond this point is South Epsilon.<LINE>
+Further up ahead is North Epsilon.<END>
+
 
 //POINTER #64 @ $1CF808 - STRING #64 @ $1CF0FE
 
+
 #WRITE(GBA,$1CF808)
- みなみイプシロンへ ようこそ!<NEWBOX>
- フェアリーパレスに いく かたは<LINE>
- すぐそばの はしを わたってください<END>
+Welcome to South Epsilon!<NEWBOX>
+To go to the Fairy Palace, just<LINE>
+cross over the nearby bridge.<END>
+
 
 //POINTER #65 @ $1CF80C - STRING #65 @ $1CF135
 
+
 #WRITE(GBA,$1CF80C)
- きたイプシロンへ ようこそ!<END>
+Welcome to North Epsilon!<END>
+
 
 //POINTER #66 @ $1CF810 - STRING #66 @ $1CF145
 
+
 #WRITE(GBA,$1CF810)
- さきほど エメラリーダさまに<LINE>
- つかえる 4けんじゃの ひとり‥‥<NEWBOX>
- ブゥさまが もどられて あなたに<LINE>
- でんごんを のこしていかれました<NEWBOX>
- でんごんを おつたえします<NEWBOX>
- ‥‥ワシら 4けんじゃは あるひ<LINE>
- きょうあくボンバーたちを<NEWBOX>
- たおすほうほうについての<LINE>
- ある じょうほうを てにいれたのぢゃ<NEWBOX>
- じつは ヤツらには それぞれ<LINE>
- にがてとする キャラボンが いる<NEWBOX>
- ‥‥という じょうほうを もとに<LINE>
- ワシらは かくちに ちり<NEWBOX>
- みつけた キャラボンを つれて<LINE>
- それぞれの ようさいに いったんぢゃ<NEWBOX>
- ぢゃが それは ブレインボンバーが<LINE>
- ながした にせじょうほうぢゃった‥‥<NEWBOX>
- けっかてきに ワシらは やつらを<LINE>
- パワーアップさせる キャラボンを<NEWBOX>
- あつめる てだすけを させられて<LINE>
- しまったのぢゃ‥‥めんぼくない<NEWBOX>
- ‥‥でんごん おわります<LINE>
- ‥‥にてました?<END>
+//さきほど エメラリーダさまに<LINE>
+//つかえる 4けんじゃの ひとり‥‥<NEWBOX>
+Not long ago, one of the four wise men<LINE>
+who serves Queen Emeralda, Buu...<NEWBOX>
+//ブゥさまが もどられて あなたに<LINE>
+//でんごんを のこしていかれました<NEWBOX>
+Returned and left a message <LINE>
+for you.<NEWBOX>
+//でんごんを おつたえします<NEWBOX>
+This is what he said...<NEWBOX>
+//‥‥ワシら 4けんじゃは あるひ<LINE>
+//きょうあくボンバーたちを<NEWBOX>
+One day, we the four wise men<LINE>
+finally discovered<NEWBOX>
+//たおすほうほうについての<LINE>
+//ある じょうほうを てにいれたのぢゃ<NEWBOX>
+the method through which the Evil<LINE>
+Bombers may be defeated.<NEWBOX>
+//じつは ヤツらには それぞれ<LINE>
+//にがてとする キャラボンが いる<NEWBOX>
+The truth is that there exists a<LINE>
+Karabon which they are weak to.<NEWBOX>
+//‥‥という じょうほうを もとに<LINE>
+//ワシらは かくちに ちり<NEWBOX>
+With this information, together with<LINE>
+the Karabons we had found<NEWBOX>
+//みつけた キャラボンを つれて<LINE>
+//それぞれの ようさいに いったんぢゃ<NEWBOX>
+we set out to visit many different<LINE>
+fortresses...<NEWBOX>
+//ぢゃが それは ブレインボンバーが<LINE>
+//ながした にせじょうほうぢゃった‥‥<NEWBOX>
+But perhaps our lead was just false<LINE>
+information spread by Brain Bomber.<NEWBOX>
+//けっかてきに ワシらは やつらを<LINE>
+//パワーアップさせる キャラボンを<NEWBOX>
+As in the end, all we did was help<LINE>
+them get their hands...<NEWBOX>
+//あつめる てだすけを させられて<LINE>
+//しまったのぢゃ‥‥めんぼくない<NEWBOX>
+On our powered up Karabons. I am<LINE>
+very ashamed by what happened...<NEWBOX>
+//‥‥でんごん おわります<LINE>
+//‥‥にてました?<END>
+That's the end of the message.<LINE>
+Does it make sense to you?<END>
+
 
 //POINTER #67 @ $1CF814 - STRING #67 @ $1CF2CA
 
+
 #WRITE(GBA,$1CF814)
-<CONTROL_CODE><$12><$4C> ボンバーマンは あいのメダリオンを<LINE>
- てにいれた!<NEWBOX>
- ボンバーマンの ハートの かずが<LINE>
- 1つ ふえた!<END>
+<CONTROL_CODE><$12><$4C>Bomberman obtained the<LINE>
+Medallion of Love!<NEWBOX>
+//ボンバーマンの ハートの かずが<LINE>
+//1つ ふえた!<END>
+Bomberman's life meter increased<LINE>
+by one!<END>
+
 
 //POINTER #68 @ $1CF818 - STRING #68 @ $1CF304
 
+
 #WRITE(GBA,$1CF818)
- いま オレの いるところから<LINE>
- おまえのいるところが よくみえるぞ<NEWBOX>
- おまえが つぎに いくべきところもだ<LINE>
- そう‥‥<NEWBOX>
- かつて このほしを<LINE>
- おさめていたものが‥‥<NEWBOX>
- すべてを みていた ばしょで<LINE>
- オレは まっている<NEWBOX>
- はやく おまえも ここにこい<LINE>
- ‥‥まっているぞ<END>
+//いま オレの いるところから<LINE>
+//おまえのいるところが よくみえるぞ<NEWBOX>
+From where I am right now, I am<LINE>
+easily able to see where you are.<NEWBOX>
+//おまえが つぎに いくべきところもだ<LINE>
+//そう‥‥<NEWBOX>
+The place where you should go next...<LINE>
+That place is...<NEWBOX>
+//かつて このほしを<LINE>
+//おさめていたものが‥‥<NEWBOX>
+This star... The one who formally<LINE>
+governed it...<NEWBOX>
+//すべてを みていた ばしょで<LINE>
+//オレは まっている<NEWBOX>
+The place where they saw all.<LINE>
+That is where I'll be...<NEWBOX>
+//はやく おまえも ここにこい<LINE>
+//‥‥まっているぞ<END>
+Quickly make your way here.<LINE>
+I'm waiting for you...<END>
+
 
 //POINTER #69 @ $1CF81C - STRING #69 @ $1CF38E
 
+
 #WRITE(GBA,$1CF81C)
- え? おしろにいきたいの‥‥?<LINE>
- それは ムリよ ムリ ムリ!<NEWBOX>
- だって いま おしろに いくための<LINE>
- はしが こおって おちちゃってるもん<NEWBOX>
- いま おしろと ここを<LINE>
- いったりきたりできるのは‥‥<NEWBOX>
- あそこの ガケを ひとっとび! の<LINE>
- ビーストポミュぐらいのものよ<END>
+Eh? You want to go to the castle...?<LINE>
+That's impossible! It's can't be done!<NEWBOX>
+//だって いま おしろに いくための<LINE>
+//はしが こおって おちちゃってるもん<NEWBOX>
+Right now, the bridge to the<LINE>
+castle is frozen and destroyed!<NEWBOX>
+//いま おしろと ここを<LINE>
+//いったりきたりできるのは‥‥<NEWBOX>
+To go back and forth between the<LINE>
+castle, well...<NEWBOX>
+//あそこの ガケを ひとっとび! の<LINE>
+//ビーストポミュぐらいのものよ<NEWBOX>
+You'd have to be able to fly over the<LINE>
+cliff like Pommy Beast!<END>
+
 
 //POINTER #70 @ $1CF820 - STRING #70 @ $1CF416
 
+
 #WRITE(GBA,$1CF820)
- みてみて! おしろの こおりが<LINE>
- とけたんだよ!<END>
+Look look! The ice around the<LINE>
+castle has melted!<NEWBOX>
+
 
 //POINTER #71 @ $1CF824 - STRING #71 @ $1CF430
 
+
 #WRITE(GBA,$1CF824)
- おぉ わかいの!<LINE>
- このへんは はじめてか?<NEWBOX>
- ここにきたら やはり<LINE>
- おんせんに はいらんとな!<NEWBOX>
- まぁ しかし わかりにくいところに<LINE>
- あるからな<NEWBOX>
- ここにくるまえに みかけたなら<LINE>
- かなり ラッキーじゃぞ<NEWBOX>
- おお! もう はいってきたのか<LINE>
- さすがじゃのう<NEWBOX>
- あの おんせんは なかなか<LINE>
- いい ゆかげんだったじゃろう<END>
+Hey, you there!<LINE>
+//このへんは はじめてか?<NEWBOX>
+Is this your first time around here?<NEWBOX>
+//ここにきたら やはり<LINE>
+//おんせんに はいらんとな!<NEWBOX>
+If so, then naturally you'll want<LINE>
+to try the hot spring!<NEWBOX>
+//まぁ しかし わかりにくいところに<LINE>
+//あるからな<NEWBOX>
+However, it's in a location that<LINE>
+may be difficult to find...<NEWBOX>
+//ここにくるまえに みかけたなら<LINE>
+//かなり ラッキーじゃぞ<NEWBOX>
+You're quite lucky if you managed<LINE>
+to find it before coming here!<NEWBOX>
+//おお! もう はいってきたのか<LINE>
+//さすがじゃのう<NEWBOX>
+Oh! So you've already been there<LINE>
+before? I guess that's to be expected.<NEWBOX>
+//あの おんせんは なかなか<LINE>
+//いい ゆかげんだったじゃろう<END>
+That hot spring's temperature<LINE>
+is very nice, don't you think?<END>
+
 
 //POINTER #72 @ $1CF828 - STRING #72 @ $1CF4D4
 
+
 #WRITE(GBA,$1CF828)
- ずいぶん ハデな なだれが<LINE>
- あったみたいだな<NEWBOX>
- ここにも すごい おとが<LINE>
- きこえてきてたぜ‥‥<NEWBOX>
- ‥‥え!? さっきの なだれで<LINE>
- ガケが うまった!?<NEWBOX>
- ガケのところにいた ヘンなやつらも<LINE>
- もういないって?<NEWBOX>
- そりゃあ たすかった!<LINE>
- みんなにも しらせないとな!<END>
+//ずいぶん ハデな なだれが<LINE>
+//あったみたいだな<NEWBOX>
+It sounded like a pretty big avalanche<LINE>
+happened somewhere...<NEWBOX>
+//ここにも すごい おとが<LINE>
+//きこえてきてたぜ‥‥<NEWBOX>
+It was so loud, I was able to hear<LINE>
+it all of the way from here!<NEWBOX>
+//‥‥え!? さっきの なだれで<LINE>
+//ガケが うまった!?<NEWBOX>
+Huh? That avalanche buried<LINE>
+the cliff?<NEWBOX>
+//ガケのところにいた ヘンなやつらも<LINE>
+//もういないって?<NEWBOX>
+And those strange guys who were<LINE>
+hanging around the cliff are now gone?<NEWBOX>
+//そりゃあ たすかった!<LINE>
+//みんなにも しらせないとな!<END>
+We're saved! We'll have to tell<LINE>
+everyone else as well!<END>
+
 
 //POINTER #73 @ $1CF82C - STRING #73 @ $1CF55E
 
+
 #WRITE(GBA,$1CF82C)
- このさきに あやしいやつらが<LINE>
- あつまって なにか やってるのよ<NEWBOX>
- なんか ドカーンって おととか<LINE>
- キャラボンの なきごえとか してたわ<NEWBOX>
- でも なんか きゅうに しずかに<LINE>
- なったわねぇ‥‥<NEWBOX>
- あら あなたが しずかに させたの?<LINE>
- ありがとう たすかったわ<END>
+//このさきに あやしいやつらが<LINE>
+//あつまって なにか やってるのよ<NEWBOX>
+Up ahead, some strange guys<LINE>
+ are gathering something.<NEWBOX>
+//なんか ドカーンって おととか<LINE>
+//キャラボンの なきごえとか してたわ<END>
+They were making lots of noise, and I<LINE>
+even heard the cry of a Karabon...<END>
+//でも なんか きゅうに しずかに<LINE>
+//なったわねぇ‥‥<NEWBOX>
+However, all of a sudden things<LINE>
+became strangely quiet...<NEWBOX>
+//あら あなたが しずかに させたの?<LINE>
+//ありがとう たすかったわ<END>
+Huh? It was you who put a stop to<LINE>
+them? Thank you so much!<END>
+
 
 //POINTER #74 @ $1CF830 - STRING #74 @ $1CF5E3
 
+
 #WRITE(GBA,$1CF830)
- こんにちは きょうも さむいわね<NEWBOX>
- そういえば ここらへんには<LINE>
- こおりづけのはな という‥‥<NEWBOX>
- はなが さくんだけど あなたは<LINE>
- もう みた?<NEWBOX>
- ‥‥え? あなた こおりづけのはな<LINE>
- もってるの? みせて みせて!<NEWBOX>
- あらあら‥‥はなびらが 1まい<LINE>
- たべられちゃってるのね‥‥<NEWBOX>
- でも そのていどで すんでいるモノを<LINE>
- みつけるなんて あるいみ ラッキーよ<END>
+//こんにちは きょうも さむいわね<NEWBOX>
+Hey there. Today's another cold day...<NEWBOX>
+//そういえば ここらへんには<LINE>
+//こおりづけのはな という‥‥<NEWBOX>
+Which reminds me. Around here a<LINE>
+plant called the Ice Flower<NEWBOX>
+//はなが さくんだけど あなたは<LINE>
+//もう みた?<NEWBOX>
+is known to bloom. Have you come<LINE>
+across any?<NEWBOX>
+//‥‥え? あなた こおりづけのはな<LINE>
+//もってるの? みせて みせて!<NEWBOX>
+...Eh? You you have an Ice Flower with<LINE>
+you right now? Lemme see lemme see!<NEWBOX>
+//あらあら‥‥はなびらが 1まい<LINE>
+//たべられちゃってるのね‥‥<NEWBOX>
+Ah! It looks as though one of the<LINE>
+petals has been eaten...<NEWBOX>
+//でも そのていどで すんでいるモノを<LINE>
+//みつけるなんて あるいみ ラッキーよ<END>
+But still, you're pretty lucky to have<LINE>
+found an Ice Flower at all!<END>
+
 
 //POINTER #75 @ $1CF834 - STRING #75 @ $1CF699
 
+
 #WRITE(GBA,$1CF834)
- とうとう メダリオンを すべて<LINE>
- あつめられたのですね<NEWBOX>
- それら 4つの メダリオンが あれば<LINE>
- ファンタシーへ いけるはずです<NEWBOX>
- どうか ファンタシーを<LINE>
- とりもどしてください<NEWBOX>
- よろしくおねがいいたします‥‥<END>
+//とうとう メダリオンを すべて<LINE>
+//あつめられたのですね<NEWBOX>
+At long last, all of the<LINE>
+medallions have been collected!<NEWBOX>
+//それら 4つの メダリオンが あれば<LINE>
+//ファンタシーへ いけるはずです<NEWBOX>
+With these four medallions, getting to<LINE>
+Fantasy will finally be possible!<NEWBOX>
+//どうか ファンタシーを<LINE>
+//とりもどしてください<NEWBOX>
+Please find a way to regain control<LINE>
+of Fantasy.<NEWBOX>
+//よろしくおねがいいたします‥‥<END>
+We're counting on you...<END>

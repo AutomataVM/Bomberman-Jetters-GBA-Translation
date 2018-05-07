@@ -5,7 +5,7 @@
 // Load and activate the table
 #ADDTBL("script/bomberman.tbl", Table)
 #ADDTBL("melissa font/melissa8x8.tbl", engTable)
-#ACTIVETBL(Table)
+#ACTIVETBL(engTable)
 
 // Setup GBA pointers and Pointer Table
 #VAR(GBA, CUSTOMPOINTER)
@@ -16,153 +16,154 @@
 
 //GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
 
-//BLOCK #000 NAME:		Block 1 - Opening Movie (POINTER)
+//BLOCK #000 NAME:		Block 0 - Opening Movie (POINTER)
 
 //POINTER #0 @ $1BDA90 - STRING #0 @ $1BD820
 
-#ACTIVETBL(engTable)
 #WRITE(GBA,$1BDA90)
-//こうせんほうか なつかしいな?d?d<LINE>
-//たしか このじけんのあと ヤツは?d?d?d?d<WAIT>
-This Beam Gun is important...<LINE>
-It must be behind the incident......<WAIT>
+//こうせんほうか なつかしいな<LINE>
+//たしか このじけんのあと ヤツは?<WAIT>
+This Beam Cannon sure takes me back.<LINE>
+The one in charge of that mission...<WAIT>
 
 //POINTER #1 @ $1BDA94 - STRING #1 @ $1BD846
 
 #WRITE(GBA,$1BDA94)
-//マイティ?d?d<WAIT>
-Mighty...<WAIT>
+//マイティ...<WAIT>
+Was Mighty...<WAIT>
 
 //POINTER #2 @ $1BDA98 - STRING #2 @ $1BD84D
 
 #WRITE(GBA,$1BDA98)
-//そうか?d?d シャウトは マイティに<LINE>
+//そうか... シャウトは マイティに<LINE>
 //あったことが なかったな<WAIT>
-That's right... Mighty doesn't know<LINE>
-Shout yet.<WAIT>
+Ah, that's right...<LINE>
+Shout never met Mighty.<WAIT>
 
 //POINTER #3 @ $1BDA9C - STRING #3 @ $1BD86C
 
 #WRITE(GBA,$1BDA9C)
 //マイティって たしか でんせつの<LINE>
-//ボンバ?[マンと よばれた ひとでしょ?<WAIT>
-Hmm, Mighty... Isn't he the Legendary<LINE>
-Bomberman?<WAIT>
+//ボンバマンと よばれた ひとでしょ?<WAIT>
+Mighty was that legendary<LINE>
+Bomberman, right?<WAIT>
 
 //POINTER #4 @ $1BDAA0 - STRING #4 @ $1BD891
 
 #WRITE(GBA,$1BDAA0)
 //あぁ そのとおりさ やつは<LINE>
-//オレたち ジェッタ?[ズの ・ンバ?[?d?d<WAIT>
-Yep. He's a member of the Jetters...<WAIT>
+//オレたち ジェッタズの ・ンバ...<WAIT>
+Yeah. He was a member of Jetters.<LINE>
+Just like us...<WAIT>
 
 //POINTER #5 @ $1BDAA4 - STRING #5 @ $1BD8B3
 
 #WRITE(GBA,$1BDAA4)
-//それに シ・ボンの<LINE>
-//じまんの あにでもある<WAIT>
-White Bomber also takes pride in him.<WAIT>
+And White Bomber's older brother.<LINE>
+<WAIT>
 
 //POINTER #6 @ $1BDAA8 - STRING #6 @ $1BD8C9
 
 #WRITE(GBA,$1BDAA8)
 //ねぇ きかせてよ!<LINE>
-//でんせつの ボンバ?[マンの こと!<WAIT>
-Now, I remember! This is the<LINE>
-story of the Legendary Bomberman!<WAIT>
+//でんせつの ボンバマンの こと!<WAIT>
+Please! Tell me about what happened<LINE>
+to that legendary Bomberman!<WAIT>
 
 //POINTER #7 @ $1BDAAC - STRING #7 @ $1BD8E5
 
 #WRITE(GBA,$1BDAAC)
-//わかった?d?d あれは<LINE>
-//シャウトがはいるまえの はなしだ?d?d?d?d<WAIT>
-Yes... I told you about it before......<WAIT>
+//わかった... あれは<LINE>
+//シャウトがはいるまえの はなしだ<WAIT>
+I see. Well, this story happened before<LINE>
+you joined us...<WAIT>
 
 //POINTER #8 @ $1BDAB0 - STRING #8 @ $1BD905
 
 #WRITE(GBA,$1BDAB0)
 //しょくん! ノンビリせいに<LINE>
 //しょうたいふめいの うちゅうせんが あらわれた!<WAIT>
-Everyone! A platoon of spaceship's<LINE>
-has appeared at the Nonbiri Star!<WAIT>
+Attention! An unidentified spaceship<LINE>
+has landed on Planet Nonbiri!<WAIT>
 
 //POINTER #9 @ $1BDAB4 - STRING #9 @ $1BD92C
 
 #WRITE(GBA,$1BDAB4)
-//ノンビリせいには オレがいくぜ!!<WAIT>
-I'll take care of them!!<WAIT>
+//ノンビリせいには オレがいくぜ!<WAIT>
+I'll go to Nonbiri and handle this!<WAIT>
 
 //POINTER #10 @ $1BDAB8 - STRING #10 @ $1BD93E
 
 #WRITE(GBA,$1BDAB8)
 //だめじゃ まだ ケガのなおっていない<LINE>
-//バ?[ディには いかせられんな<WAIT>
-No, you're still wounded, Birdie.<LINE>
-I can't let you go.<WAIT>
+//バディには いかせられんな<WAIT>
+No. You're still wounded, Birdy.<LINE>
+I can't ask you to go...<WAIT>
 
 //POINTER #11 @ $1BDABC - STRING #11 @ $1BD960
 
 #WRITE(GBA,$1BDABC)
 //おぉ いってくれるか マイティ!<WAIT>
-You can go in his place, Mighty!<WAIT>
+Ah, Mighty. You think that you can<LINE>
+handle this mission?<WAIT>
 
 //POINTER #12 @ $1BDAC0 - STRING #12 @ $1BD971
 
 #WRITE(GBA,$1BDAC0)
 //よし! ただちに<LINE>
 //ノンビリせいに むかってくれ!<WAIT>
-Go to the Nonbiri Star, before it's too<LINE>
-late!<WAIT>
-#ACTIVETBL(Table)
+Okay then! Set course for Nonbiri,<LINE>
+full speed ahead!<WAIT>
 
 //POINTER #13 @ $1BDAC4 - STRING #13 @ $1BD98A
 
 #WRITE(GBA,$1BDAC4)
-こちらバーディー こちらバーディー<WAIT>
+Birdy to Mighty, Birdy to Mighty.<WAIT>
 
 //POINTER #14 @ $1BDAC8 - STRING #14 @ $1BD99C
 
 #WRITE(GBA,$1BDAC8)
-マイティ おうとうしろ!<LINE>
-どうしたんだ! マイティ!!<WAIT>
+Mighty, do you copy?<LINE>
+Why aren't you responding? Mighty!!<WAIT>
 
 //POINTER #15 @ $1BDACC - STRING #15 @ $1BD9B8
 
 #WRITE(GBA,$1BDACC)
-あれいらい マイティからの れんらくは<LINE>
-とだえた ままだ‥‥‥‥<WAIT>
+And we haven't heard from Mighty<LINE>
+ever since...<WAIT>
 
 //POINTER #16 @ $1BDAD0 - STRING #16 @ $1BD9D9
 
 #WRITE(GBA,$1BDAD0)
-ヒゲヒゲだんが あらわれた!<LINE>
-ジェッターズ しゅつどうじゃ!!<WAIT>
+The Hige Hige Bandits have appeared!<LINE>
+Jetters, move out!<WAIT>
 
 //POINTER #17 @ $1BDAD4 - STRING #17 @ $1BD9F9
 
 #WRITE(GBA,$1BDAD4)
-いくわよ! みんな!!<WAIT>
+Let's go, everyone!<WAIT>
 
 //POINTER #18 @ $1BDAD8 - STRING #18 @ $1BDA05
 
 #WRITE(GBA,$1BDAD8)
-でんせつの ボンバーマンと よばれた<LINE>
-マイティに おいつけるかな? シロボン<WAIT>
+White Bomber... Can we count on you to<LINE>
+carry on Mighty's legacy?<WAIT>
 
 //POINTER #19 @ $1BDADC - STRING #19 @ $1BDA2C
 
 #WRITE(GBA,$1BDADC)
-フフフ‥‥ これで ボンバーマンの データは<LINE>
-すべて コピーできた‥‥‥‥<WAIT>
+Mwahaha... I have finally obtained a<LINE>
+copy of a Bomberman's data...<WAIT>
 
 //POINTER #20 @ $1BDAE0 - STRING #20 @ $1BDA52
 
 #WRITE(GBA,$1BDAE0)
-いよいよ さいきょうの せんし<LINE>
-マックスが たんじょうする‥‥<WAIT>
+With this I can at last create Max, the<LINE>
+world's strongest warrior...<WAIT>
 
 //POINTER #21 @ $1BDAE4 - STRING #21 @ $1BDA72
 
 #WRITE(GBA,$1BDAE4)
-フッフッフッ‥‥‥‥<LINE>
-ハーッハッハッハッハッハッ‥‥‥‥<WAIT>
+Mwa ha ha...<LINE>
+MWA HA HA HA HA HA...<WAIT>
+

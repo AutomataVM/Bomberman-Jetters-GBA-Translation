@@ -5,1932 +5,2778 @@
 // Load and activate the table
 #ADDTBL("script/bomberman.tbl", Table)
 #ADDTBL("melissa font/melissa8x8.tbl", engTable)
-#ACTIVETBL(Table)
+#ACTIVETBL(engTable)
 
-// Setup GBA pointers and Pointer Table
+// Setup GBA //POINTERs and //POINTER Table
 #VAR(GBA, CUSTOMPOINTER)
-// Create our pointer type
+// Create our //POINTER type
 #CREATEPTR(GBA, "LINEAR", $-08000000, 32)
 
 #JMP($552000)
 
 //GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
 
-//BLOCK #002 NAME:		Block 3 (POINTER)
+//BLOCK #002 NAME:		Block 3 (//POINTER)
 
 //POINTER #0 @ $1C1B3C - STRING #0 @ $1BDE7C
-#ACTIVETBL(engTable)
+
 #WRITE(GBA,$1C1B3C)
-<CONTROL_CODE_E001><$02><$03><$04><$26>Hey, it's Brother Jetters!<LINE>
-Did you come because<LINE>
-of the collapsing bridge?<NEWBOX>
-I wonder how many days<LINE>
-ago the tremor hit.<NEWBOX>
-That "shock" is what<LINE>
-caused the Bridge to East<NEWBOX>
-Aqua to collapse.<END>
+<CONTROL_CODE><$01><$02><$03><$04><$26>Oh! You're one of the Jetters! You<LINE>
+came because the bridge fell, right?<NEWBOX>
+A few days ago, the ground suddenly<LINE>
+started shaking a lot.<NEWBOX>
+The shock from that destroyed the<LINE>
+bridge to East Aqua.<END>
 
 //POINTER #1 @ $1C1B40 - STRING #1 @ $1BDEE8
 
 #WRITE(GBA,$1C1B40)
-<CONTROL_CODE_E001><$02><$03><$04><$25>You came because of the bridge,<LINE>
-didn't you?<NEWBOX>
-You Jetters sure have a lot of<LINE>
-free time, huh?<NEWBOX>
-Anyway, the village Carpenter will<LINE>
-fix the bridge as soon as he can.<NEWBOX>
-He can be a little careless<LINE>
-sometimes, but he's strong.<NEWBOX>
-A married couple lives in<LINE>
-the house next to me.<END>
-#ACTIVETBL(Table)
+<CONTROL_CODE><$01><$02><$03><$04><$25>You came because the bridge fell? The<LINE>
+Jetters must have a lot of spare time.<NEWBOX>
+You really didn't have to. Our<LINE>
+carpenter will fix the bridge right up.<NEWBOX>
+He can be a bit careless at times,<LINE>
+but there's no denying his skill.<NEWBOX>
+He lives in the house next door along<LINE>
+with his wife.<END>
+
 //POINTER #2 @ $1C1B44 - STRING #2 @ $1BDF67
 
 #WRITE(GBA,$1C1B44)
-ミドリはかせの けんきゅうじょなら<LINE>
-ずっとひがしの フォレスタウンにあるよ<NEWBOX>
-フォレスタウンへは いちど きたへむかい<LINE>
-きたのだんがいを ぬけていくのさ<END>
+Dr. Midori's laboratory is in Foress<LINE>
+Town, which is to the east of here.<NEWBOX>
+To get there, first go north for a bit<LINE>
+and then traverse the cliffs.<END>
 
 //POINTER #3 @ $1C1B48 - STRING #3 @ $1BDFB3
 
 #WRITE(GBA,$1C1B48)
-ミドリはかせは こだいの いせきを<LINE>
-けんきゅうしているのよ<NEWBOX>
-さいきん いせきから おおきな<LINE>
-こうせんほうを みつけたそうよ<NEWBOX>
-でんせつによると それは とてもつよい<LINE>
-はかいりょくを もっていた らしいの<NEWBOX>
-おおむかしの ものだから<LINE>
-まさか うごかないとは おもうけど<NEWBOX>
-ぼうはつとか しないか<LINE>
-ちょっと こわいわ<END>
+Do you know of Dr. Midori's ancient<LINE>
+civilization research?<NEWBOX>
+Apparently a large Beam Cannon was<LINE>
+recently discovered at the dig site.<NEWBOX>
+According to legend, that Beam Cannon<LINE>
+possesses great destructive power.<NEWBOX>
+Although since it's really old, it<LINE>
+probably doesn't work anymore.<NEWBOX>
+I'm still a bit worried it might<LINE>
+suddenly fire though...<END>
 
 //POINTER #4 @ $1C1B4C - STRING #4 @ $1BE04D
 
 #WRITE(GBA,$1C1B4C)
-あ! ジェッターズの おにいちゃんだ!<NEWBOX>
-ボク みたんだ!<LINE>
-あのひ じひびきのちょくぜんに<NEWBOX>
-ひがしの フォレスタウンのほうに<LINE>
-へんな うちゅうせんが おりていったんだ!<NEWBOX>
-おとなは だれも しんじてくれないけど<LINE>
-おにいちゃんなら しんじてくれるよね?<END>
+Oh! You're from the Jetters!<NEWBOX>
+I saw it, you know! The same day that<LINE>
+the huge quake occurred...<NEWBOX>
+A strange spaceship descended to the<LINE>
+east of Foress Town.<NEWBOX>
+None of the adults believed me. But<LINE>
+you'll believe me, right?<END>
 
 //POINTER #5 @ $1C1B50 - STRING #5 @ $1BE0C9
 
 #WRITE(GBA,$1C1B50)
-じめんが いっぱいゆれて こわかった‥‥<LINE>
-いったい なにが おきたんだろ?<END>
+The ground was shaking so much...<LINE>
+It was really scary. What happened?<END>
 
 //POINTER #6 @ $1C1B54 - STRING #6 @ $1BE0EF
 
 #WRITE(GBA,$1C1B54)
-オウ あのときは ありがとうな<LINE>
-おまえさんの おかげで はしを なおせたよ<NEWBOX>
-まったく どこのどいつが こんな<LINE>
-めいわくなこと したんだか‥‥<NEWBOX>
-ひがしへ いくのなら<LINE>
-きをつけて いくんだぞ<END>
+Thanks for all the help. It's because of<LINE>
+you that I was able to fix the bridge!<NEWBOX>
+Just what is it that has been causing<LINE>
+all of this trouble lately?<NEWBOX>
+If you're planning to head east, then<LINE>
+you better be careful...<END>
 
 //POINTER #7 @ $1C1B58 - STRING #7 @ $1BE14D
-#ACTIVETBL(engTable)
+
 #WRITE(GBA,$1C1B58)
-<CONTROL_CODE_E001><$02><$04><$04><$22><CONTROL_CODE_E001><$02><$00><$04><$21>My husband is a carpenter.<LINE>
-He can be so careless sometimes.<NEWBOX>
-He went to the forest to cut lumber,<LINE>
-so that he could can fix the bridge.<NEWBOX>
-He brought the <GET_ITEM_NAME><$2B> by<LINE>
-mistake.<NEWBOX>
-Please deliver this Axe to my<LINE>
-husband in the forest.<NEWBOX>
-Bomberman recieved the<CONTROL_CODE_E003><$02><$00><LINE>
-<GET_ITEM_NAME><$2A>!<CONTROL_CODE><$12><$0C><CONTROL_CODE_E003><$01><$20><NEWBOX>
-There are Rejuvinating Mushrooms<LINE>
-in the North Forest.<NEWBOX>
-It's dangerous!<LINE>
-so please be careful alright?<END>
-#ACTIVETBL(Table)
+<CONTROL_CODE><$01><$02><$04><$04><$22><CONTROL_CODE><$01><$02><$00><$04><$21>My husband is a carpenter, but he can<LINE>
+be rather careless at times.<NEWBOX>
+He went into the forest to the north<LINE>
+to cut wood for the bridge...<NEWBOX>
+But he took a <GET_ITEM_NAME><$2B><LINE>
+with him by mistake.<NEWBOX>
+If you could, please take this to him.<LINE>
+He's going to need it.<NEWBOX>
+<CONTROL_CODE><$03><$02><$00>Bomberman obtained the<LINE>
+<GET_ITEM_NAME><$2A>!<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$01><$20>!<NEWBOX>
+There are regenerating mushrooms in<LINE>
+the northern forest, so watch out!<END>
+
 //POINTER #8 @ $1C1B5C - STRING #8 @ $1BE21E
 
 #WRITE(GBA,$1C1B5C)
-おや こんなところまで よくきたね<LINE>
-ボクらは キャラボンけんきゅうか<NEWBOX>
-キャラボンについて はなしを きくかい?<LINE>
-    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$04><$27><$04><$29>あ! にしアクアにいく はしが<LINE>
-なおったんだね!<NEWBOX>
-やっぱり あそこの だいくさんは<LINE>
-すごいなぁ<END>
+Wow, a visitor way out here!<LINE>
+We are Karabon researchers.<NEWBOX>
+Do you want to hear about Karabons?<LINE>
+    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$04><$27><$04><$29>The bridge to West Aqua has finally<LINE>
+been fixed!<NEWBOX>
+That carpenter really is amazing.<LINE>
+<END>
 
 //POINTER #9 @ $1C1B60 - STRING #9 @ $1BE270
 
 #WRITE(GBA,$1C1B60)
-あ! にしアクアにいく はしが<LINE>
-なおったんだね!<NEWBOX>
-やっぱり あそこの だいくさんは<LINE>
-すごいなぁ<END>
+The bridge to West Aqua has finally<LINE>
+been fixed!<NEWBOX>
+That carpenter really is amazing.<LINE>
+<END>
+
 
 //POINTER #10 @ $1C1B64 - STRING #10 @ $1BE2A0
 
 #WRITE(GBA,$1C1B64)
-アクアのきたにある もりへは<LINE>
-いりぐちが ふたつあるの<NEWBOX>
-ひとつは にしアクアにある いりぐち<LINE>
-もうひとつは もりを ぐるっとまわって<NEWBOX>
-きたの だんがいのよこから<LINE>
-はいる いりぐちよ<END>
+There are two entrances to the forest<LINE>
+that is north of Aqua.<NEWBOX>
+The first one is in West Aqua. The<LINE>
+other can be found far to the north<NEWBOX>
+on the other side of the forest<LINE>
+and next to some cliffs.<END>
 
 //POINTER #11 @ $1C1B68 - STRING #11 @ $1BE2FB
-#ACTIVETBL(engTable)
+
 #WRITE(GBA,$1C1B68)
-Welcome to West Aqua...<LINE>
-Ah! It's a member of Jetters!<NEWBOX>
-Brother Jetters!<LINE>
-You're so cool...<NEWBOX>
-Did you guys come because<LINE>
-something happened?<END>
+Welcome! This is the town of<LINE>
+West Aqua.<NEWBOX>
+Hey! Aren't you a member of the<LINE>
+Jetters? That's so cool!<NEWBOX>
+//ジェッターズが きたってことは<LINE>
+//なにか じけんが あったのかなぁ‥‥<END>
+If the Jetters are here, then it must<LINE>
+mean that something is happening...<END>
 
 //POINTER #12 @ $1C1B6C - STRING #12 @ $1BE35B
 
 #WRITE(GBA,$1C1B6C)
-A person called Professor Green,<LINE>
-has lived in Forest Town for years.<NEWBOX>
-He researches the Star's<LINE>
-Ancient Ruins.<NEWBOX>
-This Professor Green,<LINE>
-is a clean person again... hehe.<END>
+Dr. Midori lives to the east of here<LINE>
+in Foress Town.<NEWBOX>
+She is studying an ancient civilization<LINE>
+that once lived on this planet.<NEWBOX>
+That Dr. Midori really is a pretty<LINE>
+Person... Heheh.<END>
 
 //POINTER #13 @ $1C1B70 - STRING #13 @ $1BE3B9
 
 #WRITE(GBA,$1C1B70)
-The only bridge to the east,<LINE>
-has fallen...<NEWBOX>
-What on Earth was that tremor?<LINE>
-I wonder what would've caused it...<END>
-#ACTIVETBL(Table)
+The only bridge going east is closed<LINE>
+because it collapsed...<NEWBOX>
+I wonder, just what was the cause<LINE>
+of that sudden earthquake...<END>
+
 //POINTER #14 @ $1C1B74 - STRING #14 @ $1BE3F4
 
 #WRITE(GBA,$1C1B74)
-かわぞいにたっている すこしほそい きは<LINE>
-ばくふうを あてると たおせるよ<END>
+//かわぞいにたっている すこしほそい きは<LINE>
+//ばくふうを あてると たおせるよ<END>
+If you blast the trees that stand up by<LINE>
+the river, you can knock them over!<END>
 
 //POINTER #15 @ $1C1B78 - STRING #15 @ $1BE41A
 
 #WRITE(GBA,$1C1B78)
-あいていた このへやを ふたりぐみの<LINE>
-トレジャーハンターに かしたんだけど<NEWBOX>
-さいきん めっきり すがたをみないんだ<LINE>
-どこにいったのかねぇ<NEWBOX>
-そろそろ やちんを<LINE>
-はらってもらいたいんじゃが‥‥<END>
+//あいていた このへやを ふたりぐみの<LINE>
+//トレジャーハンターに かしたんだけど<NEWBOX>
+In the past a group of two treasure<LINE>
+hunters were renting this room.<NEWBOX>
+//さいきん めっきり すがたをみないんだ<LINE>
+//どこにいったのかねぇ<NEWBOX>
+But lately I haven't seen them at all.<LINE>
+I wonder where they went off to...<NEWBOX>
+//そろそろ やちんを<LINE>
+//はらってもらいたいんじゃが‥‥<END>
+I really miss the rent money they<LINE>
+use to bring in...<END>
 
 //POINTER #16 @ $1C1B7C - STRING #16 @ $1BE479
 
 #WRITE(GBA,$1C1B7C)
-<CONTROL_CODE><$16><$04>Tあら けがを してるじゃないの<LINE>
-ちょっと じっとしていてね‥‥<NEWBOX>
-<CONTROL_CODE><$11><$E0>くよハイ これでだいじょうぶ<LINE>
-あんまり ムリしちゃ ダメよ<END>
+<CONTROL_CODE><$16><$04>Ah, are you injured? <LINE>
+Please sit still for just a moment... <NEWBOX>
+<CONTROL_CODE><$11><$E0>There, you're all fixed up!<LINE>
+Don't over do it now.<END>
 
 //POINTER #17 @ $1C1B80 - STRING #17 @ $1BE4BE
 
 #WRITE(GBA,$1C1B80)
-<CONTROL_CODE><$01><$02>う3アすこしまえに みなみのもりに<LINE>
-うちゅうせんが おりてきたの<NEWBOX>
-それから まちのそとを ヘンなやつらが<LINE>
-うろついているの‥‥<NEWBOX>
-なんだか こわいわ<END>
+<CONTROL_CODE><$01><$02><$0D><$04><$42>Not long ago a spaceship landed in<LINE>
+the forest to the south.<NEWBOX>
+After that, some strange guys started <LINE>
+hanging around outside the city...<NEWBOX>
+They're kind of scary.<END>
+
 
 //POINTER #18 @ $1C1B84 - STRING #18 @ $1BE50B
 
+
 #WRITE(GBA,$1C1B84)
-<CONTROL_CODE><$01><$02>う3けもりに うちゅうせんが おりてきてから<LINE>
-はっくつげんばで さぎょうしていた はかせと<NEWBOX>
-れんらくが とれなくなったらしいんじゃ<LINE>
-なにか あったんじゃろうか‥‥<END>
+<CONTROL_CODE><$01><$02><$0D><$04><$13>Ever since that spaceship landed in<LINE>
+the forest, nobody has seen<NEWBOX>
+or heard from Dr. Midori. I wonder if<LINE>
+something happened to her?<END>
+
 
 //POINTER #19 @ $1C1B88 - STRING #19 @ $1BE560
 
+
 #WRITE(GBA,$1C1B88)
-なにはともあれ みんな ぶじで<LINE>
-なによりじゃ‥‥<END>
+After all that's happened, what's<LINE>
+important is that everyone is safe...<END>
+
 
 //POINTER #20 @ $1C1B8C - STRING #20 @ $1BE579
 
+
 #WRITE(GBA,$1C1B8C)
-<CONTROL_CODE><$01><$02>う3ょうちゅうせんから おりてきたやつら<LINE>
-はっくつげんばのほうに いったんだ<NEWBOX>
-はっくつげんばでは ミドリはかせが<LINE>
-こうせんほうを ちょうさしていたんだ‥‥<NEWBOX>
-はかせが ぶじならいいけど‥‥<END>
+<CONTROL_CODE><$01><$02><$0D><$04><$41>Those guys that arrived by spaceship<LINE>
+headed towards the excavation site.<NEWBOX>
+//はっくつげんばでは ミドリはかせが<LINE>
+//こうせんほうを ちょうさしていたんだ‥‥<NEWBOX>
+Dr. Midori was there investigating<LINE>
+a Beam Cannon she discovered.<NEWBOX>
+//はかせが ぶじならいいけど‥‥<END>
+I hope that she's alright...<END>
+
 
 //POINTER #21 @ $1C1B90 - STRING #21 @ $1BE5DA
 
+
 #WRITE(GBA,$1C1B90)
- ルーム1ー2ー5<LINE>
- おとな おんな の かいわ<END>
+-Room 125- <LINE>
+Women's Meeting<END>
+
 
 //POINTER #22 @ $1C1B94 - STRING #22 @ $1BE5F3
 
+
 #WRITE(GBA,$1C1B94)
-さいきん このまちの<LINE>
-けんきゅうじょの よこのいえに<NEWBOX>
-ふたりぐみの トレジャーハンターが<LINE>
-ひっこしてきたの<NEWBOX>
-なんでも おたからを ほりあてて<LINE>
-いっぱつ あてたいんだとか‥‥<END>
+//さいきん このまちの<LINE>
+//けんきゅうじょの よこのいえに<NEWBOX>
+Recently two treasure hunters moved<LINE>
+into the house<NEWBOX>
+//ふたりぐみの トレジャーハンターが<LINE>
+//ひっこしてきたの<NEWBOX>
+that is next to the laboratory in<LINE>
+this town.<NEWBOX>
+//なんでも おたからを ほりあてて<LINE>
+//いっぱつ あてたいんだとか‥‥<END>
+Someday I want to try hunting for<LINE>
+treasure as well!<END>
+
 
 //POINTER #23 @ $1C1B98 - STRING #23 @ $1BE64A
-#ACTIVETBL(engTable)
+
+
 #WRITE(GBA,$1C1B98)
-I came to cut the trees, but I made<LINE>
-a big mistake.<NEWBOX>
-See, I brought my <GET_ITEM_NAME><$2B><LINE>
-which has trouble cutting trees.<NEWBOX>
-The <GET_ITEM_NAME><$2A> is at my house.<LINE>
-I've had trouble returning there<NEWBOX>
-by bird.<CONTROL_CODE_E001><$02><$00><$04><$18><END>
+//Ah~ きをきりに やってきたのに まちがえて<LINE>
+//<GET_ITEM_NAME><$2B>を もってきちまった<NEWBOX>
+I came out here to chop trees, but I<LINE>
+accidentally brought a blunt axe...<NEWBOX>
+//このオノじゃ ちっとも きがきれねぇや<LINE>
+//いえに <GET_ITEM_NAME><$2A>が あるんだが<NEWBOX>
+I'm not going to be able to chop down<LINE>
+any trees with this, but going back to<NEWBOX>
+//とりにかえるのは めんどうだなぁ<CONTROL_CODE><$01><$02><$00><$04><$18><END>
+get my <GET_ITEM_NAME><$2A> would take forever.<CONTROL_CODE><$01><$02><$00><$04><$18><END>
 
 
 //POINTER #24 @ $1C1B9C - STRING #24 @ $1BE6A9
 
+
 #WRITE(GBA,$1C1B9C)
 <NEWBOX>
-Ah, this is my Axe, isn't it!?<LINE>
-Thank you for returning it.<NEWBOX>
-Alright! now that I can cut the trees.<LINE>
-I'll fix the bridge in no time.<NEWBOX>
-I don't need this <GET_ITEM_NAME><$2B>,<LINE>
-so I'll give it to you.<NEWBOX>
+Oh! Is that my axe? Thank you for<LINE>
+bringing it to me.<NEWBOX>
+With this I can finally gather wood<LINE>
+and fix the bridge.<NEWBOX>
+I don't need this <GET_ITEM_NAME><$2B><LINE>
+anymore, so you can have it.<NEWBOX>
 Bomberman received the<LINE>
-<GET_ITEM_NAME><$2B>!<CONTROL_CODE><$12><$0C><CONTROL_CODE_E004><$01><$20><CONTROL_CODE_E003><$01><$21><NEWBOX>
-If we bring this, we won't<LINE>
-run into another mistake.<NEWBOX>
-OK! I'll cut it!<END>
-#ACTIVETBL(Table)
+<GET_ITEM_NAME><$2B>!<CONTROL_CODE><$12><$0C><CONTROL_CODE><$04><$01><$20><CONTROL_CODE><$03><$01><$21>.<NEWBOX>
+Now that it's in your possession, I<LINE>
+can't bring it by accident anymore.<NEWBOX>
+Okay! Let's get started!<END>
+
+
 //POINTER #25 @ $1C1BA0 - STRING #25 @ $1BE75C
 
+
 #WRITE(GBA,$1C1BA0)
-よーし これだけあれば じゅうぶんだろう<LINE>
-むらにかえって はしを なおすぞ<END>
+Alright, this should be enough. Let's<LINE>
+go back and fix that bridge.<END>
+
 
 //POINTER #26 @ $1C1BA4 - STRING #26 @ $1BE782
 
+
 #WRITE(GBA,$1C1BA4)
-ふぅ これで はしも もとどおりだ<LINE>
-いままでどおり ひがしアクアむらに いけるぞ<NEWBOX>
-ありがとうよ ボンバーマン<LINE>
-おまえさんのおかげで はしをなおせたよ<NEWBOX>
-このはしのむこうが ひがしアクアむらだ<LINE>
-それじゃ きをつけていくんだぞ<END>
+//ふぅ これで はしも もとどおりだ<LINE>
+//いままでどおり ひがしアクアむらに いけるぞ<NEWBOX>
+There, the bridge is back to normal!<LINE>
+Now everyone can finally cross again.<NEWBOX>
+//ありがとうよ ボンバーマン<LINE>
+//おまえさんのおかげで はしをなおせたよ<NEWBOX>
+Thank you, Bomberman. It was with<LINE>
+your help that I was able to do this.<NEWBOX>
+//このはしのむこうが ひがしアクアむらだ<LINE>
+//それじゃ きをつけていくんだぞ<END>
+East Aqua is on the other side of<LINE>
+the bridge. Take care.<END>
+
 
 //POINTER #27 @ $1C1BA8 - STRING #27 @ $1BE7F1
 
+
 #WRITE(GBA,$1C1BA8)
-<CONTROL_CODE><$19><$05>トレジャンおぉ たすかった!<LINE>
-もう いっしょう でられないかと おもったよ<NEWBOX>
-オレたちは トレジャーハンター<LINE>
-たからをさがして うちゅうをまわってるんだ<NEWBOX>
-ミドリはかせが ここのやまから<LINE>
-こだいのいさんを ほりだしたのをきいて<NEWBOX>
-オレたちも ひとやまあてようと<LINE>
-いわやまを ほりすすんでいたんだが<NEWBOX>
-なんにちか まえに とつぜんはげしい<LINE>
-じひびきがして かべがくずれてしまったんだ<NEWBOX>
-とにかく でぐちを あけてくれて ありがとう<LINE>
-たすかったよ<END>
+//<CONTROL_CODE><$19><$05>トレジャンおぉ たすかった!<LINE>
+//もう いっしょう でられないかと おもったよ<NEWBOX>
+<CONTROL_CODE><$19><$06>TrejurYou saved us! I thought that we<LINE>
+would be trapped here forever...<NEWBOX>
+//オレたちは トレジャーハンター<LINE>
+//たからをさがして うちゅうをまわってるんだ<NEWBOX>
+We are treasure hunters! We travel the<LINE>
+universe searching for treasure.<NEWBOX>
+//ミドリはかせが ここのやまから<LINE>
+//こだいのいさんを ほりだしたのをきいて<NEWBOX>
+We heard that Dr. Midori excavated an<LINE>
+ancient artifact from this mountain.<NEWBOX>
+//オレたちも ひとやまあてようと<LINE>
+//いわやまを ほりすすんでいたんだが<NEWBOX>
+So we decided to conduct a search of<LINE>
+our own. However, suddenly<NEWBOX>
+//なんにちか まえに とつぜんはげしい<LINE>
+//じひびきがして かべがくずれてしまったんだ<NEWBOX>
+the ground began to shake and<LINE>
+the walls of the cavern caved in!<NEWBOX>
+//とにかく でぐちを あけてくれて ありがとう<LINE>
+//たすかったよ<END>
+But now we're free! Thank you very<LINE>
+much for helping us out.<END>
+
 
 //POINTER #28 @ $1C1BAC - STRING #28 @ $1BE8CD
 
+
 #WRITE(GBA,$1C1BAC)
-<CONTROL_CODE><$19><$04>ハンタラありがとうついでに ひとつたのみがあるんだが<LINE>
-ちょっと ついてきてくれ‥‥<END>
+//<CONTROL_CODE><$19><$04>ハンタラありがとうついでに ひとつたのみがあるんだが<LINE>
+//ちょっと ついてきてくれ‥‥<END>
+<CONTROL_CODE><$19><$06>HuntarThank you! We have one more request<LINE>
+for you. If you could just follow me...<END>
+
 
 //POINTER #29 @ $1C1BB0 - STRING #29 @ $1BE8FA
 
+
 #WRITE(GBA,$1C1BB0)
-<CONTROL_CODE><$19><$05>エレファンおねがいです ボンバーマンさん<LINE>
-わたしのねがいを きいてください<NEWBOX>
-わたしのむすこを さがしてください<LINE>
-もりのどこかに いるはずなんです<NEWBOX>
-あのとき わたしはむすこと もりにいました<LINE>
-とつぜん おおきなうちゅうせんが<NEWBOX>
-もりのきを なぎたおしながら<LINE>
-すごいいきおいで おりてきたんです<NEWBOX>
-そのときのショックで わたしはケガをして<LINE>
-むすこと はぐれてしまったんです<END>
+//<CONTROL_CODE><$19><$05>エレファンおねがいです ボンバーマンさん<LINE>
+<CONTROL_CODE><$19><$06>ElifanHello Bomberman. I have a favor to<LINE>
+ask of you...<NEWBOX>
+If you could, please search for my son.<LINE>
+He has to be somewhere in the forest.<NEWBOX>
+I was with him when suddenly a huge<LINE>
+spaceship appeared<NEWBOX>
+and brought destruction to part of the<LINE>
+forest, causing trees to fall over...<NEWBOX>
+I was injured at the time and lost <LINE>
+sight of my son.<END>
+
 
 //POINTER #30 @ $1C1BB4 - STRING #30 @ $1BE9B4
 
+
 #WRITE(GBA,$1C1BB4)
-<CONTROL_CODE><$19><$04>ハンタラオレたちも さんざん もりを さがしたんだが<LINE>
-けっきょく こどもは みつからなくてな<NEWBOX>
-もしかしたら うちゅうせんの むこうがわに<LINE>
-いるのかもしれん‥‥<NEWBOX>
-エレファンのこどもを さがしてきてくれないか<LINE>
-オレたちは ここで まっているよ<NEWBOX>
-したのつうろが もりにつながっているんだ<LINE>
-とちゅうには モンスターがいるから<NEWBOX>
-きをつけて いってくれ<LINE>
-それじゃ たのんだぞ<END>
+//<CONTROL_CODE><$19><$04>ハンタラオレたちも さんざん もりを さがしたんだが<LINE>
+//けっきょく こどもは みつからなくてな<NEWBOX>
+<CONTROL_CODE><$19><$06>HuntarEven after searching the vast forest,<LINE>
+we weren't able to find the child...<NEWBOX>
+//もしかしたら うちゅうせんの むこうがわに<LINE>
+//いるのかもしれん‥‥<NEWBOX>
+Perhaps there's a chance that he's<LINE>
+near the spaceship...<NEWBOX>
+//エレファンのこどもを さがしてきてくれないか<LINE>
+//オレたちは ここで まっているよ<NEWBOX>
+If you could, please search for Elifan's<LINE>
+child. We will await your return.<NEWBOX>
+//したのつうろが もりにつながっているんだ<LINE>
+//とちゅうには モンスターがいるから<NEWBOX>
+The path here connects to the forest,<LINE>
+but there are monsters along the way.<NEWBOX>
+//きをつけて いってくれ<LINE>
+//それじゃ たのんだぞ<END>
+Be careful out there. We're counting<LINE>
+on you to return.<END>
+
 
 //POINTER #31 @ $1C1BB8 - STRING #31 @ $1BEA6D
 
+
 #WRITE(GBA,$1C1BB8)
-<CONTROL_CODE><$01><$02>う3タ<CONTROL_CODE><$01><$02>け3ソ<CONTROL_CODE><$19><$05>トレジャンエレファンのこどもを さがしてきてくれ<LINE>
-オレたちは ここで まっているよ<NEWBOX>
-したのつうろが もりにつながっているんだ<LINE>
-とちゅうには モンスターがいるから<NEWBOX>
-きをつけて いってくれ<LINE>
-それじゃ たのんだぞ<END>
+//<CONTROL_CODE><$01><$02><$0D><$04><$51><CONTROL_CODE><$01><$02><$13><$04><$50><CONTROL_CODE><$19><$05>トレジャンエレファンのこどもを さがしてきてくれ<LINE>
+//オレたちは ここで まっているよ<NEWBOX>/<CONTROL_CODE><$01><$02><$0D><$04><$51><CONTROL_CODE><$01><$02><$13><$04><$50><CONTROL_CODE><$19><$06>TrejurIf you could, please search for Elifan's<LINE>
+child. We will await your return.<NEWBOX>
+//したのつうろが もりにつながっているんだ<LINE>
+//とちゅうには モンスターがいるから<NEWBOX>
+The path here connects to the forest,<LINE>
+but there are monsters along the way.<NEWBOX>
+//きをつけて いってくれ<LINE>
+//それじゃ たのんだぞ<END>
+Be careful out there. We're counting on<LINE>
+you to return.<END>
+
 
 //POINTER #32 @ $1C1BBC - STRING #32 @ $1BEAE4
 
+
 #WRITE(GBA,$1C1BBC)
-<CONTROL_CODE><$01><$02>け3セ<CONTROL_CODE><$19><$05>エレファンおねがいです わたしの むすこを<LINE>
-さがしてきてください きっと もりにいます<NEWBOX>
-おねがいです おねがいです‥‥‥<LINE>
-わたしの むすこを‥‥‥‥<END>
+//<CONTROL_CODE><$01><$02><$13><$04><$4F><CONTROL_CODE><$19><$05>エレファンおねがいです わたしの むすこを<LINE>
+//さがしてきてください きっと もりにいます<NEWBOX>
+<CONTROL_CODE><$01><$02><$13><$04><$4F><CONTROL_CODE><$19><$06>ElifanPlease, search for my son... He should<LINE>
+be somewhere in the forest.<NEWBOX>
+Please... I'm begging you...<LINE>
+My son...<END>
+
 
 //POINTER #33 @ $1C1BC0 - STRING #33 @ $1BEB38
 
+
 #WRITE(GBA,$1C1BC0)
-ダンナは きたのもりに いるわ<LINE>
-ふっかつするキノコに きをつけてね<END>
+My husband is in the northern forest.<LINE>
+Beware of regenerating mushrooms!<END>
+
 
 //POINTER #34 @ $1C1BC4 - STRING #34 @ $1BEB5A
 
+
 #WRITE(GBA,$1C1BC4)
-<CONTROL_CODE><$16><$04>のまったく このひとは<LINE>
-せわが やけるんだから‥‥<NEWBOX>
-‥‥あら あなた ケガしてるじゃないの<LINE>
-ちょっと まってなさいな<NEWBOX>
-<CONTROL_CODE><$11><$E0>くよはい これでよし!<LINE>
-あんまり ムチャするんじゃないよ<END>
+//<CONTROL_CODE><$16><$04>のまったく このひとは<LINE>
+//せわが やけるんだから‥‥<NEWBOX>
+<CONTROL_CODE><$16><$04>Here you can receive treatment for<LINE>
+your injuries.<NEWBOX>
+//‥‥あら あなた ケガしてるじゃないの<LINE>
+//ちょっと まってなさいな<NEWBOX>
+Ah, are you hurt?<LINE>
+Just a second...<NEWBOX>
+//<CONTROL_CODE><$11><$E0>くよはい これでよし!<LINE>
+//あんまり ムチャするんじゃないよ<END>
+<CONTROL_CODE><$11><$E0>There you go!<LINE>
+Take care of yourself out there.<END>
+
 
 //POINTER #35 @ $1C1BC8 - STRING #35 @ $1BEBB8
 
+
 #WRITE(GBA,$1C1BC8)
-まったく このひとは<LINE>
-せわが やけるんだから‥‥<END>
+//まったく このひとは<LINE>
+//せわが やけるんだから‥‥<END>
+This person is truly ungrateful<LINE>
+of my treatment...<END>
+
 
 //POINTER #36 @ $1C1BCC - STRING #36 @ $1BEBD1
 
+
 #WRITE(GBA,$1C1BCC)
-このほしの どこかに とてもつよい<LINE>
-ちからをもった キャラボンが いるそうじゃ<NEWBOX>
-じゃが どこにいるのか<LINE>
-どんな のうりょくの キャラボンなのか<NEWBOX>
-だれも みたものはなく<LINE>
-すべてが なぞに つつまれているという<END>
+//このほしの どこかに とてもつよい<LINE>
+//ちからをもった キャラボンが いるそうじゃ<NEWBOX>
+Somewhere on this planet there is a<LINE>
+Karabon with incredible strength.<NEWBOX>
+//じゃが どこにいるのか<LINE>
+//どんな のうりょくの キャラボンなのか<NEWBOX>
+But exactly where it is and what kind<LINE>
+of ability it possesses, I don't know...<NEWBOX>
+//だれも みたものはなく<LINE>
+//すべてが なぞに つつまれているという<END>
+Nobody has ever seen it before. It<LINE>
+really is a mystery...<END>
+
 
 //POINTER #37 @ $1C1BD0 - STRING #37 @ $1BEC39
 
+
 #WRITE(GBA,$1C1BD0)
-ホラ いったとおり だいくが<LINE>
-うまく はしを なおしてくれただろ?<END>
+//ホラ いったとおり だいくが<LINE>
+//うまく はしを なおしてくれただろ?<END>
+Ah, did that carpenter finally get the<LINE>
+bridge fixed?<END>
+
 
 //POINTER #38 @ $1C1BD4 - STRING #38 @ $1BEC5B
 
+
 #WRITE(GBA,$1C1BD4)
-はしがなおったよ!<LINE>
-これで ひがしアクアにも<NEWBOX>
-もっとさきの フォレスタウンにも<LINE>
-いけるようになったよ!<NEWBOX>
-ひさしぶりに フォレスタウンに<LINE>
-かいものに いきたいなぁ<END>
+//はしがなおったよ!<LINE>
+//これで ひがしアクアにも<NEWBOX>
+The bridge has been repaired!<LINE>
+That means that once again<NEWBOX>
+//もっとさきの フォレスタウンにも<LINE>
+//いけるようになったよ!<NEWBOX>
+it's possible to travel to East Aqua<LINE>
+and towards Foress Town!<NEWBOX>
+//ひさしぶりに フォレスタウンに<LINE>
+//かいものに いきたいなぁ<END>
+It's been a while since I've shopped in<LINE>
+Foress Town. I really want to go!<END>
+
 
 //POINTER #39 @ $1C1BD8 - STRING #39 @ $1BECAC
 
-#WRITE(GBA,$1C1BD8)
-<CONTROL_CODE><$01><$02>83ほキャラボンというのは かわった<LINE>
-のうりょくをもった いきものなんだ<NEWBOX>
-とくしゅのうりょくは そのキャラボンを<LINE>
-セットしているときに つかえるよ<NEWBOX>
-キャラボンの なかには<LINE>
-セットしていなくても のうりょくが<NEWBOX>
-ゆうこうな キャラボンも<LINE>
-いるんだよ<NEWBOX>
-お よくみれば キミも<LINE>
-キャラボンを つれているね<NEWBOX>
-よし キミに これをあげよう<NEWBOX>
-<CONTROL_CODE><$03><$02>8ボンバーマンは キャラボンずかんを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$01>7<NEWBOX>
-あたらしい キャラボンをみつけると<LINE>
-じどうてきに かきこまれるよ<NEWBOX>
-その ずかんが ぜんぶ うまったら<LINE>
-もういちど ここにきてごらん<END>
 
-//POINTER #40 @ $1C1BDC - STRING #40 @ $1BEDB9
+#WRITE(GBA,$1C1BD8)
+<CONTROL_CODE><$01><$02><$09><$04><$28>Karabons are living creatures that<LINE>
+possess great power.<NEWBOX>
+When you have a Karabon selected, you<LINE>
+can use its special ability!<NEWBOX>
+There are also some Karabons that<LINE>
+possess special abilities...<NEWBOX>
+that can be used even when they<LINE>
+are not selected.<NEWBOX>
+Hm? It looks like you already have a<LINE>
+Karabon travelling with you.<NEWBOX>
+In that case, take this.<NEWBOX>
+<CONTROL_CODE><$03><$02><$09>Bomberman obtained the<LINE>
+Karabon Encyclopedia!<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$01><$08><NEWBOX>
+As you discover more Karabons they<LINE>
+will be added to your encyclopedia.<NEWBOX>
+If you are able to completely fill it,<LINE>
+please bring it back and show me.<END>
+
+
+////POINTER #40 @ $1C1BDC - STRING #40 @ $1BEDB9
+
 
 #WRITE(GBA,$1C1BDC)
-キャラボンというのは かわった<LINE>
-のうりょくをもった いきものなんだ<NEWBOX>
-とくしゅのうりょくは そのキャラボンを<LINE>
-セットしているときに つかえるよ<NEWBOX>
-キャラボンの なかには<LINE>
-セットしていなくても のうりょくが<NEWBOX>
-ゆうこうな キャラボンも<LINE>
-いるんだよ<END>
+//キャラボンというのは かわった<LINE>
+//のうりょくをもった いきものなんだ<NEWBOX>
+Karabons are living creatures that<LINE>
+possess great power.<NEWBOX>
+//とくしゅのうりょくは そのキャラボンを<LINE>
+//セットしているときに つかえるよ<NEWBOX>
+When you have a Karabon selected, you<LINE>
+can use its special ability!<NEWBOX>
+//キャラボンの なかには<LINE>
+//セットしていなくても のうりょくが<NEWBOX>
+There are also some Karabons that<LINE>
+possess special abilities<NEWBOX>
+//ゆうこうな キャラボンも<LINE>
+//いるんだよ<NEWBOX>
+that can be used even when they are<LINE>
+not selected!<END>
+
+
 
 //POINTER #41 @ $1C1BE0 - STRING #41 @ $1BEE31
 
+
 #WRITE(GBA,$1C1BE0)
-そうか‥‥ キャラボンについて<LINE>
-ききたくなったら いつでも おいで<END>
+Ah I see... If you ever want to hear<LINE>
+about Karabons, be sure to come back!.<END>
+
 
 //POINTER #42 @ $1C1BE4 - STRING #42 @ $1BEE53
 
+
 #WRITE(GBA,$1C1BE4)
-やぁ いらっしゃい<LINE>
-ボクらは キャラボンけんきゅうか<NEWBOX>
-キャラボンの しんかについて ききたい?<LINE>
-    はい       いいえ<CONTROL_CODE_E018><$03><$02><$0C><$02><$04><$2B><$04><$2C>ときどきでてくる フルーツは<LINE>
-キャラボンの だいこうぶつなんだ<NEWBOX>
-フルーツをとると セットしている<LINE>
-キャラボンの せいちょうゲージが ふえるよ<NEWBOX>
-ゲージが いっぱいになると そのキャラボンは<LINE>
-1だんかい しんか するんだ<NEWBOX>
-しんかすると キャラボンの のうりょくが<LINE>
-すこし へんかするよ<NEWBOX>
-フルーツによって せいちょうゲージの<LINE>
-ふえかたが ちがうよ<END>
+Welcome!<LINE>
+We are Karabon researchers.<NEWBOX>
+Want to hear about Karabon evolution?<LINE>
+    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$04><$2B><$04><$2C>Occasionally you will come across<LINE>
+fruits that Karabons like to eat.<NEWBOX>
+//フルーツをとると セットしている<LINE>
+//キャラボンの せいちょうゲージが ふえるよ<NEWBOX>
+If picked up, the Growth Meter of the<LINE>
+currently set Karabon will increase!<NEWBOX>
+//ゲージが いっぱいになると そのキャラボンは<LINE>
+//1だんかい しんか するんだ<NEWBOX>
+If you completely fill the meter, the<LINE>
+Karabon will gain a level.<NEWBOX>
+//しんかすると キャラボンの のうりょくが<LINE>
+//すこし へんかするよ<NEWBOX>
+As Karabons grow, they will gradually<LINE>
+become stronger.<NEWBOX>
+//フルーツによって せいちょうゲージの<LINE>
+//ふえかたが ちがうよ<END>
+Just remember that different fruits<LINE>
+will fill the meter different amounts.<END>
+
 
 //POINTER #43 @ $1C1BE8 - STRING #43 @ $1BEE9D
 
+
 #WRITE(GBA,$1C1BE8)
-ときどきでてくる フルーツは<LINE>
-キャラボンの だいこうぶつなんだ<NEWBOX>
-フルーツをとると セットしている<LINE>
-キャラボンの せいちょうゲージが ふえるよ<NEWBOX>
-ゲージが いっぱいになると そのキャラボンは<LINE>
-1だんかい しんか するんだ<NEWBOX>
-しんかすると キャラボンの のうりょくが<LINE>
-すこし へんかするよ<NEWBOX>
-フルーツによって せいちょうゲージの<LINE>
-ふえかたが ちがうよ<END>
+Occasionally you will come across<LINE>
+fruits that Karabons like to eat.<NEWBOX>
+//フルーツをとると セットしている<LINE>
+//キャラボンの せいちょうゲージが ふえるよ<NEWBOX>
+If picked up, the Growth Meter of the<LINE>
+currently set Karabon will increase!<NEWBOX>
+//ゲージが いっぱいになると そのキャラボンは<LINE>
+//1だんかい しんか するんだ<NEWBOX>
+If you completely fill the meter, the<LINE>
+Karabon will gain a level.<NEWBOX>
+//しんかすると キャラボンの のうりょくが<LINE>
+//すこし へんかするよ<NEWBOX>
+As Karabons grow, they will gradually<LINE>
+become stronger.<NEWBOX>
+//フルーツによって せいちょうゲージの<LINE>
+//ふえかたが ちがうよ<END>
+Just remember that different fruits<LINE>
+will fill the meter different amounts.<END>
+
 
 //POINTER #44 @ $1C1BEC - STRING #44 @ $1BEF48
 
+
 #WRITE(GBA,$1C1BEC)
-そうか‥‥ キャラボンの しんかについて<LINE>
-ききたくなったら いつでも おいで<END>
+Ah I see... If you ever want to hear<LINE>
+about Karabon evolution, just ask!<END>
+
 
 //POINTER #45 @ $1C1BF0 - STRING #45 @ $1BEF6F
 
+
 #WRITE(GBA,$1C1BF0)
-ジェッターズの リーダーである きみなら<LINE>
-すでに きづいていると おもうが<NEWBOX>
-こうせんほうを うばいにきたのは<LINE>
-あの ヒゲヒゲだんだ<NEWBOX>
-しかも うわさによると やつらは<LINE>
-さいきん しんへいきを かいはつして<NEWBOX>
-そいつの せいのうテストを<LINE>
-しているらしい<NEWBOX>
-なんでも つよいあいてと たたかわせて<LINE>
-せんとうデータを あつめているとか‥‥<END>
+Since you're the leader of the Jetters,<LINE>
+//すでに きづいていると おもうが<NEWBOX>
+you probably already know<NEWBOX>
+//こうせんほうを うばいにきたのは<LINE>
+//あの ヒゲヒゲだんだ<NEWBOX>
+that the Hige Hige Bandits have taken<LINE>
+possession of the Beam Cannon.<NEWBOX>
+//しかも うわさによると やつらは<LINE>
+//さいきん しんへいきを かいはつして<NEWBOX>
+And from what I've heard, they've<LINE>
+even developed some new weapons.<NEWBOX>
+//そいつの せいのうテストを<LINE>
+//しているらしい<NEWBOX>
+Perhaps they are currently testing<LINE>
+out their newfound power<NEWBOX>
+//なんでも つよいあいてと たたかわせて<LINE>
+//せんとうデータを あつめているとか‥‥<END>
+and collecting data in case they<LINE>
+encounter any strong opposition...<END>
+
 
 //POINTER #46 @ $1C1BF4 - STRING #46 @ $1BF013
 
+
 #WRITE(GBA,$1C1BF4)
-このさきに あやしいばしょが あるんだ<LINE>
-4つ ひとくみで いわが おいてあって‥‥<NEWBOX>
-なにか みえないものが<LINE>
-かくされているのかなぁ‥‥<END>
+There use to be an entrance here, but<LINE>
+a group of four guys blocked it off.<NEWBOX>
+Perhaps they are trying to hide<LINE>
+whatever is inside...<END>
+
 
 //POINTER #47 @ $1C1BF8 - STRING #47 @ $1BF057
 
+
 #WRITE(GBA,$1C1BF8)
-ほっほっほ‥‥ こんなところまで<LINE>
-チェックするなんて マメな わかものだね<NEWBOX>
-せっかく きてくれたんだから<LINE>
-ちょっと イイことを おしえてあげよう<NEWBOX>
-ソフトブロックを こわしたときに<LINE>
-キャラボンのえさが でるのは しってるね?<NEWBOX>
-じつは えさのしゅるいが<LINE>
-かたよって でるばしょも あるのさ<NEWBOX>
-フルーツのでかたが あやしいと おもったら<LINE>
-よく かんさつして みることさね<NEWBOX>
-メロンを あたえれば キャラボンは<LINE>
-すくすくと せいちょうするからねぇ‥‥<END>
+//Ho ho ho... こんなところまで<LINE>
+//チェックするなんて マメな わかものだね<NEWBOX>
+Ho ho ho... Well if you haven't travelled<LINE>
+quite a ways to make it here.<NEWBOX>
+//せっかく きてくれたんだから<LINE>
+//ちょっと イイことを おしえてあげよう<NEWBOX>
+As a reward for your efforts, I'll give<LINE>
+you some good information.<NEWBOX>
+//ソフトブロックを こわしたときに<LINE>
+//キャラボンのえさが でるのは しってるね?<NEWBOX>
+Did you know that when you destroy<LINE>
+some blocks, Karabon food comes out?<NEWBOX>
+//じつは えさのしゅるいが<LINE>
+//かたよって でるばしょも あるのさ<NEWBOX>
+There are places where some types<LINE>
+of food are more common than others.<NEWBOX>
+//フルーツのでかたが あやしいと おもったら<LINE>
+//よく かんさつして みることさね<NEWBOX>
+Some fruits are better than others, so<LINE>
+you should find out which are best.<NEWBOX>
+//メロンを あたえれば キャラボンは<LINE>
+//すくすくと せいちょうするからねぇ‥‥<END>
+If you give a melon to your Karabon,<LINE>
+they should power up fairly quickly!<END>
+
 
 //POINTER #48 @ $1C1BFC - STRING #48 @ $1BF133
 
+
 #WRITE(GBA,$1C1BFC)
-<CONTROL_CODE><$01><$02>あ3ら<CONTROL_CODE><$03><$02>あねぇねぇ ボクのたからものを みていってよ<LINE>
-このまえ ザブザブがわで ひろったんだ<NEWBOX>
-キラキラしてて きれいだろ?<LINE>
-このカギは ボクのおきにいりさ!<END>
+Hey hey! Look at the treasure I found!<LINE>
+I picked it up by the water.<NEWBOX>
+See the way it shines? I really love<LINE>
+this key!<END>
+
 
 //POINTER #49 @ $1C1C00 - STRING #49 @ $1BF187
 
+
 #WRITE(GBA,$1C1C00)
-ほんとうにこのカギは きれいだなぁ‥‥<LINE>
-この キラキラひかるようすが たまらないよ<NEWBOX>
-ハァ‥‥‥‥‥‥<LINE>
-‥‥‥‥‥‥‥‥ウットリ<END>
+Isn't this key really beautiful? It's<LINE>
+so shiny, I just can't resist it! <NEWBOX>
+Ah.....<LINE>
+...So mesmerizing.<END>
+
 
 //POINTER #50 @ $1C1C04 - STRING #50 @ $1BF1C7
 
+
 #WRITE(GBA,$1C1C04)
-<CONTROL_CODE><$01><$02>ズ3れ<CONTROL_CODE><$03><$02>ズボクのたからものが みたいんでしょ?<LINE>
-しょうがないなぁ ちょっとだけだよ‥‥<NEWBOX>
-え? このカギがほしいの!?<LINE>
-だめだよ! ボクのたからものなんだから<NEWBOX>
-‥‥どうしても ひつようなの?<LINE>
-これがないと こまるひとが いるの?<NEWBOX>
-う~ん それじゃ ボクとしょうぶして<LINE>
-ミニゲームにかてたら カギはかえすよ<END>
+<CONTROL_CODE><$01><$02><$99><$04><$34><CONTROL_CODE><$03><$02><$99>You want to see my treasure? If<LINE>
+you insist, you can have a little peek... <NEWBOX>
+Eh? You want this key? No way!<LINE>
+It's my treasure!<NEWBOX>
+What did you want it for? <LINE>
+//これがないと こまるひとが いるの?<NEWBOX>
+...Someone is in trouble?<NEWBOX>
+//う~ん それじゃ ボクとしょうぶして<LINE>
+Fine, then I challenge you!<LINE>
+Win this minigame, and it's yours!<END>
+
 
 //POINTER #51 @ $1C1C08 - STRING #51 @ $1BF264
 
+
 #WRITE(GBA,$1C1C08)
-ボクのかちだね カギはかえさないよ<LINE>
-もっと うでをみがいてから きなよ<NEWBOX>
-あぁ ボクのたからもの キレイだなぁ<LINE>
-ハァ‥‥‥‥‥‥ ウットリ<END>
+//ボクのかちだね カギはかえさないよ<LINE>
+//もっと うでをみがいてから きなよ<NEWBOX>
+I win! That means the key is mine to<LINE>
+keep. It seems you need more practice.<NEWBOX>
+//あぁ ボクのたからもの キレイだなぁ<LINE>
+My treasure really is beautiful...<LINE>
+Hah..... So pretty~<END>
+
 
 //POINTER #52 @ $1C1C0C - STRING #52 @ $1BF2A9
 
+
 #WRITE(GBA,$1C1C0C)
-しつこいなぁ まだあきらめないのかい?<LINE>
-なんどやってもおなじこと カギはボクのものさ<NEWBOX>
-またボクに ちょうせんするのかい?<LINE>
-ミニゲームにかてたら カギはかえすよ<END>
+//しつこいなぁ まだあきらめないのかい?<LINE>
+//なんどやってもおなじこと カギはボクのものさ<NEWBOX>
+You're persistent, aren't you? Even if<LINE>
+you try again, you won't win!<NEWBOX>
+//またボクに ちょうせんするのかい?<LINE>
+//ミニゲームにかてたら カギはかえすよ<END>
+But what's that? You want to give it<LINE>
+another go? I suppose that's fine...<END>
+
 
 //POINTER #53 @ $1C1C10 - STRING #53 @ $1BF2F9
 
+
 #WRITE(GBA,$1C1C10)
-まけちゃった‥‥ でもやくそくだから<LINE>
-このカギはかえすよ ハイ<NEWBOX>
-<CONTROL_CODE><$03><$02>いボンバーマンは もんのカギを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$01>ね<NEWBOX>
-ねぇ おねがいがあるんだ<LINE>
-ボクもいっしょに つれていってほしいんだ<NEWBOX>
-ボクもそとのせかいを いろいろみてみたいんだ<LINE>
-ねぇ‥‥ いいでしょ?<NEWBOX>
-‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥‥<NEWBOX>
-‥‥えっ つれていってくれるの!?<LINE>
-ありがとう ボクのなまえは シェル よろしくね<END>
+I lost... But a promise is a promise.<LINE>
+I'll hand over the key...<NEWBOX>
+<CONTROL_CODE><$03><$02><$0C>Bomberman obtained the<LINE>
+Gate Key!<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$01><$22><NEWBOX>
+Hey, I have a request...<LINE>
+I want to join you on your journey.<NEWBOX>
+I'd love to travel the world and see lots<LINE>
+of amazing things. So... Is that ok?<NEWBOX>
+............<NEWBOX>
+...Huh!? You'll take me? Thank you! <LINE>
+My name is Kai-Man. Nice to meet you!<END>
+
 
 //POINTER #54 @ $1C1C14 - STRING #54 @ $1BF3BA
 
+
 #WRITE(GBA,$1C1C14)
-キャラボン シェルがなかまになった!<LINE>
-<CONTROL_CODE><$22><$00><CONTROL_CODE><$12><$5C>ボクののうりょくは シールド<NEWBOX>
-まえから とんでくるものを ふせぐよ<NEWBOX>
-ボクを Bボタンにセットする?<LINE>
-    はい       いいえ<CONTROL_CODE><$05><$03>1い13ナ3ニこのまえの じひびきで<LINE>
-はしが おちてしもうた<NEWBOX>
-まえから ボロボロじゃったから<LINE>
-いつか おちるとは おもっていたが‥‥<NEWBOX>
-はしのちかくで ふきだした ちかすいが<LINE>
-まるたを おしあげているんじゃが<NEWBOX>
-なんとか あの まるたで むこうがわへ<LINE>
-わたれないものかのう‥‥<END>
+Became friends with Karabon, Kai-Man!<LINE>
+<CONTROL_CODE><$22><$00><CONTROL_CODE><$12><$5C>My ability is called Shield, it can<NEWBOX>
+protect you from frontward attacks.<NEWBOX>
+Set me to the B Button?<LINE>
+    Yes       No<CONTROL_CODE><$05><$03>ground tremor from earlier wrecked<LINE>
+the bridge...<NEWBOX>
+I always thought that bridge was worn<LINE>
+out. So I'm not surprised it broke.<NEWBOX>
+It also looks like a geyser close to the<LINE>
+bridge has pushed a log into the air.<NEWBOX>
+There must be some way to get to<LINE>
+the other side of it...<END>
+
 
 //POINTER #55 @ $1C1C18 - STRING #55 @ $1BF41F
 
+
 #WRITE(GBA,$1C1C18)
-このまえの じひびきで<LINE>
-はしが おちてしもうた<NEWBOX>
-まえから ボロボロじゃったから<LINE>
-いつか おちるとは おもっていたが‥‥<NEWBOX>
-はしのちかくで ふきだした ちかすいが<LINE>
-まるたを おしあげているんじゃが<NEWBOX>
-なんとか あの まるたで むこうがわへ<LINE>
-わたれないものかのう‥‥<END>
+//このまえの じひびきで<LINE>
+A ground tremor from earlier wrecked<LINE>
+//はしが おちてしもうた<NEWBOX>
+the bridge...<NEWBOX>
+//まえから ボロボロじゃったから<LINE>
+//いつか おちるとは おもっていたが‥‥<NEWBOX>
+I always thought that bridge was worn<LINE>
+out. So I'm not surprised it broke...<NEWBOX>
+//はしのちかくで ふきだした ちかすいが<LINE>
+//まるたを おしあげているんじゃが<NEWBOX>
+It also looks like a geyser close to the<LINE>
+bridge has pushed a log into the air.<NEWBOX>
+//なんとか あの まるたで むこうがわへ<LINE>
+//わたれないものかのう‥‥<END>
+There must be some way to get to<LINE>
+the other side of it...<END>
+
 
 //POINTER #56 @ $1C1C1C - STRING #56 @ $1BF4A1
 
+
 #WRITE(GBA,$1C1C1C)
-<CONTROL_CODE><$01><$01>け3Uここから にしにいった もりのきたの<LINE>
-どうくつのなかに ふしぎなこおりがある<NEWBOX>
-なかなかとけないから いろんなものを<LINE>
-ひやしたり こおらせるのに べんりなのじゃ<NEWBOX>
-ひがしアクアの ごうせいやに もっていけば<LINE>
-ほかのアイテムと ごうせいしてくれるぞい<END>
+//<CONTROL_CODE><$01><$01><$13><$04><$C6>ここから にしにいった もりのきたの<LINE>
+//どうくつのなかに ふしぎなこおりがある<NEWBOX>
+To the north of the forest that is west<LINE>
+of here is a cave with mysterious ice.<NEWBOX>
+//なかなかとけないから いろんなものを<LINE>
+//ひやしたり こおらせるのに べんりなのじゃ<NEWBOX>
+It doesn't melt very easily, so it's<LINE>
+very useful for cooling things down!<NEWBOX>
+//ひがしアクアの ごうせいやに もっていけば<LINE>
+//ほかのアイテムと ごうせいしてくれるぞい<END>
+You should take some to the workshop<LINE>
+in East Aqua as a synthesis ingredient.<END>
+
 
 //POINTER #57 @ $1C1C20 - STRING #57 @ $1BF522
 
+
 #WRITE(GBA,$1C1C20)
-ショートカットは おぼえておるか?<LINE>
-スタートボタンで ポーズをかけて<NEWBOX>
-Lボタンでキャラボンを チェンジ<LINE>
-Rボタンでボムを チェンジじゃ<END>
+//ショートカットは おぼえておるか?<LINE>
+//スタートボタンで ポーズをかけて<NEWBOX>
+Do you know the quick technique?<LINE>
+If you press the Start Button you<NEWBOX>
+//Lボタンでキャラボンを チェンジ<LINE>
+//Rボタンでボムを チェンジじゃ<END>
+can press the R Button to change bombs<LINE>
+and the L button the change Karabons!<END>
+
 
 //POINTER #58 @ $1C1C24 - STRING #58 @ $1BF566
 
+
 #WRITE(GBA,$1C1C24)
-<CONTROL_CODE><$01><$02>い3っ<CONTROL_CODE><$01><$02>93ぅ<CONTROL_CODE><$03><$02>9もんを とおりたいのかい?<LINE>
-う~ん こまったな‥‥じつは‥‥<NEWBOX>
-もんのカギを なくしてしまったんだ<LINE>
-アレがないと もんを あけられないんだ<NEWBOX>
-まいったな‥‥ どこに おとしたのかなぁ<LINE>
-キミも さがしてくれないかい?<NEWBOX>
-もしかしたら かわにおちて<LINE>
-みなみのほうに ながされたのかも‥‥<END>
+//<CONTROL_CODE><$01><$02><$0C><$04><$3E><CONTROL_CODE><$01><$02><$0A><$04><$3B><CONTROL_CODE><$03><$02><$0A>もんを とおりたいのかい?<LINE>
+//う~ん こまったな‥‥じつは‥‥<NEWBOX>
+<CONTROL_CODE><$01><$02><$0C><$04><$3E><CONTROL_CODE><$01><$02><$0A><$04><$3B><CONTROL_CODE><$03><$02><$0A>So you want to open the gate?<LINE>
+That might be difficult...<NEWBOX>
+//もんのカギを なくしてしまったんだ<LINE>
+//アレがないと もんを あけられないんだ<NEWBOX>
+I somehow lost the key, and without<LINE>
+it the gate can't be opened.<NEWBOX>
+//まいったな‥‥ どこに おとしたのかなぁ<LINE>
+//キミも さがしてくれないかい?<NEWBOX>
+I must have dropped it somewhere.<LINE>
+Maybe you could help me look for it?<NEWBOX>
+//もしかしたら かわにおちて<LINE>
+//みなみのほうに ながされたのかも‥‥<END>
+It might have fallen to the river, so<LINE>
+perhaps the current carried it south...<END>
+
 
 //POINTER #59 @ $1C1C28 - STRING #59 @ $1BF601
 
+
 #WRITE(GBA,$1C1C28)
-このあたりは なんどもさがしたけど<LINE>
-もんのカギは どこにも みあたらないんだ<NEWBOX>
-もしかしたら かわにおちて<LINE>
-みなみのほうに ながされたのかも‥‥<END>
+//このあたりは なんどもさがしたけど<LINE>
+//もんのカギは どこにも みあたらないんだ<NEWBOX>
+I've searched all around this area but<LINE>
+haven't been able to find the key.<NEWBOX>
+//もしかしたら かわにおちて<LINE>
+//みなみのほうに ながされたのかも‥‥<END>
+It might have fallen to the river, so<LINE>
+perhaps the current carried it south...<END>
+
 
 //POINTER #60 @ $1C1C2C - STRING #60 @ $1BF649
 
+
 #WRITE(GBA,$1C1C2C)
-あ! それは もんのカギじゃないか<LINE>
-みつけてきてくれたんだね ありがとう!<NEWBOX>
-これで もんを あけしめできるよ<LINE>
-ほんとうに ありがとう<NEWBOX>
-じゃあ さっそく もんをあけるよ<END>
+//Ah! それは もんのカギじゃないか<LINE>
+//みつけてきてくれたんだね ありがとう!<NEWBOX>
+Ah! Is that the key for the gate?<LINE>
+Thank you so much for finding it!<NEWBOX>
+//これで もんを あけしめできるよ<LINE>
+//ほんとうに ありがとう<NEWBOX>
+Now the gate can finally be opened<LINE>
+again. You're a lifesaver.<NEWBOX>
+//じゃあ さっそく もんをあけるよ<END>
+Well then, let's get it open!<END>
+
 
 //POINTER #61 @ $1C1C30 - STRING #61 @ $1BF69D
 
+
 #WRITE(GBA,$1C1C30)
-これで きたのだんがいを とおって<LINE>
-フォレスタウンに いけるよ<NEWBOX>
-もんのカギを みつけてくれたおれいに<LINE>
-この ボムノモトをあげよう<NEWBOX>
-ボンバーマンは<LINE>
-ボムノモトを てにいれた!<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$01>の<NEWBOX>
-これは いろいろなものと ごうせいできる<LINE>
-ごうせいそざい らしいんだけど<NEWBOX>
-きみなら うまくつかいこなせそうだ<LINE>
-ごうせいやで いろいろ ためしてみるといいよ<NEWBOX>
-それじゃ きをつけてね<END>
+Past the cliffs to the north you will<LINE>
+find Foress Town.<NEWBOX>
+As thanks for finding the key, please<LINE>
+take this Bomb Material.<NEWBOX>
+Bomberman received the<LINE>
+Bomb Material!<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$01><$23><NEWBOX>
+You can combine this with various<LINE>
+ingredients to create new bomb types!<NEWBOX>
+Use it well, and you should be able<LINE>
+to make all sorts of helpful bombs!<NEWBOX>
+Well then, take care.<END>
+
 
 //POINTER #62 @ $1C1C34 - STRING #62 @ $1BF755
 
+
 #WRITE(GBA,$1C1C34)
-もんのカギは なくさないように<LINE>
-からだにしっかり ヒモでくくりつけてあるよ<NEWBOX>
-それにしても きれいなカギだなぁ‥‥<LINE>
-ハァ‥‥ ウットリ<END>
+//もんのカギは なくさないように<LINE>
+//からだにしっかり ヒモでくくりつけてあるよ<NEWBOX>
+To ensure I don't lose the key, I used<LINE>
+string to make a necklace out of it!<NEWBOX>
+//それにしても きれいなカギだなぁ‥‥<LINE>
+//Hah... ウットリ<END>
+It really is a pretty key.<LINE>
+Ha... So shiny...<END>
+
 
 //POINTER #63 @ $1C1C38 - STRING #63 @ $1BF798
 
+
 #WRITE(GBA,$1C1C38)
-スタートボタンで ポーズをかけているあいだ<LINE>
-Lボタンを おすと キャラボンが<NEWBOX>
-Rボタンを おすと ボムが<LINE>
-チェンジ できるのじゃ<NEWBOX>
-なかなか べんりだから おぼえておきなさい<END>
+//スタートボタンで ポーズをかけているあいだ<LINE>
+//Lボタンを おすと キャラボンが<NEWBOX>
+By pressing Start to pause the game,<LINE>
+you can then press the L Button to<NEWBOX>
+//Rボタンを おすと ボムが<LINE>
+//チェンジ できるのじゃ<NEWBOX>
+change Karabons or the R Button to<LINE>
+change bombs.<NEWBOX>
+//なかなか べんりだから おぼえておきなさい<END>
+It's a very convenient trick!<END>
+
 
 //POINTER #64 @ $1C1C3C - STRING #64 @ $1BF7EF
 
+
 #WRITE(GBA,$1C1C3C)
-いらっしゃいませ しょうひんを<LINE>
-てにとって ごらんください<END>
+Welcome to my store! Feel free to<LINE>
+have a look around.<END>
+
 
 //POINTER #65 @ $1C1C40 - STRING #65 @ $1BF80D
 
+
 #WRITE(GBA,$1C1C40)
-あやしいやつら みんな<LINE>
-いなくなっちゃった<NEWBOX>
-おにいちゃんが やっつけてくれたんでしょ?<LINE>
-さっすが ジェッターズ!<END>
+//あやしいやつら みんな<LINE>
+//いなくなっちゃった<NEWBOX>
+All of those strange guys seem to<LINE>
+have left.<NEWBOX>
+//おにいちゃんが やっつけてくれたんでしょ?<LINE>
+//さっすが ジェッターズ!<END>
+Was it you who got rid of them?<LINE>
+I'd expect no less of the Jetters!<END>
+
 
 //POINTER #66 @ $1C1C44 - STRING #66 @ $1BF846
 
+
 #WRITE(GBA,$1C1C44)
-ミドリはかせが ぶじに かえってきたよ!<LINE>
-ありがとう ジェッターズ!<END>
+Dr. Midori has returned safely!<LINE>
+Thank you, Jetters!<END>
+
 
 //POINTER #67 @ $1C1C48 - STRING #67 @ $1BF869
 
+
 #WRITE(GBA,$1C1C48)
-<CONTROL_CODE><$01><$01>93Zずっとにしにある いわやまの みはりごやに<LINE>
-レーダーを わすれてきちまったよ<NEWBOX>
-でも みはりごやは ヘンなやつらに<LINE>
-のっとられちゃったしなぁ‥‥<NEWBOX>
-くやしいけど あきらめるか<END>
+//<CONTROL_CODE><$01><$01><$0A><$04><$CB>ずっとにしにある いわやまの みはりごやに<LINE>
+//レーダーを わすれてきちまったよ<NEWBOX>
+<CONTROL_CODE><$01><$01><$0A><$04><$CB>I forgot my radar in a lookout post<LINE>
+that is in the mountains west of here.<NEWBOX>
+//でも みはりごやは ヘンなやつらに<LINE>
+//のっとられちゃったしなぁ‥‥<NEWBOX>
+But now it looks like some strange guy<LINE>
+has taken over the lookout post...<NEWBOX>
+//くやしいけど あきらめるか<END>
+I guess I'm out of luck...<END>
+
 
 //POINTER #68 @ $1C1C4C - STRING #68 @ $1BF8C5
 
+
 #WRITE(GBA,$1C1C4C)
-<CONTROL_CODE><$01><$02>ぴ3キ<CONTROL_CODE><$01><$02>ぼ3オ<CONTROL_CODE><$01><$01>め3エウチはむかしから だいだい<LINE>
-びんぼうな かけいでな‥‥<NEWBOX>
-オイラのだいになっても あいかわらず<LINE>
-かねが ないのさ‥‥<NEWBOX>
-あー どこかに<LINE>
-ウマいはなしは ないかなぁ‥‥<END>
+//<CONTROL_CODE><$01><$02><$8E><$04><$48><CONTROL_CODE><$01><$02><$8C><$04><$46><CONTROL_CODE><$01><$01><$2C><$04><$45>ウチはむかしから だいだい<LINE>
+//びんぼうな かけいでな‥‥<NEWBOX>
+<CONTROL_CODE><$01><$02><$8E><$04><$48><CONTROL_CODE><$01><$02><$8C><$04><$46><CONTROL_CODE><$01><$01><$2C><$04><$45>For years I have had little money and<LINE>
+have been a fairly poor person...<NEWBOX>
+//オイラのだいになっても あいかわらず<LINE>
+//かねが ないのさ‥‥<NEWBOX>
+It seems like no matter what I try,<LINE>
+I remain as poor as ever...<NEWBOX>
+//あー どこかに<LINE>
+//ウマいはなしは ないかなぁ‥‥<END>
+Any opportunity I get always ends<LINE>
+up being too good to be true...<END>
+
 
 //POINTER #69 @ $1C1C50 - STRING #69 @ $1BF929
 
+
 #WRITE(GBA,$1C1C50)
-<CONTROL_CODE><$03><$02>ぼ<CONTROL_CODE><$04><$01>めなに!? オイラのごせんぞさまの<LINE>
-かくした ざいさんが あるだって!?<NEWBOX>
-ちょっと そのちずを みせてくれ‥‥<LINE>
-‥‥‥‥このいえの すぐウラじゃないか<NEWBOX>
+//<CONTROL_CODE><$03><$02><$8C><CONTROL_CODE><$04><$01><$2C>めなに!? オイラのごせんぞさまの<LINE>
+//かくした ざいさんが あるだって!?<NEWBOX>
+<CONTROL_CODE><$03><$02><$8C><CONTROL_CODE><$04><$01><$2C>Huh!? An ancestor of mine hid their<LINE>
+fortune in a secret location?<NEWBOX>
+//ちょっと そのちずを みせてくれ‥‥<LINE>
+//‥‥‥‥このいえの すぐウラじゃないか<NEWBOX>
+If you could just show me that map...<LINE>
+...Ah! It's right beneath this house!<NEWBOX>
 <CONTROL_CODE><$1E><$05><END>
+
 
 //POINTER #70 @ $1C1C54 - STRING #70 @ $1BF980
 
+
 #WRITE(GBA,$1C1C54)
-ほんとうに かいだんが でてきた‥‥<LINE>
-こわいから ちょっと みてきてくれないか<NEWBOX>
-ざいほうが でてきたら<LINE>
-おれいを あげるからさ<END>
+//ほんとうに かいだんが でてきた‥‥<LINE>
+//こわいから ちょっと みてきてくれないか<NEWBOX>
+You actually went downstairs and came<LINE>
+back. Wasn't it scary?<NEWBOX>
+//ざいほうが でてきたら<LINE>
+//おれいを あげるからさ<END>
+If you find the treasure, I will<LINE>
+give you a reward.<END>
+
 
 //POINTER #71 @ $1C1C58 - STRING #71 @ $1BF9C0
 
+
 #WRITE(GBA,$1C1C58)
-おおっ! みつかったかい<LINE>
-よく みせてくれ‥‥<NEWBOX>
-‥‥‥‥トホホ<LINE>
-コインが すうまいか‥‥<NEWBOX>
-やっぱり ウチは むかしから<LINE>
-びんぼうだったんだなぁ‥‥<NEWBOX>
-ありがとう おれいに<LINE>
-コインを1まい あげよう<NEWBOX>
-ボンバーマンは むかしのコインを<LINE>
-<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$01>もてにいれた!<END>
+Ohh! You found it? You're pretty good<LINE>
+//よく みせてくれ‥‥<NEWBOX>
+at finding things!<NEWBOX>
+//‥‥‥‥トホホ<LINE>
+//コインが すうまいか‥‥<NEWBOX>
+Ho ho ho. So it was a bunch of coins,<LINE>
+was it?<NEWBOX>
+//やっぱり ウチは むかしから<LINE>
+//びんぼうだったんだなぁ‥‥<NEWBOX>
+I had been poor for so long. So very<LINE>
+very long... But not anymore!<NEWBOX>
+//ありがとう おれいに<LINE>
+//コインを1まい あげよう<NEWBOX>
+Thank you! As a reward, please take<LINE>
+this single coin.<NEWBOX>
+//Bomberman obtainedむかしのコインを<LINE>
+//<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$01><$2D>てにいれた!<END>
+Bomberman obtained the<LINE>
+<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$01><$2D>Old Coin!<END>
+
 
 //POINTER #72 @ $1C1C5C - STRING #72 @ $1BFA41
 
+
 #WRITE(GBA,$1C1C5C)
-やっぱり マジメに はたらくか‥‥<END>
+As expected, you're a hard worker, hm?<END>
+
 
 //POINTER #73 @ $1C1C60 - STRING #73 @ $1BFA53
 
-#WRITE(GBA,$1C1C60)
-<CONTROL_CODE><$19><$03>エレフうわーん うわーん さみしいよー<LINE>
-こわいよー おかあさーん<NEWBOX>
-おなかへったよー ‥‥‥‥<LINE>
-‥‥‥ん?だれ? ここからだしてくれるの?<NEWBOX>
-おかあさんに あわせてくれるの?<LINE>
-‥‥‥‥うわーん おかあさーん<END>
+
+<CONTROL_CODE><$19><$04>ElifWaaaaaah I'm so lonely and scared.<LINE>
+Where are you Mother...<NEWBOX>
+I'm really hungry too... Huh? You came<LINE>
+here to rescue me?<NEWBOX>
+And you can take me back to my<LINE>
+mother? Waaaaaaaah Mother...<END>
 
 //POINTER #74 @ $1C1C64 - STRING #74 @ $1BFABC
 
 #WRITE(GBA,$1C1C64)
-<CONTROL_CODE><$19><$03>エレフおかあさーん さみしかったよー<LINE>
-あいたかったよー!<NEWBOX>
-<CONTROL_CODE><$19><$05>エレファンよしよし もうだいじょうぶだよ<LINE>
-かあさんも あいたかったよ<NEWBOX>
-<CONTROL_CODE><$19><$03>エレフうわーん おかあさーん<LINE>
-おなかすいたよー<NEWBOX>
-<CONTROL_CODE><$19><$05>エレファンこれこれ おとこのこでしょう もうなかないで<LINE>
-ボンバーマンさんに おれいをいわなきゃ<NEWBOX>
-<CONTROL_CODE><$13><$04><CONTROL_CODE><$19><$03>エレフあっ そうだ<LINE>
-ありがとう ボンバーマン<NEWBOX>
-<CONTROL_CODE><$19><$05>エレファンボンバーマンさん ありがとうございました<LINE>
-いちじは どうなることかと‥‥<NEWBOX>
-<CONTROL_CODE><$19><$05>トレジャンさっき ちょっと みてきたんだが<LINE>
-いせきにつながる どうくつが<NEWBOX>
-おおきないわで ふさがれていたんだ<LINE>
-うちゅうせんのやつらの しわざだろう<NEWBOX>
-どうにかして あのいわを どかさないと<LINE>
-いせきには たどりつけないぜ<END>
+<CONTROL_CODE><$19><$04>ElifMother! I was so lonely! It was really<LINE>
+scary and terrible...<NEWBOX>
+<CONTROL_CODE><$19><$06>ElifanThere there. It's alright. Mother is<LINE>
+here now.<NEWBOX>
+<CONTROL_CODE><$19><$04>ElifWaaaaaaaah Mother...<LINE>
+I'm soooo hungry...<NEWBOX>
+<CONTROL_CODE><$19><$06>ElifanYou're a grown boy Elif, you need to<LINE>
+stop crying. Now, what do you say?<NEWBOX>
+<CONTROL_CODE><$13><$04><CONTROL_CODE><$19><$04>ElifAh, that's right!<LINE>
+Thank you, Bomberman!<NEWBOX>
+<CONTROL_CODE><$19><$06>ElifanBomberman, thank you so much.<LINE>
+You really helped us out.<NEWBOX>
+<CONTROL_CODE><$19><$06>TrejurNot long ago I tried to use the cave<LINE>
+that connects to the ruins.<NEWBOX>
+But it's been blocked by a boulder!<LINE>
+Those bandits must have done it...<NEWBOX>
+If you found some way to move that<LINE>
+boulder, you could get to the ruins.<END>
 
 //POINTER #75 @ $1C1C68 - STRING #75 @ $1BFC0A
 
 #WRITE(GBA,$1C1C68)
-<CONTROL_CODE><$19><$05>エレファンそれならば わたしたちの のうりょくが<LINE>
-やくだつと おもいます<NEWBOX>
-さぁ エレフ ボンバーマンさんの<LINE>
-おてつだいを してきなさい<NEWBOX>
-<CONTROL_CODE><$13><$05><CONTROL_CODE><$19><$03>エレフえ‥‥ せっかくあえたのに<LINE>
-また はなればなれに なるの?<NEWBOX>
-そんなの イヤだよ!<LINE>
-かあさんと いっしょにいるんだい!<NEWBOX>
-<CONTROL_CODE><$19><$05>エレファンおとこのこでしょう しっかりしなさい<NEWBOX>
-こんどは おまえが ボンバーマンさんに<LINE>
-おんがえしを するばんですよ<NEWBOX>
-<CONTROL_CODE><$19><$03>エレフうん‥‥ わかったよ ボクがんばって<LINE>
-ボンバーマンを てつだうよ!<END>
+<CONTROL_CODE><$19><$06>ElifanIn that case, let us help you out by<LINE>
+lending you our power!<NEWBOX>
+Elif! Please join up with Bomberman<LINE>
+and help him out.<NEWBOX>
+<CONTROL_CODE><$13><$05><CONTROL_CODE><$19><$04>ElifWhat!? But were we just reunited with<LINE>
+each other...<NEWBOX>
+No, I can't! I don't want to be away<LINE>
+from you again!<NEWBOX>
+<CONTROL_CODE><$19><$06>ElifanYou're a grown boy now. You'll be fine.<NEWBOX>
+As thanks for Bomberman's help,<LINE>
+assisting him is the right thing to do.<NEWBOX>
+<CONTROL_CODE><$19><$04>ElifI understand. I will do my best<LINE>
+to help Bomberman!<END>
+
 
 //POINTER #76 @ $1C1C6C - STRING #76 @ $1BFCFB
 
+
 #WRITE(GBA,$1C1C6C)
-キャラボン エレフがなかまになった!<CONTROL_CODE><$22><$00><CONTROL_CODE><$12><$5C><NEWBOX>
-ボクの のうりょくは ブロックおし<LINE>
-とくべつな ハードブロックを うごかせるよ<NEWBOX>
-しかも ボクの のうりょくは<LINE>
-セットしていなくても ゆうこうなんだ<NEWBOX>
-ボクを Bボタンにセットする?<LINE>
-    はい       いいえ<CONTROL_CODE><$05><$03>1い13シ3ス<CONTROL_CODE><$0D><$03><$FD><CONTROL_CODE><$19><$05>エレファンエレフや がんばるんですよ‥‥<END>
+Became friends with the Karabon, Elif!<CONTROL_CODE><$22><$00><CONTROL_CODE><$12><$5C><NEWBOX>
+My ability is Block Push! You can use<LINE>
+it to push some blocks.<NEWBOX>
+And even if I'm not set, you will still<LINE>
+be able to use my ability!<NEWBOX>
+Set me to the B Button?<LINE>
+    Yes       No<CONTROL_CODE><$05><$03><CONTROL_CODE><$0D><$03><$FD><CONTROL_CODE><$19><$06>ElifanTake care out there, Elif...<END>
+
 
 //POINTER #77 @ $1C1C70 - STRING #77 @ $1BFD88
 
+
 #WRITE(GBA,$1C1C70)
-<CONTROL_CODE><$0D><$03><$FD><CONTROL_CODE><$19><$05>エレファンエレフや がんばるんですよ‥‥<END>
+//<CONTROL_CODE><$0D><$03><$FD><CONTROL_CODE><$19><$05>エレファンエレフや がんばるんですよ‥‥<END>
+<CONTROL_CODE><$0D><$03><$FD><CONTROL_CODE><$19><$06>ElifanTake care out there, Elif...<END>
+
 
 //POINTER #78 @ $1C1C74 - STRING #78 @ $1BFD8B
 
+
 #WRITE(GBA,$1C1C74)
-<$FD><CONTROL_CODE><$19><$05>エレファンエレフや がんばるんですよ‥‥<END>
+//<$FD><CONTROL_CODE><$19><$05>エレファンエレフや がんばるんですよ‥‥<END>
+<$FD><CONTROL_CODE><$19><$06>ElifanTake care out there, Elif...<END>
+
 
 //POINTER #79 @ $1C1C78 - STRING #79 @ $1BFD8C
 
+
 #WRITE(GBA,$1C1C78)
-<CONTROL_CODE><$19><$05>エレファンエレフや がんばるんですよ‥‥<END>
+//<CONTROL_CODE><$19><$05>エレファンエレフや がんばるんですよ‥‥<END>
+<CONTROL_CODE><$19><$06>ElifanTake care out there, Elif...<END>
+
 
 //POINTER #80 @ $1C1C7C - STRING #80 @ $1BFDA4
 
+
 #WRITE(GBA,$1C1C7C)
-<CONTROL_CODE><$19><$05>トレジャンさっき ちょっと みてきたんだが<LINE>
-はっくつげんばにつながる どうくつが<NEWBOX>
-おおきないわで ふさがれていたんだ<LINE>
-うちゅうせんのやつらの しわざだろう<NEWBOX>
-どうにかして あのいわを どかさないと<LINE>
-いせきには たどりつけないぜ<END>
+//<CONTROL_CODE><$19><$05>トレジャンさっき ちょっと みてきたんだが<LINE>
+//はっくつげんばにつながる どうくつが<NEWBOX>
+<$06>TrejurNot long ago I tried to use the cave<LINE>
+that connects to the ruins.<NEWBOX>
+//おおきないわで ふさがれていたんだ<LINE>
+//うちゅうせんのやつらの しわざだろう<NEWBOX>
+But it's been blocked by a boulder!<LINE>
+Those bandits must have done it...<NEWBOX>
+//どうにかして あのいわを どかさないと<LINE>
+//いせきには たどりつけないぜ<END>
+If you found some way to move that<LINE>
+boulder, you could get to the ruins.<END>
+
 
 //POINTER #81 @ $1C1C80 - STRING #81 @ $1BFE18
 
+
 #WRITE(GBA,$1C1C80)
-<CONTROL_CODE><$19><$05>トレジャンミドリはかせを たすけだしたんだってな<LINE>
-フォレスタウンのひとに きいたよ<END>
+<CONTROL_CODE><$19><$06>TrejurSo it was you who saved Dr. Midori?<LINE>
+Everyone in Foress Town knows!<END>
+
 
 //POINTER #82 @ $1C1C84 - STRING #82 @ $1BFE45
 
+
 #WRITE(GBA,$1C1C84)
-<CONTROL_CODE><$01><$02>う3テ<CONTROL_CODE><$01><$02>け3ツ<CONTROL_CODE><$19><$04>ハンタラそういえば フォレスタウンに<LINE>
-へやをかりて やちんを はらってないなぁ‥‥<END>
+//<CONTROL_CODE><$01><$02><$0D><$04><$54><CONTROL_CODE><$01><$02><$13><$04><$53><CONTROL_CODE><$19><$04>ハンタラそういえば フォレスタウンに<LINE>
+//へやをかりて やちんを はらってないなぁ‥‥<END>
+<CONTROL_CODE><$01><$02><$0D><$04><$54><CONTROL_CODE><$01><$02><$13><$04><$53><CONTROL_CODE><$19><$06>HuntarIt seems like the price to rent a room<LINE>
+in Foress Town isn't any cheaper...<END>
+
 
 //POINTER #83 @ $1C1C88 - STRING #83 @ $1BFE7E
 
+
 #WRITE(GBA,$1C1C88)
-<CONTROL_CODE><$19><$04>ハンタラさっき ちょっと みてきたんだが<LINE>
-はっくつげんばにつながる どうくつが<NEWBOX>
-おおきないわで ふさがれていたんだ<LINE>
-うちゅうせんのやつらの しわざだろう<NEWBOX>
-どうにかして あのいわを どかさないと<LINE>
-いせきには たどりつけないぜ<END>
+//<CONTROL_CODE><$19><$04>ハンタラさっき ちょっと みてきたんだが<LINE>
+//はっくつげんばにつながる どうくつが<NEWBOX>
+<CONTROL_CODE><$19><$06>TrejurNot long ago I tried to use the cave<LINE>
+that connects to the ruins.<NEWBOX>
+//おおきないわで ふさがれていたんだ<LINE>
+//うちゅうせんのやつらの しわざだろう<NEWBOX>
+But it's been blocked by a boulder!<LINE>
+Those bandits must have done it...<NEWBOX>
+//どうにかして あのいわを どかさないと<LINE>
+//いせきには たどりつけないぜ<END>
+If you found some way to move that<LINE>
+boulder, you could get to the ruins.<END>
+
 
 //POINTER #84 @ $1C1C8C - STRING #84 @ $1BFEF1
 
+
 #WRITE(GBA,$1C1C8C)
-<CONTROL_CODE><$19><$04>ハンタラなかなか いごこちがいいから<LINE>
-このどうくつに すむことにしたよ<NEWBOX>
-やちんも かからないし<LINE>
-けっこう かいてきだぜ<END>
+//<CONTROL_CODE><$19><$04>ハンタラなかなか いごこちがいいから<LINE>
+//このどうくつに すむことにしたよ<NEWBOX>
+<CONTROL_CODE><$19><$06>HuntarThis cave is actually quite cozy, so<LINE>
+we've decided to live here!<NEWBOX>
+//やちんも かからないし<LINE>
+//けっこう かいてきだぜ<END>
+There's also no rent to pay, so<LINE>
+it's perfect!<END>
+
 
 //POINTER #85 @ $1C1C90 - STRING #85 @ $1BFF30
 
-#WRITE(GBA,$1C1C90)
-この あしばのうえで<LINE>
-まわりからとんでくる たまをかわして<NEWBOX>
-じかんいっぱい いきのこれたら<LINE>
-キミのかちだよ<NEWBOX>
-ボクの のうりょくは シールド<LINE>
-Bボタンをおすと まえからのたまを ふせぐよ<NEWBOX>
-コウモリと らくせきは<LINE>
-シールドでふせげないから きをつけてね<NEWBOX>
-それじゃ しょうぶだ!<END>
 
-//POINTER #86 @ $1C1C94 - STRING #86 @ $1BFFB9
+#WRITE(GBA,$1C1C90)
+While on this platform, projectiles<LINE>
+will come at you from all directions.<NEWBOX>
+The goal is to continue dodging attacks<LINE>
+until time runs out!<NEWBOX>
+The B Button brings up a shield which<LINE>
+can protect you from projectiles.<NEWBOX>
+However, the shield can't be used to<LINE>
+defend against bats or falling rocks.<NEWBOX>
+Well then, it's time to begin!<END>
+
+
+////POINTER #86 @ $1C1C94 - STRING #86 @ $1BFFB9
+
 
 #WRITE(GBA,$1C1C94)
-<CONTROL_CODE><$0D><$02><$FD><CONTROL_CODE><$01><$02>う3ネあの こうせんほうは もともと<LINE>
-まちにしんにゅうする モンスターを<NEWBOX>
-げきたいするために つくられた<LINE>
-もののようです<NEWBOX>
-でも パワーのちょうせいしだいでは<LINE>
-わくせいを はかいするほどの<NEWBOX>
-こうせんを はなつことも<LINE>
-できたとか‥‥<NEWBOX>
-あんなものが ヒゲヒゲだんの てに<LINE>
-わたってしまったら‥‥<END>
+//<CONTROL_CODE><$0D><$02><$FD><CONTROL_CODE><$01><$02><$0D><$04><$59>あの こうせんほうは もともと<LINE>
+//まちにしんにゅうする モンスターを<NEWBOX>
+<CONTROL_CODE><$0D><$02><$FD><CONTROL_CODE><$01><$02><$0D><$04><$59>The Beam Cannon was originally<LINE>
+created to defend against monsters<NEWBOX>
+//げきたいするために つくられた<LINE>
+//もののようです<NEWBOX>
+that were attempting to invade<LINE>
+the town.<NEWBOX>
+//でも パワーのちょうせいしだいでは<LINE>
+//わくせいを はかいするほどの<NEWBOX>
+However, it also has the potential to<LINE>
+be used as a weapon of war...<NEWBOX>
+//こうせんを はなつことも<LINE>
+//できたとか‥‥<NEWBOX>
+One with enough power to destroy<LINE>
+this entire planet!<NEWBOX>
+//あんなものが ヒゲヒゲだんの てに<LINE>
+//わたってしまったら‥‥<END>
+For such a thing to have fallen into<LINE>
+the hands of the Hige Hige Bandits... <END>
+
 
 //POINTER #87 @ $1C1C98 - STRING #87 @ $1BFFBC
 
+
 #WRITE(GBA,$1C1C98)
-<$FD><CONTROL_CODE><$01><$02>う3ネあの こうせんほうは もともと<LINE>
-まちにしんにゅうする モンスターを<NEWBOX>
-げきたいするために つくられた<LINE>
-もののようです<NEWBOX>
-でも パワーのちょうせいしだいでは<LINE>
-わくせいを はかいするほどの<NEWBOX>
-こうせんを はなつことも<LINE>
-できたとか‥‥<NEWBOX>
-あんなものが ヒゲヒゲだんの てに<LINE>
-わたってしまったら‥‥<END>
+//<$FD><CONTROL_CODE><$01><$02><$0D><$04><$59>あの こうせんほうは もともと<LINE>
+//まちにしんにゅうする モンスターを<NEWBOX>
+<$FD><CONTROL_CODE><$01><$02><$0D><$04><$59>The Beam Cannon was originally<LINE>
+created to defend against monsters<NEWBOX>
+//げきたいするために つくられた<LINE>
+//もののようです<NEWBOX>
+that were attempting to invade<LINE>
+the town.<NEWBOX>
+//でも パワーのちょうせいしだいでは<LINE>
+//わくせいを はかいするほどの<NEWBOX>
+However, it also has the potential to<LINE>
+be used as a weapon of war...<NEWBOX>
+//こうせんを はなつことも<LINE>
+//できたとか‥‥<NEWBOX>
+One with enough power to destroy<LINE>
+this entire planet!<NEWBOX>
+//あんなものが ヒゲヒゲだんの てに<LINE>
+//わたってしまったら‥‥<END>
+For such a thing to have fallen into<LINE>
+the hands of the Hige Hige Bandits...<END>
+
 
 //POINTER #88 @ $1C1C9C - STRING #88 @ $1BFFBD
 
-#WRITE(GBA,$1C1C9C)
-<CONTROL_CODE><$01><$02>う3ネあの こうせんほうは もともと<LINE>
-まちにしんにゅうする モンスターを<NEWBOX>
-げきたいするために つくられた<LINE>
-もののようです<NEWBOX>
-でも パワーのちょうせいしだいでは<LINE>
-わくせいを はかいするほどの<NEWBOX>
-こうせんを はなつことも<LINE>
-できたとか‥‥<NEWBOX>
-あんなものが ヒゲヒゲだんの てに<LINE>
-わたってしまったら‥‥<END>
 
-//POINTER #89 @ $1C1CA0 - STRING #89 @ $1C0051
+#WRITE(GBA,$1C1C9C)
+//<CONTROL_CODE><$01><$02><$0D><$04><$59>あの こうせんほうは もともと<LINE>
+//まちにしんにゅうする モンスターを<NEWBOX>
+<CONTROL_CODE><$01><$02><$0D><$04><$59>The Beam Cannon was originally<LINE>
+created to defend against monsters<NEWBOX>
+//げきたいするために つくられた<LINE>
+//もののようです<NEWBOX>
+that were attempting to invade<LINE>
+the town.<NEWBOX>
+//でも パワーのちょうせいしだいでは<LINE>
+//わくせいを はかいするほどの<NEWBOX>
+However, it also has the potential to<LINE>
+be used as a weapon of war...<NEWBOX>
+//こうせんを はなつことも<LINE>
+//できたとか‥‥<NEWBOX>
+One with enough power to destroy<LINE>
+this entire planet!<NEWBOX>
+//あんなものが ヒゲヒゲだんの てに<LINE>
+//わたってしまったら‥‥<END>
+For such a thing to have fallen into<LINE>
+the hands of the Hige Hige Bandits... <END>
+
+
+////POINTER #89 @ $1C1CA0 - STRING #89 @ $1C0051
+
 
 #WRITE(GBA,$1C1CA0)
-はかせを たすけだしてくれて<LINE>
-ありがとうございます<NEWBOX>
-しかし‥‥こうせんほうを<LINE>
-やつらに うばわれてしまいました<NEWBOX>
-どうか ヒゲヒゲだんから<LINE>
-こうせんほうを うばいかえしてください<NEWBOX>
-あの こうせんほうのちからを<LINE>
-わるいことに つかわれてしまったら‥‥<END>
+Thank you so much for saving<LINE>
+the Doctor!<NEWBOX>
+However... The Beam Cannon was taken<LINE>
+by the Hige Hige Bandits...<NEWBOX>
+//どうか ヒゲヒゲだんから<LINE>
+//こうせんほうを うばいかえしてください<NEWBOX>
+No matter what, you have to get it<LINE>
+back from them!<NEWBOX>
+//あの こうせんほうのちからを<LINE>
+//わるいことに つかわれてしまったら‥‥<END>
+In the wrong hands, that cannon could<LINE>
+be used for terrible things...<END>
+
 
 //POINTER #90 @ $1C1CA4 - STRING #90 @ $1C00CD
 
+
 #WRITE(GBA,$1C1CA4)
-<CONTROL_CODE><$01><$02>う3ハミドリはかせと われわれは<LINE>
-ここ ノンビリせいの<NEWBOX>
-こだいぶんめいについて<LINE>
-ずっと けんきゅうしてきました<NEWBOX>
-そして すうしゅうかんまえに はじめて<LINE>
-こだいぶんめいの しょうこである<NEWBOX>
-こうせんほうを はっけんしたのです<NEWBOX>
-その けんきゅうせいかを あんな<LINE>
-とうぞくどもに とられるのかと おもうと<NEWBOX>
-くやしくて よるも ねむれませんよ<END>
+//<CONTROL_CODE><$01><$02><$0D><$04><$5B>ミドリはかせと われわれは<LINE>
+//ここ ノンビリせいの<NEWBOX>
+<CONTROL_CODE><$01><$02><$0D><$04><$5B>We came here along with Dr. Midori to<LINE>
+study an ancient civilization.<NEWBOX>
+//こだいぶんめいについて<LINE>
+//ずっと けんきゅうしてきました<NEWBOX>
+Things were proceeding well without<LINE>
+any trouble, until several weeks ago...<NEWBOX>
+//そして すうしゅうかんまえに はじめて<LINE>
+//こだいぶんめいの しょうこである<NEWBOX>
+We discovered the Beam Cannon that<LINE>
+had once brought destruction to<NEWBOX>
+//こうせんほうを はっけんしたのです<NEWBOX>
+//その けんきゅうせいかを あんな<LINE>
+the ancient civilization. Then suddenly<NEWBOX>
+those bandits stole what we had found!<LINE>
+//とうぞくどもに とられるのかと おもうと<NEWBOX>
+//くやしくて よるも ねむれませんよ<END>
+It keeps me up at night, thinking about<NEWBOX>
+what they might do with it...<END>
+
 
 //POINTER #91 @ $1C1CA8 - STRING #91 @ $1C0177
 
+
 #WRITE(GBA,$1C1CA8)
-どうか ヒゲヒゲだんから<LINE>
-こうせんほうを とりもどしてください!<NEWBOX>
-われわれの けんきゅうしていたものを<LINE>
-わるいことに つかわれてしまったら‥‥<END>
+Please get the Beam Cannon back from<LINE>
+the Hige Hige Bandits!<NEWBOX>
+We can't let our discovery be used<LINE>
+for evil...<END>
+
 
 //POINTER #92 @ $1C1CAC - STRING #92 @ $1C01BF
 
+
 #WRITE(GBA,$1C1CAC)
-<CONTROL_CODE><$01><$02>う3フミドリはかせは いつも<LINE>
-げんばで しきを とっていました<NEWBOX>
-ヤツらが おしいってきた あのひも<LINE>
-はかせは はっくつげんばに いたんです<NEWBOX>
-ヤツらは ミドリはかせと<LINE>
-じょしゅの シロウさんを ひとじちにして<NEWBOX>
-われわれを はっくつげんばから<LINE>
-おいだしたんです<NEWBOX>
-こうせんほうを ほりだしたら<LINE>
-ふたりは ぶじに かえすといっていましたが<NEWBOX>
-あの ヒゲヒゲだんの いうことなんて<LINE>
-しんようできません<NEWBOX>
-あぁ‥‥しんぱいだ‥‥<LINE>
-ミドリはかせは ぶじだろうか‥‥<END>
+<CONTROL_CODE><$01><$02><$0D><$04><$5D>Doctor Midori was always working<LINE>
+hard at the excavation site.<NEWBOX>
+So on the day those bandits showed up,<LINE>
+she probably would have been there.<NEWBOX>
+They must be holding Dr. Midori and<LINE>
+her assistant Shirou as hostages!<NEWBOX>
+Everyone else seems to have been<LINE>
+driven out from the excavation site.<NEWBOX>
+Hopefully once the cannon is excavated,<LINE>
+they'll safely return those two...<NEWBOX>
+But with the Hige Hige Bandits you<LINE>
+just never know what might happen.<NEWBOX>
+Ah...I'm worried...<LINE>
+I hope Doctor Midori is safe...<END>
+
 
 //POINTER #93 @ $1C1CB0 - STRING #93 @ $1C02A2
 
+
 #WRITE(GBA,$1C1CB0)
-こうせんほうは ヒゲヒゲだんに<LINE>
-うばわれてしまいましたが<NEWBOX>
-ふたりは ぶじに かえってきました<LINE>
-ほんとうに ありがとうございました<END>
+The Beam Cannon was stolen by the <LINE>
+Hige Hige Bandits...<NEWBOX>
+But at least Dr. Midori and Shirou<LINE>
+returned safely. Thank you so much!<END>
+
 
 //POINTER #94 @ $1C1CB4 - STRING #94 @ $1C02E3
 
+
 #WRITE(GBA,$1C1CB4)
-<CONTROL_CODE><$01><$02>う3ホあのひ ふたりをひとじちにして<LINE>
-われわれを おいだしたヤツラは<NEWBOX>
-はっくつげんばの いりぐちに<LINE>
-おおいわをおいて ふさいでしまいました<NEWBOX>
-はかせを たすけに いきたくても<LINE>
-あの おおきないわを どうにかしないと<NEWBOX>
-いせきに はいることも できません<LINE>
-どうしたら いいんだろう‥‥<END>
+<CONTROL_CODE><$01><$02><$0D><$04><$5F>When Dr. Midori was taken hostage,<LINE>
+we were driven out by those bandits.<NEWBOX>
+//はっくつげんばの いりぐちに<LINE>
+//おおいわをおいて ふさいでしまいました<NEWBOX>
+Then the entrance to the excavation<LINE>
+site was blocked off by a huge boulder.<NEWBOX>
+//はかせを たすけに いきたくても<LINE>
+//あの おおきないわを どうにかしないと<NEWBOX>
+Even though I wanted to help her,<LINE>
+I just couldn't move that boulder...<NEWBOX>
+//いせきに はいることも できません<LINE>
+//どうしたら いいんだろう‥‥<END>
+And so I couldn't get back into the<LINE>
+ruins. What should we do?<END>
+
 
 //POINTER #95 @ $1C1CB8 - STRING #95 @ $1C0372
 
+
 #WRITE(GBA,$1C1CB8)
-はかせを たすけだしてくれて<LINE>
-ありがとうございました‥‥<NEWBOX>
-しかし あの いわを うごかしてしまうなんて<LINE>
-すごい ちからですね‥‥<END>
+You saved the Doctor!<LINE>
+Thank you so much! <NEWBOX>
+You must be really strong to have been<LINE>
+able to move that boulder...<END>
+
 
 //POINTER #96 @ $1C1CBC - STRING #96 @ $1C03B3
 
+
 #WRITE(GBA,$1C1CBC)
-<CONTROL_CODE><$01><$02>う3ミヤツら ヒゲヒゲだんは うちゅうに<LINE>
-ひとつしかないものを あつめているとか‥‥<NEWBOX>
-なにも われわれの はっくつした<LINE>
-こうせんほうに めをつけなくても いいのに<END>
+//<CONTROL_CODE><$01><$02><$0D><$04><$61>ヤツら ヒゲヒゲだんは うちゅうに<LINE>
+//ひとつしかないものを あつめているとか‥‥<NEWBOX>
+<CONTROL_CODE><$01><$02><$0D><$04><$61>The Hige Hige Bandits desire things<LINE>
+that are truly one of a kind.<NEWBOX>
+//なにも われわれの はっくつした<LINE>
+//こうせんほうに めをつけなくても いいのに<END>
+If only they hadn't found out about<LINE>
+our discovery...<END>
+
 
 //POINTER #97 @ $1C1CC0 - STRING #97 @ $1C0408
 
+
 #WRITE(GBA,$1C1CC0)
-おねがいです いっこくもはやく<LINE>
-こうせんほうを とりもどしてください<END>
+Please! Get back the Beam Cannon<LINE>
+as quickly as possible.<END>
+
 
 //POINTER #98 @ $1C1CC4 - STRING #98 @ $1C042B
 
+
 #WRITE(GBA,$1C1CC4)
-ボンバーマンさん たすけていただいて<LINE>
-ほんとうに ありがとうございました<NEWBOX>
-でんせつでは あのこうせんほうは<LINE>
-おそろしい ちからを もっているそうです<NEWBOX>
-きっと ヒゲヒゲだんは どこかで<LINE>
-ためしうちを するつもりです<NEWBOX>
-どうか ヒゲヒゲだんの さくせんを<LINE>
-そし してください おねがいします<NEWBOX>
-あぁ‥‥ こんなことになるなら<LINE>
-いせきなんて はっくつしなければよかった‥‥<END>
+Mr. Bomberman, thank you so much for<LINE>
+rescuing me!<NEWBOX>
+According to legend, it's said the Beam<LINE>
+Cannon possesses terrible power.<NEWBOX>
+//きっと ヒゲヒゲだんは どこかで<LINE>
+//ためしうちを するつもりです<NEWBOX>
+Those bandits are likely going to try<LINE>
+to test it out somewhere...<NEWBOX>
+//どうか ヒゲヒゲだんの さくせんを<LINE>
+//そし してください おねがいします<NEWBOX>
+You must do everything you can to<LINE>
+stop them before it's too late!<NEWBOX>
+//こんなことになるなら<LINE>
+//いせきなんて はっくつしなければよかった‥‥<END>
+It would have better if we had never<LINE>
+discovered that thing...<END>
+
 
 //POINTER #99 @ $1C1CC8 - STRING #99 @ $1C04E1
 
+
 #WRITE(GBA,$1C1CC8)
-やあ たすけてくれて ありがとう<LINE>
-いちじは どうなることかと おもったよ<NEWBOX>
-つかまっているときに こっそり<LINE>
-ヤツらのはなしを きいてたら<NEWBOX>
-トコトコせいで こうせんほうの<LINE>
-ためしうちをすると いっていたんだ<NEWBOX>
-はやく トコトコせいへいって<LINE>
-やつらのけいかくを そししてください<END>
+Hey, thanks for saving me! I was<LINE>
+//いちじは どうなることかと おもったよ<NEWBOX>
+beginning to lose hope...<NEWBOX>
+//つかまっているときに こっそり<LINE>
+//ヤツらのはなしを きいてたら<NEWBOX>
+When I was caught, I overheard<LINE>
+something that my captors said.<NEWBOX>
+//トコトコせいで こうせんほうの<LINE>
+//ためしうちをすると いっていたんだ<NEWBOX>
+They plan to test the laser cannon on<LINE>
+the planet Tokotoko...<NEWBOX>
+//はやく トコトコせいへいって<LINE>
+//やつらのけいかくを そししてください<END>
+You must hurry to Tokotoko and put a<LINE>
+stop to their plans!<END>
+
 
 //POINTER #100 @ $1C1CCC - STRING #100 @ $1C0569
 
+
 #WRITE(GBA,$1C1CCC)
-<CONTROL_CODE><$01><$02>う3ヤサイエンスニュース<LINE>
-セカセカせいの クロノはかせ<NEWBOX>
-クロノりろんによる タイムエンジンの<LINE>
-かいはつを かいし!<END>
+<CONTROL_CODE><$01><$02><$0D><$04><$65>~Science News~<LINE>
+Dr. Chronos of the planet Sekaseka<NEWBOX>
+//クロノりろんによる タイムエンジンの<LINE>
+//かいはつを かいし!<END>
+has begun development of an invention<LINE>
+known as the Time Engine!<END>
+
 
 //POINTER #101 @ $1C1CD0 - STRING #101 @ $1C05A6
 
+
 #WRITE(GBA,$1C1CD0)
-サイエンスニュース<LINE>
-セカセカせいの クロノはかせ<NEWBOX>
-ついに タイムエンジンの<LINE>
-かいはつに せいこう!<END>
+~Science News~<LINE>
+Dr. Chronos of the planet Sekaseka....<NEWBOX>
+//ついに タイムエンジンの<LINE>
+//かいはつに せいこう!<END>
+has at last completed the development<LINE>
+of his invention, the Time Engine!<END>
+
 
 //POINTER #102 @ $1C1CD4 - STRING #102 @ $1C05D8
 
+
 #WRITE(GBA,$1C1CD4)
-ドリルモグネスは もうやられたのか‥‥<LINE>
-メカードめ ポンコツをよこしやがって<NEWBOX>
-まぁいい こうせんほうは<LINE>
-われわれ ヒゲヒゲだんが もらっていくぞ<END>
+//ドリルモグネスは もうやられたのか‥‥<LINE>
+//メカードめ ポンコツをよこしやがって<NEWBOX>
+So, you've already defeated Drill Mole.<LINE>
+What a hunk of junk...<NEWBOX>
+//まぁいい こうせんほうは<LINE>
+//われわれ ヒゲヒゲだんが もらっていくぞ<END>
+Well no matter! This cannon now<LINE>
+belongs to the Hige Hige Bandits!<END>
+
 
 //POINTER #103 @ $1C1CD8 - STRING #103 @ $1C0621
 
+
 #WRITE(GBA,$1C1CD8)
-さ~て どこで ためしうちを<LINE>
-してやろうかな ワハハハハ‥‥‥<END>
+And now, it's time to go somewhere<LINE>
+and test this thing! Wahahaha...<END>
+
 
 //POINTER #104 @ $1C1CDC - STRING #104 @ $1C0641
 
+
 #WRITE(GBA,$1C1CDC)
-たすけに きてくれたのですね ありがとう<NEWBOX>
-でも‥‥ こうせんほうが<LINE>
-ヒゲヒゲだんに うばわれてしまいました<NEWBOX>
-でんせつでは あのこうせんほうは<LINE>
-おそろしい ちからを もっているそうです<NEWBOX>
-きっと ヒゲヒゲだんは どこかで<LINE>
-ためしうちを するつもりです<NEWBOX>
-どうか ヒゲヒゲだんの さくせんを<LINE>
-そし してください おねがいします<NEWBOX>
-あぁ‥‥ こんなことになるなら<LINE>
-いせきなんて はっくつしなければよかった‥‥<END>
+You came to save us. Thank you!<NEWBOX>
+But the Beam Cannon... The Hige Hige<LINE>
+//ヒゲヒゲだんに うばわれてしまいました<NEWBOX>
+Bandits made off with it...<NEWBOX>
+//でんせつでは あのこうせんほうは<LINE>
+//おそろしい ちからを もっているそうです<NEWBOX>
+According to legend, it's said the Beam<LINE>
+Cannon possesses terrible power.<NEWBOX>
+//きっと ヒゲヒゲだんは どこかで<LINE>
+//ためしうちを するつもりです<NEWBOX>
+Those bandits are likely going to try<LINE>
+and test it out somewhere...<NEWBOX>
+//どうか ヒゲヒゲだんの さくせんを<LINE>
+//そし してください おねがいします<NEWBOX>
+You must do everything you can to<LINE>
+stop them before it's too late!<NEWBOX>
+//こんなことになるなら<LINE>
+//いせきなんて はっくつしなければよかった‥‥<END>
+It would have better if we had never<LINE>
+discovered that thing...<END>
+
 
 //POINTER #105 @ $1C1CE0 - STRING #105 @ $1C0708
 
+
 #WRITE(GBA,$1C1CE0)
-きみも とけないこおりを とりにきたのかい?<LINE>
-ここの こおりは なかなか とけないから<NEWBOX>
-いろいろとつかえて べんりなんだ<LINE>
-ごうせいやで ごうせいしてくれるよ<NEWBOX>
-いちど ごうせいすると なくなってしまうけど<LINE>
-また ここにくれば てにはいるよ<NEWBOX>
-おくにある おおきな こおりに<LINE>
-つよいしょうげきを あたえれば<NEWBOX>
-こおりのかけらが おちてくるよ<END>
+//きみも とけないこおりを とりにきたのかい?<LINE>
+//ここの こおりは なかなか とけないから<NEWBOX>
+Did you come to get some non-melting<LINE>
+ice? Because it doesn't melt easily<NEWBOX>
+//いろいろとつかえて べんりなんだ<LINE>
+//ごうせいやで ごうせいしてくれるよ<NEWBOX>
+it's very useful. You should take some<LINE>
+to a workshop as an ingredient.<NEWBOX>
+//いちど ごうせいすると なくなってしまうけど<LINE>
+//また ここにくれば てにはいるよ<NEWBOX>
+If something happens to it, you can<LINE>
+always come back here for more!<NEWBOX>
+//おくにある おおきな こおりに<LINE>
+//つよいしょうげきを あたえれば<NEWBOX>
+A strong quake should loosen a small<LINE>
+piece off that you can take...<NEWBOX>
+//こおりのかけらが おちてくるよ<END>
+from the large ice wall below.<END>
+
 
 //POINTER #106 @ $1C1CE4 - STRING #106 @ $1C07AF
 
+
 #WRITE(GBA,$1C1CE4)
-ボンバーマンは こおりのかけらを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+Bomberman obtained the<LINE>
+Ice Fragment!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #107 @ $1C1CE8 - STRING #107 @ $1C07CA
 
+
 #WRITE(GBA,$1C1CE8)
-ボンバーマンは <GET_ITEM_NAME><$FF>を<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+Bomberman obtained<LINE>
+<GET_ITEM_NAME><$FF>!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #108 @ $1C1CEC - STRING #108 @ $1C07E1
 
+
 #WRITE(GBA,$1C1CEC)
-ボンバーマンは カイソクシューズを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+Bomberman obtained the<LINE>
+Speedy Shoes!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #109 @ $1C1CF0 - STRING #109 @ $1C07FD
 
+
 #WRITE(GBA,$1C1CF0)
-ボンバーマンは おおきいクスリを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+Bomberman obtained the<LINE>
+Large Medicine!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #110 @ $1C1CF4 - STRING #110 @ $1C0818
 
+
 #WRITE(GBA,$1C1CF4)
-ハートが ぜんぶ かいふくします<NEWBOX>
-おおきいクスリを かいますか?<LINE>
-    はい       いいえ<CONTROL_CODE><$17><$03>1い13ざ3じボンバーマンは おおきいクスリを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+It will restore all of your hearts.<NEWBOX>
+Buy a Large Medicine?<LINE>
+    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Bomberman obtained the<LINE>
+Large Medicine!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #111 @ $1C1CF8 - STRING #111 @ $1C0853
 
+
 #WRITE(GBA,$1C1CF8)
-ボンバーマンは おおきいクスリを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+Bomberman obtained the<LINE>
+Large Medicine!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #112 @ $1C1CFC - STRING #112 @ $1C086E
 
+
 #WRITE(GBA,$1C1CFC)
-のむと ドクロのどくを<LINE>
-すぐに けすことができます<NEWBOX>
-どくけしを かいますか?<LINE>
-    はい       いいえ<CONTROL_CODE><$17><$03>1い13ざ3じボンバーマンは どくけしを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+//のむと ドクロのどくを<LINE>
+//すぐに けすことができます<NEWBOX>
+Drinking it will cure you of the<LINE>
+slow skull poison effect.<NEWBOX>
+Buy an Antidote?<LINE>
+    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Bomberman obtained the<LINE>
+Antidote!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #113 @ $1C1D00 - STRING #113 @ $1C08AF
 
+
 #WRITE(GBA,$1C1D00)
-ボンバーマンは どくけしを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+Bomberman obtained the<LINE>
+Antidote!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #114 @ $1C1D04 - STRING #114 @ $1C08C7
 
+
 #WRITE(GBA,$1C1D04)
-コロコロコミック 1がつごう<NEWBOX>
-ガッツなわらいと ちょうドはくりょく!<LINE>
-ボスの こうりゃくほうが かいてあります<NEWBOX>
-コロコロコミックを かいますか?<LINE>
-    はい       いいえ<CONTROL_CODE><$17><$03>1い13ざ3じボンバーマンは コロコロコミックを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+CoroCoro Comic Volume 1<NEWBOX>
+//ガッツなわらいと ちょうドはくりょく!<LINE>
+//ボスの こうりゃくほうが かいてあります<NEWBOX>
+Laugh with confidence! Contains<LINE>
+strategies for defeating bosses.<NEWBOX>
+Buy the CoroCoro Comic?<LINE>
+    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Bomberman obtained the<LINE>
+CoroCoro Comic!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #115 @ $1C1D08 - STRING #115 @ $1C092A
 
+
 #WRITE(GBA,$1C1D08)
-ボンバーマンは コロコロコミックを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+Bomberman obtained the<LINE>
+CoroCoro Comic!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #116 @ $1C1D0C - STRING #116 @ $1C0946
 
+
 #WRITE(GBA,$1C1D0C)
-コロコロコミック 2がつごう<NEWBOX>
-ガッツなわらいと ちょうドはくりょく!<LINE>
-ボスの こうりゃくほうが かいてあります<NEWBOX>
-コロコロコミックを かいますか?<LINE>
-    はい       いいえ<CONTROL_CODE><$17><$03>1い13ざ3じボンバーマンは コロコロコミックを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+CoroCoro Comic Volume 2<NEWBOX>
+//ガッツなわらいと ちょうドはくりょく!<LINE>
+//ボスの こうりゃくほうが かいてあります<NEWBOX>
+Laugh with confidence! Contains<LINE>
+strategies for defeating bosses.<NEWBOX>
+Buy the CoroCoro Comic?<LINE>
+    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Bomberman obtained the<LINE>
+CoroCoro Comic!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #117 @ $1C1D10 - STRING #117 @ $1C09A9
 
+
 #WRITE(GBA,$1C1D10)
-ボンバーマンは コロコロコミックを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+Bomberman obtained the<LINE>
+CoroCoro Comic!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #118 @ $1C1D14 - STRING #118 @ $1C09C5
 
+
 #WRITE(GBA,$1C1D14)
-コロコロコミック 3がつごう<NEWBOX>
-ガッツなわらいと ちょうドはくりょく!<LINE>
-ボスの こうりゃくほうが かいてあります<NEWBOX>
-コロコロコミックを かいますか?<LINE>
-    はい       いいえ<CONTROL_CODE><$17><$03>1い13ざ3じボンバーマンは コロコロコミックを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+CoroCoro Comic Volume 3<NEWBOX>
+//ガッツなわらいと ちょうドはくりょく!<LINE>
+//ボスの こうりゃくほうが かいてあります<NEWBOX>
+Laugh with confidence! Contains<LINE>
+strategies for defeating bosses.<NEWBOX>
+Buy the CoroCoro Comic?<LINE>
+    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Bomberman obtained the<LINE>
+CoroCoro Comic!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #119 @ $1C1D18 - STRING #119 @ $1C0A28
 
+
 #WRITE(GBA,$1C1D18)
-ボンバーマンは コロコロコミックを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+Bomberman obtained the<LINE>
+CoroCoro Comic!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #120 @ $1C1D1C - STRING #120 @ $1C0A44
 
+
 #WRITE(GBA,$1C1D1C)
-コロコロコミック 4がつごう<NEWBOX>
-ガッツなわらいと ちょうドはくりょく!<LINE>
-ボスの こうりゃくほうが かいてあります<NEWBOX>
-コロコロコミックを かいますか?<LINE>
-    はい       いいえ<CONTROL_CODE><$17><$03>1い13ざ3じボンバーマンは コロコロコミックを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+CoroCoro Comic Volume 4<NEWBOX>
+//ガッツなわらいと ちょうドはくりょく!<LINE>
+//ボスの こうりゃくほうが かいてあります<NEWBOX>
+Laugh with confidence! Contains<LINE>
+strategies for defeating bosses.<NEWBOX>
+Buy the CoroCoro Comic?<LINE>
+    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Bomberman obtained the<LINE>
+CoroCoro Comic!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #121 @ $1C1D20 - STRING #121 @ $1C0AA7
 
+
 #WRITE(GBA,$1C1D20)
-ボンバーマンは コロコロコミックを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+Bomberman obtained the<LINE>
+CoroCoro Comic!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #122 @ $1C1D24 - STRING #122 @ $1C0AC3
 
+
 #WRITE(GBA,$1C1D24)
-コロコロコミック 5がつごう<NEWBOX>
-ガッツなわらいと ちょうドはくりょく!<LINE>
-ボスの こうりゃくほうが かいてあります<NEWBOX>
-コロコロコミックを かいますか?<LINE>
-    はい       いいえ<CONTROL_CODE><$17><$03>1い13ざ3じボンバーマンは コロコロコミックを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+CoroCoro Comic Volume 5<NEWBOX>
+//ガッツなわらいと ちょうドはくりょく!<LINE>
+//ボスの こうりゃくほうが かいてあります<NEWBOX>
+Laugh with confidence! Contains<LINE>
+strategies for defeating bosses.<NEWBOX>
+Buy the CoroCoro Comic?<LINE>
+    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Bomberman obtained the<LINE>
+CoroCoro Comic!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #123 @ $1C1D28 - STRING #123 @ $1C0B26
 
+
 #WRITE(GBA,$1C1D28)
-ボンバーマンは コロコロコミックを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+Bomberman obtained the<LINE>
+CoroCoro Comic!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #124 @ $1C1D2C - STRING #124 @ $1C0B42
 
+
 #WRITE(GBA,$1C1D2C)
-のめば たちどころに<LINE>
-びょうきが なおります<NEWBOX>
-シムロノーレAを かいますか?<LINE>
-    はい       いいえ<CONTROL_CODE><$17><$03>1い13ざ3じボンバーマンは シムロノーレAを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+An incredible medicine that cures<LINE>
+almost any illness.<NEWBOX>
+Buy the Super Cure A?<LINE>
+    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Bomberman obtained the<LINE>
+Super Cure A!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #125 @ $1C1D30 - STRING #125 @ $1C0B83
 
+
 #WRITE(GBA,$1C1D30)
-ボンバーマンは シムロノーレAを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+Bomberman obtained the<LINE>
+Super Cure A!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #126 @ $1C1D34 - STRING #126 @ $1C0B9E
+
 
 #WRITE(GBA,$1C1D34)
 <CONTROL_CODE><$13><$01><WAIT>
 
+
 //POINTER #127 @ $1C1D38 - STRING #127 @ $1C0BA2
 
+
 #WRITE(GBA,$1C1D38)
-<CONTROL_CODE><$13><$02><$FD>おっと おかねが たりないよ<END>
+<CONTROL_CODE><$13><$02><$FD>Sorry. You don't have enough money.<END>
+
 
 //POINTER #128 @ $1C1D3C - STRING #128 @ $1C0BA6
 
+
 #WRITE(GBA,$1C1D3C)
-おっと おかねが たりないよ<END>
+Sorry. You don't have enough money.<END>
+
 
 //POINTER #129 @ $1C1D40 - STRING #129 @ $1C0BB5
 
+
 #WRITE(GBA,$1C1D40)
-そのアイテムは もう もっています<END>
+You already own that item.<END>
+
 
 //POINTER #130 @ $1C1D44 - STRING #130 @ $1C0BC7
 
+
 #WRITE(GBA,$1C1D44)
-<CONTROL_CODE><$01><$02>に3ぢ<CONTROL_CODE><$01><$02>つ3だ<CONTROL_CODE><$03><$02>つあ あなたは!? たすけにきてくれたのですか?<LINE>
-ボクは ミドリはかせの じょしゅ シロウです<NEWBOX>
-おねがいです ミドリはかせを<LINE>
-たすけてください!<NEWBOX>
-はかせは このダンジョンの いちばんふかく<LINE>
-こうせんほうのへやに とらわれています<NEWBOX>
-とちゅうの ちゅうおうゲートを あけるには<LINE>
-ゲートのよこの かべのスロットの えがらを<NEWBOX>
-りょうほうマルに そろえなければ いけません<NEWBOX>
-ボクは ここのコンピュータから<LINE>
-スイッチのシャッターを あけますから<NEWBOX>
-あなたは ちゅうおうゲートに<LINE>
-むかってください<END>
+<CONTROL_CODE><$01><$02><$20><$04><$84><CONTROL_CODE><$01><$02><$1C><$04><$83><CONTROL_CODE><$03><$02><$1C>Oh! Did you come to rescue me?<LINE>
+Im Dr. Midori's assistant, Shirou.<NEWBOX>
+Please! You must save Dr. Midori!<LINE>
+<NEWBOX>
+//はかせは このダンジョンの いちばんふかく<LINE>
+//こうせんほうのへやに とらわれています<NEWBOX>
+She has been taken to the deepest part<LINE>
+of this dungeon. The cannon room!<NEWBOX>
+//とちゅうの ちゅうおうゲートを あけるには<LINE>
+//ゲートのよこの かべのスロットの えがらを<NEWBOX>
+Along the way you will find a gate<LINE>
+with slot machines on each side.<NEWBOX>
+//りょうほうマルに そろえなければ いけません<NEWBOX>
+Set each slot to a circle to proceed!<NEWBOX>
+//ボクは ここのコンピュータから<LINE>
+//スイッチのシャッターを あけますから<NEWBOX>
+From this computer I can lower the<LINE>
+gates surrounding the center switch.<NEWBOX>
+//あなたは ちゅうおうゲートに<LINE>
+//むかってください<END>
+Press that switch and then clear the<LINE>
+slot machine challenge!<END>
+
 
 //POINTER #131 @ $1C1D48 - STRING #131 @ $1C0C1F
 
+
 #WRITE(GBA,$1C1D48)
-はかせは このダンジョンの いちばんふかく<LINE>
-こうせんほうのへやに とらわれています<NEWBOX>
-とちゅうの ちゅうおうゲートを あけるには<LINE>
-ゲートのよこの かべのスロットの えがらを<NEWBOX>
-りょうほうマルに そろえなければ いけません<NEWBOX>
-ボクは ここのコンピュータから<LINE>
-スイッチのシャッターを あけますから<NEWBOX>
-あなたは ちゅうおうゲートに<LINE>
-むかってください<END>
+//はかせは このダンジョンの いちばんふかく<LINE>
+//こうせんほうのへやに とらわれています<NEWBOX>
+Dr. Midori has been taken to the<LINE>
+deepest part of this dungeon.<NEWBOX>
+//とちゅうの ちゅうおうゲートを あけるには<LINE>
+//ゲートのよこの かべのスロットの えがらを<NEWBOX>
+Along the way you will find a gate<LINE>
+with slot machines on each side.<NEWBOX>
+//りょうほうマルに そろえなければ いけません<NEWBOX>
+Set each slot to a circle to proceed!<NEWBOX>
+//ボクは ここのコンピュータから<LINE>
+//スイッチのシャッターを あけますから<NEWBOX>
+From this computer I can lower the<LINE>
+gates surrounding the center switch.<NEWBOX>
+//あなたは ちゅうおうゲートに<LINE>
+//むかってください<END>
+Press that switch and then clear the<LINE>
+slot machine challenge!<END>
+
 
 //POINTER #132 @ $1C1D4C - STRING #132 @ $1C0CC7
 
+
 #WRITE(GBA,$1C1D4C)
-おねがいです ミドリはかせを<LINE>
-たすけてください!<NEWBOX>
-はかせは このダンジョンの いちばんふかく<LINE>
-ボスのへやの おくに とらわれています<END>
+Please! You must save Dr. Midori!<LINE>
+<NEWBOX>
+She has been taken to the deepest part<LINE>
+of this dungeon. The cannon room!<NEWBOX>
+
 
 //POINTER #133 @ $1C1D50 - STRING #133 @ $1C0D0A
 
+
 #WRITE(GBA,$1C1D50)
-マップデータを ダウンロードしました<CONTROL_CODE><$12><$0C><END>
+Map Data has been downloaded!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #134 @ $1C1D54 - STRING #134 @ $1C0D20
 
+
 #WRITE(GBA,$1C1D54)
-いらっしゃいませ ここは<LINE>
-アイテムごうせいや です<NEWBOX>
-ここでは ごうせいそざいAと<LINE>
-ごうせいそざいBを かけあわせて<NEWBOX>
-あたらしい アイテムを<LINE>
-つくることが できます<NEWBOX>
-<CONTROL_CODE><$01><$02>ギ3N<CONTROL_CODE><$03><$02>ギ<CONTROL_CODE><$00><$04>K<CONTROL_CODE><$1C><$00>93ぴ<CONTROL_CODE><$13><$01><WAIT>
+Welcome! This is the Item Workshop.<LINE>
+<NEWBOX>
+Here you can combine an A synthesis<LINE>
+ingredient with a B ingredient<NEWBOX>
+to create entirely new items!<LINE>
+<NEWBOX>
+<CONTROL_CODE><$01><$02><$93><$04><$BF><CONTROL_CODE><$03><$02><$93><GET_ENEMY_NAME><$04><$BC><CONTROL_CODE><$1C><$00><CONTROL_CODE><$13><$01><WAIT>
 
 //POINTER #135 @ $1C1D58 - STRING #135 @ $1C0D80
 
 #WRITE(GBA,$1C1D58)
-<CONTROL_CODE><$1C><$00>93ぴ<CONTROL_CODE><$13><$01><WAIT>
+<CONTROL_CODE><$1C><$00><CONTROL_CODE><$13><$01><WAIT>
 
 //POINTER #136 @ $1C1D5C - STRING #136 @ $1C0D8A
 
 #WRITE(GBA,$1C1D5C)
-<CONTROL_CODE><$13><$02><$FD>ごうせいそざいAを えらんでください<WAIT>
+<CONTROL_CODE><$13><$02><$FD>Please select synthesis ingredient A.<WAIT>
+
 
 //POINTER #137 @ $1C1D60 - STRING #137 @ $1C0D8E
 
+
 #WRITE(GBA,$1C1D60)
-ごうせいそざいAを えらんでください<WAIT>
+Please select synthesis ingredient A.<WAIT>
+
 
 //POINTER #138 @ $1C1D64 - STRING #138 @ $1C0DA1
 
+
 #WRITE(GBA,$1C1D64)
-ごうせいそざいBを えらんでください<WAIT>
+Please select synthesis ingredient B.<WAIT>
+
 
 //POINTER #139 @ $1C1D68 - STRING #139 @ $1C0DB4
 
+
 #WRITE(GBA,$1C1D68)
-このくみあわせで よろしいですか?<LINE>
-    はい       いいえ<CONTROL_CODE><$17><$03>1い13ぼ3ぱ<CONTROL_CODE><$13><$01><WAIT>
+Do you want to combine these?<LINE>
+    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02><CONTROL_CODE><$13><$01><WAIT>
+
 
 //POINTER #140 @ $1C1D6C - STRING #140 @ $1C0DE0
+
 
 #WRITE(GBA,$1C1D6C)
 <CONTROL_CODE><$13><$01><WAIT>
 
+
 //POINTER #141 @ $1C1D70 - STRING #141 @ $1C0DE4
 
+
 #WRITE(GBA,$1C1D70)
-<CONTROL_CODE><$13><$02><$FD><CONTROL_CODE><$13><$02>おっと おかねが たりないよ<LINE>
-ごうせいは いっかい 10G かかるよ<END>
+<CONTROL_CODE><$13><$02><$FD><CONTROL_CODE><$13><$02>Sorry, you don't have enough money.<LINE>
+The fee is 10G per try.<END>
+
 
 //POINTER #142 @ $1C1D74 - STRING #142 @ $1C0DE8
 
-#WRITE(GBA,$1C1D74)
-<CONTROL_CODE><$13><$02>おっと おかねが たりないよ<LINE>
-ごうせいは いっかい 10G かかるよ<END>
 
-//POINTER #143 @ $1C1D78 - STRING #143 @ $1C0E0E
+#WRITE(GBA,$1C1D74)
+<CONTROL_CODE><$13><$02>Oops, you don't have enough money.<LINE>
+The fee is 10G per try.<END>
+
+
+////POINTER #143 @ $1C1D78 - STRING #143 @ $1C0E0E
+
 
 #WRITE(GBA,$1C1D78)
-ゲッ もう ジェッターズが きやがったのか<LINE>
-あとすこしで ほりだせるってところで‥‥<NEWBOX>
-まいかい この ムジョーさまの<LINE>
-ジャマばっかり しやがって!<NEWBOX>
-えぇい しばらく コイツとあそんでろ!<LINE>
-カモン ドリルモグネス!<END>
+//ゲッ もう ジェッターズが きやがったのか<LINE>
+//あとすこしで ほりだせるってところで‥‥<NEWBOX>
+Gah! So the Jetters are already here.<LINE>
+We just needed a bit more time...<NEWBOX>
+//まいかい この ムジョーさまの<LINE>
+//ジャマばっかり しやがって!<NEWBOX>
+Why is it that I, Mujoe, must always<LINE>
+be bothered by the likes of you?<NEWBOX>
+//えぇい しばらく コイツとあそんでろ!<LINE>
+//カモン ドリルモグネス!<END>
+It's been a bit since we last met, hm?<LINE>
+Come forth Drill Mole, take him out!<END>
+
 
 //POINTER #144 @ $1C1D7C - STRING #144 @ $1C0E79
 
+
 #WRITE(GBA,$1C1D7C)
-ちゃんと せんとうデータを とるんだぞ<END>
+Carefully take the battle data.<END>
+
 
 //POINTER #145 @ $1C1D80 - STRING #145 @ $1C0E8D
 
+
 #WRITE(GBA,$1C1D80)
-<CONTROL_CODE><$01><$01>ゆ3▼これより アクアのもり<LINE>
-ふっかつキノコに ちゅうい!<END>
+<CONTROL_CODE><$01><$01><$2F><$04><$B0>Beyond this point is Aqua Forest.<LINE>
+Beware of regenerating mushrooms!<END>
+
 
 //POINTER #146 @ $1C1D84 - STRING #146 @ $1C0EAE
 
+
 #WRITE(GBA,$1C1D84)
-<CONTROL_CODE><$01><$01>ゆ3(HEART)ここは にしアクア<LINE>
-ひがしに いくと ひがしアクア<END>
+<CONTROL_CODE><$01><$01><$2F><$04><$B1>You are currently in West Aqua.<LINE>
+Head east to reach East Aqua.<END>
+
 
 //POINTER #147 @ $1C1D88 - STRING #147 @ $1C0ECE
 
+
 #WRITE(GBA,$1C1D88)
-<CONTROL_CODE><$01><$01>ゆ3Aこれより きたのだんがい<LINE>
-にしへいくと こおりのどうくつ<END>
+<CONTROL_CODE><$01><$01><$2F><$04><$B2>Ahead is the North Cliff.<LINE>
+Go west to reach the Ice Cave.<END>
+
 
 //POINTER #148 @ $1C1D8C - STRING #148 @ $1C0EF1
 
+
 #WRITE(GBA,$1C1D8C)
-<CONTROL_CODE><$01><$01>ゆ3Bもんを とおるかたは<LINE>
-もんばんに はなしかけてください<END>
+<CONTROL_CODE><$01><$01><$2F><$04><$B3>To pass through the gate, please speak<LINE>
+with the gatekeeper.<END>
+
 
 //POINTER #149 @ $1C1D90 - STRING #149 @ $1C0F13
 
+
 #WRITE(GBA,$1C1D90)
-<CONTROL_CODE><$01><$01>ゆ3Cいせき はっくつげんば いりぐち<END>
+<CONTROL_CODE><$01><$01><$2F><$04><$B4>-Excavation Site Entrance-<END>
+
 
 //POINTER #150 @ $1C1D94 - STRING #150 @ $1C0F2A
 
+
 #WRITE(GBA,$1C1D94)
-<CONTROL_CODE><$01><$01>ゆ3Dここは フォレスタウン<END>
+<CONTROL_CODE><$01><$01><$2F><$04><$B5>You are in Foress Town.<END>
+
 
 //POINTER #151 @ $1C1D98 - STRING #151 @ $1C0F3C
 
+
 #WRITE(GBA,$1C1D98)
-<CONTROL_CODE><$01><$01>ゆ3Eにし いせき はっくつげんば<LINE>
-みなみ モリモリのもり<END>
+<CONTROL_CODE><$01><$01><$2F><$04><$B6>West: Archaeological Excavation Site<LINE>
+South: MoriMori Forest<END>
+
 
 //POINTER #152 @ $1C1D9C - STRING #152 @ $1C0F5D
 
+
 #WRITE(GBA,$1C1D9C)
-<CONTROL_CODE><$01><$01>ゆ3Fミドリけんきゅうじょ<END>
+<CONTROL_CODE><$01><$01><$2F><$04><$B7>-Midori Laboratory-<END>
+
 
 //POINTER #153 @ $1C1DA0 - STRING #153 @ $1C0F6E
 
+
 #WRITE(GBA,$1C1DA0)
-<CONTROL_CODE><$12><$0C><GET_ITEM_NAME><$FF>が ごうせいできた!<$F8><CONTROL_CODE><$12><$0C><GET_ITEM_NAME><$FF>が ごうせいできた!<NEWBOX>
-これはもう もっているようだね<LINE>
-30ゴールドで かいとってあげよう<$F8>つづけて ごうせい しますか?<LINE>
-    はい       いいえ<CONTROL_CODE><$17><$03>1い13ダ3ヂ<CONTROL_CODE><$13><$01><WAIT>
+//<CONTROL_CODE><$12><$0C><GET_ITEM_NAME><$FF>が ごうせいできた!//<$F8><CONTROL_CODE><$12><$0C><GET_ITEM_NAME><$FF>が ごうせいできた!<NEWBOX>
+<CONTROL_CODE><$12><$0C><GET_ITEM_NAME><$FF> was synthesized!<$F8><CONTROL_CODE><$12><$0C><GET_ITEM_NAME><$FF> was synthesized!<NEWBOX>
+//これはもう もっているようだね<LINE>
+//30ゴールドで かいとってあげよう<$F8>つづけて ごうせい しますか?<LINE>
+It appears you already own this item.<LINE>
+I'll give you 30 Gold for it.<$F8>Continue synthesizing?<LINE>
+    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02><CONTROL_CODE><$13><$01><WAIT>
+
 
 //POINTER #154 @ $1C1DA4 - STRING #154 @ $1C0F7F
 
+
 #WRITE(GBA,$1C1DA4)
-<CONTROL_CODE><$12><$0C><GET_ITEM_NAME><$FF>が ごうせいできた!<NEWBOX>
-これはもう もっているようだね<LINE>
-30ゴールドで かいとってあげよう<$F8>つづけて ごうせい しますか?<LINE>
-    はい       いいえ<CONTROL_CODE><$17><$03>1い13ダ3ヂ<CONTROL_CODE><$13><$01><WAIT>
+//<CONTROL_CODE><$12><$0C><GET_ITEM_NAME><$FF>が ごうせいできた!<NEWBOX>
+//<CONTROL_CODE><$12><$0C><GET_ITEM_NAME><$FF> was synthesized!<NEWBOX>
+//これはもう もっているようだね<LINE>
+//30ゴールドで かいとってあげよう<$F8>つづけて ごうせい しますか?<LINE>
+It appears you already own this item.<LINE>
+I'll give you 30 Gold for it.<$F8>Continue synthesizing?<LINE>
+    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02><CONTROL_CODE><$13><$01><WAIT>
+
 
 //POINTER #155 @ $1C1DA8 - STRING #155 @ $1C0FB2
 
+
 #WRITE(GBA,$1C1DA8)
-つづけて ごうせい しますか?<LINE>
-    はい       いいえ<CONTROL_CODE><$17><$03>1い13ダ3ヂ<CONTROL_CODE><$13><$01><WAIT>
+Continue synthesizing?<LINE>
+    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02><CONTROL_CODE><$13><$01><WAIT>
+
 
 //POINTER #156 @ $1C1DAC - STRING #156 @ $1C0FDC
+
 
 #WRITE(GBA,$1C1DAC)
 <CONTROL_CODE><$13><$01><WAIT>
 
+
 //POINTER #157 @ $1C1DB0 - STRING #157 @ $1C0FE0
+
 
 #WRITE(GBA,$1C1DB0)
 <CONTROL_CODE><$13><$02><WAIT>
 
+
 //POINTER #158 @ $1C1DB4 - STRING #158 @ $1C0FE4
 
+
 #WRITE(GBA,$1C1DB4)
-このくみあわせで<LINE>
-<GET_ITEM_NAME><$FF>が できます<NEWBOX>
-<GET_ITEM_NAME><$FF>が できます<NEWBOX>
-ごうせい しますか?<LINE>
-    はい       いいえ<CONTROL_CODE><$17><$03>1い13ぼ3ぱそれは ごうせいできません<$F8>ふ~ やっと ついたミュ~<LINE>
-さっそく じょうほうを あつめるミュ~<NEWBOX>
-あ いちおう せつめい しとくミュ~<LINE>
-オイラの のうりょくは テレポート<NEWBOX>
-チェックした ワープポイントに<LINE>
-いっしゅんで とんでいくミュ~<NEWBOX>
-ダンジョンの なかでは<LINE>
-いりぐちに とんでくミュ~<NEWBOX>
-じゃ かってに セットされとくから<LINE>
-ようがあったら Bボタンを おすミュ~<CONTROL_CODE><$0D><$01><END>
+With this combination you can create<LINE>
+the <GET_ITEM_NAME><$FF>.<NEWBOX>
+Synthesize this item?<LINE>
+    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>You cannot synthesize that.<$F8>Ah, we've arrived at last! Quickly,<LINE>
+we must begin investigating! myu~<NEWBOX>
+But first let me explain my special<LINE>
+ability. It is called Teleport. myu~<NEWBOX>
+You can use it to travel to any warp<LINE>
+point you have discovered. myu~<NEWBOX>
+And using it in a dungeon will return<LINE>
+you to the entrance! myu~<NEWBOX>
+I will be set to the B Button, so to use<LINE>
+my ability just give it a press! myu~<CONTROL_CODE><$0D><$01><END>
+
 
 //POINTER #159 @ $1C1DB8 - STRING #159 @ $1C101C
 
+
 #WRITE(GBA,$1C1DB8)
-それは ごうせいできません<$F8>ふ~ やっと ついたミュ~<LINE>
-さっそく じょうほうを あつめるミュ~<NEWBOX>
-あ いちおう せつめい しとくミュ~<LINE>
-オイラの のうりょくは テレポート<NEWBOX>
-チェックした ワープポイントに<LINE>
-いっしゅんで とんでいくミュ~<NEWBOX>
-ダンジョンの なかでは<LINE>
-いりぐちに とんでくミュ~<NEWBOX>
-じゃ かってに セットされとくから<LINE>
-ようがあったら Bボタンを おすミュ~<CONTROL_CODE><$0D><$01><END>
+//それは ごうせいできません<$F8>ふ~ やっと ついたミュ~<LINE>
+//さっそく じょうほうを あつめるミュ~<NEWBOX>
+You cannot synthesize that.<$F8>Ah, we've arrived at last! Quickly,<LINE>
+we must begin investigating! myu~<NEWBOX>
+//あ いちおう せつめい しとくミュ~<LINE>
+//オイラの のうりょくは テレポート<NEWBOX>
+But first let me explain my special<LINE>
+ability. It's called Teleport. myu~<NEWBOX>
+//チェックした ワープポイントに<LINE>
+//いっしゅんで とんでいくミュ~<NEWBOX>
+You can use it to travel to any warp<LINE>
+point you have discovered. myu~<NEWBOX>
+//ダンジョンの なかでは<LINE>
+//いりぐちに とんでくミュ~<NEWBOX>
+And using it in a dungeon will return<LINE>
+you to the entrance! myu~<NEWBOX>
+//じゃ かってに セットされとくから<LINE>
+//ようがあったら Bボタンを おすミュ~<CONTROL_CODE><$0D><$01><END>
+I will be set to the B Button, so to use<LINE>
+my ability just give it a press! myu~<CONTROL_CODE><$0D><$01><END>
+
 
 //POINTER #160 @ $1C1DBC - STRING #160 @ $1C102A
 
+
 #WRITE(GBA,$1C1DBC)
-ふ~ やっと ついたミュ~<LINE>
-さっそく じょうほうを あつめるミュ~<NEWBOX>
-あ いちおう せつめい しとくミュ~<LINE>
-オイラの のうりょくは テレポート<NEWBOX>
-チェックした ワープポイントに<LINE>
-いっしゅんで とんでいくミュ~<NEWBOX>
-ダンジョンの なかでは<LINE>
-いりぐちに とんでくミュ~<NEWBOX>
-じゃ かってに セットされとくから<LINE>
-ようがあったら Bボタンを おすミュ~<CONTROL_CODE><$0D><$01><END>
+//ふ~ やっと ついたミュ~<LINE>
+//さっそく じょうほうを あつめるミュ~<NEWBOX>
+Ah, we've arrived at last! Quickly,<LINE>
+we must begin investigating! myu~<NEWBOX>
+//あ いちおう せつめい しとくミュ~<LINE>
+//オイラの のうりょくは テレポート<NEWBOX>
+But first let me explain my special<LINE>
+ability. It's called Teleport. myu~<NEWBOX>
+//チェックした ワープポイントに<LINE>
+//いっしゅんで とんでいくミュ~<NEWBOX>
+You can use it to travel to any warp<LINE>
+point you have discovered. myu~<NEWBOX>
+//ダンジョンの なかでは<LINE>
+//いりぐちに とんでくミュ~<NEWBOX>
+And using it in a dungeon will return<LINE>
+you to the entrance! myu~<NEWBOX>
+//じゃ かってに セットされとくから<LINE>
+//ようがあったら Bボタンを おすミュ~<CONTROL_CODE><$0D><$01><END>
+I will be set to the B Button, so to use<LINE>
+my ability just give it a press! myu~<CONTROL_CODE><$0D><$01><END>
+
 
 //POINTER #161 @ $1C1DC0 - STRING #161 @ $1C10D4
 
+
 #WRITE(GBA,$1C1DC0)
-もしもし こちら シロウです<LINE>
-いま スイッチのシャッターを あけました<NEWBOX>
-スロットを かいてんさせて えがらを そろえて<LINE>
-ちゅうおうゲートを ひらいて ください<END>
+Hello, this is Shirou. The shutters<LINE>
+around the switch should now be open.<NEWBOX>
+//スロットを かいてんさせて えがらを そろえて<LINE>
+//ちゅうおうゲートを ひらいて ください<END>
+If you stop the slots in the right place<LINE>
+the center gate will unlock!<END>
+
 
 //POINTER #162 @ $1C1DC4 - STRING #162 @ $1C1124
 
+
 #WRITE(GBA,$1C1DC4)
-このダンジョンの いりぐちに もどりますか?<LINE>
-    はい       いいえ<CONTROL_CODE><$17><$03>1い13ブ3ベ<CONTROL_CODE><$13><$81><$FD><CONTROL_CODE><$13><$82><$FD><CONTROL_CODE><$13><$0D>キャラボン ポミュと きょうりょくして<LINE>
-ちょうさを すすめるボンゴ<NEWBOX>
-<CONTROL_CODE><$13><$0D>あと とちゅうで ほかの キャラボンを<LINE>
-みかけたら なかまになっておくボンゴ<NEWBOX>
-<CONTROL_CODE><$13><$0D>きっと キャラボンの のうりょくが<LINE>
-にんむの やくに たつボンゴ<END>
+Return to this dungeon's entrance?<LINE>
+    Yes       No<CONTROL_CODE><$17><$03><CONTROL_CODE><$13><$81><$FD><CONTROL_CODE><$13><$82><$FD><CONTROL_CODE><$13><$0D>Work together with the Karabon Pommy<LINE>
+and gather information.<NEWBOX>
+<CONTROL_CODE><$13><$0D>If later you meet other Karabons, you<LINE>
+may become friends with them too.<NEWBOX>
+<CONTROL_CODE><$13><$0D>You will surely to find the special<LINE>
+abilities of Karabons to be helpful!<END>
+
 
 //POINTER #163 @ $1C1DC8 - STRING #163 @ $1C1155
 
+
 #WRITE(GBA,$1C1DC8)
-<CONTROL_CODE><$13><$81><$FD><CONTROL_CODE><$13><$82><$FD><CONTROL_CODE><$13><$0D>キャラボン ポミュと きょうりょくして<LINE>
-ちょうさを すすめるボンゴ<NEWBOX>
-<CONTROL_CODE><$13><$0D>あと とちゅうで ほかの キャラボンを<LINE>
-みかけたら なかまになっておくボンゴ<NEWBOX>
-<CONTROL_CODE><$13><$0D>きっと キャラボンの のうりょくが<LINE>
-にんむの やくに たつボンゴ<END>
+//<CONTROL_CODE><$13><$81><$FD><CONTROL_CODE><$13><$82><$FD><CONTROL_CODE><$13><$0D>キャラボン ポミュと きょうりょくして<LINE>
+//ちょうさを すすめるボンゴ<NEWBOX>
+<CONTROL_CODE><$13><$81><$FD><CONTROL_CODE><$13><$82><$FD><CONTROL_CODE><$13><$0D>Work together with the Karabon Pommy<LINE>
+and gather information.<NEWBOX>
+//<CONTROL_CODE><$13><$0D>あと とちゅうで ほかの キャラボンを<LINE>
+//みかけたら なかまになっておくボンゴ<NEWBOX>
+<CONTROL_CODE><$13><$0D>If later you meet other Karabons, you<LINE>
+may become friends with them too.<NEWBOX>
+//<CONTROL_CODE><$13><$0D>きっと キャラボンの のうりょくが<LINE>
+//にんむの やくに たつボンゴ<END>
+<CONTROL_CODE><$13><$0D>You will surely to find the special<LINE>
+abilities of Karabons to be helpful!<END>
+
 
 //POINTER #164 @ $1C1DCC - STRING #164 @ $1C1159
 
+
 #WRITE(GBA,$1C1DCC)
-<CONTROL_CODE><$13><$82><$FD><CONTROL_CODE><$13><$0D>キャラボン ポミュと きょうりょくして<LINE>
-ちょうさを すすめるボンゴ<NEWBOX>
-<CONTROL_CODE><$13><$0D>あと とちゅうで ほかの キャラボンを<LINE>
-みかけたら なかまになっておくボンゴ<NEWBOX>
-<CONTROL_CODE><$13><$0D>きっと キャラボンの のうりょくが<LINE>
-にんむの やくに たつボンゴ<END>
+//<CONTROL_CODE><$13><$82><$FD><CONTROL_CODE><$13><$0D>キャラボン ポミュと きょうりょくして<LINE>
+//ちょうさを すすめるボンゴ<NEWBOX>
+<CONTROL_CODE><$13><$82><$FD><CONTROL_CODE><$13><$0D>Work together with the Karabon Pommy<LINE>
+and gather information.<NEWBOX>
+Pommy while you are investigating.<NEWBOX>
+//<CONTROL_CODE><$13><$0D>あと とちゅうで ほかの キャラボンを<LINE>
+//みかけたら なかまになっておくボンゴ<NEWBOX>
+<CONTROL_CODE><$13><$0D>If later you meet other Karabons, you<LINE>
+may become friends with them too.<NEWBOX>
+//<CONTROL_CODE><$13><$0D>きっと キャラボンの のうりょくが<LINE>
+//にんむの やくに たつボンゴ<END>
+<CONTROL_CODE><$13><$0D>You will surely to find the special<LINE>
+abilities of Karabons to be helpful!<END>
+
 
 //POINTER #165 @ $1C1DD0 - STRING #165 @ $1C115D
 
+
 #WRITE(GBA,$1C1DD0)
-<CONTROL_CODE><$13><$0D>キャラボン ポミュと きょうりょくして<LINE>
-ちょうさを すすめるボンゴ<NEWBOX>
-<CONTROL_CODE><$13><$0D>あと とちゅうで ほかの キャラボンを<LINE>
-みかけたら なかまになっておくボンゴ<NEWBOX>
-<CONTROL_CODE><$13><$0D>きっと キャラボンの のうりょくが<LINE>
-にんむの やくに たつボンゴ<END>
+//<CONTROL_CODE><$13><$0D>キャラボン ポミュと きょうりょくして<LINE>
+//ちょうさを すすめるボンゴ<NEWBOX>
+<CONTROL_CODE><$13><$0D>Work together with the Karabon Pommy<LINE>
+and gather information.<NEWBOX>
+//<CONTROL_CODE><$13><$0D>あと とちゅうで ほかの キャラボンを<LINE>
+//みかけたら なかまになっておくボンゴ<NEWBOX>
+<CONTROL_CODE><$13><$0D>If later you meet other Karabons, you<LINE>
+may become friends with them too.<NEWBOX>
+//<CONTROL_CODE><$13><$0D>きっと キャラボンの のうりょくが<LINE>
+//にんむの やくに たつボンゴ<END>
+<CONTROL_CODE><$13><$0D>You will surely to find the special<LINE>
+abilities of Karabons to be helpful!<END>
+
 
 //POINTER #166 @ $1C1DD4 - STRING #166 @ $1C11D0
 
+
 #WRITE(GBA,$1C1DD4)
-<CONTROL_CODE><$12><$0D>もしもし こちら バーディ<LINE>
-ぶじ ノンビリせいに ついたようだな<NEWBOX>
-<CONTROL_CODE><$13><$0D>れんらくによると その ノンビリせいの<LINE>
-こだいいせき はっくつげんばに<NEWBOX>
-<CONTROL_CODE><$13><$0D>オレたちの しゅくてき<LINE>
-ヒゲヒゲだんが おしいって<NEWBOX>
-<CONTROL_CODE><$13><$0D>うちゅうに ひとつしかない こだいの<LINE>
-こうせんほうを うばおうと しているらしい<NEWBOX>
-<CONTROL_CODE><$13><$0D>ケガさえ してなければ このオレが いって<LINE>
-ヒゲヒゲだんを けちらしてやるんだが‥‥<NEWBOX>
-<CONTROL_CODE><$13><$0D>すまねぇが オレのかわりに<LINE>
-ヤツらの わるだくみを そししてくれ<$F8><WAIT>
+<CONTROL_CODE><$13><$0D>Hello, this is Birdy. It appears you've<LINE>
+//ぶじ ノンビリせいに ついたようだな<NEWBOX>
+landed on Nonbiri without any trouble.<NEWBOX>
+//<CONTROL_CODE><$13><$0D>れんらくによると その ノンビリせいの<LINE>
+//こだいいせき はっくつげんばに<NEWBOX>
+<CONTROL_CODE><$13><$0D>Reports show that our enemy, the Hige<LINE>
+Hige Bandits, have taken control of<NEWBOX>
+//<CONTROL_CODE><$13><$0D>オレたちの しゅくてき<LINE>
+//ヒゲヒゲだんが おしいって<NEWBOX>
+<CONTROL_CODE><$13><$0D>the excavation site of an ancient<LINE>
+civilization located on that planet.<NEWBOX>
+//<CONTROL_CODE><$13><$0D>うちゅうに ひとつしかない こだいの<LINE>
+//こうせんほうを うばおうと しているらしい<NEWBOX>
+<CONTROL_CODE><$13><$0D>Their goal is to obtain a legendary<LINE>
+Beam Cannon used by the civilization.<NEWBOX>
+//<CONTROL_CODE><$13><$0D>ケガさえ してなければ このオレが いって<LINE>
+//ヒゲヒゲだんを けちらしてやるんだが‥‥<NEWBOX>
+<CONTROL_CODE><$13><$0D>We have to stop the Hige Hige Bandits<LINE>
+before something terrible happens...<NEWBOX>
+//<CONTROL_CODE><$13><$0D>すまねぇが オレのかわりに<LINE>
+//ヤツらの わるだくみを そししてくれ<$F8><WAIT>
+<CONTROL_CODE><$13><$0D>I hate to ask this of you, but please do<LINE>
+whatever you can to sort things out.<$F8><WAIT>
+
 
 //POINTER #167 @ $1C1DD8 - STRING #167 @ $1C12B6
+
 
 #WRITE(GBA,$1C1DD8)
 <WAIT>
 
+
 //POINTER #168 @ $1C1DDC - STRING #168 @ $1C12B7
 
+
 #WRITE(GBA,$1C1DDC)
-‥‥‥‥‥‥‥‥‥‥‥‥?<END>
+........................?<END>
+
 
 //POINTER #169 @ $1C1DE0 - STRING #169 @ $1C12C5
 
+
 #WRITE(GBA,$1C1DE0)
-‥‥‥‥‥‥‥‥‥‥‥‥<LINE>
-ボンバーマンは カンバンをたてた!<END>
+........................<LINE>
+Bomberman built a Signpost!<END>
+
 
 //POINTER #170 @ $1C1DE4 - STRING #170 @ $1C12E4
 
+
 #WRITE(GBA,$1C1DE4)
-<CONTROL_CODE><$01><$01>ゆ3ーここは きたの だんがい<END>
+<CONTROL_CODE><$01><$01><$2F><$04><$AB>This is the Northern Cliff.<END>
+
 
 //POINTER #171 @ $1C1DE8 - STRING #171 @ $1C12F7
 
-#WRITE(GBA,$1C1DE8)
-ここは きたの だんがい<NEWBOX>
-‥‥‥‥‥‥‥‥ウサギ おおいね<END>
 
-//POINTER #172 @ $1C1DEC - STRING #172 @ $1C1315
+#WRITE(GBA,$1C1DE8)
+This is the Northern Cliff.<NEWBOX>
+...There's lots of rabbits, huh?<END>
+
+
+////POINTER #172 @ $1C1DEC - STRING #172 @ $1C1315
+
 
 #WRITE(GBA,$1C1DEC)
-‥‥‥‥‥‥‥‥‥‥‥‥?<END>
+........................?<END>
+
 
 //POINTER #173 @ $1C1DF0 - STRING #173 @ $1C1323
 
+
 #WRITE(GBA,$1C1DF0)
-‥‥‥‥‥‥‥‥‥‥‥‥<LINE>
-ボンバーマンは カンバンをたてた!<END>
+........................<LINE>
+Bomberman built a Signpost!<END>
+
 
 //POINTER #174 @ $1C1DF4 - STRING #174 @ $1C1342
 
+
 #WRITE(GBA,$1C1DF4)
-<CONTROL_CODE><$01><$01>ゆ3:みはりごや<LINE>
-かんけいしゃいがい たちいり きんし<END>
+//<CONTROL_CODE><$01><$01><$2F><$04><$AF>みはりごや<LINE>
+//かんけいしゃいがい たちいり きんし<END>
+<CONTROL_CODE><$01><$01><$2F><$04><$AF>-Lookout Post-<LINE>
+Authorized personnel only<END>
+
 
 //POINTER #175 @ $1C1DF8 - STRING #175 @ $1C1361
 
+
 #WRITE(GBA,$1C1DF8)
-みはりごや<LINE>
-かんけいしゃいがい たちいり きんし<NEWBOX>
-みはりごやの すみっこに<LINE>
-たからばこが あったの きづいた?<END>
+//みはりごや<LINE>
+//かんけいしゃいがい たちいり きんし<NEWBOX>
+-Lookout Post-<LINE>
+Authorized personnel only<NEWBOX>
+//みはりごやの すみっこに<LINE>
+//たからばこが あったの きづいた?<END>
+Did you notice that there is a chest<LINE>
+in the corner of the lookout post?<END>
+
 
 //POINTER #176 @ $1C1DFC - STRING #176 @ $1C1399
 
+
 #WRITE(GBA,$1C1DFC)
-これより アクアのもり<LINE>
-ふっかつキノコに ちゅうい!<NEWBOX>
-もう アイテムは ぜんぶ あつめたかな?<END>
+Ahead is the Aqua Forest. Watch out<LINE>
+for the regenerating mushrooms!<NEWBOX>
+//もう アイテムは ぜんぶ あつめたかな?<END>
+Did you find all of the items there?<END>
+
 
 //POINTER #177 @ $1C1E00 - STRING #177 @ $1C13C9
 
+
 #WRITE(GBA,$1C1E00)
-ここは にしアクア<LINE>
-ひがしに いくと ひがしアクア<NEWBOX>
-あ ボンバーマンだ ひさしぶり!<LINE>
-もう わるものは ぜんぶ やっつけたの?<END>
+This is West Aqua. Head to the east<LINE>
+//ひがしに いくと ひがしアクア<NEWBOX>
+and you will reach East Aqua.<NEWBOX>
+//あ ボンバーマンだ ひさしぶり!<LINE>
+//もう わるものは ぜんぶ やっつけたの?<END>
+Hey Bomberman, it's been a while! Did<LINE>
+you already defeat all of the bad guys?<END>
+
 
 //POINTER #178 @ $1C1E04 - STRING #178 @ $1C1409
 
+
 #WRITE(GBA,$1C1E04)
-これより きたのだんがい<LINE>
-にしへいくと こおりのどうくつ<NEWBOX>
-キャラボンを はやく そだてたいときは<LINE>
-ダンジョンで たたかうと いいよ<END>
+//これより きたのだんがい<LINE>
+//にしへいくと こおりのどうくつ<NEWBOX>
+Ahead is the Northern Cliffs. To the<LINE>
+west is the Ice Cave.<NEWBOX>
+//キャラボンを はやく そだてたいときは<LINE>
+//ダンジョンで たたかうと いいよ<END>
+If you want to raise your Karabons<LINE>
+quickly you should battle in a dungeon.<END>
+
 
 //POINTER #179 @ $1C1E08 - STRING #179 @ $1C144B
 
+
 #WRITE(GBA,$1C1E08)
-もんを とおるかたは<LINE>
-もんばんに はなしかけてください<NEWBOX>
-もんのカギって そんなに ウットリするほど<LINE>
-キレイなのかな?<END>
+//もんを とおるかたは<LINE>
+//もんばんに はなしかけてください<NEWBOX>
+To pass through the gate, speak with<LINE>
+the gatekeeper.<NEWBOX>
+//もんのカギって そんなに ウットリするほど<LINE>
+//キレイなのかな?<END>
+Isn't the key so pretty that you could<LINE>
+just gaze at it forever?<END>
+
 
 //POINTER #180 @ $1C1E0C - STRING #180 @ $1C1486
 
+
 #WRITE(GBA,$1C1E0C)
-いせき はっくつげんば いりぐち<NEWBOX>
-エレファンを そだてると<LINE>
-ブロックを おすのが はやくなるよ<END>
+//いせき はっくつげんば いりぐち<NEWBOX>
+-Excavation Site Entrance-<NEWBOX>
+//エレファンを そだてると<LINE>
+//ブロックを おすのが はやくなるよ<END>
+As Elifan grows stronger it can push<LINE>
+blocks faster.<END>
+
 
 //POINTER #181 @ $1C1E10 - STRING #181 @ $1C14B6
 
-#WRITE(GBA,$1C1E10)
-ここは フォレスタウン<NEWBOX>
-ジェッターズの ほかの ひとたちは<LINE>
-いま どうしているんですか?<END>
 
-//POINTER #182 @ $1C1E14 - STRING #182 @ $1C14E3
+#WRITE(GBA,$1C1E10)
+This is Foress Town.<NEWBOX>
+What are those guys who aren't a<LINE>
+part of the Jetters doing here?<END>
+
+
+////POINTER #182 @ $1C1E14 - STRING #182 @ $1C14E3
+
 
 #WRITE(GBA,$1C1E14)
-にし いせき はっくつげんば<LINE>
-みなみ モリモリのもり<NEWBOX>
-キャラボンずかんを ぜんぶ うめたら<LINE>
-けんきゅうかの ところに いってみよう<END>
+//にし いせき はっくつげんば<LINE>
+//みなみ モリモリのもり<NEWBOX>
+West: Excavation Site<LINE>
+South: Morimori Forest<NEWBOX>
+//キャラボンずかんを ぜんぶ うめたら<LINE>
+//けんきゅうかの ところに いってみよう<END>
+Take your Karabon Encyclopedia to the<LINE>
+laboratory if you complete it!<END>
+
 
 //POINTER #183 @ $1C1E18 - STRING #183 @ $1C1525
 
+
 #WRITE(GBA,$1C1E18)
-ミドリけんきゅうじょ<NEWBOX>
-ミドリはかせって しんかんの キミドリさんの<LINE>
-しそんなのかな?<END>
+-Midori Laboratory-<NEWBOX>
+//ミドリはかせって しんかんの キミドリさんの<LINE>
+//しそんなのかな?<END>
+Do you think that the priest Kimidori<LINE>
+Is an ancestor of Dr. Midori?<END>
+
 
 //POINTER #184 @ $1C1E1C - STRING #184 @ $1C1550
 
+
 #WRITE(GBA,$1C1E1C)
-フン わざわざ こんなところまで<LINE>
-まったく ごくろうなこった‥‥<NEWBOX>
-オマエに オレが つかいこなせるかな?<END>
+//フン わざわざ こんなところまで<LINE>
+//まったく ごくろうなこった‥‥<NEWBOX>
+You have done very well to find<LINE>
+me here. As a reward, let me<NEWBOX>
+//オマエに オレが つかいこなせるかな?<END>
+help you on your journey.<END>
+
 
 //POINTER #185 @ $1C1E20 - STRING #185 @ $1C1585
 
+
 #WRITE(GBA,$1C1E20)
-キャラボン ポッポがなかまになった<CONTROL_CODE><$22><$00><CONTROL_CODE><$12><$5C><NEWBOX>
-オレの のうりょくは リモコンボム<LINE>
-ボムを すきなときに ばくはつさせられるぜ<NEWBOX>
-オレを セットするか?<LINE>
-    はい       いいえ<CONTROL_CODE><$05><$03>1い13I3J<CONTROL_CODE><$0D><$08><$FD>こんかいは らいてんきねんに<LINE>
-アルバムを さしあげます<NEWBOX>
-ボンバーマンは アルバムを<LINE>
-てにいれた!<CONTROL_CODE><$03><$01>8<CONTROL_CODE><$12><$0C><NEWBOX>
-<CONTROL_CODE><$00><$04>Nおっ! キャラボンずかんが<LINE>
-ぜんぶ うまっているじゃないか<NEWBOX>
-すごい‥‥ ボクらも しらないような<LINE>
-めずらしい キャラボンが いっぱいだ‥‥<NEWBOX>
-いやー いいものを みせてもらったよ<LINE>
-おれいに これを あげよう<NEWBOX>
-ボンバーマンは ゲームソフト24を<LINE>
-てにいれた!<CONTROL_CODE><$03><$01>ネ<CONTROL_CODE><$12><$0C><END>
+Became friends with the Karabon, Poppo!<CONTROL_CODE><$22><$00><CONTROL_CODE><$12><$5C><NEWBOX>
+My ability is the Remote Bomb. With it<LINE>
+//ボムを すきなときに ばくはつさせられるぜ<NEWBOX>
+you can detonate bombs when you like!<NEWBOX>
+Set me as the active Karabon?<LINE>
+    Yes       No<CONTROL_CODE><$05><$03><$02><$0C><$02>3I3J<CONTROL_CODE><$0D><$08><$FD>As a gift for coming to the store,<LINE>
+we're giving away a free album.<NEWBOX>
+Bomberman obtained the<LINE>
+Album!<CONTROL_CODE><$03><$01><$09><CONTROL_CODE><$12><$0C><NEWBOX>
+<GET_ENEMY_NAME><$04><$BF>Oh! You've filled in the entire<LINE>
+Karabon Encyclopedia!<NEWBOX>
+//すごい‥‥ ボクらも しらないような<LINE> 
+//ずらしい キャラボンが いっぱいだ‥‥<NEWBOX>
+Wow... There are so many Karabons that<LINE> 
+I have never seen before!<NEWBOX>
+//いやー いいものを みせてもらったよ<LINE>
+//おれいに これを あげよう<NEWBOX>
+Here's a reward for taking the time to<LINE>
+show me something so amazing.<NEWBOX>
+Bomberman obtained the<LINE>
+Game Data 24!<CONTROL_CODE><$03><$01><$59><CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #186 @ $1C1E24 - STRING #186 @ $1C15EB
 
+
 #WRITE(GBA,$1C1E24)
-<CONTROL_CODE><$0D><$08><$FD>こんかいは らいてんきねんに<LINE>
-アルバムを さしあげます<NEWBOX>
-ボンバーマンは アルバムを<LINE>
-てにいれた!<CONTROL_CODE><$03><$01>8<CONTROL_CODE><$12><$0C><NEWBOX>
-<CONTROL_CODE><$00><$04>Nおっ! キャラボンずかんが<LINE>
-ぜんぶ うまっているじゃないか<NEWBOX>
-すごい‥‥ ボクらも しらないような<LINE>
-めずらしい キャラボンが いっぱいだ‥‥<NEWBOX>
-いやー いいものを みせてもらったよ<LINE>
-おれいに これを あげよう<NEWBOX>
-ボンバーマンは ゲームソフト24を<LINE>
-てにいれた!<CONTROL_CODE><$03><$01>ネ<CONTROL_CODE><$12><$0C><END>
+<CONTROL_CODE><$0D><$08><$FD>As a gift for coming to the store,<LINE>
+we're giving away a free album.<NEWBOX>
+Bomberman obtained the<LINE>
+Album!<CONTROL_CODE><$03><$01><$09><CONTROL_CODE><$12><$0C><NEWBOX>
+<GET_ENEMY_NAME><$04><$BF>Oh! You've filled in the entire<LINE>
+Karabon Encyclopedia!<NEWBOX>
+//すごい‥‥ ボクらも しらないような<LINE> 
+//ずらしい キャラボンが いっぱいだ‥‥<NEWBOX>
+Wow... There are so many Karabons that<LINE> 
+I have never seen before!<NEWBOX>
+//いやー いいものを みせてもらったよ<LINE>
+//おれいに これを あげよう<NEWBOX>
+Here's a reward for taking the time to<LINE>
+show me something so amazing.<NEWBOX>
+Bomberman obtained the<LINE>
+Game Data 24!<CONTROL_CODE><$03><$01><$59><CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #187 @ $1C1E28 - STRING #187 @ $1C15EE
 
+
 #WRITE(GBA,$1C1E28)
-<$FD>こんかいは らいてんきねんに<LINE>
-アルバムを さしあげます<NEWBOX>
-ボンバーマンは アルバムを<LINE>
-てにいれた!<CONTROL_CODE><$03><$01>8<CONTROL_CODE><$12><$0C><NEWBOX>
-<CONTROL_CODE><$00><$04>Nおっ! キャラボンずかんが<LINE>
-ぜんぶ うまっているじゃないか<NEWBOX>
-すごい‥‥ ボクらも しらないような<LINE>
-めずらしい キャラボンが いっぱいだ‥‥<NEWBOX>
-いやー いいものを みせてもらったよ<LINE>
-おれいに これを あげよう<NEWBOX>
-ボンバーマンは ゲームソフト24を<LINE>
-てにいれた!<CONTROL_CODE><$03><$01>ネ<CONTROL_CODE><$12><$0C><END>
+<$FD>As a gift for coming to the store,<LINE>
+we're giving away a free album.<NEWBOX>
+Bomberman obtained the<LINE>
+Album!<CONTROL_CODE><$03><$01><$09><CONTROL_CODE><$12><$0C><NEWBOX>
+<GET_ENEMY_NAME><$04><$BF>Oh! You've filled in the entire<LINE>
+Karabon Encyclopedia!<NEWBOX>
+//すごい‥‥ ボクらも しらないような<LINE> 
+//ずらしい キャラボンが いっぱいだ‥‥<NEWBOX>
+Wow... There are so many Karabons that<LINE> 
+I have never seen before!<NEWBOX>
+//いやー いいものを みせてもらったよ<LINE>
+//おれいに これを あげよう<NEWBOX>
+Here's a reward for taking the time to<LINE>
+show me something so amazing.<NEWBOX>
+Bomberman obtained the<LINE>
+Game Data 24!<CONTROL_CODE><$03><$01><$59><CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #188 @ $1C1E2C - STRING #188 @ $1C15EF
 
+
 #WRITE(GBA,$1C1E2C)
-こんかいは らいてんきねんに<LINE>
-アルバムを さしあげます<NEWBOX>
-ボンバーマンは アルバムを<LINE>
-てにいれた!<CONTROL_CODE><$03><$01>8<CONTROL_CODE><$12><$0C><NEWBOX>
-<CONTROL_CODE><$00><$04>Nおっ! キャラボンずかんが<LINE>
-ぜんぶ うまっているじゃないか<NEWBOX>
-すごい‥‥ ボクらも しらないような<LINE>
-めずらしい キャラボンが いっぱいだ‥‥<NEWBOX>
-いやー いいものを みせてもらったよ<LINE>
-おれいに これを あげよう<NEWBOX>
-ボンバーマンは ゲームソフト24を<LINE>
-てにいれた!<CONTROL_CODE><$03><$01>ネ<CONTROL_CODE><$12><$0C><END>
+As a gift for coming to the store,<LINE>
+we're giving away a free album.<NEWBOX>
+Bomberman obtained the<LINE>
+Album!<CONTROL_CODE><$03><$01><$09><CONTROL_CODE><$12><$0C><NEWBOX>
+<GET_ENEMY_NAME><$04><$BF>Oh! You've filled in the<LINE>
+entire Karabon Encyclopedia!?<NEWBOX>
+//すごい‥‥ ボクらも しらないような<LINE> 
+//ずらしい キャラボンが いっぱいだ‥‥<NEWBOX>
+Wow... There are so many Karabons that<LINE> 
+I have never seen before!<NEWBOX>
+//いやー いいものを みせてもらったよ<LINE>
+//おれいに これを あげよう<NEWBOX>
+Here's a reward for taking the time to<LINE>
+show me something so amazing.<NEWBOX>
+Bomberman obtained the<LINE>
+Game Data 24!<CONTROL_CODE><$03><$01><$59><CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #189 @ $1C1E30 - STRING #189 @ $1C162B
 
+
 #WRITE(GBA,$1C1E30)
-おっ! キャラボンずかんが<LINE>
-ぜんぶ うまっているじゃないか<NEWBOX>
-すごい‥‥ ボクらも しらないような<LINE>
-めずらしい キャラボンが いっぱいだ‥‥<NEWBOX>
-いやー いいものを みせてもらったよ<LINE>
-おれいに これを あげよう<NEWBOX>
-ボンバーマンは ゲームソフト24を<LINE>
-てにいれた!<CONTROL_CODE><$03><$01>ネ<CONTROL_CODE><$12><$0C><END>
+Oh! You've filled in the<LINE>
+entire Karabon Encyclopedia!?<NEWBOX>
+//すごい‥‥ ボクらも しらないような<LINE> 
+//ずらしい キャラボンが いっぱいだ‥‥<NEWBOX>
+Wow... There are so many Karabons that<LINE> 
+I have never seen before!<NEWBOX>
+//いやー いいものを みせてもらったよ<LINE>
+//おれいに これを あげよう<NEWBOX>
+Here's a reward for taking the time to<LINE>
+show me something so amazing.<NEWBOX>
+Bomberman obtained the<LINE>
+Game Data 24!<CONTROL_CODE><$03><$01><$59><CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #190 @ $1C1E34 - STRING #190 @ $1C16B2
+
 
 #WRITE(GBA,$1C1E34)
 <END>
 
+
 //POINTER #191 @ $1C1E38 - STRING #191 @ $1C16B3
 
+
 #WRITE(GBA,$1C1E38)
-ごうせいりょうきんは いっかい 10Gです<NEWBOX>
-ごうせい しますか?<LINE>
-    はい       いいえ<CONTROL_CODE><$17><$03>1い13ど3ばボンバーマンは タマゴを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+The synthesis fee is 10G.<NEWBOX>
+Synthesize items?<LINE>
+    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Bomberman obtained the<LINE>
+Egg!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #192 @ $1C1E3C - STRING #192 @ $1C16EE
 
+
 #WRITE(GBA,$1C1E3C)
-ボンバーマンは タマゴを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+Bomberman obtained the<LINE>
+Egg!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #193 @ $1C1E40 - STRING #193 @ $1C1705
 
+
 #WRITE(GBA,$1C1E40)
-ボンバーマンは マラカスを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+Bomberman obtained the<LINE>
+Maracas!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #194 @ $1C1E44 - STRING #194 @ $1C171D
 
+
 #WRITE(GBA,$1C1E44)
-ボンバーマンは トカゲのしっぽを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+Bomberman obtained the<LINE>
+Lizard's Tail!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #195 @ $1C1E48 - STRING #195 @ $1C1738
 
+
 #WRITE(GBA,$1C1E48)
-ボンバーマンは カルデラのしずくを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+Bomberman obtained the<LINE>
+Caldera Drop!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #196 @ $1C1E4C - STRING #196 @ $1C1754
 
+
 #WRITE(GBA,$1C1E4C)
-ボンバーマンは フーセンを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+Bomberman obtained the<LINE>
+Fuse!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #197 @ $1C1E50 - STRING #197 @ $1C176C
 
+
 #WRITE(GBA,$1C1E50)
-フォレスタウンに ようこそ<LINE>
-けんきゅうじょは まちの みなみにあるわよ<NEWBOX>
-まちを にしにぬけると<LINE>
-こうせんほうの はっくつげんばがあるわ<END>
+Welcome to Foress Town. The lab can be<LINE>
+found in the south part of the city.<NEWBOX>
+Leave the city to the west to find<LINE>
+the archaeological excavation site.<END>
+
 
 //POINTER #198 @ $1C1E54 - STRING #198 @ $1C17B0
 
+
 #WRITE(GBA,$1C1E54)
-ほっほう アイスボムか‥‥<LINE>
-なかなか いいものを つくったねぇ<NEWBOX>
-みずは こおらせると かたまり<LINE>
-こおりは ほのおにあたると とけるのじゃ<NEWBOX>
-だいじなことだから おぼえておきなさい‥‥<END>
+Ho ho, isn't than an Ice Bomb? That<LINE>
+must be pretty useful.<NEWBOX>
+The Ice Bomb can freeze water, and<LINE>
+then fire can be used to melt that ice. <NEWBOX>
+You'd do well to remember that!<END>
+
 
 //POINTER #199 @ $1C1E58 - STRING #199 @ $1C180B
 
+
 #WRITE(GBA,$1C1E58)
-ボンバーマンは ちいさいたつまきを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><END>
+Bomberman obtained the<LINE>
+Small Twister!<CONTROL_CODE><$12><$0C><END>
+
 
 //POINTER #200 @ $1C1E5C - STRING #200 @ $1C1827
 
+
 #WRITE(GBA,$1C1E5C)
-ボンバーマンは ボムキックを<LINE>
-てにいれた!<CONTROL_CODE><$14><$5C><NEWBOX>
-ボムをキックして とおくに けとばせるよ!<LINE>
-けったボムは Bボタンで ストップするよ<END>
+Bomberman obtained<LINE>
+Bomb Kick!<CONTROL_CODE><$14><$5C><NEWBOX>
+Bombs can now be kicked ahead! Press<LINE>
+the B Button to halt a moving bomb.<END>
+
 
 //POINTER #201 @ $1C1E60 - STRING #201 @ $1C186B
 
+
 #WRITE(GBA,$1C1E60)
-ボンバーマンは パワーグローブを<LINE>
-てにいれた!<CONTROL_CODE><$14><$5C><NEWBOX>
-ボムのうえで Aボタンをおすと<LINE>
-ボムをもちあげ はなすと ボムをなげるよ<NEWBOX>
-トロッコに のりながら<LINE>
-ボムを なげることも できるよ!<END>
+Bomberman obtained the<LINE>
+Power Glove!<CONTROL_CODE><$14><$5C><NEWBOX>
+Press and hold the A Button on top of<LINE>
+a bomb to pick it up. Let go to throw!<NEWBOX>
+You can even throw bombs while riding<LINE>
+on a railcar!<END>
+
 
 //POINTER #202 @ $1C1E64 - STRING #202 @ $1C18C8
 
+
 #WRITE(GBA,$1C1E64)
-ボンバーマンは レーダーを<LINE>
-てにいれた!<CONTROL_CODE><$12><$0C><NEWBOX>
-ダンジョンのなかで ボスのへやがわかる!<LINE>
-マップがめんで みてみよう<END>
+Bomberman obtained the<LINE>
+Radar!<CONTROL_CODE><$12><$0C><NEWBOX>
+You can now look at the map screen to<LINE>
+locate which room the boss is in!<END>
+
 
 //POINTER #203 @ $1C1E68 - STRING #203 @ $1C1903
 
+
 #WRITE(GBA,$1C1E68)
-あ! それは みはりごやに おいてきた<LINE>
-オレの レーダーじゃないか!<NEWBOX>
-あんた みはりごやの やつらを<LINE>
-おいはらってくれたのか ありがとう!<NEWBOX>
-よし そのレーダーは あんたに あげよう<LINE>
-だいじに つかってくれよな!<END>
+Ah! Isn't that my Radar? I left it in<LINE>
+the lookout post.<NEWBOX>
+Thank you for driving away those<LINE>
+bandits who took over the place.<NEWBOX>
+To show my appreciation, you can keep<LINE>
+the Radar. I hope you find it useful!<END>
+
 
 //POINTER #204 @ $1C1E6C - STRING #204 @ $1C196D
 
+
 #WRITE(GBA,$1C1E6C)
-ボンバーマンは カイソクシューズを<LINE>
-<CONTROL_CODE><$14><$5C>てにいれた!<NEWBOX>
-スイスイ すすむよ カイソクシューズ!<LINE>
-あるくはやさが ちょっぴり アップ!<END>
+Bomberman obtained the<LINE>
+<CONTROL_CODE><$14><$5C>Speedy Shoes!<NEWBOX>
+With these nifty shoes, your walking<LINE>
+speed will slightly increase!<END>
+
 
 //POINTER #205 @ $1C1E70 - STRING #205 @ $1C19B0
 
+
 #WRITE(GBA,$1C1E70)
-ボンバーマンは カットビシューズを<LINE>
-<CONTROL_CODE><$14><$5C>てにいれた!<NEWBOX>
-ギュンギュン すすむよ カットビシューズ!<LINE>
-あるくはやさが ガッツリ アップ!<END>
+Bomberman obtained the<LINE>
+<CONTROL_CODE><$14><$5C>Super Shoes!<NEWBOX>
+With these you can move SUPER FAST!<LINE>
+Walking speed is greatly increased!<END>
+
 
 //POINTER #206 @ $1C1E74 - STRING #206 @ $1C19F4
 
+
 #WRITE(GBA,$1C1E74)
-ボンバーマンは カターイアーマーを<LINE>
-<CONTROL_CODE><$14><$5C>てにいれた!<NEWBOX>
-なかなか かたいよ カターイアーマー!<LINE>
-てきからの ダメージが ちょっぴり へるよ!<END>
+Bomberman obtained the<LINE>
+<CONTROL_CODE><$14><$5C>Hard Armor!<NEWBOX>
+The Hard Armor is pretty tough! Damage<LINE>
+from enemies is slightly decreased.<END>
+
 
 //POINTER #207 @ $1C1E78 - STRING #207 @ $1C1A3B
 
+
 #WRITE(GBA,$1C1E78)
-ボンバーマンは テッペキアーマーを<LINE>
-<CONTROL_CODE><$14><$5C>てにいれた!<NEWBOX>
-メチャクチャ かたいよ テッペキアーマー!<LINE>
-てきからの ダメージが ガッツリ へるよ!<END>
+Bomberman obtained the<LINE>
+<CONTROL_CODE><$14><$5C>Gold Armor!<NEWBOX>
+The Gold Armor is super tough! Damage<LINE>
+from enemies is greatly decreased.<END>
+
 
 //POINTER #208 @ $1C1E7C - STRING #208 @ $1C1A83
 
+
 #WRITE(GBA,$1C1E7C)
-ボンバーマンの ハートが 1つ ふえた!<CONTROL_CODE><$12><$5C><END>
+Bomberman's max life increased by 1!<CONTROL_CODE><$12><$5C><END>
+
 
 //POINTER #209 @ $1C1E80 - STRING #209 @ $1C1A9B
 
+
 #WRITE(GBA,$1C1E80)
-あかいスイッチは ボムのばくふうで<LINE>
-みどりのスイッチは ふんできりかえるんだよ<NEWBOX>
-きいろいスイッチは スイッチのうえに<LINE>
-ものが のっているあいだだけ オンになるんだ<END>
+Bombs can activate red switches, and<LINE>
+green switches must be stepped on.<NEWBOX>
+Yellow switches must have an object<LINE>
+placed on top of them to activate.<END>
+
 
 //POINTER #210 @ $1C1E84 - STRING #210 @ $1C1AED
 
+
 #WRITE(GBA,$1C1E84)
-ボンバーマンは ボムアップを<LINE>
-<CONTROL_CODE><$14><$5C>てにいれた!<END>
+Bomberman obtained a<LINE>
+<CONTROL_CODE><$14><$5C>Bomb Up!<END>
+
 
 //POINTER #211 @ $1C1E88 - STRING #211 @ $1C1B06
 
+
 #WRITE(GBA,$1C1E88)
-ボンバーマンは ファイアーアップを<LINE>
-<CONTROL_CODE><$14><$5C>てにいれた!<END>
+Bomberman obtained a<LINE>
+<CONTROL_CODE><$14><$5C>Fire Up!<END>
+
 
 //POINTER #212 @ $1C1E8C - STRING #212 @ $1C1B22
 
+
 #WRITE(GBA,$1C1E8C)
-ボンバーマンは ハートを<LINE>
-<CONTROL_CODE><$14><$5C>てにいれた!<END>
+Bomberman obtained a<LINE>
+<CONTROL_CODE><$14><$5C>Heart!<END>

@@ -211,7 +211,7 @@ namespace TextPreviewer
             {
                 FileStream fs = new FileStream(filename, FileMode.Open);
                 StreamReader sr = new StreamReader(fs, encoding);
-                string[] lines = sr.ReadToEnd().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+                string[] lines = sr.ReadToEnd().Split('\n' );
                 table = new Dictionary<string, string>();
                 int cur_line = 0;
                 foreach (string str in lines)
