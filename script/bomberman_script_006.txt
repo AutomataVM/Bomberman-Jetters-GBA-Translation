@@ -1130,7 +1130,7 @@ Press the B Button the cancel.<WAIT>
 
 #WRITE(GBA,$1CCABC)
 Load File <GET_SAVE_SLOT>?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Loaded File <GET_SAVE_SLOT>.<END>
+    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02><$08><$75><$08><$76>Loaded File <GET_SAVE_SLOT>.<END>
 
 //POINTER #170 @ $1CCAC0 - STRING #170 @ $1CBCEC
 
