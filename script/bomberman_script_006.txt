@@ -717,13 +717,13 @@ Please choose a warp point.<WAIT>
 
 #WRITE(GBA,$1CC9E4)
 <CONTROL_CODE><$0A><$FC><CONTROL_CODE><$0A><$27>Warp here?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02><CONTROL_CODE><$03><$01><$F3><WAIT>
+    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02><$08><$75><$08><$76><CONTROL_CODE><$03><$01><$F3><WAIT>
 
 //POINTER #116 @ $1CC9E8 - STRING #116 @ $1CB17E
 
 #WRITE(GBA,$1CC9E8)
 <CONTROL_CODE><$0A><$27>Warp here?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02><CONTROL_CODE><$03><$01><$F3><WAIT>
+    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02><$08><$75><$08><$76><CONTROL_CODE><$03><$01><$F3><WAIT>
 
 //POINTER #117 @ $1CC9EC - STRING #117 @ $1CB1A5
 
