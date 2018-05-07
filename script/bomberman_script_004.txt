@@ -901,7 +901,7 @@ My ability is the Lazy Bomb. With it,<LINE>
 bombs with take longer to detonate.<NEWBOX>
 Set me as the active Karabon?<LINE>
     Yes       No<CONTROL_CODE><$05><$03><$02><$0C><$02><CONTROL_CODE><$0D><$07><$FD>Listen to the Slot Battle explanation?<LINE>
-    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$06><$5D><$06><$5E>Press down on the D-Pad to start<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$06><$5D><$06><$5E>Press down on the D-Pad to start<LINE>
 the slots.<NEWBOX>
 Pressing the A Button will stop the<LINE>
 slots, starting from the left.<NEWBOX>
@@ -917,7 +917,7 @@ Well then, do your best!<END>
 
 #WRITE(GBA,$1C77CC)
 <CONTROL_CODE><$0D><$07><$FD>Listen to the Slot Battle explanation?<LINE>
-    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$06><$5D><$06><$5E>Press down on the D-Pad to start<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$06><$5D><$06><$5E>Press down on the D-Pad to start<LINE>
 the slots.<NEWBOX>
 Pressing the A Button will stop the<LINE>
 slots, starting from the left.<NEWBOX>
@@ -933,7 +933,7 @@ Well then, do your best!<END>
 
 #WRITE(GBA,$1C77D0)
 <$FD>Listen to the Slot Battle explanation?<LINE>
-    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$06><$5D><$06><$5E>Press down on the D-Pad to start<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$06><$5D><$06><$5E>Press down on the D-Pad to start<LINE>
 the slots.<NEWBOX>
 Pressing the A Button will stop the<LINE>
 slots, starting from the left.<NEWBOX>
@@ -949,7 +949,7 @@ Well then, do your best!<END>
 
 #WRITE(GBA,$1C77D4)
 Listen to the Slot Battle explanation?<LINE>
-    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$06><$5D><$06><$5E>Press down on the D-Pad to start<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$06><$5D><$06><$5E>Press down on the D-Pad to start<LINE>
 the slots.<NEWBOX>
 Pressing the A Button will stop the<LINE>
 slots, starting from the left.<NEWBOX>
@@ -1076,7 +1076,7 @@ if it got away safely...<END>
 
 #WRITE(GBA,$1C77FC)
 Listen to the Slot Battle explanation?<LINE>
-    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$06><$67><$06><$68>Press down on the D-Pad to start<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$06><$67><$06><$68>Press down on the D-Pad to start<LINE>
 the slots.<NEWBOX>
 Pressing the A Button will stop the<LINE>
 slots, starting from the left.<NEWBOX>

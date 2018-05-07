@@ -1168,7 +1168,7 @@ base, so be careful in there, Mighty!<END>
 <CONTROL_CODE><$01><$02><$8A><$07><$98><CONTROL_CODE><$03><$02><$8A>Good of you to come, Mighty.<LINE>
 Is your mission going well?<NEWBOX>
 Listen to the Bomber Hall explanation?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Here you can evaluate your skill<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Here you can evaluate your skill<LINE>
 //おまえの うでまえを ひょうかするところじゃ<NEWBOX>
 in battling against enemies.<NEWBOX>
 //5フロアを いかにうまく クリアするか<LINE>
@@ -1192,7 +1192,7 @@ be awarded a medal!<NEWBOX>
 Your high scores will be recorded on<LINE>
 the board beside the door.<NEWBOX>
 Give it a try for 20G?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02><CONTROL_CODE><$1C><$00><CONTROL_CODE><$03><$02><$8B><CONTROL_CODE><$1D><$14>Well then, head on in and get started!<END>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><CONTROL_CODE><$1C><$00><CONTROL_CODE><$03><$02><$8B><CONTROL_CODE><$1D><$14>Well then, head on in and get started!<END>
 
 
 //POINTER #93 @ $1CA36C - STRING #93 @ $1C9591
@@ -1223,13 +1223,13 @@ be awarded a medal!<NEWBOX>
 Your high scores will be recorded on<LINE>
 the board beside the door.<NEWBOX>
 Give it a try for 20G?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02><CONTROL_CODE><$1C><$00><CONTROL_CODE><$03><$02><$8B><CONTROL_CODE><$1D><$14>Well then, head on in and get started!<END>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><CONTROL_CODE><$1C><$00><CONTROL_CODE><$03><$02><$8B><CONTROL_CODE><$1D><$14>Well then, head on in and get started!<END>
 
 //POINTER #94 @ $1CA370 - STRING #94 @ $1C9673
 
 #WRITE(GBA,$1CA370)
 Give it a try for 20G?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02><CONTROL_CODE><$1C><$00><CONTROL_CODE><$03><$02><$8B><CONTROL_CODE><$1D><$14>Well then, head on in and get started!<END>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><CONTROL_CODE><$1C><$00><CONTROL_CODE><$03><$02><$8B><CONTROL_CODE><$1D><$14>Well then, head on in and get started!<END>
 
 
 //POINTER #95 @ $1CA374 - STRING #95 @ $1C96A0
@@ -1537,7 +1537,7 @@ has been activated!<END>
 #WRITE(GBA,$1CA3F8)
 -Shell Minigame-<LINE>
 Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$FB>Play the Shell Minigame?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02><CONTROL_CODE><$1C><$00><CONTROL_CODE><$1D><$0A><CONTROL_CODE><$13><$01><$FD><CONTROL_CODE><$13><$02>Sorry, but you're short on money.<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><CONTROL_CODE><$1C><$00><CONTROL_CODE><$1D><$0A><CONTROL_CODE><$13><$01><$FD><CONTROL_CODE><$13><$02>Sorry, but you're short on money.<LINE>
 Save some up and come back!<END>
 
 
@@ -1562,7 +1562,7 @@ Save some up and come back!<END>
 
 #WRITE(GBA,$1CA404)
 <CONTROL_CODE><$13><$02><$FD>Listen to the explanation?<LINE>
-    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$07><$85><$07><$86>The goal is to dodge the objects that<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$07><$85><$07><$86>The goal is to dodge the objects that<LINE>
 come at you for as long as you can.<NEWBOX>
 The B Button brings up a shield which<LINE>
 can protect you from projectiles.<NEWBOX>
@@ -1576,7 +1576,7 @@ Well then, do your best!<END>
 
 #WRITE(GBA,$1CA408)
 Listen to the explanation?<LINE>
-    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$07><$85><$07><$86>The goal is to dodge the objects that<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$07><$85><$07><$86>The goal is to dodge the objects that<LINE>
 come at you for as long as you can.<NEWBOX>
 The B Button brings up a shield which<LINE>
 can protect you from projectiles.<NEWBOX>
@@ -1630,16 +1630,16 @@ better score!<END>
 #WRITE(GBA,$1CA41C)
 -Karabon Race Minigame-<LINE>
 Current High Score: <GET_SAVE_SLOT>.<CONTROL_CODE><$08><$FB>Play the Karabon Race Minigame?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Slot Battle Minigame-<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Slot Battle Minigame-<LINE>
 Current High Score: <GET_SAVE_SLOT> rounds cleared.<NEWBOX>
 Play the Slot Battle Minigame?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Beam Cannon Minigame-<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Beam Cannon Minigame-<LINE>
 Current High Score: <GET_SAVE_SLOT>.<CONTROL_CODE><$08><$FB>Play the Beam Cannon Minigame?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Play the Motor Jetter Minigame?<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Play the Motor Jetter Minigame?<LINE>
 Current High Score: <GET_SAVE_SLOT><NEWBOX>
 Play the Motor Jetter Minigame?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Listen to the minigame instructions?<LINE>
-    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$07><$8E><$07><$8F>Run towards the goal while avoiding the<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Listen to the minigame instructions?<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$07><$8E><$07><$8F>Run towards the goal while avoiding the<LINE>
 attacks that rain down from above.<NEWBOX>
 //どれだけ ながいじかん<LINE>
 //こうせんを よけつづけられたかを きそいます<NEWBOX>
@@ -1659,13 +1659,13 @@ Well then, do your best!<END>
 -Slot Battle Minigame-<LINE>
 Current High Score: <GET_SAVE_SLOT> rounds cleared.<NEWBOX>
 Do you want to play the Slot Battle?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Beam Cannon Minigame-<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Beam Cannon Minigame-<LINE>
 Current High Score: <GET_SAVE_SLOT>.<CONTROL_CODE><$08><$FB>Play the Beam Cannon Minigame?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Motor Jetter Minigame-<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Motor Jetter Minigame-<LINE>
 Current High Score: <GET_SAVE_SLOT>.<NEWBOX>
 Play the Motor Jetters Minigame?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Listen to the minigame instructions?<LINE>
-    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$07><$8E><$07><$8F>Run towards the goal while avoiding<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Listen to the minigame instructions?<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$07><$8E><$07><$8F>Run towards the goal while avoiding<LINE>
 attacks that rain down from above.<NEWBOX>
 //どれだけ ながいじかん<LINE>
 //こうせんを よけつづけられたかを きそいます<NEWBOX>
@@ -1684,11 +1684,11 @@ Well then, do your best!<END>
 #WRITE(GBA,$1CA424)
 -Beam Cannon Minigame-<LINE>
 Current High Score: <GET_SAVE_SLOT>.<CONTROL_CODE><$08><$FB>Play the Beam Cannon Minigame?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Motor Jetter Minigame-<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Motor Jetter Minigame-<LINE>
 Current High Score: <GET_SAVE_SLOT>.<NEWBOX>
 Play the Motor Jetter Minigame?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Listen to the minigame instructions?<LINE>
-    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$07><$8E><$07><$8F>Run towards the goal while avoiding<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Listen to the minigame instructions?<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$07><$8E><$07><$8F>Run towards the goal while avoiding<LINE>
 attacks that rain down from above.<NEWBOX>
 //どれだけ ながいじかん<LINE>
 //こうせんを よけつづけられたかを きそいます<NEWBOX>
@@ -1708,8 +1708,8 @@ Well then, do your best!<END>
 -Motor Jetter Minigame-<LINE>
 Current High Score: <GET_SAVE_SLOT>.<NEWBOX>
 Play the Motor Jetter Minigame?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Listen to the minigame instructions?<LINE>
-    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$07><$8E><$07><$8F>Run towards the goal while avoiding<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Listen to the minigame instructions?<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$07><$8E><$07><$8F>Run towards the goal while avoiding<LINE>
 attacks that rain down from above.<NEWBOX>
 //どれだけ ながいじかん<LINE>
 //こうせんを よけつづけられたかを きそいます<NEWBOX>
@@ -1727,7 +1727,7 @@ Well then, do your best!<END>
 
 #WRITE(GBA,$1CA42C)
 Listen to the minigame instructions?<LINE>
-    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$07><$8E><$07><$8F>Run towards the goal while avoiding<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$07><$8E><$07><$8F>Run towards the goal while avoiding<LINE>
 attacks that rain down from above.<NEWBOX>
 //どれだけ ながいじかん<LINE>
 //こうせんを よけつづけられたかを きそいます<NEWBOX>
@@ -1769,7 +1769,7 @@ Well then, do your best.<END>
 
 #WRITE(GBA,$1CA438)
 Listen to the Boss Battle instructions?<LINE>
-    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$07><$91><$07><$92>The goal is to see how quickly you can<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$07><$91><$07><$92>The goal is to see how quickly you can<LINE>
 defeat the boss.<NEWBOX>
 //ボスに やられてしまうと<LINE>
 //きろくは のこらないので きをつけてください<NEWBOX>
@@ -1805,15 +1805,15 @@ Well then, do your best!<END>
 #WRITE(GBA,$1CA444)
 -Drill Mole Boss Battle-<LINE>
 Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>Battle against Drill Mole?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Net Spider Boss Battle-<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Net Spider Boss Battle-<LINE>
 Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>Battle against Net Spider?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Blade Beetle Boss Battle-<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Blade Beetle Boss Battle-<LINE>
 Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>Battle against Blade Beetle?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Hammer Kong Boss Battle-<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Hammer Kong Boss Battle-<LINE>
 Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>Battle against Hammer Kong?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Machine Dragon Boss Battle-<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Machine Dragon Boss Battle-<LINE>
 Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>Battle against Machine Dragon?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Listen to the Bomber Hall explanation?<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Listen to the Bomber Hall explanation?<LINE>
     //Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$07><$5D><$07><$5E>  いョつ7スョつ7バョつ7<$DF>ョつ7たがつ7ダがつ7おぎつ7げぎつ7(HEART)ぎつ79ぐつ7ぁぐつ7ノぐつ7ザぐつ7Yぐつ7コげつ7ズげつ7<$EB>げつ7シごつ7シごつ7Nごつ76ざつ7ひざつ7アざつ7Cざつ7メじつ7<$EF>じつ7ぃずつ7モずつ7Yずつ7ぁぜつ7ュぜつ7「ぜつ7<END>
 
 
@@ -1823,13 +1823,13 @@ Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><
 #WRITE(GBA,$1CA448)
 -Net Spider Boss Battle-<LINE>
 Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>Battle agianst Net Spider?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Blade Beetle Boss Battle-<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Blade Beetle Boss Battle-<LINE>
 Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>Battle against Blade Beetle?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Hammer Kong Boss Battle-<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Hammer Kong Boss Battle-<LINE>
 Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>Battle against Hammer Kong?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Machine Dragon Boss Battle-<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Machine Dragon Boss Battle-<LINE>
 Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>Battle against Machine Dragon?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Listen to the Bomber Hall explanation?<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Listen to the Bomber Hall explanation?<LINE>
     //Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$07><$5D><$07><$5E>  いョつ7スョつ7バョつ7<$DF>ョつ7たがつ7ダがつ7おぎつ7げぎつ7(HEART)ぎつ79ぐつ7ぁぐつ7ノぐつ7ザぐつ7Yぐつ7コげつ7ズげつ7<$EB>げつ7シごつ7シごつ7Nごつ76ざつ7ひざつ7アざつ7Cざつ7メじつ7<$EF>じつ7ぃずつ7モずつ7Yずつ7ぁぜつ7ュぜつ7「ぜつ7<END>
 
 
@@ -1839,11 +1839,11 @@ Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><
 #WRITE(GBA,$1CA44C)
 -Blade Beetle Boss Battle-<LINE>
 Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>Battle against Blade Beetle?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Hammer Kong Boss Battle-<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Hammer Kong Boss Battle-<LINE>
 Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>Battle against Hammer Kong?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Machine Dragon Boss Battle-<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Machine Dragon Boss Battle-<LINE>
 Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>Battle against Machine Dragon?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Listen to Bomber Kan's explanation?<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Listen to Bomber Kan's explanation?<LINE>
     //Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$07><$5D><$07><$5E>  いョつ7スョつ7バョつ7<$DF>ョつ7たがつ7ダがつ7おぎつ7げぎつ7(HEART)ぎつ79ぐつ7ぁぐつ7ノぐつ7ザぐつ7Yぐつ7コげつ7ズげつ7<$EB>げつ7シごつ7シごつ7Nごつ76ざつ7ひざつ7アざつ7Cざつ7メじつ7<$EF>じつ7ぃずつ7モずつ7Yずつ7ぁぜつ7ュぜつ7「ぜつ7<END>
 
 
@@ -1853,9 +1853,9 @@ Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><
 #WRITE(GBA,$1CA450)
 -Hammer Kong Boss Battle-<LINE>
 Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>Battle against Hammer Kong?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Machine Dragon Boss Battle-<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Machine Dragon Boss Battle-<LINE>
 Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>Battle against Machine Dragon?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Listen to the Bomber Hall explanation?<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Listen to the Bomber Hall explanation?<LINE>
     //Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$07><$5D><$07><$5E>  いョつ7スョつ7バョつ7<$DF>ョつ7たがつ7ダがつ7おぎつ7げぎつ7(HEART)ぎつ79ぐつ7ぁぐつ7ノぐつ7ザぐつ7Yぐつ7コげつ7ズげつ7<$EB>げつ7シごつ7シごつ7Nごつ76ざつ7ひざつ7アざつ7Cざつ7メじつ7<$EF>じつ7ぃずつ7モずつ7Yずつ7ぁぜつ7ュぜつ7「ぜつ7<END>
 
 
@@ -1865,7 +1865,7 @@ Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><
 #WRITE(GBA,$1CA454)
 --Machine Dragon Boss Battle-<LINE>
 Current High Score: <GET_SAVE_SLOT>:<CONTROL_CODE><$23><$AF><CONTROL_CODE><$24><$FB>Battle against Machine Dragon?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Listen to the Bomber Hall explanation?<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Listen to the Bomber Hall explanation?<LINE>
     //Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$07><$5D><$07><$5E>  いョつ7スョつ7バョつ7<$DF>ョつ7たがつ7ダがつ7おぎつ7げぎつ7(HEART)ぎつ79ぐつ7ぁぐつ7ノぐつ7ザぐつ7Yぐつ7コげつ7ズげつ7<$EB>げつ7シごつ7シごつ7Nごつ76ざつ7ひざつ7アざつ7Cざつ7メじつ7<$EF>じつ7ぃずつ7モずつ7Yずつ7ぁぜつ7ュぜつ7「ぜつ7<END>
 
 

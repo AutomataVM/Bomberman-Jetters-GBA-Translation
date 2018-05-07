@@ -22,8 +22,8 @@
 
 #WRITE(GBA,$1C51A8)
 Listen to the Race Minigame rules?<LINE>
-    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$05><$02><$05><$03>Listen to the Race Minigame rules?<LINE>
-    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$05><$02><$05><$03>Race a Karabon from the start line to the<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$05><$02><$05><$03>Listen to the Race Minigame rules?<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$05><$02><$05><$03>Race a Karabon from the start line to the<LINE>
 the finish. Get there first to win!<NEWBOX>
 Press the A Button in accordance with<LINE>
 the on-screen gauge to dash.<NEWBOX>
@@ -37,7 +37,7 @@ Well then. On your mark... Get Set...<END>
 
 #WRITE(GBA,$1C51AC)
 Listen to the Race Minigame rules?<LINE>
-    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$05><$02><$05><$03>Race a Karabon from the start line to the<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$05><$02><$05><$03>Race a Karabon from the start line to the<LINE>
 the finish. Get there first to win!<NEWBOX>
 Press the A Button in accordance with<LINE>
 the on-screen gauge to dash.<NEWBOX>
@@ -921,10 +921,10 @@ super fast dashing Karabon!<NEWBOX>
 The participation fee is<LINE>
 10 Gold per try.<NEWBOX>
 Enter the Karabon Race?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Do you want to enter the race using the gym's Karabon Pan?<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Do you want to enter the race using the gym's Karabon Pan?<LINE>
 Want to enter the Karabon Race?<NEWBOX>
 It's 10 Gold per try.<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02><CONTROL_CODE><$1C><$00><CONTROL_CODE><$1D><$0A><CONTROL_CODE><$13><$01>Alright then, get ready to race!<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><CONTROL_CODE><$1C><$00><CONTROL_CODE><$1D><$0A><CONTROL_CODE><$13><$01>Alright then, get ready to race!<LINE>
 <END>
 
 
@@ -935,7 +935,7 @@ It's 10 Gold per try.<LINE>
 //ƒWƒ€‚Ì ƒpƒ“‚ð ‚Â‚©‚Á‚Ä<LINE>
 Want to enter the Karabon Race?<NEWBOX>
 It's 10 Gold per try.<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02><CONTROL_CODE><$1C><$00><CONTROL_CODE><$1D><$0A><CONTROL_CODE><$13><$01>Alright then, get ready to race!<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><CONTROL_CODE><$1C><$00><CONTROL_CODE><$1D><$0A><CONTROL_CODE><$13><$01>Alright then, get ready to race!<LINE>
 <END>
 
 

@@ -111,7 +111,7 @@ the northern forest, so watch out!<END>
 Wow, a visitor way out here!<LINE>
 We are Karabon researchers.<NEWBOX>
 Do you want to hear about Karabons?<LINE>
-    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$04><$27><$04><$29>The bridge to West Aqua has finally<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$04><$27><$04><$29>The bridge to West Aqua has finally<LINE>
 been fixed!<NEWBOX>
 That carpenter really is amazing.<LINE>
 <END>
@@ -580,7 +580,7 @@ about Karabons, be sure to come back!.<END>
 Welcome!<LINE>
 We are Karabon researchers.<NEWBOX>
 Want to hear about Karabon evolution?<LINE>
-    Yes       No<CONTROL_CODE><$18><$03><$02><$0C><$02><$04><$2B><$04><$2C>Occasionally you will come across<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$04><$2B><$04><$2C>Occasionally you will come across<LINE>
 fruits that Karabons like to eat.<NEWBOX>
 //フルーツをとると セットしている<LINE>
 //キャラボンの せいちょうゲージが ふえるよ<NEWBOX>
@@ -770,9 +770,9 @@ I'll hand over the key...<NEWBOX>
 Gate Key!<CONTROL_CODE><$12><$0C><CONTROL_CODE><$03><$01><$22><NEWBOX>
 Hey, I have a request...<LINE>
 I want to join you on your journey.<NEWBOX>
-I'd love to travel the world and see lots<LINE>
-of amazing things. So... Is that ok?<NEWBOX>
-............<NEWBOX>
+I'd love to travel the world and see<LINE>
+lots of amazing things. So...<NEWBOX>
+Is that ok?............<NEWBOX>
 ...Huh!? You'll take me? Thank you! <LINE>
 My name is Kai-Man. Nice to meet you!<END>
 
@@ -785,7 +785,7 @@ Became friends with Karabon, Kai-Man!<LINE>
 <CONTROL_CODE><$22><$00><CONTROL_CODE><$12><$5C>My ability is called Shield, it can<NEWBOX>
 protect you from frontward attacks.<NEWBOX>
 Set me to the B Button?<LINE>
-    Yes       No<CONTROL_CODE><$05><$03>ground tremor from earlier wrecked<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$04><$56><$04><$57>ground tremor from earlier wrecked<LINE>
 the bridge...<NEWBOX>
 I always thought that bridge was worn<LINE>
 out. So I'm not surprised it broke.<NEWBOX>
@@ -1133,7 +1133,7 @@ it to push some blocks.<NEWBOX>
 And even if I'm not set, you will still<LINE>
 be able to use my ability!<NEWBOX>
 Set me to the B Button?<LINE>
-    Yes       No<CONTROL_CODE><$05><$03><CONTROL_CODE><$0D><$03><$FD><CONTROL_CODE><$19><$06>ElifanTake care out there, Elif...<END>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$04><$4D><$04><$4E><CONTROL_CODE><$0D><$03><$FD><CONTROL_CODE><$19><$05>ElifanTake care out there, Elif...<END>
 
 
 //POINTER #77 @ $1C1C70 - STRING #77 @ $1BFD88
@@ -1634,7 +1634,7 @@ Large Medicine!<CONTROL_CODE><$12><$0C><END>
 #WRITE(GBA,$1C1CF4)
 It will restore all of your hearts.<NEWBOX>
 Buy a Large Medicine?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Bomberman obtained the<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$04><$7E><$04><$7F>Bomberman obtained the<LINE>
 Large Medicine!<CONTROL_CODE><$12><$0C><END>
 
 
@@ -1655,7 +1655,7 @@ Large Medicine!<CONTROL_CODE><$12><$0C><END>
 Drinking it will cure you of the<LINE>
 slow skull poison effect.<NEWBOX>
 Buy an Antidote?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Bomberman obtained the<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$04><$7E><$04><$7F>Bomberman obtained the<LINE>
 Antidote!<CONTROL_CODE><$12><$0C><END>
 
 
@@ -1677,7 +1677,7 @@ CoroCoro Comic Volume 1<NEWBOX>
 Laugh with confidence! Contains<LINE>
 strategies for defeating bosses.<NEWBOX>
 Buy the CoroCoro Comic?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Bomberman obtained the<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$04><$7E><$04><$7F>Bomberman obtained the<LINE>
 CoroCoro Comic!<CONTROL_CODE><$12><$0C><END>
 
 
@@ -1699,7 +1699,7 @@ CoroCoro Comic Volume 2<NEWBOX>
 Laugh with confidence! Contains<LINE>
 strategies for defeating bosses.<NEWBOX>
 Buy the CoroCoro Comic?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Bomberman obtained the<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$04><$7E><$04><$7F>Bomberman obtained the<LINE>
 CoroCoro Comic!<CONTROL_CODE><$12><$0C><END>
 
 
@@ -1721,7 +1721,7 @@ CoroCoro Comic Volume 3<NEWBOX>
 Laugh with confidence! Contains<LINE>
 strategies for defeating bosses.<NEWBOX>
 Buy the CoroCoro Comic?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Bomberman obtained the<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$04><$7E><$04><$7F>Bomberman obtained the<LINE>
 CoroCoro Comic!<CONTROL_CODE><$12><$0C><END>
 
 
@@ -1743,7 +1743,7 @@ CoroCoro Comic Volume 4<NEWBOX>
 Laugh with confidence! Contains<LINE>
 strategies for defeating bosses.<NEWBOX>
 Buy the CoroCoro Comic?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Bomberman obtained the<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$04><$7E><$04><$7F>Bomberman obtained the<LINE>
 CoroCoro Comic!<CONTROL_CODE><$12><$0C><END>
 
 
@@ -1765,7 +1765,7 @@ CoroCoro Comic Volume 5<NEWBOX>
 Laugh with confidence! Contains<LINE>
 strategies for defeating bosses.<NEWBOX>
 Buy the CoroCoro Comic?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Bomberman obtained the<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$04><$7E><$04><$7F>Bomberman obtained the<LINE>
 CoroCoro Comic!<CONTROL_CODE><$12><$0C><END>
 
 
@@ -1784,7 +1784,7 @@ CoroCoro Comic!<CONTROL_CODE><$12><$0C><END>
 An incredible medicine that cures<LINE>
 almost any illness.<NEWBOX>
 Buy the Super Cure A?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Bomberman obtained the<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$04><$7E><$04><$7F>Bomberman obtained the<LINE>
 Super Cure A!<CONTROL_CODE><$12><$0C><END>
 
 
@@ -1935,7 +1935,7 @@ Please select synthesis ingredient B.<WAIT>
 
 #WRITE(GBA,$1C1D68)
 Do you want to combine these?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02><CONTROL_CODE><$13><$01><WAIT>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><CONTROL_CODE><$13><$01><WAIT>
 
 
 //POINTER #140 @ $1C1D6C - STRING #140 @ $1C0DE0
@@ -2057,7 +2057,7 @@ South: MoriMori Forest<END>
 //30ゴールドで かいとってあげよう<$F8>つづけて ごうせい しますか?<LINE>
 It appears you already own this item.<LINE>
 I'll give you 30 Gold for it.<$F8>Continue synthesizing?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02><CONTROL_CODE><$13><$01><WAIT>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><CONTROL_CODE><$13><$01><WAIT>
 
 
 //POINTER #154 @ $1C1DA4 - STRING #154 @ $1C0F7F
@@ -2070,7 +2070,7 @@ I'll give you 30 Gold for it.<$F8>Continue synthesizing?<LINE>
 //30ゴールドで かいとってあげよう<$F8>つづけて ごうせい しますか?<LINE>
 It appears you already own this item.<LINE>
 I'll give you 30 Gold for it.<$F8>Continue synthesizing?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02><CONTROL_CODE><$13><$01><WAIT>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><CONTROL_CODE><$13><$01><WAIT>
 
 
 //POINTER #155 @ $1C1DA8 - STRING #155 @ $1C0FB2
@@ -2078,7 +2078,7 @@ I'll give you 30 Gold for it.<$F8>Continue synthesizing?<LINE>
 
 #WRITE(GBA,$1C1DA8)
 Continue synthesizing?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02><CONTROL_CODE><$13><$01><WAIT>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><CONTROL_CODE><$13><$01><WAIT>
 
 
 //POINTER #156 @ $1C1DAC - STRING #156 @ $1C0FDC
@@ -2102,7 +2102,7 @@ Continue synthesizing?<LINE>
 With this combination you can create<LINE>
 the <GET_ITEM_NAME><$FF>.<NEWBOX>
 Synthesize this item?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>You cannot synthesize that.<$F8>Ah, we've arrived at last! Quickly,<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>You cannot synthesize that.<$F8>Ah, we've arrived at last! Quickly,<LINE>
 we must begin investigating! myu~<NEWBOX>
 But first let me explain my special<LINE>
 ability. It is called Teleport. myu~<NEWBOX>
@@ -2584,7 +2584,7 @@ Game Data 24!<CONTROL_CODE><$03><$01><$59><CONTROL_CODE><$12><$0C><END>
 #WRITE(GBA,$1C1E38)
 The synthesis fee is 10G.<NEWBOX>
 Synthesize items?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><$02><$0C><$02>Bomberman obtained the<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Bomberman obtained the<LINE>
 Egg!<CONTROL_CODE><$12><$0C><END>
 
 
