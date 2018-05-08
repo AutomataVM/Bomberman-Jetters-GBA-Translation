@@ -921,10 +921,10 @@ super fast dashing Karabon!<NEWBOX>
 The participation fee is<LINE>
 10 Gold per try.<NEWBOX>
 Enter the Karabon Race?<LINE>
-    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Do you want to enter the race using the gym's Karabon Pan?<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$05><$4D><$05><$4F>Do you want to enter the race using the gym's Karabon Pan?<LINE>
 Want to enter the Karabon Race?<NEWBOX>
 It's 10 Gold per try.<LINE>
-    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><CONTROL_CODE><$1C><$00><CONTROL_CODE><$1D><$0A><CONTROL_CODE><$13><$01>Alright then, get ready to race!<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$05><$4D><$05><$4F><CONTROL_CODE><$1C><$00><CONTROL_CODE><$1D><$0A><CONTROL_CODE><$13><$01>Alright then, get ready to race!<LINE>
 <END>
 
 
@@ -935,7 +935,7 @@ It's 10 Gold per try.<LINE>
 //ジムの パンを つかって<LINE>
 Want to enter the Karabon Race?<NEWBOX>
 It's 10 Gold per try.<LINE>
-    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><CONTROL_CODE><$1C><$00><CONTROL_CODE><$1D><$0A><CONTROL_CODE><$13><$01>Alright then, get ready to race!<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$05><$4D><$05><$4F><CONTROL_CODE><$1C><$00><CONTROL_CODE><$1D><$0A><CONTROL_CODE><$13><$01>Alright then, get ready to race!<LINE>
 <END>
 
 
@@ -943,7 +943,7 @@ It's 10 Gold per try.<LINE>
 
 
 #WRITE(GBA,$1C52DC)
-<CONTROL_CODE><$1C><$00><CONTROL_CODE><$1D><$0A><CONTROL_CODE><$13><$01>Alright then, get ready to race!<LINE>
+<CONTROL_CODE><$1C><$00><$0A><$05><$50><CONTROL_CODE><$1D><$0A><CONTROL_CODE><$13><$01>Alright then, get ready to race!<LINE>
 <END>
 
 
@@ -1002,7 +1002,7 @@ While holding down the B Button<NEWBOX>
 you will be able to dash very quickly.<LINE>
 Let's give it our all from now on!<NEWBOX>
 Set me as the active Karabon?<LINE>
-    Yes       No<CONTROL_CODE><$05><$03><$02><$0C><$02><CONTROL_CODE><$0D><$04><$FD>Fufufu... You still have a ways to go!<NEWBOX>
+    Yes       No<CONTROL_CODE><$05><$00><$02><$05><$02><$05><$53><$05><$54><CONTROL_CODE><$0D><$04><$FD>Fufufu... You still have a ways to go!<NEWBOX>
 //そんなようすじゃ ウチのこを<LINE>
 //まかせるわけには いかないな<NEWBOX>
 With skills like that, there's no way<LINE>
@@ -1301,7 +1301,7 @@ disappear for a short time.<NEWBOX>
 However, you won't become invincible<LINE>
 so you will still take damage.<NEWBOX>
 Set me as the active Karabon?<LINE>
-    Yes       No<CONTROL_CODE><$05><$03><$02><$0C><$02><CONTROL_CODE><$0D><$05><$FD>Gah! Mighty!<LINE>
+    Yes        No<CONTROL_CODE><$05><$00><$02><$05><$02><$05><$65><$05><$66><CONTROL_CODE><$0D><$05><$FD>Gah! Mighty!<LINE>
 You sure are a persistent pest!<NEWBOX>
 Everytime I find a good place to hide,<LINE>
 you show up and cause trouble!<NEWBOX>

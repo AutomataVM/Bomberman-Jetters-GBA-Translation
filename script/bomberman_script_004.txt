@@ -670,7 +670,7 @@ Became friends with the Karabon,<LINE>
 My ability is the Hasty Bomb. It will<LINE>
 cause your bombs to detonate faster.<NEWBOX>
 Set me as the active Karabon?<LINE>
-    Yes       No<CONTROL_CODE><$05><$03><$02><$0C><$02><CONTROL_CODE><$0D><$06>I was at the Chronos Laboratory when<LINE>
+    Yes        No<CONTROL_CODE><$05><$00><$02><$05><$02><$06><$42><$06><$43><CONTROL_CODE><$0D><$06>I was at the Chronos Laboratory when<LINE>
 the Hige Hige Bandits attacked.<NEWBOX>
 //‚È‚ñ‚Æ‚© ‚½‚·‚¯‚ð‚æ‚Ú‚¤‚Æ<LINE>
 //‚¾‚Á‚µ‚ã‚Â ‚µ‚Ä‚«‚½‚ñ‚¾<NEWBOX>
@@ -900,7 +900,7 @@ Bomberman became friends with the<LINE>
 My ability is the Lazy Bomb. With it,<LINE>
 bombs with take longer to detonate.<NEWBOX>
 Set me as the active Karabon?<LINE>
-    Yes       No<CONTROL_CODE><$05><$03><$02><$0C><$02><CONTROL_CODE><$0D><$07><$FD>Listen to the Slot Battle explanation?<LINE>
+    Yes        No<CONTROL_CODE><$05><$00><$02><$05><$02><$06><$5A><$06><$5B><CONTROL_CODE><$0D><$07><$FD>Listen to the Slot Battle explanation?<LINE>
     Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$06><$5D><$06><$5E>Press down on the D-Pad to start<LINE>
 the slots.<NEWBOX>
 Pressing the A Button will stop the<LINE>

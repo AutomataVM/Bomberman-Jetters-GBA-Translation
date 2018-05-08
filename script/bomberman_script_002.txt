@@ -1903,12 +1903,12 @@ Here you can combine an A synthesis<LINE>
 ingredient with a B ingredient<NEWBOX>
 to create entirely new items!<LINE>
 <NEWBOX>
-<CONTROL_CODE><$01><$02><$93><$04><$BF><CONTROL_CODE><$03><$02><$93><GET_ENEMY_NAME><$04><$BC><CONTROL_CODE><$1C><$00><CONTROL_CODE><$13><$01><WAIT>
+<CONTROL_CODE_E001><$02><$93><$04><$BF><CONTROL_CODE_E003><$02><$93><GET_ENEMY_NAME><$04><$BC><CONTROL_CODE><$1C><$00><$0A><$04><$8E><CONTROL_CODE><$13><$01><WAIT>
 
 //POINTER #135 @ $1C1D58 - STRING #135 @ $1C0D80
 
 #WRITE(GBA,$1C1D58)
-<CONTROL_CODE><$1C><$00><CONTROL_CODE><$13><$01><WAIT>
+<CONTROL_CODE><$1C><$00><$0A><$04><$8E><CONTROL_CODE><$13><$01><WAIT>
 
 //POINTER #136 @ $1C1D5C - STRING #136 @ $1C0D8A
 
@@ -1935,7 +1935,7 @@ Please select synthesis ingredient B.<WAIT>
 
 #WRITE(GBA,$1C1D68)
 Do you want to combine these?<LINE>
-    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><CONTROL_CODE><$13><$01><WAIT>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$04><$8C><$04><$8D><CONTROL_CODE><$13><$01><WAIT>
 
 
 //POINTER #140 @ $1C1D6C - STRING #140 @ $1C0DE0
@@ -2057,7 +2057,7 @@ South: MoriMori Forest<END>
 //30ゴールドで かいとってあげよう<$F8>つづけて ごうせい しますか?<LINE>
 It appears you already own this item.<LINE>
 I'll give you 30 Gold for it.<$F8>Continue synthesizing?<LINE>
-    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><CONTROL_CODE><$13><$01><WAIT>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$04><$9C><$04><$9D><CONTROL_CODE><$13><$01><WAIT>
 
 
 //POINTER #154 @ $1C1DA4 - STRING #154 @ $1C0F7F
@@ -2070,7 +2070,7 @@ I'll give you 30 Gold for it.<$F8>Continue synthesizing?<LINE>
 //30ゴールドで かいとってあげよう<$F8>つづけて ごうせい しますか?<LINE>
 It appears you already own this item.<LINE>
 I'll give you 30 Gold for it.<$F8>Continue synthesizing?<LINE>
-    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><CONTROL_CODE><$13><$01><WAIT>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$04><$9C><$04><$9D><CONTROL_CODE><$13><$01><WAIT>
 
 
 //POINTER #155 @ $1C1DA8 - STRING #155 @ $1C0FB2
@@ -2078,7 +2078,7 @@ I'll give you 30 Gold for it.<$F8>Continue synthesizing?<LINE>
 
 #WRITE(GBA,$1C1DA8)
 Continue synthesizing?<LINE>
-    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><CONTROL_CODE><$13><$01><WAIT>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$04><$9C><$04><$9D><CONTROL_CODE><$13><$01><WAIT>
 
 
 //POINTER #156 @ $1C1DAC - STRING #156 @ $1C0FDC
@@ -2102,7 +2102,7 @@ Continue synthesizing?<LINE>
 With this combination you can create<LINE>
 the <GET_ITEM_NAME><$FF>.<NEWBOX>
 Synthesize this item?<LINE>
-    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>You cannot synthesize that.<$F8>Ah, we've arrived at last! Quickly,<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$04><$8C><$04><$8D>You cannot synthesize that.<$F8>Ah, we've arrived at last! Quickly,<LINE>
 we must begin investigating! myu~<NEWBOX>
 But first let me explain my special<LINE>
 ability. It is called Teleport. myu~<NEWBOX>
@@ -2183,7 +2183,7 @@ the center gate will unlock!<END>
 
 #WRITE(GBA,$1C1DC4)
 Return to this dungeon's entrance?<LINE>
-    Yes       No<CONTROL_CODE><$17><$03><CONTROL_CODE><$13><$81><$FD><CONTROL_CODE><$13><$82><$FD><CONTROL_CODE><$13><$0D>Work together with the Karabon Pommy<LINE>
+    Yes       No<CONTROL_CODE><$17><$00><$02><$05><$02><$04><$A3><$04><$A4><CONTROL_CODE><$13><$81><$FD><CONTROL_CODE><$13><$82><$FD><CONTROL_CODE><$13><$0D>Work together with the Karabon Pommy<LINE>
 and gather information.<NEWBOX>
 <CONTROL_CODE><$13><$0D>If later you meet other Karabons, you<LINE>
 may become friends with them too.<NEWBOX>
@@ -2469,7 +2469,7 @@ My ability is the Remote Bomb. With it<LINE>
 //ボムを すきなときに ばくはつさせられるぜ<NEWBOX>
 you can detonate bombs when you like!<NEWBOX>
 Set me as the active Karabon?<LINE>
-    Yes       No<CONTROL_CODE><$05><$03><$02><$0C><$02>3I3J<CONTROL_CODE><$0D><$08><$FD>As a gift for coming to the store,<LINE>
+    Yes       No<CONTROL_CODE><$05><$03><$02><$0C><$02><$04><$BA><$04><$BB><CONTROL_CODE><$0D><$08><$FD>As a gift for coming to the store,<LINE>
 we're giving away a free album.<NEWBOX>
 Bomberman obtained the<LINE>
 Album!<CONTROL_CODE><$03><$01><$09><CONTROL_CODE><$12><$0C><NEWBOX>
@@ -2584,7 +2584,7 @@ Game Data 24!<CONTROL_CODE><$03><$01><$59><CONTROL_CODE><$12><$0C><END>
 #WRITE(GBA,$1C1E38)
 The synthesis fee is 10G.<NEWBOX>
 Synthesize items?<LINE>
-    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02>Bomberman obtained the<LINE>
+    Yes        No<CONTROL_CODE><$17><$00><$02><$05><$02><$04><$87><$04><$88>Bomberman obtained the<LINE>
 Egg!<CONTROL_CODE><$12><$0C><END>
 
 
